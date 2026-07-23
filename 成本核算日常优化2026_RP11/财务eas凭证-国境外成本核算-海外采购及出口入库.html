@@ -1,0 +1,2115 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>财务EAS凭证-国境外成本核算-海外采购及出口入库</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/财务eas凭证-国境外成本核算-海外采购及出口入库/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-3.7.1.min.js"></script>
+    <script src="resources/scripts/axure/axQuery.js"></script>
+    <script src="resources/scripts/axure/globals.js"></script>
+    <script src="resources/scripts/axutils.js"></script>
+    <script src="resources/scripts/axure/annotation.js"></script>
+    <script src="resources/scripts/axure/axQuery.std.js"></script>
+    <script src="resources/scripts/axure/doc.js"></script>
+    <script src="resources/scripts/messagecenter.js"></script>
+    <script src="resources/scripts/axure/events.js"></script>
+    <script src="resources/scripts/axure/recording.js"></script>
+    <script src="resources/scripts/axure/action.js"></script>
+    <script src="resources/scripts/axure/expr.js"></script>
+    <script src="resources/scripts/axure/geometry.js"></script>
+    <script src="resources/scripts/axure/flyout.js"></script>
+    <script src="resources/scripts/axure/model.js"></script>
+    <script src="resources/scripts/axure/repeater.js"></script>
+    <script src="resources/scripts/axure/sto.js"></script>
+    <script src="resources/scripts/axure/utils.temp.js"></script>
+    <script src="resources/scripts/axure/variables.js"></script>
+    <script src="resources/scripts/axure/drag.js"></script>
+    <script src="resources/scripts/axure/move.js"></script>
+    <script src="resources/scripts/axure/visibility.js"></script>
+    <script src="resources/scripts/axure/style.js"></script>
+    <script src="resources/scripts/axure/adaptive.js"></script>
+    <script src="resources/scripts/axure/tree.js"></script>
+    <script src="resources/scripts/axure/init.temp.js"></script>
+    <script src="resources/scripts/axure/legacy.js"></script>
+    <script src="resources/scripts/axure/viewer.js"></script>
+    <script src="resources/scripts/axure/math.js"></script>
+    <script src="resources/scripts/axure/jquery.nicescroll.min.js"></script>
+    <script src="data/document.js"></script>
+    <script src="files/财务eas凭证-国境外成本核算-海外采购及出口入库/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (矩形) -->
+      <div id="u388" class="ax_default box_3 transition notrs">
+        <div id="u388_div" class=""></div>
+        <div id="u388_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u389" class="ax_default _文本段落 transition notrs">
+        <div id="u389_div" class=""></div>
+        <div id="u389_text" class="text ">
+          <p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Negreta&quot;, &quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:700;">需求说明：</span><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">当前国境外成本核算采购入库仍为手工入账，系统需实现自动化推凭；新增财务EAS凭证-国境外成本核算-海外采购及出口入库页签；</span></p><p><span style="font-family:&quot;Arial Negreta&quot;, &quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:700;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">新增【数据来源】=‘采购成本核算-国境外成本核算-海外采购及出口入库’的页签；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Negreta&quot;, &quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:700;">1.按钮：</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">1.1【拉取EAS单据】：（拉取后前端后台金额均保留两位小数）仅限拉取【期间+法人编码】为【法人管理】法人类型（国外底稿=’国外法人‘，境外底稿需=’境外法人‘），模块类型=‘合并报表’对应金蝶法人编码+当前期间的未关账数据；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp;&nbsp; 1.1.1点击按钮打开弹窗：【会计期间、法人主体】：格式同汇总成本报表数据来源；【法人类型】：下拉多选无默认值，选项包括‘国外法人’‘境外法人’；【单据类型】：下拉多选无默认值，选项包括‘采购入库-跨法人调拨’‘采购入库-德恩’‘采购入库-海外采购’</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ‘采购入库-库存品类调整’‘销售收入-德恩’‘德恩净额法’；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp;&nbsp; 1.1.2拉取校验是否存在数据及删除数据的逻辑维度为【会计期间+法人主体+单据类型+法人类型】，确认后按照【会计期间+法人编码+单据类型】维度根据下述对应关系汇总（单据头）</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图像) -->
+      <div id="u390" class="ax_default _图片_ transition notrs">
+        <img id="u390_img" class="img " src="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u390.png"/>
+        <div id="u390_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (动态面板) -->
+      <div id="u391" class="ax_default">
+        <div id="u391_state0" class="panel_state" data-label="状态 1" style="">
+          <div id="u391_state0_content" class="panel_state_content">
+
+            <!-- Unnamed (表格) -->
+            <div id="u392" class="ax_default">
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u393" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u393.svg" id="u393_img" class="img generatedImage" viewbox="0 0 481 30">
+
+  <path d="M 1 1  L 481 1  L 481 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(1, 111, 160, 0.4588235294117647)" stroke="none" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+  <path d="M 0 0.5  L 481 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+                </svg>
+                <div id="u393_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u394" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u394.svg" id="u394_img" class="img generatedImage" viewbox="481 0 201 30">
+
+  <path d="M 1 1  L 201 1  L 201 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(1, 111, 160, 0.4588235294117647)" stroke="none" transform="matrix(1 0 0 1 481 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 481 0 )" class="stroke" />
+  <path d="M 0 0.5  L 201 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 481 0 )" class="stroke" />
+                </svg>
+                <div id="u394_text" class="text ">
+                  <p><span>单据体汇总维度</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u395" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u395.svg" id="u395_img" class="img generatedImage" viewbox="682 0 228 30">
+
+  <path d="M 1 1  L 228 1  L 228 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(1, 111, 160, 0.4588235294117647)" stroke="none" transform="matrix(1 0 0 1 682 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 682 0 )" class="stroke" />
+  <path d="M 0 0.5  L 228 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 682 0 )" class="stroke" />
+                </svg>
+                <div id="u395_text" class="text ">
+                  <p><span>单据类型</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u396" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u396.svg" id="u396_img" class="img generatedImage" viewbox="910 0 137 30">
+
+  <path d="M 1 1  L 137 1  L 137 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(1, 111, 160, 0.4588235294117647)" stroke="none" transform="matrix(1 0 0 1 910 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 910 0 )" class="stroke" />
+  <path d="M 0 0.5  L 137 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 910 0 )" class="stroke" />
+                </svg>
+                <div id="u396_text" class="text ">
+                  <p><span>单据头字段</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u397" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u397.svg" id="u397_img" class="img generatedImage" viewbox="1047 0 231 30">
+
+  <path d="M 1 1  L 231 1  L 231 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(1, 111, 160, 0.4588235294117647)" stroke="none" transform="matrix(1 0 0 1 1047 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1047 0 )" class="stroke" />
+  <path d="M 0 0.5  L 231 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1047 0 )" class="stroke" />
+                </svg>
+                <div id="u397_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u398" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u398.svg" id="u398_img" class="img generatedImage" viewbox="1278 0 160 30">
+
+  <path d="M 1 1  L 160 1  L 160 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(1, 111, 160, 0.4588235294117647)" stroke="none" transform="matrix(1 0 0 1 1278 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1278 0 )" class="stroke" />
+  <path d="M 0 0.5  L 160 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1278 0 )" class="stroke" />
+                </svg>
+                <div id="u398_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u399" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u399.svg" id="u399_img" class="img generatedImage" viewbox="1438 0 131 30">
+
+  <path d="M 1 1  L 131 1  L 131 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(1, 111, 160, 0.4588235294117647)" stroke="none" transform="matrix(1 0 0 1 1438 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1438 0 )" class="stroke" />
+  <path d="M 0 0.5  L 131 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1438 0 )" class="stroke" />
+                </svg>
+                <div id="u399_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u400" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u400.svg" id="u400_img" class="img generatedImage" viewbox="1569 0 183 30">
+
+  <path d="M 1 1  L 183 1  L 183 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(1, 111, 160, 0.4588235294117647)" stroke="none" transform="matrix(1 0 0 1 1569 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1569 0 )" class="stroke" />
+  <path d="M 0 0.5  L 183 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1569 0 )" class="stroke" />
+                </svg>
+                <div id="u400_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u401" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u401.svg" id="u401_img" class="img generatedImage" viewbox="1752 0 205 30">
+
+  <path d="M 1 1  L 205 1  L 205 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(1, 111, 160, 0.4588235294117647)" stroke="none" transform="matrix(1 0 0 1 1752 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1752 0 )" class="stroke" />
+  <path d="M 0 0.5  L 205 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1752 0 )" class="stroke" />
+                </svg>
+                <div id="u401_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u402" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u402.svg" id="u402_img" class="img generatedImage" viewbox="1957 0 148 30">
+
+  <path d="M 1 1  L 148 1  L 148 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(1, 111, 160, 0.4588235294117647)" stroke="none" transform="matrix(1 0 0 1 1957 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1957 0 )" class="stroke" />
+  <path d="M 0 0.5  L 148 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1957 0 )" class="stroke" />
+                </svg>
+                <div id="u402_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u403" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u403.svg" id="u403_img" class="img generatedImage" viewbox="2105 0 270 30">
+
+  <path d="M 1 1  L 270 1  L 270 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(1, 111, 160, 0.4588235294117647)" stroke="none" transform="matrix(1 0 0 1 2105 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2105 0 )" class="stroke" />
+  <path d="M 0 0.5  L 270 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2105 0 )" class="stroke" />
+                </svg>
+                <div id="u403_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u404" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u404.svg" id="u404_img" class="img generatedImage" viewbox="2375 0 221 30">
+
+  <path d="M 1 1  L 221 1  L 221 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(1, 111, 160, 0.4588235294117647)" stroke="none" transform="matrix(1 0 0 1 2375 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2375 0 )" class="stroke" />
+  <path d="M 0 0.5  L 221 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2375 0 )" class="stroke" />
+                </svg>
+                <div id="u404_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u405" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u405.svg" id="u405_img" class="img generatedImage" viewbox="2596 0 205 30">
+
+  <path d="M 1 1  L 205 1  L 205 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(1, 111, 160, 0.4588235294117647)" stroke="none" transform="matrix(1 0 0 1 2596 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2596 0 )" class="stroke" />
+  <path d="M 0 0.5  L 205 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2596 0 )" class="stroke" />
+                </svg>
+                <div id="u405_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u406" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u406.svg" id="u406_img" class="img generatedImage" viewbox="2801 0 106 30">
+
+  <path d="M 1 1  L 106 1  L 106 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(1, 111, 160, 0.4588235294117647)" stroke="none" transform="matrix(1 0 0 1 2801 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2801 0 )" class="stroke" />
+  <path d="M 0 0.5  L 106 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2801 0 )" class="stroke" />
+                </svg>
+                <div id="u406_text" class="text ">
+                  <p><span>单据体字段</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u407" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u407.svg" id="u407_img" class="img generatedImage" viewbox="2907 0 201 30">
+
+  <path d="M 1 1  L 201 1  L 201 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(1, 111, 160, 0.4588235294117647)" stroke="none" transform="matrix(1 0 0 1 2907 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2907 0 )" class="stroke" />
+  <path d="M 0 0.5  L 201 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2907 0 )" class="stroke" />
+                </svg>
+                <div id="u407_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u408" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u408.svg" id="u408_img" class="img generatedImage" viewbox="3108 0 201 30">
+
+  <path d="M 1 1  L 201 1  L 201 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(1, 111, 160, 0.4588235294117647)" stroke="none" transform="matrix(1 0 0 1 3108 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3108 0 )" class="stroke" />
+  <path d="M 0 0.5  L 201 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3108 0 )" class="stroke" />
+                </svg>
+                <div id="u408_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u409" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u409.svg" id="u409_img" class="img generatedImage" viewbox="3309 0 204 30">
+
+  <path d="M 1 1  L 204 1  L 204 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(1, 111, 160, 0.4588235294117647)" stroke="none" transform="matrix(1 0 0 1 3309 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3309 0 )" class="stroke" />
+  <path d="M 0 0.5  L 204 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3309 0 )" class="stroke" />
+                </svg>
+                <div id="u409_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u410" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u410.svg" id="u410_img" class="img generatedImage" viewbox="3513 0 146 30">
+
+  <path d="M 1 1  L 146 1  L 146 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(1, 111, 160, 0.4588235294117647)" stroke="none" transform="matrix(1 0 0 1 3513 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3513 0 )" class="stroke" />
+  <path d="M 0 0.5  L 146 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3513 0 )" class="stroke" />
+                </svg>
+                <div id="u410_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u411" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u411.svg" id="u411_img" class="img generatedImage" viewbox="3659 0 128 30">
+
+  <path d="M 1 1  L 128 1  L 128 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(1, 111, 160, 0.4588235294117647)" stroke="none" transform="matrix(1 0 0 1 3659 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3659 0 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3659 0 )" class="stroke" />
+                </svg>
+                <div id="u411_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u412" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u412.svg" id="u412_img" class="img generatedImage" viewbox="3787 0 299 30">
+
+  <path d="M 1 1  L 299 1  L 299 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(1, 111, 160, 0.4588235294117647)" stroke="none" transform="matrix(1 0 0 1 3787 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3787 0 )" class="stroke" />
+  <path d="M 0 0.5  L 299 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3787 0 )" class="stroke" />
+                </svg>
+                <div id="u412_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u413" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u413.svg" id="u413_img" class="img generatedImage" viewbox="4086 0 231 30">
+
+  <path d="M 1 1  L 231 1  L 231 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(1, 111, 160, 0.4588235294117647)" stroke="none" transform="matrix(1 0 0 1 4086 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 4086 0 )" class="stroke" />
+  <path d="M 0 0.5  L 231 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 4086 0 )" class="stroke" />
+                </svg>
+                <div id="u413_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u414" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u414.svg" id="u414_img" class="img generatedImage" viewbox="4317 0 175 30">
+
+  <path d="M 1 1  L 175 1  L 175 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(1, 111, 160, 0.4588235294117647)" stroke="none" transform="matrix(1 0 0 1 4317 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 4317 0 )" class="stroke" />
+  <path d="M 0 0.5  L 175 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 4317 0 )" class="stroke" />
+                </svg>
+                <div id="u414_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u415" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u415.svg" id="u415_img" class="img generatedImage" viewbox="4492 0 205 30">
+
+  <path d="M 1 1  L 204 1  L 204 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(1, 111, 160, 0.4588235294117647)" stroke="none" transform="matrix(1 0 0 1 4492 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 4492 0 )" class="stroke" />
+  <path d="M 0 0.5  L 205 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 4492 0 )" class="stroke" />
+  <path d="M 204.5 1  L 204.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 4492 0 )" class="stroke" />
+                </svg>
+                <div id="u415_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u416" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u416.svg" id="u416_img" class="img generatedImage" viewbox="0 30 481 29">
+
+  <path d="M 1 1  L 481 1  L 481 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 30 )" class="stroke" />
+  <path d="M 0 0.5  L 481 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 30 )" class="stroke" />
+                </svg>
+                <div id="u416_text" class="text ">
+                  <p><span>数据源</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u417" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u417.svg" id="u417_img" class="img generatedImage" viewbox="481 30 201 29">
+
+  <path d="M 1 1  L 201 1  L 201 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 481 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 481 30 )" class="stroke" />
+  <path d="M 0 0.5  L 201 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 481 30 )" class="stroke" />
+                </svg>
+                <div id="u417_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u418" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u418.svg" id="u418_img" class="img generatedImage" viewbox="682 30 228 29">
+
+  <path d="M 1 1  L 228 1  L 228 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 682 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 682 30 )" class="stroke" />
+  <path d="M 0 0.5  L 228 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 682 30 )" class="stroke" />
+                </svg>
+                <div id="u418_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u419" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u419.svg" id="u419_img" class="img generatedImage" viewbox="910 30 137 29">
+
+  <path d="M 1 1  L 137 1  L 137 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 910 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 910 30 )" class="stroke" />
+  <path d="M 0 0.5  L 137 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 910 30 )" class="stroke" />
+                </svg>
+                <div id="u419_text" class="text ">
+                  <p><span>会计期间</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u420" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u420.svg" id="u420_img" class="img generatedImage" viewbox="1047 30 231 29">
+
+  <path d="M 1 1  L 231 1  L 231 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1047 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1047 30 )" class="stroke" />
+  <path d="M 0 0.5  L 231 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1047 30 )" class="stroke" />
+                </svg>
+                <div id="u420_text" class="text ">
+                  <p><span>业务日期</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u421" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u421.svg" id="u421_img" class="img generatedImage" viewbox="1278 30 160 29">
+
+  <path d="M 1 1  L 160 1  L 160 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1278 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1278 30 )" class="stroke" />
+  <path d="M 0 0.5  L 160 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1278 30 )" class="stroke" />
+                </svg>
+                <div id="u421_text" class="text ">
+                  <p><span>入库法人主体</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u422" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u422.svg" id="u422_img" class="img generatedImage" viewbox="1438 30 131 29">
+
+  <path d="M 1 1  L 131 1  L 131 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1438 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1438 30 )" class="stroke" />
+  <path d="M 0 0.5  L 131 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1438 30 )" class="stroke" />
+                </svg>
+                <div id="u422_text" class="text ">
+                  <p><span>出库法人主体</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u423" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u423.svg" id="u423_img" class="img generatedImage" viewbox="1569 30 183 29">
+
+  <path d="M 1 1  L 183 1  L 183 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1569 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1569 30 )" class="stroke" />
+  <path d="M 0 0.5  L 183 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1569 30 )" class="stroke" />
+                </svg>
+                <div id="u423_text" class="text ">
+                  <p><span>法人主体</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u424" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u424.svg" id="u424_img" class="img generatedImage" viewbox="1752 30 205 29">
+
+  <path d="M 1 1  L 205 1  L 205 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1752 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1752 30 )" class="stroke" />
+  <path d="M 0 0.5  L 205 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1752 30 )" class="stroke" />
+                </svg>
+                <div id="u424_text" class="text ">
+                  <p><span>法人类型</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u425" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u425.svg" id="u425_img" class="img generatedImage" viewbox="1957 30 148 29">
+
+  <path d="M 1 1  L 148 1  L 148 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1957 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1957 30 )" class="stroke" />
+  <path d="M 0 0.5  L 148 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1957 30 )" class="stroke" />
+                </svg>
+                <div id="u425_text" class="text ">
+                  <p><span>单据编号</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u426" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u426.svg" id="u426_img" class="img generatedImage" viewbox="2105 30 270 29">
+
+  <path d="M 1 1  L 270 1  L 270 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2105 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2105 30 )" class="stroke" />
+  <path d="M 0 0.5  L 270 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2105 30 )" class="stroke" />
+                </svg>
+                <div id="u426_text" class="text ">
+                  <p><span>成本金额总计</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u427" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u427.svg" id="u427_img" class="img generatedImage" viewbox="2375 30 221 29">
+
+  <path d="M 1 1  L 221 1  L 221 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2375 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2375 30 )" class="stroke" />
+  <path d="M 0 0.5  L 221 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2375 30 )" class="stroke" />
+                </svg>
+                <div id="u427_text" class="text ">
+                  <p><span>应付原币总计</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u428" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u428.svg" id="u428_img" class="img generatedImage" viewbox="2596 30 205 29">
+
+  <path d="M 1 1  L 205 1  L 205 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2596 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2596 30 )" class="stroke" />
+  <path d="M 0 0.5  L 205 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2596 30 )" class="stroke" />
+                </svg>
+                <div id="u428_text" class="text ">
+                  <p><span>应付本币总计</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u429" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u429.svg" id="u429_img" class="img generatedImage" viewbox="2801 30 106 29">
+
+  <path d="M 1 1  L 106 1  L 106 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2801 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2801 30 )" class="stroke" />
+  <path d="M 0 0.5  L 106 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2801 30 )" class="stroke" />
+                </svg>
+                <div id="u429_text" class="text ">
+                  <p><span>品类</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u430" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u430.svg" id="u430_img" class="img generatedImage" viewbox="2907 30 201 29">
+
+  <path d="M 1 1  L 201 1  L 201 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2907 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2907 30 )" class="stroke" />
+  <path d="M 0 0.5  L 201 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2907 30 )" class="stroke" />
+                </svg>
+                <div id="u430_text" class="text ">
+                  <p><span>部门编码</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u431" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u431.svg" id="u431_img" class="img generatedImage" viewbox="3108 30 201 29">
+
+  <path d="M 1 1  L 201 1  L 201 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 3108 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3108 30 )" class="stroke" />
+  <path d="M 0 0.5  L 201 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3108 30 )" class="stroke" />
+                </svg>
+                <div id="u431_text" class="text ">
+                  <p><span>部门</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u432" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u432.svg" id="u432_img" class="img generatedImage" viewbox="3309 30 204 29">
+
+  <path d="M 1 1  L 204 1  L 204 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 3309 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3309 30 )" class="stroke" />
+  <path d="M 0 0.5  L 204 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3309 30 )" class="stroke" />
+                </svg>
+                <div id="u432_text" class="text ">
+                  <p><span>供应商编码</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u433" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u433.svg" id="u433_img" class="img generatedImage" viewbox="3513 30 146 29">
+
+  <path d="M 1 1  L 146 1  L 146 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 3513 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3513 30 )" class="stroke" />
+  <path d="M 0 0.5  L 146 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3513 30 )" class="stroke" />
+                </svg>
+                <div id="u433_text" class="text ">
+                  <p><span>供应商名称</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u434" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u434.svg" id="u434_img" class="img generatedImage" viewbox="3659 30 128 29">
+
+  <path d="M 1 1  L 128 1  L 128 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 3659 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3659 30 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3659 30 )" class="stroke" />
+                </svg>
+                <div id="u434_text" class="text ">
+                  <p><span>币别</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u435" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u435.svg" id="u435_img" class="img generatedImage" viewbox="3787 30 299 29">
+
+  <path d="M 1 1  L 299 1  L 299 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 3787 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3787 30 )" class="stroke" />
+  <path d="M 0 0.5  L 299 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3787 30 )" class="stroke" />
+                </svg>
+                <div id="u435_text" class="text ">
+                  <p><span>汇率</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u436" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u436.svg" id="u436_img" class="img generatedImage" viewbox="4086 30 231 29">
+
+  <path d="M 1 1  L 231 1  L 231 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 4086 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 4086 30 )" class="stroke" />
+  <path d="M 0 0.5  L 231 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 4086 30 )" class="stroke" />
+                </svg>
+                <div id="u436_text" class="text ">
+                  <p><span>成本金额</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u437" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u437.svg" id="u437_img" class="img generatedImage" viewbox="4317 30 175 29">
+
+  <path d="M 1 1  L 175 1  L 175 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 4317 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 4317 30 )" class="stroke" />
+  <path d="M 0 0.5  L 175 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 4317 30 )" class="stroke" />
+                </svg>
+                <div id="u437_text" class="text ">
+                  <p><span>应付原币</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u438" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u438.svg" id="u438_img" class="img generatedImage" viewbox="4492 30 205 29">
+
+  <path d="M 1 1  L 204 1  L 204 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 4492 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 4492 30 )" class="stroke" />
+  <path d="M 0 0.5  L 205 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 4492 30 )" class="stroke" />
+  <path d="M 204.5 1  L 204.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 4492 30 )" class="stroke" />
+                </svg>
+                <div id="u438_text" class="text ">
+                  <p><span>应付本币</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u439" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u439.svg" id="u439_img" class="img generatedImage" viewbox="0 59 481 69">
+
+  <path d="M 1 1  L 481 1  L 481 69  L 1 69  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 59 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 69  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 59 )" class="stroke" />
+  <path d="M 0 0.5  L 481 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 59 )" class="stroke" />
+                </svg>
+                <div id="u439_text" class="text ">
+                  <p><span>在【国（境）外成本核算合并报表/采购入库】筛选【数据来源】=’跨法人调拨‘或(【数据来源】=’手工导入‘且【供应商】在【法人管理】对应【法人名称】的【法人类型】=’国内法人‘）的数据按【会计期间+法人编码】维度汇总金额</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u440" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u440.svg" id="u440_img" class="img generatedImage" viewbox="481 59 201 69">
+
+  <path d="M 1 1  L 201 1  L 201 69  L 1 69  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 481 59 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 69  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 481 59 )" class="stroke" />
+  <path d="M 0 0.5  L 201 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 481 59 )" class="stroke" />
+                </svg>
+                <div id="u440_text" class="text ">
+                  <p><span>按【会计期间+法人编码+出库法人+单据类型+币别】汇总</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u441" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u441.svg" id="u441_img" class="img generatedImage" viewbox="682 59 228 69">
+
+  <path d="M 1 1  L 228 1  L 228 69  L 1 69  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 682 59 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 69  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 682 59 )" class="stroke" />
+  <path d="M 0 0.5  L 228 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 682 59 )" class="stroke" />
+                </svg>
+                <div id="u441_text" class="text ">
+                  <p><span>采购入库-跨法人调拨</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u442" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u442.svg" id="u442_img" class="img generatedImage" viewbox="910 59 137 69">
+
+  <path d="M 1 1  L 137 1  L 137 69  L 1 69  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 910 59 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 69  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 910 59 )" class="stroke" />
+  <path d="M 0 0.5  L 137 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 910 59 )" class="stroke" />
+                </svg>
+                <div id="u442_text" class="text ">
+                  <p><span>所选会计期间</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u443" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u443.svg" id="u443_img" class="img generatedImage" viewbox="1047 59 231 69">
+
+  <path d="M 1 1  L 231 1  L 231 69  L 1 69  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1047 59 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 69  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1047 59 )" class="stroke" />
+  <path d="M 0 0.5  L 231 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1047 59 )" class="stroke" />
+                </svg>
+                <div id="u443_text" class="text ">
+                  <p><span>所选会计期间倒数第二天</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u444" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u444.svg" id="u444_img" class="img generatedImage" viewbox="1278 59 160 69">
+
+  <path d="M 1 1  L 160 1  L 160 69  L 1 69  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1278 59 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 69  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1278 59 )" class="stroke" />
+  <path d="M 0 0.5  L 160 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1278 59 )" class="stroke" />
+                </svg>
+                <div id="u444_text" class="text ">
+                  <p><span>-</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u445" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u445.svg" id="u445_img" class="img generatedImage" viewbox="1438 59 131 69">
+
+  <path d="M 1 1  L 131 1  L 131 69  L 1 69  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1438 59 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 69  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1438 59 )" class="stroke" />
+  <path d="M 0 0.5  L 131 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1438 59 )" class="stroke" />
+                </svg>
+                <div id="u445_text" class="text ">
+                  <p><span>供应商</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u446" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u446.svg" id="u446_img" class="img generatedImage" viewbox="1569 59 183 69">
+
+  <path d="M 1 1  L 183 1  L 183 69  L 1 69  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1569 59 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 69  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1569 59 )" class="stroke" />
+  <path d="M 0 0.5  L 183 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1569 59 )" class="stroke" />
+                </svg>
+                <div id="u446_text" class="text ">
+                  <p><span>法人在法人管理匹配对应金蝶法人</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u447" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u447.svg" id="u447_img" class="img generatedImage" viewbox="1752 59 205 69">
+
+  <path d="M 1 1  L 205 1  L 205 69  L 1 69  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1752 59 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 69  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1752 59 )" class="stroke" />
+  <path d="M 0 0.5  L 205 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1752 59 )" class="stroke" />
+                </svg>
+                <div id="u447_text" class="text ">
+                  <p><span>法人在法人管理匹配法人类型</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u448" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u448.svg" id="u448_img" class="img generatedImage" viewbox="1957 59 148 69">
+
+  <path d="M 1 1  L 148 1  L 148 69  L 1 69  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1957 59 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 69  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1957 59 )" class="stroke" />
+  <path d="M 0 0.5  L 148 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1957 59 )" class="stroke" />
+                </svg>
+                <div id="u448_text" class="text ">
+                  <p><span>原逻辑</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u449" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u449.svg" id="u449_img" class="img generatedImage" viewbox="2105 59 270 69">
+
+  <path d="M 1 1  L 270 1  L 270 69  L 1 69  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2105 59 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 69  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2105 59 )" class="stroke" />
+  <path d="M 0 0.5  L 270 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2105 59 )" class="stroke" />
+                </svg>
+                <div id="u449_text" class="text ">
+                  <p><span>汇总①国外法人：【含毛利金额】；</span></p><p><span>②境外法人：【本位币含毛利金额】；</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u450" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u450.svg" id="u450_img" class="img generatedImage" viewbox="2375 59 221 69">
+
+  <path d="M 1 1  L 221 1  L 221 69  L 1 69  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2375 59 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 69  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2375 59 )" class="stroke" />
+  <path d="M 0 0.5  L 221 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2375 59 )" class="stroke" />
+                </svg>
+                <div id="u450_text" class="text ">
+                  <p><span>汇总【原币金额】</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u451" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u451.svg" id="u451_img" class="img generatedImage" viewbox="2596 59 205 69">
+
+  <path d="M 1 1  L 205 1  L 205 69  L 1 69  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2596 59 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 69  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2596 59 )" class="stroke" />
+  <path d="M 0 0.5  L 205 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2596 59 )" class="stroke" />
+                </svg>
+                <div id="u451_text" class="text ">
+                  <p><span>汇总：①国外法人：【含毛利金额】；②境外法人：【本位币含毛利金额】；</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u452" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u452.svg" id="u452_img" class="img generatedImage" viewbox="2801 59 106 69">
+
+  <path d="M 1 1  L 106 1  L 106 69  L 1 69  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2801 59 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 69  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2801 59 )" class="stroke" />
+  <path d="M 0 0.5  L 106 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2801 59 )" class="stroke" />
+                </svg>
+                <div id="u452_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u453" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u453.svg" id="u453_img" class="img generatedImage" viewbox="2907 59 201 69">
+
+  <path d="M 1 1  L 201 1  L 201 69  L 1 69  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2907 59 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 69  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2907 59 )" class="stroke" />
+  <path d="M 0 0.5  L 201 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2907 59 )" class="stroke" />
+                </svg>
+                <div id="u453_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u454" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u454.svg" id="u454_img" class="img generatedImage" viewbox="3108 59 201 69">
+
+  <path d="M 1 1  L 201 1  L 201 69  L 1 69  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 3108 59 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 69  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3108 59 )" class="stroke" />
+  <path d="M 0 0.5  L 201 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3108 59 )" class="stroke" />
+                </svg>
+                <div id="u454_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u455" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u455.svg" id="u455_img" class="img generatedImage" viewbox="3309 59 204 69">
+
+  <path d="M 1 1  L 204 1  L 204 69  L 1 69  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 3309 59 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 69  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3309 59 )" class="stroke" />
+  <path d="M 0 0.5  L 204 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3309 59 )" class="stroke" />
+                </svg>
+                <div id="u455_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u456" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u456.svg" id="u456_img" class="img generatedImage" viewbox="3513 59 146 69">
+
+  <path d="M 1 1  L 146 1  L 146 69  L 1 69  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 3513 59 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 69  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3513 59 )" class="stroke" />
+  <path d="M 0 0.5  L 146 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3513 59 )" class="stroke" />
+                </svg>
+                <div id="u456_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u457" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u457.svg" id="u457_img" class="img generatedImage" viewbox="3659 59 128 69">
+
+  <path d="M 1 1  L 128 1  L 128 69  L 1 69  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 3659 59 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 69  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3659 59 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3659 59 )" class="stroke" />
+                </svg>
+                <div id="u457_text" class="text ">
+                  <p><span>币别</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u458" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u458.svg" id="u458_img" class="img generatedImage" viewbox="3787 59 299 69">
+
+  <path d="M 1 1  L 299 1  L 299 69  L 1 69  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 3787 59 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 69  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3787 59 )" class="stroke" />
+  <path d="M 0 0.5  L 299 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3787 59 )" class="stroke" />
+                </svg>
+                <div id="u458_text" class="text ">
+                  <p><span>生效日期=所选期间倒数第二天；原币取当前页面币别；目标币取当前页面法人主体列在法人管理本位币；原币与目标币相同时，汇率取1；</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u459" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u459.svg" id="u459_img" class="img generatedImage" viewbox="4086 59 231 69">
+
+  <path d="M 1 1  L 231 1  L 231 69  L 1 69  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 4086 59 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 69  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 4086 59 )" class="stroke" />
+  <path d="M 0 0.5  L 231 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 4086 59 )" class="stroke" />
+                </svg>
+                <div id="u459_text" class="text ">
+                  <p><span>汇总①国外法人：【含毛利金额】‘②境外法人：【本位币含毛利金额】</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u460" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u460.svg" id="u460_img" class="img generatedImage" viewbox="4317 59 175 69">
+
+  <path d="M 1 1  L 175 1  L 175 69  L 1 69  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 4317 59 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 69  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 4317 59 )" class="stroke" />
+  <path d="M 0 0.5  L 175 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 4317 59 )" class="stroke" />
+                </svg>
+                <div id="u460_text" class="text ">
+                  <p><span>汇总【原币金额】</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u461" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u461.svg" id="u461_img" class="img generatedImage" viewbox="4492 59 205 69">
+
+  <path d="M 1 1  L 204 1  L 204 69  L 1 69  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 4492 59 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 69  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 4492 59 )" class="stroke" />
+  <path d="M 0 0.5  L 205 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 4492 59 )" class="stroke" />
+  <path d="M 204.5 1  L 204.5 69  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 4492 59 )" class="stroke" />
+                </svg>
+                <div id="u461_text" class="text ">
+                  <p><span>汇总①国外法人：【含毛利金额】；②境外法人：【本位币含毛利金额】</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u462" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u462.svg" id="u462_img" class="img generatedImage" viewbox="0 128 481 51">
+
+  <path d="M 1 1  L 481 1  L 481 51  L 1 51  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 128 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 51  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 128 )" class="stroke" />
+  <path d="M 0 0.5  L 481 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 128 )" class="stroke" />
+                </svg>
+                <div id="u462_text" class="text ">
+                  <p><span>在【国（境）外成本核算合并报表/采购入库】筛选【数据来源】=‘手工导入’且【仓库】=‘HK-海外采购仓-德恩’的数据按【会计期间+法人编码】维度汇总金额</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u463" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u463.svg" id="u463_img" class="img generatedImage" viewbox="481 128 201 51">
+
+  <path d="M 1 1  L 201 1  L 201 51  L 1 51  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 481 128 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 51  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 481 128 )" class="stroke" />
+  <path d="M 0 0.5  L 201 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 481 128 )" class="stroke" />
+                </svg>
+                <div id="u463_text" class="text ">
+                  <p><span>按【会计期间+法人编码+供应商+单据类型+币别】汇总</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u464" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u464.svg" id="u464_img" class="img generatedImage" viewbox="682 128 228 51">
+
+  <path d="M 1 1  L 228 1  L 228 51  L 1 51  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 682 128 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 51  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 682 128 )" class="stroke" />
+  <path d="M 0 0.5  L 228 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 682 128 )" class="stroke" />
+                </svg>
+                <div id="u464_text" class="text ">
+                  <p><span>采购入库-德恩</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u465" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u465.svg" id="u465_img" class="img generatedImage" viewbox="910 128 137 51">
+
+  <path d="M 1 1  L 137 1  L 137 51  L 1 51  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 910 128 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 51  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 910 128 )" class="stroke" />
+  <path d="M 0 0.5  L 137 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 910 128 )" class="stroke" />
+                </svg>
+                <div id="u465_text" class="text ">
+                  <p><span>所选会计期间</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u466" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u466.svg" id="u466_img" class="img generatedImage" viewbox="1047 128 231 51">
+
+  <path d="M 1 1  L 231 1  L 231 51  L 1 51  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1047 128 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 51  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1047 128 )" class="stroke" />
+  <path d="M 0 0.5  L 231 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1047 128 )" class="stroke" />
+                </svg>
+                <div id="u466_text" class="text ">
+                  <p><span>所选会计期间倒数第二天</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u467" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u467.svg" id="u467_img" class="img generatedImage" viewbox="1278 128 160 51">
+
+  <path d="M 1 1  L 160 1  L 160 51  L 1 51  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1278 128 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 51  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1278 128 )" class="stroke" />
+  <path d="M 0 0.5  L 160 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1278 128 )" class="stroke" />
+                </svg>
+                <div id="u467_text" class="text ">
+                  <p><span>-</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u468" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u468.svg" id="u468_img" class="img generatedImage" viewbox="1438 128 131 51">
+
+  <path d="M 1 1  L 131 1  L 131 51  L 1 51  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1438 128 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 51  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1438 128 )" class="stroke" />
+  <path d="M 0 0.5  L 131 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1438 128 )" class="stroke" />
+                </svg>
+                <div id="u468_text" class="text ">
+                  <p><span>-</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u469" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u469.svg" id="u469_img" class="img generatedImage" viewbox="1569 128 183 51">
+
+  <path d="M 1 1  L 183 1  L 183 51  L 1 51  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1569 128 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 51  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1569 128 )" class="stroke" />
+  <path d="M 0 0.5  L 183 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1569 128 )" class="stroke" />
+                </svg>
+                <div id="u469_text" class="text ">
+                  <p><span>法人在法人管理匹配对应金蝶法人</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u470" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u470.svg" id="u470_img" class="img generatedImage" viewbox="1752 128 205 51">
+
+  <path d="M 1 1  L 205 1  L 205 51  L 1 51  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1752 128 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 51  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1752 128 )" class="stroke" />
+  <path d="M 0 0.5  L 205 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1752 128 )" class="stroke" />
+                </svg>
+                <div id="u470_text" class="text ">
+                  <p><span>法人在法人管理匹配法人类型</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u471" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u471.svg" id="u471_img" class="img generatedImage" viewbox="1957 128 148 51">
+
+  <path d="M 1 1  L 148 1  L 148 51  L 1 51  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1957 128 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 51  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1957 128 )" class="stroke" />
+  <path d="M 0 0.5  L 148 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1957 128 )" class="stroke" />
+                </svg>
+                <div id="u471_text" class="text ">
+                  <p><span>原逻辑</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u472" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u472.svg" id="u472_img" class="img generatedImage" viewbox="2105 128 270 51">
+
+  <path d="M 1 1  L 270 1  L 270 51  L 1 51  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2105 128 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 51  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2105 128 )" class="stroke" />
+  <path d="M 0 0.5  L 270 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2105 128 )" class="stroke" />
+                </svg>
+                <div id="u472_text" class="text ">
+                  <p><span>同上</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u473" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u473.svg" id="u473_img" class="img generatedImage" viewbox="2375 128 221 51">
+
+  <path d="M 1 1  L 221 1  L 221 51  L 1 51  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2375 128 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 51  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2375 128 )" class="stroke" />
+  <path d="M 0 0.5  L 221 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2375 128 )" class="stroke" />
+                </svg>
+                <div id="u473_text" class="text ">
+                  <p><span>同上</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u474" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u474.svg" id="u474_img" class="img generatedImage" viewbox="2596 128 205 51">
+
+  <path d="M 1 1  L 205 1  L 205 51  L 1 51  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2596 128 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 51  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2596 128 )" class="stroke" />
+  <path d="M 0 0.5  L 205 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2596 128 )" class="stroke" />
+                </svg>
+                <div id="u474_text" class="text ">
+                  <p><span>同上</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u475" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u475.svg" id="u475_img" class="img generatedImage" viewbox="2801 128 106 51">
+
+  <path d="M 1 1  L 106 1  L 106 51  L 1 51  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2801 128 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 51  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2801 128 )" class="stroke" />
+  <path d="M 0 0.5  L 106 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2801 128 )" class="stroke" />
+                </svg>
+                <div id="u475_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u476" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u476.svg" id="u476_img" class="img generatedImage" viewbox="2907 128 201 51">
+
+  <path d="M 1 1  L 201 1  L 201 51  L 1 51  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2907 128 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 51  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2907 128 )" class="stroke" />
+  <path d="M 0 0.5  L 201 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2907 128 )" class="stroke" />
+                </svg>
+                <div id="u476_text" class="text ">
+                  <p><span>=A.997</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u477" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u477.svg" id="u477_img" class="img generatedImage" viewbox="3108 128 201 51">
+
+  <path d="M 1 1  L 201 1  L 201 51  L 1 51  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 3108 128 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 51  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3108 128 )" class="stroke" />
+  <path d="M 0 0.5  L 201 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3108 128 )" class="stroke" />
+                </svg>
+                <div id="u477_text" class="text ">
+                  <p><span>=海外采购组</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u478" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u478.svg" id="u478_img" class="img generatedImage" viewbox="3309 128 204 51">
+
+  <path d="M 1 1  L 204 1  L 204 51  L 1 51  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 3309 128 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 51  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3309 128 )" class="stroke" />
+  <path d="M 0 0.5  L 204 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3309 128 )" class="stroke" />
+                </svg>
+                <div id="u478_text" class="text ">
+                  <p><span>根据供应商名称在【财务对接平台/供应商】取对应状态=核准的【编码】</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u479" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u479.svg" id="u479_img" class="img generatedImage" viewbox="3513 128 146 51">
+
+  <path d="M 1 1  L 146 1  L 146 51  L 1 51  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 3513 128 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 51  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3513 128 )" class="stroke" />
+  <path d="M 0 0.5  L 146 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3513 128 )" class="stroke" />
+                </svg>
+                <div id="u479_text" class="text ">
+                  <p><span>供应商</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u480" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u480.svg" id="u480_img" class="img generatedImage" viewbox="3659 128 128 51">
+
+  <path d="M 1 1  L 128 1  L 128 51  L 1 51  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 3659 128 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 51  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3659 128 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3659 128 )" class="stroke" />
+                </svg>
+                <div id="u480_text" class="text ">
+                  <p><span>币别</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u481" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u481.svg" id="u481_img" class="img generatedImage" viewbox="3787 128 299 51">
+
+  <path d="M 1 1  L 299 1  L 299 51  L 1 51  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 3787 128 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 51  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3787 128 )" class="stroke" />
+  <path d="M 0 0.5  L 299 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3787 128 )" class="stroke" />
+                </svg>
+                <div id="u481_text" class="text ">
+                  <p><span>同上</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u482" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u482.svg" id="u482_img" class="img generatedImage" viewbox="4086 128 231 51">
+
+  <path d="M 1 1  L 231 1  L 231 51  L 1 51  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 4086 128 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 51  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 4086 128 )" class="stroke" />
+  <path d="M 0 0.5  L 231 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 4086 128 )" class="stroke" />
+                </svg>
+                <div id="u482_text" class="text ">
+                  <p><span>同上</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u483" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u483.svg" id="u483_img" class="img generatedImage" viewbox="4317 128 175 51">
+
+  <path d="M 1 1  L 175 1  L 175 51  L 1 51  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 4317 128 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 51  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 4317 128 )" class="stroke" />
+  <path d="M 0 0.5  L 175 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 4317 128 )" class="stroke" />
+                </svg>
+                <div id="u483_text" class="text ">
+                  <p><span>同上</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u484" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u484.svg" id="u484_img" class="img generatedImage" viewbox="4492 128 205 51">
+
+  <path d="M 1 1  L 204 1  L 204 51  L 1 51  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 4492 128 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 51  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 4492 128 )" class="stroke" />
+  <path d="M 0 0.5  L 205 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 4492 128 )" class="stroke" />
+  <path d="M 204.5 1  L 204.5 51  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 4492 128 )" class="stroke" />
+                </svg>
+                <div id="u484_text" class="text ">
+                  <p><span>同上</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u485" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u485.svg" id="u485_img" class="img generatedImage" viewbox="0 179 481 64">
+
+  <path d="M 1 1  L 481 1  L 481 64  L 1 64  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 179 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 64  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 179 )" class="stroke" />
+  <path d="M 0 0.5  L 481 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 179 )" class="stroke" />
+                </svg>
+                <div id="u485_text" class="text ">
+                  <p><span>在【国（境）外成本核算合并报表/采购入库】筛选（【数据来源】=‘手工导入’且【仓库】≠‘HK-海外采购仓-德恩’且【供应商】在【法人管理】对应【法人名称】中不存在）或（【数据来源】=‘佰易-商品收发明细’）的数据按【会计期间+法人编码】维度汇总金额</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u486" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u486.svg" id="u486_img" class="img generatedImage" viewbox="481 179 201 64">
+
+  <path d="M 1 1  L 201 1  L 201 64  L 1 64  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 481 179 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 64  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 481 179 )" class="stroke" />
+  <path d="M 0 0.5  L 201 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 481 179 )" class="stroke" />
+                </svg>
+                <div id="u486_text" class="text ">
+                  <p><span>按【会计期间+法人编码+供应商+sku部门+单据类型+币别】汇总</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u487" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u487.svg" id="u487_img" class="img generatedImage" viewbox="682 179 228 64">
+
+  <path d="M 1 1  L 228 1  L 228 64  L 1 64  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 682 179 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 64  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 682 179 )" class="stroke" />
+  <path d="M 0 0.5  L 228 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 682 179 )" class="stroke" />
+                </svg>
+                <div id="u487_text" class="text ">
+                  <p><span>采购入库-海外采购</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u488" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u488.svg" id="u488_img" class="img generatedImage" viewbox="910 179 137 64">
+
+  <path d="M 1 1  L 137 1  L 137 64  L 1 64  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 910 179 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 64  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 910 179 )" class="stroke" />
+  <path d="M 0 0.5  L 137 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 910 179 )" class="stroke" />
+                </svg>
+                <div id="u488_text" class="text ">
+                  <p><span>所选会计期间</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u489" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u489.svg" id="u489_img" class="img generatedImage" viewbox="1047 179 231 64">
+
+  <path d="M 1 1  L 231 1  L 231 64  L 1 64  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1047 179 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 64  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1047 179 )" class="stroke" />
+  <path d="M 0 0.5  L 231 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1047 179 )" class="stroke" />
+                </svg>
+                <div id="u489_text" class="text ">
+                  <p><span>所选会计期间倒数第二天</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u490" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u490.svg" id="u490_img" class="img generatedImage" viewbox="1278 179 160 64">
+
+  <path d="M 1 1  L 160 1  L 160 64  L 1 64  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1278 179 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 64  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1278 179 )" class="stroke" />
+  <path d="M 0 0.5  L 160 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1278 179 )" class="stroke" />
+                </svg>
+                <div id="u490_text" class="text ">
+                  <p><span>-</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u491" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u491.svg" id="u491_img" class="img generatedImage" viewbox="1438 179 131 64">
+
+  <path d="M 1 1  L 131 1  L 131 64  L 1 64  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1438 179 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 64  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1438 179 )" class="stroke" />
+  <path d="M 0 0.5  L 131 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1438 179 )" class="stroke" />
+                </svg>
+                <div id="u491_text" class="text ">
+                  <p><span>-</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u492" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u492.svg" id="u492_img" class="img generatedImage" viewbox="1569 179 183 64">
+
+  <path d="M 1 1  L 183 1  L 183 64  L 1 64  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1569 179 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 64  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1569 179 )" class="stroke" />
+  <path d="M 0 0.5  L 183 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1569 179 )" class="stroke" />
+                </svg>
+                <div id="u492_text" class="text ">
+                  <p><span>法人在法人管理匹配对应金蝶法人</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u493" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u493.svg" id="u493_img" class="img generatedImage" viewbox="1752 179 205 64">
+
+  <path d="M 1 1  L 205 1  L 205 64  L 1 64  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1752 179 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 64  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1752 179 )" class="stroke" />
+  <path d="M 0 0.5  L 205 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1752 179 )" class="stroke" />
+                </svg>
+                <div id="u493_text" class="text ">
+                  <p><span>法人在法人管理匹配法人类型</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u494" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u494.svg" id="u494_img" class="img generatedImage" viewbox="1957 179 148 64">
+
+  <path d="M 1 1  L 148 1  L 148 64  L 1 64  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1957 179 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 64  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1957 179 )" class="stroke" />
+  <path d="M 0 0.5  L 148 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1957 179 )" class="stroke" />
+                </svg>
+                <div id="u494_text" class="text ">
+                  <p><span>原逻辑</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u495" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u495.svg" id="u495_img" class="img generatedImage" viewbox="2105 179 270 64">
+
+  <path d="M 1 1  L 270 1  L 270 64  L 1 64  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2105 179 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 64  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2105 179 )" class="stroke" />
+  <path d="M 0 0.5  L 270 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2105 179 )" class="stroke" />
+                </svg>
+                <div id="u495_text" class="text ">
+                  <p><span>同上</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u496" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u496.svg" id="u496_img" class="img generatedImage" viewbox="2375 179 221 64">
+
+  <path d="M 1 1  L 221 1  L 221 64  L 1 64  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2375 179 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 64  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2375 179 )" class="stroke" />
+  <path d="M 0 0.5  L 221 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2375 179 )" class="stroke" />
+                </svg>
+                <div id="u496_text" class="text ">
+                  <p><span>同上</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u497" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u497.svg" id="u497_img" class="img generatedImage" viewbox="2596 179 205 64">
+
+  <path d="M 1 1  L 205 1  L 205 64  L 1 64  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2596 179 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 64  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2596 179 )" class="stroke" />
+  <path d="M 0 0.5  L 205 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2596 179 )" class="stroke" />
+                </svg>
+                <div id="u497_text" class="text ">
+                  <p><span>同上</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u498" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u498.svg" id="u498_img" class="img generatedImage" viewbox="2801 179 106 64">
+
+  <path d="M 1 1  L 106 1  L 106 64  L 1 64  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2801 179 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 64  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2801 179 )" class="stroke" />
+  <path d="M 0 0.5  L 106 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2801 179 )" class="stroke" />
+                </svg>
+                <div id="u498_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u499" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u499.svg" id="u499_img" class="img generatedImage" viewbox="2907 179 201 64">
+
+  <path d="M 1 1  L 201 1  L 201 64  L 1 64  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2907 179 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 64  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2907 179 )" class="stroke" />
+  <path d="M 0 0.5  L 201 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2907 179 )" class="stroke" />
+                </svg>
+                <div id="u499_text" class="text ">
+                  <p><span>入账小组编码（若所取入账小组值为独立站，则赋值‘SP.01.01’）</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u500" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u500.svg" id="u500_img" class="img generatedImage" viewbox="3108 179 201 64">
+
+  <path d="M 1 1  L 201 1  L 201 64  L 1 64  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 3108 179 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 64  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3108 179 )" class="stroke" />
+  <path d="M 0 0.5  L 201 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3108 179 )" class="stroke" />
+                </svg>
+                <div id="u500_text" class="text ">
+                  <p><span>入账小组（若所取值为独立站，则赋值‘独立站-OHWILL组’）</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u501" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u501.svg" id="u501_img" class="img generatedImage" viewbox="3309 179 204 64">
+
+  <path d="M 1 1  L 204 1  L 204 64  L 1 64  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 3309 179 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 64  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3309 179 )" class="stroke" />
+  <path d="M 0 0.5  L 204 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3309 179 )" class="stroke" />
+                </svg>
+                <div id="u501_text" class="text ">
+                  <p><span>同上</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u502" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u502.svg" id="u502_img" class="img generatedImage" viewbox="3513 179 146 64">
+
+  <path d="M 1 1  L 146 1  L 146 64  L 1 64  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 3513 179 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 64  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3513 179 )" class="stroke" />
+  <path d="M 0 0.5  L 146 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3513 179 )" class="stroke" />
+                </svg>
+                <div id="u502_text" class="text ">
+                  <p><span>同上</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u503" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u503.svg" id="u503_img" class="img generatedImage" viewbox="3659 179 128 64">
+
+  <path d="M 1 1  L 128 1  L 128 64  L 1 64  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 3659 179 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 64  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3659 179 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3659 179 )" class="stroke" />
+                </svg>
+                <div id="u503_text" class="text ">
+                  <p><span>币别</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u504" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u504.svg" id="u504_img" class="img generatedImage" viewbox="3787 179 299 64">
+
+  <path d="M 1 1  L 299 1  L 299 64  L 1 64  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 3787 179 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 64  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3787 179 )" class="stroke" />
+  <path d="M 0 0.5  L 299 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3787 179 )" class="stroke" />
+                </svg>
+                <div id="u504_text" class="text ">
+                  <p><span>同上</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u505" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u505.svg" id="u505_img" class="img generatedImage" viewbox="4086 179 231 64">
+
+  <path d="M 1 1  L 231 1  L 231 64  L 1 64  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 4086 179 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 64  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 4086 179 )" class="stroke" />
+  <path d="M 0 0.5  L 231 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 4086 179 )" class="stroke" />
+                </svg>
+                <div id="u505_text" class="text ">
+                  <p><span>同上</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u506" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u506.svg" id="u506_img" class="img generatedImage" viewbox="4317 179 175 64">
+
+  <path d="M 1 1  L 175 1  L 175 64  L 1 64  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 4317 179 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 64  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 4317 179 )" class="stroke" />
+  <path d="M 0 0.5  L 175 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 4317 179 )" class="stroke" />
+                </svg>
+                <div id="u506_text" class="text ">
+                  <p><span>同上</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u507" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u507.svg" id="u507_img" class="img generatedImage" viewbox="4492 179 205 64">
+
+  <path d="M 1 1  L 204 1  L 204 64  L 1 64  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 4492 179 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 64  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 4492 179 )" class="stroke" />
+  <path d="M 0 0.5  L 205 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 4492 179 )" class="stroke" />
+  <path d="M 204.5 1  L 204.5 64  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 4492 179 )" class="stroke" />
+                </svg>
+                <div id="u507_text" class="text ">
+                  <p><span>同上</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u508" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u508.svg" id="u508_img" class="img generatedImage" viewbox="0 243 481 64">
+
+  <path d="M 1 1  L 481 1  L 481 63  L 1 63  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 243 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 63  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 243 )" class="stroke" />
+  <path d="M 0 0.5  L 481 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 243 )" class="stroke" />
+  <path d="M 0 63.5  L 481 63.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 243 )" class="stroke" />
+                </svg>
+                <div id="u508_text" class="text ">
+                  <p><span>在【国（境）外成本核算合并报表/采购入库】按【会计期间+法人编码】维度汇总金额</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u509" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u509.svg" id="u509_img" class="img generatedImage" viewbox="481 243 201 64">
+
+  <path d="M 1 1  L 201 1  L 201 63  L 1 63  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 481 243 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 63  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 481 243 )" class="stroke" />
+  <path d="M 0 0.5  L 201 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 481 243 )" class="stroke" />
+  <path d="M 0 63.5  L 201 63.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 481 243 )" class="stroke" />
+                </svg>
+                <div id="u509_text" class="text ">
+                  <p><span>按【会计期间+法人编码+单据类型+品类】汇总</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u510" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u510.svg" id="u510_img" class="img generatedImage" viewbox="682 243 228 64">
+
+  <path d="M 1 1  L 228 1  L 228 63  L 1 63  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 682 243 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 63  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 682 243 )" class="stroke" />
+  <path d="M 0 0.5  L 228 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 682 243 )" class="stroke" />
+  <path d="M 0 63.5  L 228 63.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 682 243 )" class="stroke" />
+                </svg>
+                <div id="u510_text" class="text ">
+                  <p><span>采购入库-库存品类调整</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u511" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u511.svg" id="u511_img" class="img generatedImage" viewbox="910 243 137 64">
+
+  <path d="M 1 1  L 137 1  L 137 63  L 1 63  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 910 243 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 63  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 910 243 )" class="stroke" />
+  <path d="M 0 0.5  L 137 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 910 243 )" class="stroke" />
+  <path d="M 0 63.5  L 137 63.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 910 243 )" class="stroke" />
+                </svg>
+                <div id="u511_text" class="text ">
+                  <p><span>所选会计期间</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u512" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u512.svg" id="u512_img" class="img generatedImage" viewbox="1047 243 231 64">
+
+  <path d="M 1 1  L 231 1  L 231 63  L 1 63  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1047 243 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 63  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1047 243 )" class="stroke" />
+  <path d="M 0 0.5  L 231 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1047 243 )" class="stroke" />
+  <path d="M 0 63.5  L 231 63.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1047 243 )" class="stroke" />
+                </svg>
+                <div id="u512_text" class="text ">
+                  <p><span>所选会计期间倒数第二天</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u513" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u513.svg" id="u513_img" class="img generatedImage" viewbox="1278 243 160 64">
+
+  <path d="M 1 1  L 160 1  L 160 63  L 1 63  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1278 243 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 63  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1278 243 )" class="stroke" />
+  <path d="M 0 0.5  L 160 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1278 243 )" class="stroke" />
+  <path d="M 0 63.5  L 160 63.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1278 243 )" class="stroke" />
+                </svg>
+                <div id="u513_text" class="text ">
+                  <p><span>-</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u514" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u514.svg" id="u514_img" class="img generatedImage" viewbox="1438 243 131 64">
+
+  <path d="M 1 1  L 131 1  L 131 63  L 1 63  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1438 243 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 63  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1438 243 )" class="stroke" />
+  <path d="M 0 0.5  L 131 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1438 243 )" class="stroke" />
+  <path d="M 0 63.5  L 131 63.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1438 243 )" class="stroke" />
+                </svg>
+                <div id="u514_text" class="text ">
+                  <p><span>-</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u515" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u515.svg" id="u515_img" class="img generatedImage" viewbox="1569 243 183 64">
+
+  <path d="M 1 1  L 183 1  L 183 63  L 1 63  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1569 243 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 63  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1569 243 )" class="stroke" />
+  <path d="M 0 0.5  L 183 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1569 243 )" class="stroke" />
+  <path d="M 0 63.5  L 183 63.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1569 243 )" class="stroke" />
+                </svg>
+                <div id="u515_text" class="text ">
+                  <p><span>法人在法人管理匹配对应金蝶法人</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u516" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u516.svg" id="u516_img" class="img generatedImage" viewbox="1752 243 205 64">
+
+  <path d="M 1 1  L 205 1  L 205 63  L 1 63  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1752 243 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 63  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1752 243 )" class="stroke" />
+  <path d="M 0 0.5  L 205 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1752 243 )" class="stroke" />
+  <path d="M 0 63.5  L 205 63.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1752 243 )" class="stroke" />
+                </svg>
+                <div id="u516_text" class="text ">
+                  <p><span>法人在法人管理匹配法人类型</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u517" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u517.svg" id="u517_img" class="img generatedImage" viewbox="1957 243 148 64">
+
+  <path d="M 1 1  L 148 1  L 148 63  L 1 63  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1957 243 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 63  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1957 243 )" class="stroke" />
+  <path d="M 0 0.5  L 148 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1957 243 )" class="stroke" />
+  <path d="M 0 63.5  L 148 63.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1957 243 )" class="stroke" />
+                </svg>
+                <div id="u517_text" class="text ">
+                  <p><span>原逻辑</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u518" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u518.svg" id="u518_img" class="img generatedImage" viewbox="2105 243 270 64">
+
+  <path d="M 1 1  L 270 1  L 270 63  L 1 63  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2105 243 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 63  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2105 243 )" class="stroke" />
+  <path d="M 0 0.5  L 270 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2105 243 )" class="stroke" />
+  <path d="M 0 63.5  L 270 63.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2105 243 )" class="stroke" />
+                </svg>
+                <div id="u518_text" class="text ">
+                  <p><span>同上</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u519" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u519.svg" id="u519_img" class="img generatedImage" viewbox="2375 243 221 64">
+
+  <path d="M 1 1  L 221 1  L 221 63  L 1 63  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2375 243 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 63  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2375 243 )" class="stroke" />
+  <path d="M 0 0.5  L 221 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2375 243 )" class="stroke" />
+  <path d="M 0 63.5  L 221 63.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2375 243 )" class="stroke" />
+                </svg>
+                <div id="u519_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u520" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u520.svg" id="u520_img" class="img generatedImage" viewbox="2596 243 205 64">
+
+  <path d="M 1 1  L 205 1  L 205 63  L 1 63  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2596 243 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 63  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2596 243 )" class="stroke" />
+  <path d="M 0 0.5  L 205 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2596 243 )" class="stroke" />
+  <path d="M 0 63.5  L 205 63.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2596 243 )" class="stroke" />
+                </svg>
+                <div id="u520_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u521" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u521.svg" id="u521_img" class="img generatedImage" viewbox="2801 243 106 64">
+
+  <path d="M 1 1  L 106 1  L 106 63  L 1 63  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2801 243 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 63  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2801 243 )" class="stroke" />
+  <path d="M 0 0.5  L 106 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2801 243 )" class="stroke" />
+  <path d="M 0 63.5  L 106 63.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2801 243 )" class="stroke" />
+                </svg>
+                <div id="u521_text" class="text ">
+                  <p><span>品类</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u522" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u522.svg" id="u522_img" class="img generatedImage" viewbox="2907 243 201 64">
+
+  <path d="M 1 1  L 201 1  L 201 63  L 1 63  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2907 243 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 63  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2907 243 )" class="stroke" />
+  <path d="M 0 0.5  L 201 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2907 243 )" class="stroke" />
+  <path d="M 0 63.5  L 201 63.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2907 243 )" class="stroke" />
+                </svg>
+                <div id="u522_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u523" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u523.svg" id="u523_img" class="img generatedImage" viewbox="3108 243 201 64">
+
+  <path d="M 1 1  L 201 1  L 201 63  L 1 63  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 3108 243 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 63  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3108 243 )" class="stroke" />
+  <path d="M 0 0.5  L 201 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3108 243 )" class="stroke" />
+  <path d="M 0 63.5  L 201 63.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3108 243 )" class="stroke" />
+                </svg>
+                <div id="u523_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u524" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u524.svg" id="u524_img" class="img generatedImage" viewbox="3309 243 204 64">
+
+  <path d="M 1 1  L 204 1  L 204 63  L 1 63  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 3309 243 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 63  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3309 243 )" class="stroke" />
+  <path d="M 0 0.5  L 204 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3309 243 )" class="stroke" />
+  <path d="M 0 63.5  L 204 63.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3309 243 )" class="stroke" />
+                </svg>
+                <div id="u524_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u525" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u525.svg" id="u525_img" class="img generatedImage" viewbox="3513 243 146 64">
+
+  <path d="M 1 1  L 146 1  L 146 63  L 1 63  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 3513 243 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 63  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3513 243 )" class="stroke" />
+  <path d="M 0 0.5  L 146 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3513 243 )" class="stroke" />
+  <path d="M 0 63.5  L 146 63.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3513 243 )" class="stroke" />
+                </svg>
+                <div id="u525_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u526" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u526.svg" id="u526_img" class="img generatedImage" viewbox="3659 243 128 64">
+
+  <path d="M 1 1  L 128 1  L 128 63  L 1 63  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 3659 243 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 63  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3659 243 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3659 243 )" class="stroke" />
+  <path d="M 0 63.5  L 128 63.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3659 243 )" class="stroke" />
+                </svg>
+                <div id="u526_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u527" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u527.svg" id="u527_img" class="img generatedImage" viewbox="3787 243 299 64">
+
+  <path d="M 1 1  L 299 1  L 299 63  L 1 63  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 3787 243 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 63  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3787 243 )" class="stroke" />
+  <path d="M 0 0.5  L 299 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3787 243 )" class="stroke" />
+  <path d="M 0 63.5  L 299 63.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3787 243 )" class="stroke" />
+                </svg>
+                <div id="u527_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u528" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u528.svg" id="u528_img" class="img generatedImage" viewbox="4086 243 231 64">
+
+  <path d="M 1 1  L 231 1  L 231 63  L 1 63  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 4086 243 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 63  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 4086 243 )" class="stroke" />
+  <path d="M 0 0.5  L 231 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 4086 243 )" class="stroke" />
+  <path d="M 0 63.5  L 231 63.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 4086 243 )" class="stroke" />
+                </svg>
+                <div id="u528_text" class="text ">
+                  <p><span>同上</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u529" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u529.svg" id="u529_img" class="img generatedImage" viewbox="4317 243 175 64">
+
+  <path d="M 1 1  L 175 1  L 175 63  L 1 63  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 4317 243 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 63  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 4317 243 )" class="stroke" />
+  <path d="M 0 0.5  L 175 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 4317 243 )" class="stroke" />
+  <path d="M 0 63.5  L 175 63.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 4317 243 )" class="stroke" />
+                </svg>
+                <div id="u529_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u530" class="ax_default table_cell transition notrs">
+                <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u530.svg" id="u530_img" class="img generatedImage" viewbox="4492 243 205 64">
+
+  <path d="M 1 1  L 204 1  L 204 63  L 1 63  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 4492 243 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 63  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 4492 243 )" class="stroke" />
+  <path d="M 0 0.5  L 205 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 4492 243 )" class="stroke" />
+  <path d="M 204.5 1  L 204.5 63  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 4492 243 )" class="stroke" />
+  <path d="M 0 63.5  L 205 63.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 4492 243 )" class="stroke" />
+                </svg>
+                <div id="u530_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u531" class="ax_default _文本段落 transition notrs">
+        <div id="u531_div" class=""></div>
+        <div id="u531_text" class="text ">
+          <p><span>跨法人调拨</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u532" class="ax_default _文本段落 transition notrs">
+        <div id="u532_div" class=""></div>
+        <div id="u532_text" class="text ">
+          <p><span>海外直采</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u533" class="ax_default _文本段落 transition notrs">
+        <div id="u533_div" class=""></div>
+        <div id="u533_text" class="text ">
+          <p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Negreta&quot;, &quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:700;">2.搜索框：</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u534" class="ax_default box_1 transition notrs">
+        <div id="u534_div" class=""></div>
+        <div id="u534_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (表格) -->
+      <div id="u535" class="ax_default">
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u536" class="ax_default table_cell transition notrs">
+          <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u536.svg" id="u536_img" class="img generatedImage" viewbox="0 0 330 30">
+
+  <path d="M 1 1  L 330 1  L 330 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(1, 111, 160, 0.4666666666666667)" stroke="none" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+  <path d="M 0 0.5  L 330 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+          </svg>
+          <div id="u536_text" class="text ">
+            <p><span>搜索框</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u537" class="ax_default table_cell transition notrs">
+          <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u537.svg" id="u537_img" class="img generatedImage" viewbox="330 0 888 30">
+
+  <path d="M 1 1  L 887 1  L 887 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(1, 111, 160, 0.4666666666666667)" stroke="none" transform="matrix(1 0 0 1 330 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 330 0 )" class="stroke" />
+  <path d="M 0 0.5  L 888 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 330 0 )" class="stroke" />
+  <path d="M 887.5 1  L 887.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 330 0 )" class="stroke" />
+          </svg>
+          <div id="u537_text" class="text ">
+            <p><span>说明</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u538" class="ax_default table_cell transition notrs">
+          <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u538.svg" id="u538_img" class="img generatedImage" viewbox="0 30 330 32">
+
+  <path d="M 1 1  L 330 1  L 330 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 30 )" class="stroke" />
+  <path d="M 0 0.5  L 330 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 30 )" class="stroke" />
+          </svg>
+          <div id="u538_text" class="text ">
+            <p><span>会计期间、单据编号、凭证状态、凭证号</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u539" class="ax_default table_cell transition notrs">
+          <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u539.svg" id="u539_img" class="img generatedImage" viewbox="330 30 888 32">
+
+  <path d="M 1 1  L 887 1  L 887 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 330 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 330 30 )" class="stroke" />
+  <path d="M 0 0.5  L 888 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 330 30 )" class="stroke" />
+  <path d="M 887.5 1  L 887.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 330 30 )" class="stroke" />
+          </svg>
+          <div id="u539_text" class="text ">
+            <p><span>参考其他数据来源</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u540" class="ax_default table_cell transition notrs">
+          <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u540.svg" id="u540_img" class="img generatedImage" viewbox="0 62 330 37">
+
+  <path d="M 1 1  L 330 1  L 330 37  L 1 37  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 62 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 37  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 62 )" class="stroke" />
+  <path d="M 0 0.5  L 330 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 62 )" class="stroke" />
+          </svg>
+          <div id="u540_text" class="text ">
+            <p><span>法人主体</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u541" class="ax_default table_cell transition notrs">
+          <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u541.svg" id="u541_img" class="img generatedImage" viewbox="330 62 888 37">
+
+  <path d="M 1 1  L 887 1  L 887 37  L 1 37  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 330 62 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 37  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 330 62 )" class="stroke" />
+  <path d="M 0 0.5  L 888 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 330 62 )" class="stroke" />
+  <path d="M 887.5 1  L 887.5 37  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 330 62 )" class="stroke" />
+          </svg>
+          <div id="u541_text" class="text ">
+            <p><span>下拉多选无默认值，选项包括法人管理【法人类型】=‘国外法人’或‘境外法人’的【金蝶法人名称】去重</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u542" class="ax_default table_cell transition notrs">
+          <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u542.svg" id="u542_img" class="img generatedImage" viewbox="0 99 330 34">
+
+  <path d="M 1 1  L 330 1  L 330 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 99 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 99 )" class="stroke" />
+  <path d="M 0 0.5  L 330 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 99 )" class="stroke" />
+          </svg>
+          <div id="u542_text" class="text ">
+            <p><span>法人类型</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u543" class="ax_default table_cell transition notrs">
+          <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u543.svg" id="u543_img" class="img generatedImage" viewbox="330 99 888 34">
+
+  <path d="M 1 1  L 887 1  L 887 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 330 99 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 330 99 )" class="stroke" />
+  <path d="M 0 0.5  L 888 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 330 99 )" class="stroke" />
+  <path d="M 887.5 1  L 887.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 330 99 )" class="stroke" />
+          </svg>
+          <div id="u543_text" class="text ">
+            <p><span>下拉多选无默认值，选项包括‘境外法人’‘国外法人’</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u544" class="ax_default table_cell transition notrs">
+          <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u544.svg" id="u544_img" class="img generatedImage" viewbox="0 133 330 34">
+
+  <path d="M 1 1  L 330 1  L 330 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 133 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 133 )" class="stroke" />
+  <path d="M 0 0.5  L 330 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 133 )" class="stroke" />
+          </svg>
+          <div id="u544_text" class="text ">
+            <p><span>单据类型</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u545" class="ax_default table_cell transition notrs">
+          <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u545.svg" id="u545_img" class="img generatedImage" viewbox="330 133 888 34">
+
+  <path d="M 1 1  L 887 1  L 887 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 330 133 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 330 133 )" class="stroke" />
+  <path d="M 0 0.5  L 888 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 330 133 )" class="stroke" />
+  <path d="M 887.5 1  L 887.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 330 133 )" class="stroke" />
+          </svg>
+          <div id="u545_text" class="text ">
+            <p><span>下拉多选无默认值，选项包括‘采购入库-跨法人调拨’‘采购入库-德恩’‘采购入库-海外采购’‘采购入库-库存品类调整’‘销售收入-德恩’‘德恩净额法’；</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u546" class="ax_default table_cell transition notrs">
+          <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u546.svg" id="u546_img" class="img generatedImage" viewbox="0 167 330 34">
+
+  <path d="M 1 1  L 330 1  L 330 33  L 1 33  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 167 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 167 )" class="stroke" />
+  <path d="M 0 0.5  L 330 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 167 )" class="stroke" />
+  <path d="M 0 33.5  L 330 33.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 167 )" class="stroke" />
+          </svg>
+          <div id="u546_text" class="text ">
+            <p><span>入库法人主体、出库法人主体</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u547" class="ax_default table_cell transition notrs">
+          <svg data="images/财务eas凭证-国境外成本核算-海外采购及出口入库/u547.svg" id="u547_img" class="img generatedImage" viewbox="330 167 888 34">
+
+  <path d="M 1 1  L 887 1  L 887 33  L 1 33  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 330 167 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 330 167 )" class="stroke" />
+  <path d="M 0 0.5  L 888 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 330 167 )" class="stroke" />
+  <path d="M 887.5 1  L 887.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 330 167 )" class="stroke" />
+  <path d="M 0 33.5  L 888 33.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 330 167 )" class="stroke" />
+          </svg>
+          <div id="u547_text" class="text ">
+            <p><span>下拉多选无默认值，选项包括列表数据去重；</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="resources/scripts/axure/ios.js"></script>
+  </body>
+</html>

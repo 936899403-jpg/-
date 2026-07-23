@@ -1,0 +1,655 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>新增FBA进销存倒挤销毁按钮</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/新增fba进销存倒挤销毁按钮/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-3.7.1.min.js"></script>
+    <script src="resources/scripts/axure/axQuery.js"></script>
+    <script src="resources/scripts/axure/globals.js"></script>
+    <script src="resources/scripts/axutils.js"></script>
+    <script src="resources/scripts/axure/annotation.js"></script>
+    <script src="resources/scripts/axure/axQuery.std.js"></script>
+    <script src="resources/scripts/axure/doc.js"></script>
+    <script src="resources/scripts/messagecenter.js"></script>
+    <script src="resources/scripts/axure/events.js"></script>
+    <script src="resources/scripts/axure/recording.js"></script>
+    <script src="resources/scripts/axure/action.js"></script>
+    <script src="resources/scripts/axure/expr.js"></script>
+    <script src="resources/scripts/axure/geometry.js"></script>
+    <script src="resources/scripts/axure/flyout.js"></script>
+    <script src="resources/scripts/axure/model.js"></script>
+    <script src="resources/scripts/axure/repeater.js"></script>
+    <script src="resources/scripts/axure/sto.js"></script>
+    <script src="resources/scripts/axure/utils.temp.js"></script>
+    <script src="resources/scripts/axure/variables.js"></script>
+    <script src="resources/scripts/axure/drag.js"></script>
+    <script src="resources/scripts/axure/move.js"></script>
+    <script src="resources/scripts/axure/visibility.js"></script>
+    <script src="resources/scripts/axure/style.js"></script>
+    <script src="resources/scripts/axure/adaptive.js"></script>
+    <script src="resources/scripts/axure/tree.js"></script>
+    <script src="resources/scripts/axure/init.temp.js"></script>
+    <script src="resources/scripts/axure/legacy.js"></script>
+    <script src="resources/scripts/axure/viewer.js"></script>
+    <script src="resources/scripts/axure/math.js"></script>
+    <script src="resources/scripts/axure/jquery.nicescroll.min.js"></script>
+    <script src="data/document.js"></script>
+    <script src="files/新增fba进销存倒挤销毁按钮/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (矩形) -->
+      <div id="u148" class="ax_default box_1 transition notrs">
+        <div id="u148_div" class=""></div>
+        <div id="u148_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u149" class="ax_default _文本段落 transition notrs">
+        <div id="u149_div" class=""></div>
+        <div id="u149_text" class="text ">
+          <p><span style="font-family:&quot;Arial Negreta&quot;, &quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:700;">1、需求背景：</span><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">其他出库【移除订单】定时任务获取的销毁（系统倒挤）数据不完整，需要通过对比库存日报表的卖家退货和期末核算的调出(亚马逊退仓)+销毁数量核实差异并补充；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Negreta&quot;, &quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:700;">2、需求方案：</span></p><p><span style="font-family:&quot;Arial Negreta&quot;, &quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:700;"><br></span></p><p><span style="font-family:&quot;Arial Negreta&quot;, &quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:700;">2.1【采购成本核算-境（国）外成本核算FBA底稿-期末核算】</span><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">：</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">新增【倒挤销毁数据】：2.1.1鼠标悬停时提示：对比期末核算与FBA库存日报表卖家退货数量差异并倒挤生成其他出库销毁数据；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 2.1.2筛选【法人管理】中【法人类型】=境（国）外法人，【模块类型】=‘FBA底稿’，且【当前期间】为上一自然月的未</span><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;color:#D9001B;">结</span><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">账数据，按【法人ID+当前期间】匹配并筛选期末（核算）当前页面的数据，再按【当前期间+法人+账号（取仓库拼接前的账号）+站点（取仓库拼接前的站点）+FNSKU】维度汇总【调出+销毁】匹配【FBA库存/亚马逊新库存/库存日报表（按月）】中对应【库存日期+法人（</span><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;color:#D9001B;">用账号在【基础设置/账号维护/亚马逊账号】匹英文名称获取对应法人主体</span><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">）+账号+站点+FNSKU】汇总的【卖家退货】，将【卖家退货】-(【调出+销毁】)的差异值</span><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;color:#D9001B;">（不为0）</span><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">生成一条【其他出库】数据，对应关系如下：</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;color:#D9001B;">每次生成数据前需先删除上次点倒挤销毁数据生成的同维度数据（删除也要符合【法人管理】中【法人类型】=境（国）外法人，【模块类型】=‘FBA底稿’，且【当前期间】为上一自然月的未结账数据，）</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;color:#D9001B;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;color:#D9001B;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;color:#D9001B;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (表格) -->
+      <div id="u150" class="ax_default">
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u151" class="ax_default table_cell1 transition notrs">
+          <svg data="images/fba底稿新增买家退货转其他出库类型/u99.svg" id="u151_img" class="img generatedImage" viewbox="0 0 150 40">
+
+  <path d="M 1 1  L 150 1  L 150 40  L 1 40  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" class="fill" />
+  <path d="M 0.5 1  L 0.5 40  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+  <path d="M 0 0.5  L 150 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+          </svg>
+          <div id="u151_text" class="text ">
+            <p><span>库存日报表（按月）</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u152" class="ax_default table_cell1 transition notrs">
+          <svg data="images/fba底稿新增买家退货转其他出库类型/u100.svg" id="u152_img" class="img generatedImage" viewbox="150 0 150 40">
+
+  <path d="M 1 1  L 150 1  L 150 40  L 1 40  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 150 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 40  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 150 0 )" class="stroke" />
+  <path d="M 0 0.5  L 150 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 150 0 )" class="stroke" />
+          </svg>
+          <div id="u152_text" class="text ">
+            <p><span>其他出库</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u153" class="ax_default table_cell1 transition notrs">
+          <svg data="images/fba底稿新增买家退货转其他出库类型/u101.svg" id="u153_img" class="img generatedImage" viewbox="300 0 767 40">
+
+  <path d="M 1 1  L 766 1  L 766 40  L 1 40  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 40  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 0 )" class="stroke" />
+  <path d="M 0 0.5  L 767 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 0 )" class="stroke" />
+  <path d="M 766.5 1  L 766.5 40  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 0 )" class="stroke" />
+          </svg>
+          <div id="u153_text" class="text ">
+            <p><span>备注</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u154" class="ax_default table_cell1 transition notrs">
+          <svg data="images/fba底稿新增买家退货转其他出库类型/u102.svg" id="u154_img" class="img generatedImage" viewbox="0 40 150 40">
+
+  <path d="M 1 1  L 150 1  L 150 40  L 1 40  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 40 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 40  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 40 )" class="stroke" />
+  <path d="M 0 0.5  L 150 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 40 )" class="stroke" />
+          </svg>
+          <div id="u154_text" class="text ">
+            <p><span>库存日期</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u155" class="ax_default table_cell1 transition notrs">
+          <svg data="images/fba底稿新增买家退货转其他出库类型/u103.svg" id="u155_img" class="img generatedImage" viewbox="150 40 150 40">
+
+  <path d="M 1 1  L 150 1  L 150 40  L 1 40  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 150 40 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 40  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 150 40 )" class="stroke" />
+  <path d="M 0 0.5  L 150 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 150 40 )" class="stroke" />
+          </svg>
+          <div id="u155_text" class="text ">
+            <p><span>期间</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u156" class="ax_default table_cell1 transition notrs">
+          <svg data="images/fba底稿新增买家退货转其他出库类型/u104.svg" id="u156_img" class="img generatedImage" viewbox="300 40 767 40">
+
+  <path d="M 1 1  L 766 1  L 766 40  L 1 40  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 40 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 40  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 40 )" class="stroke" />
+  <path d="M 0 0.5  L 767 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 40 )" class="stroke" />
+  <path d="M 766.5 1  L 766.5 40  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 40 )" class="stroke" />
+          </svg>
+          <div id="u156_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u157" class="ax_default table_cell1 transition notrs">
+          <svg data="images/fba底稿新增买家退货转其他出库类型/u105.svg" id="u157_img" class="img generatedImage" viewbox="0 80 150 40">
+
+  <path d="M 1 1  L 150 1  L 150 40  L 1 40  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 80 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 40  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 80 )" class="stroke" />
+  <path d="M 0 0.5  L 150 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 80 )" class="stroke" />
+          </svg>
+          <div id="u157_text" class="text ">
+            <p><span>法人</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u158" class="ax_default table_cell1 transition notrs">
+          <svg data="images/fba底稿新增买家退货转其他出库类型/u106.svg" id="u158_img" class="img generatedImage" viewbox="150 80 150 40">
+
+  <path d="M 1 1  L 150 1  L 150 40  L 1 40  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 150 80 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 40  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 150 80 )" class="stroke" />
+  <path d="M 0 0.5  L 150 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 150 80 )" class="stroke" />
+          </svg>
+          <div id="u158_text" class="text ">
+            <p><span>法人</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u159" class="ax_default table_cell1 transition notrs">
+          <svg data="images/fba底稿新增买家退货转其他出库类型/u107.svg" id="u159_img" class="img generatedImage" viewbox="300 80 767 40">
+
+  <path d="M 1 1  L 766 1  L 766 40  L 1 40  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 80 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 40  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 80 )" class="stroke" />
+  <path d="M 0 0.5  L 767 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 80 )" class="stroke" />
+  <path d="M 766.5 1  L 766.5 40  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 80 )" class="stroke" />
+          </svg>
+          <div id="u159_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u160" class="ax_default table_cell1 transition notrs">
+          <svg data="images/fba底稿新增买家退货转其他出库类型/u108.svg" id="u160_img" class="img generatedImage" viewbox="0 120 150 40">
+
+  <path d="M 1 1  L 150 1  L 150 40  L 1 40  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 120 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 40  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 120 )" class="stroke" />
+  <path d="M 0 0.5  L 150 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 120 )" class="stroke" />
+          </svg>
+          <div id="u160_text" class="text ">
+            <p><span>账号</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u161" class="ax_default table_cell1 transition notrs">
+          <svg data="images/fba底稿新增买家退货转其他出库类型/u109.svg" id="u161_img" class="img generatedImage" viewbox="150 120 150 40">
+
+  <path d="M 1 1  L 150 1  L 150 40  L 1 40  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 150 120 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 40  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 150 120 )" class="stroke" />
+  <path d="M 0 0.5  L 150 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 150 120 )" class="stroke" />
+          </svg>
+          <div id="u161_text" class="text ">
+            <p><span>账号</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u162" class="ax_default table_cell1 transition notrs">
+          <svg data="images/fba底稿新增买家退货转其他出库类型/u110.svg" id="u162_img" class="img generatedImage" viewbox="300 120 767 40">
+
+  <path d="M 1 1  L 766 1  L 766 40  L 1 40  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 120 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 40  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 120 )" class="stroke" />
+  <path d="M 0 0.5  L 767 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 120 )" class="stroke" />
+  <path d="M 766.5 1  L 766.5 40  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 120 )" class="stroke" />
+          </svg>
+          <div id="u162_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u163" class="ax_default table_cell1 transition notrs">
+          <svg data="images/fba底稿新增买家退货转其他出库类型/u111.svg" id="u163_img" class="img generatedImage" viewbox="0 160 150 103">
+
+  <path d="M 1 1  L 150 1  L 150 103  L 1 103  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 160 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 103  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 160 )" class="stroke" />
+  <path d="M 0 0.5  L 150 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 160 )" class="stroke" />
+          </svg>
+          <div id="u163_text" class="text ">
+            <p><span>站点区域</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u164" class="ax_default table_cell1 transition notrs">
+          <svg data="images/fba底稿新增买家退货转其他出库类型/u112.svg" id="u164_img" class="img generatedImage" viewbox="150 160 150 103">
+
+  <path d="M 1 1  L 150 1  L 150 103  L 1 103  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 150 160 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 103  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 150 160 )" class="stroke" />
+  <path d="M 0 0.5  L 150 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 150 160 )" class="stroke" />
+          </svg>
+          <div id="u164_text" class="text ">
+            <p><span>站点区域</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u165" class="ax_default table_cell1 transition notrs">
+          <svg data="images/fba底稿新增买家退货转其他出库类型/u113.svg" id="u165_img" class="img generatedImage" viewbox="300 160 767 103">
+
+  <path d="M 1 1  L 766 1  L 766 103  L 1 103  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 160 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 103  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 160 )" class="stroke" />
+  <path d="M 0 0.5  L 767 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 160 )" class="stroke" />
+  <path d="M 766.5 1  L 766.5 103  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 160 )" class="stroke" />
+          </svg>
+          <div id="u165_text" class="text ">
+            <p><span>北美缩写为：US</span></p><p><span>澳洲缩写为：AU</span></p><p><span>欧洲缩写为：EU</span></p><p><span>远东缩写为：JP</span></p><p><span>中东缩写为：ME</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u166" class="ax_default table_cell1 transition notrs">
+          <svg data="images/fba底稿新增买家退货转其他出库类型/u114.svg" id="u166_img" class="img generatedImage" viewbox="0 263 150 87">
+
+  <path d="M 1 1  L 150 1  L 150 87  L 1 87  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 263 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 87  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 263 )" class="stroke" />
+  <path d="M 0 0.5  L 150 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 263 )" class="stroke" />
+          </svg>
+          <div id="u166_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u167" class="ax_default table_cell1 transition notrs">
+          <svg data="images/fba底稿新增买家退货转其他出库类型/u115.svg" id="u167_img" class="img generatedImage" viewbox="150 263 150 87">
+
+  <path d="M 1 1  L 150 1  L 150 87  L 1 87  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 150 263 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 87  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 150 263 )" class="stroke" />
+  <path d="M 0 0.5  L 150 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 150 263 )" class="stroke" />
+          </svg>
+          <div id="u167_text" class="text ">
+            <p><span>仓库</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u168" class="ax_default table_cell1 transition notrs">
+          <svg data="images/fba底稿新增买家退货转其他出库类型/u116.svg" id="u168_img" class="img generatedImage" viewbox="300 263 767 87">
+
+  <path d="M 1 1  L 766 1  L 766 87  L 1 87  L 1 1  Z " fill-rule="nonzero" fill="rgba(0, 0, 0, 1)" stroke="none" transform="matrix(1 0 0 1 300 263 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 87  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 263 )" class="stroke" />
+  <path d="M 0 0.5  L 767 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 263 )" class="stroke" />
+  <path d="M 766.5 1  L 766.5 87  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 263 )" class="stroke" />
+          </svg>
+          <div id="u168_text" class="text ">
+            <p><span>【'FBA-'站点缩写+‘-’+账号】组合</span></p><p><span>若数据行的账户为qiyun，且站点的缩写为JP，则仓库字段值为：FBA-JP-qiyun</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u169" class="ax_default table_cell1 transition notrs">
+          <svg data="images/fba底稿新增买家退货转其他出库类型/u117.svg" id="u169_img" class="img generatedImage" viewbox="0 350 150 40">
+
+  <path d="M 1 1  L 150 1  L 150 40  L 1 40  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 350 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 40  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 350 )" class="stroke" />
+  <path d="M 0 0.5  L 150 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 350 )" class="stroke" />
+          </svg>
+          <div id="u169_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u170" class="ax_default table_cell1 transition notrs">
+          <svg data="images/fba底稿新增买家退货转其他出库类型/u118.svg" id="u170_img" class="img generatedImage" viewbox="150 350 150 40">
+
+  <path d="M 1 1  L 150 1  L 150 40  L 1 40  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 150 350 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 40  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 150 350 )" class="stroke" />
+  <path d="M 0 0.5  L 150 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 150 350 )" class="stroke" />
+          </svg>
+          <div id="u170_text" class="text ">
+            <p><span>亚马逊SKU</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u171" class="ax_default table_cell1 transition notrs">
+          <svg data="images/fba底稿新增买家退货转其他出库类型/u119.svg" id="u171_img" class="img generatedImage" viewbox="300 350 767 40">
+
+  <path d="M 1 1  L 766 1  L 766 40  L 1 40  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 350 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 40  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 350 )" class="stroke" />
+  <path d="M 0 0.5  L 767 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 350 )" class="stroke" />
+  <path d="M 766.5 1  L 766.5 40  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 350 )" class="stroke" />
+          </svg>
+          <div id="u171_text" class="text ">
+            <p><span>取所匹期末核算数据中【销毁】数量最大的对应【亚马逊SKU】</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u172" class="ax_default table_cell1 transition notrs">
+          <svg data="images/fba底稿新增买家退货转其他出库类型/u120.svg" id="u172_img" class="img generatedImage" viewbox="0 390 150 40">
+
+  <path d="M 1 1  L 150 1  L 150 40  L 1 40  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 390 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 40  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 390 )" class="stroke" />
+  <path d="M 0 0.5  L 150 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 390 )" class="stroke" />
+          </svg>
+          <div id="u172_text" class="text ">
+            <p><span>FNSKU</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u173" class="ax_default table_cell1 transition notrs">
+          <svg data="images/fba底稿新增买家退货转其他出库类型/u121.svg" id="u173_img" class="img generatedImage" viewbox="150 390 150 40">
+
+  <path d="M 1 1  L 150 1  L 150 40  L 1 40  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 150 390 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 40  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 150 390 )" class="stroke" />
+  <path d="M 0 0.5  L 150 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 150 390 )" class="stroke" />
+          </svg>
+          <div id="u173_text" class="text ">
+            <p><span>FNSKU</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u174" class="ax_default table_cell1 transition notrs">
+          <svg data="images/fba底稿新增买家退货转其他出库类型/u122.svg" id="u174_img" class="img generatedImage" viewbox="300 390 767 40">
+
+  <path d="M 1 1  L 766 1  L 766 40  L 1 40  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 390 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 40  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 390 )" class="stroke" />
+  <path d="M 0 0.5  L 767 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 390 )" class="stroke" />
+  <path d="M 766.5 1  L 766.5 40  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 390 )" class="stroke" />
+          </svg>
+          <div id="u174_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u175" class="ax_default table_cell1 transition notrs">
+          <svg data="images/fba底稿新增买家退货转其他出库类型/u123.svg" id="u175_img" class="img generatedImage" viewbox="0 430 150 40">
+
+  <path d="M 1 1  L 150 1  L 150 40  L 1 40  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 430 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 40  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 430 )" class="stroke" />
+  <path d="M 0 0.5  L 150 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 430 )" class="stroke" />
+          </svg>
+          <div id="u175_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u176" class="ax_default table_cell1 transition notrs">
+          <svg data="images/fba底稿新增买家退货转其他出库类型/u124.svg" id="u176_img" class="img generatedImage" viewbox="150 430 150 40">
+
+  <path d="M 1 1  L 150 1  L 150 40  L 1 40  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 150 430 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 40  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 150 430 )" class="stroke" />
+  <path d="M 0 0.5  L 150 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 150 430 )" class="stroke" />
+          </svg>
+          <div id="u176_text" class="text ">
+            <p><span>SKU</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u177" class="ax_default table_cell1 transition notrs">
+          <svg data="images/fba底稿新增买家退货转其他出库类型/u125.svg" id="u177_img" class="img generatedImage" viewbox="300 430 767 40">
+
+  <path d="M 1 1  L 766 1  L 766 40  L 1 40  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 430 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 40  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 430 )" class="stroke" />
+  <path d="M 0 0.5  L 767 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 430 )" class="stroke" />
+  <path d="M 766.5 1  L 766.5 40  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 430 )" class="stroke" />
+          </svg>
+          <div id="u177_text" class="text ">
+            <p><span>赋空值</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u178" class="ax_default table_cell1 transition notrs">
+          <svg data="images/fba底稿新增买家退货转其他出库类型/u126.svg" id="u178_img" class="img generatedImage" viewbox="0 470 150 40">
+
+  <path d="M 1 1  L 150 1  L 150 40  L 1 40  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 470 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 40  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 470 )" class="stroke" />
+  <path d="M 0 0.5  L 150 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 470 )" class="stroke" />
+          </svg>
+          <div id="u178_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u179" class="ax_default table_cell1 transition notrs">
+          <svg data="images/fba底稿新增买家退货转其他出库类型/u127.svg" id="u179_img" class="img generatedImage" viewbox="150 470 150 40">
+
+  <path d="M 1 1  L 150 1  L 150 40  L 1 40  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 150 470 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 40  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 150 470 )" class="stroke" />
+  <path d="M 0 0.5  L 150 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 150 470 )" class="stroke" />
+          </svg>
+          <div id="u179_text" class="text ">
+            <p><span>订单ID</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u180" class="ax_default table_cell1 transition notrs">
+          <svg data="images/fba底稿新增买家退货转其他出库类型/u128.svg" id="u180_img" class="img generatedImage" viewbox="300 470 767 40">
+
+  <path d="M 1 1  L 766 1  L 766 40  L 1 40  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 470 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 40  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 470 )" class="stroke" />
+  <path d="M 0 0.5  L 767 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 470 )" class="stroke" />
+  <path d="M 766.5 1  L 766.5 40  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 470 )" class="stroke" />
+          </svg>
+          <div id="u180_text" class="text ">
+            <p><span>赋空值</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u181" class="ax_default table_cell1 transition notrs">
+          <svg data="images/fba底稿新增买家退货转其他出库类型/u129.svg" id="u181_img" class="img generatedImage" viewbox="0 510 150 40">
+
+  <path d="M 1 1  L 150 1  L 150 40  L 1 40  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 510 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 40  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 510 )" class="stroke" />
+  <path d="M 0 0.5  L 150 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 510 )" class="stroke" />
+          </svg>
+          <div id="u181_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u182" class="ax_default table_cell1 transition notrs">
+          <svg data="images/fba底稿新增买家退货转其他出库类型/u130.svg" id="u182_img" class="img generatedImage" viewbox="150 510 150 40">
+
+  <path d="M 1 1  L 150 1  L 150 40  L 1 40  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 150 510 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 40  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 150 510 )" class="stroke" />
+  <path d="M 0 0.5  L 150 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 150 510 )" class="stroke" />
+          </svg>
+          <div id="u182_text" class="text ">
+            <p><span>数量</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u183" class="ax_default table_cell1 transition notrs">
+          <svg data="images/fba底稿新增买家退货转其他出库类型/u131.svg" id="u183_img" class="img generatedImage" viewbox="300 510 767 40">
+
+  <path d="M 1 1  L 766 1  L 766 40  L 1 40  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 510 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 40  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 510 )" class="stroke" />
+  <path d="M 0 0.5  L 767 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 510 )" class="stroke" />
+  <path d="M 766.5 1  L 766.5 40  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 510 )" class="stroke" />
+          </svg>
+          <div id="u183_text" class="text ">
+            <p><span>所计算的差异值</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u184" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增fba进销存倒挤销毁按钮/u184.svg" id="u184_img" class="img generatedImage" viewbox="0 550 150 62">
+
+  <path d="M 1 1  L 150 1  L 150 62  L 1 62  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 550 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 62  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 550 )" class="stroke" />
+  <path d="M 0 0.5  L 150 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 550 )" class="stroke" />
+          </svg>
+          <div id="u184_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u185" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增fba进销存倒挤销毁按钮/u185.svg" id="u185_img" class="img generatedImage" viewbox="150 550 150 62">
+
+  <path d="M 1 1  L 150 1  L 150 62  L 1 62  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 150 550 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 62  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 150 550 )" class="stroke" />
+  <path d="M 0 0.5  L 150 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 150 550 )" class="stroke" />
+          </svg>
+          <div id="u185_text" class="text ">
+            <p><span>类型</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u186" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增fba进销存倒挤销毁按钮/u186.svg" id="u186_img" class="img generatedImage" viewbox="300 550 767 62">
+
+  <path d="M 1 1  L 766 1  L 766 62  L 1 62  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 550 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 62  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 550 )" class="stroke" />
+  <path d="M 0 0.5  L 767 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 550 )" class="stroke" />
+  <path d="M 766.5 1  L 766.5 62  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 550 )" class="stroke" />
+          </svg>
+          <div id="u186_text" class="text ">
+            <p><span>赋固定值‘销毁（系统倒挤）’</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u187" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增fba进销存倒挤销毁按钮/u187.svg" id="u187_img" class="img generatedImage" viewbox="0 612 150 52">
+
+  <path d="M 1 1  L 150 1  L 150 52  L 1 52  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 612 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 52  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 612 )" class="stroke" />
+  <path d="M 0 0.5  L 150 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 612 )" class="stroke" />
+          </svg>
+          <div id="u187_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u188" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增fba进销存倒挤销毁按钮/u188.svg" id="u188_img" class="img generatedImage" viewbox="150 612 150 52">
+
+  <path d="M 1 1  L 150 1  L 150 52  L 1 52  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 150 612 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 52  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 150 612 )" class="stroke" />
+  <path d="M 0 0.5  L 150 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 150 612 )" class="stroke" />
+          </svg>
+          <div id="u188_text" class="text ">
+            <p><span>备注</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u189" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增fba进销存倒挤销毁按钮/u189.svg" id="u189_img" class="img generatedImage" viewbox="300 612 767 52">
+
+  <path d="M 1 1  L 766 1  L 766 52  L 1 52  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 612 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 52  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 612 )" class="stroke" />
+  <path d="M 0 0.5  L 767 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 612 )" class="stroke" />
+  <path d="M 766.5 1  L 766.5 52  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 612 )" class="stroke" />
+          </svg>
+          <div id="u189_text" class="text ">
+            <p><span>赋固定值‘根据FBA进销存倒挤’</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u190" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增fba进销存倒挤销毁按钮/u190.svg" id="u190_img" class="img generatedImage" viewbox="0 664 150 52">
+
+  <path d="M 1 1  L 150 1  L 150 51  L 1 51  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 664 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 51  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 664 )" class="stroke" />
+  <path d="M 0 0.5  L 150 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 664 )" class="stroke" />
+  <path d="M 0 51.5  L 150 51.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 664 )" class="stroke" />
+          </svg>
+          <div id="u190_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u191" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增fba进销存倒挤销毁按钮/u191.svg" id="u191_img" class="img generatedImage" viewbox="150 664 150 52">
+
+  <path d="M 1 1  L 150 1  L 150 51  L 1 51  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 150 664 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 51  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 150 664 )" class="stroke" />
+  <path d="M 0 0.5  L 150 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 150 664 )" class="stroke" />
+  <path d="M 0 51.5  L 150 51.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 150 664 )" class="stroke" />
+          </svg>
+          <div id="u191_text" class="text ">
+            <p><span>数据来源</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u192" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增fba进销存倒挤销毁按钮/u192.svg" id="u192_img" class="img generatedImage" viewbox="300 664 767 52">
+
+  <path d="M 1 1  L 766 1  L 766 51  L 1 51  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 664 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 51  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 664 )" class="stroke" />
+  <path d="M 0 0.5  L 767 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 664 )" class="stroke" />
+  <path d="M 766.5 1  L 766.5 51  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 664 )" class="stroke" />
+  <path d="M 0 51.5  L 767 51.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 664 )" class="stroke" />
+          </svg>
+          <div id="u192_text" class="text ">
+            <p><span>赋固定值：期末（核算）</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u193" class="ax_default _文本段落 transition notrs">
+        <div id="u193_div" class=""></div>
+        <div id="u193_text" class="text ">
+          <p><span style="font-family:&quot;Arial Negreta&quot;, &quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:700;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">2.1.3生成其他出库数据后，参考执行定时任务时，写入【匹配SKU】表的逻辑（下图所示）新增或更新匹配SKU页面数据</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图像) -->
+      <div id="u194" class="ax_default _图片_ transition notrs">
+        <img id="u194_img" class="img " src="images/fba底稿新增买家退货转其他出库类型/u143.png"/>
+        <div id="u194_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <script src="resources/scripts/axure/ios.js"></script>
+  </body>
+</html>
