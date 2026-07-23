@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>采购、头程成本、sku转换</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/采购、头程成本、sku转换/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-3.7.1.min.js"></script>
+    <script src="resources/scripts/axure/axQuery.js"></script>
+    <script src="resources/scripts/axure/globals.js"></script>
+    <script src="resources/scripts/axutils.js"></script>
+    <script src="resources/scripts/axure/annotation.js"></script>
+    <script src="resources/scripts/axure/axQuery.std.js"></script>
+    <script src="resources/scripts/axure/doc.js"></script>
+    <script src="resources/scripts/messagecenter.js"></script>
+    <script src="resources/scripts/axure/events.js"></script>
+    <script src="resources/scripts/axure/recording.js"></script>
+    <script src="resources/scripts/axure/action.js"></script>
+    <script src="resources/scripts/axure/expr.js"></script>
+    <script src="resources/scripts/axure/geometry.js"></script>
+    <script src="resources/scripts/axure/flyout.js"></script>
+    <script src="resources/scripts/axure/model.js"></script>
+    <script src="resources/scripts/axure/repeater.js"></script>
+    <script src="resources/scripts/axure/sto.js"></script>
+    <script src="resources/scripts/axure/utils.temp.js"></script>
+    <script src="resources/scripts/axure/variables.js"></script>
+    <script src="resources/scripts/axure/drag.js"></script>
+    <script src="resources/scripts/axure/move.js"></script>
+    <script src="resources/scripts/axure/visibility.js"></script>
+    <script src="resources/scripts/axure/style.js"></script>
+    <script src="resources/scripts/axure/adaptive.js"></script>
+    <script src="resources/scripts/axure/tree.js"></script>
+    <script src="resources/scripts/axure/init.temp.js"></script>
+    <script src="resources/scripts/axure/legacy.js"></script>
+    <script src="resources/scripts/axure/viewer.js"></script>
+    <script src="resources/scripts/axure/math.js"></script>
+    <script src="resources/scripts/axure/jquery.nicescroll.min.js"></script>
+    <script src="data/document.js"></script>
+    <script src="files/采购、头程成本、sku转换/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (矩形) -->
+      <div id="u3697" class="ax_default box_2 transition notrs">
+        <div id="u3697_div" class=""></div>
+        <div id="u3697_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u3698" class="ax_default _文本段落 transition notrs">
+        <div id="u3698_div" class=""></div>
+        <div id="u3698_text" class="text ">
+          <p style="font-size:18px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;color:#000000;">1、采购成本：</span></p><p style="font-size:16px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;">【拉取数据】：</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">新增拉取【成本核算/境外成本核算合并报表/期末（核算）】页面对应期间的【法人】【SKU】【不含毛利单价（期末）】（保留两位小数）（去重）至当前页面【法人主体】【公司SKU】【加权平均单价】；其余不变</span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 原需求：https://sk4m4b.axshare.com/#g=1&amp;id=u8pk83&amp;p=%E9%87%87%E8%B4%AD%E6%88%90%E6%9C%AC</span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:18px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;color:#000000;">2、头程成本：</span></p><p style="font-size:16px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;">2.1【拉取数据】：</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">原拉取数据源修改为【财务管理/头程单价】，即根据所筛选的未结存期间，拉取【财务管理/头程单价】页面对应【年月】的【法人主体】【公司SKU】【头程单价】（去重）至当前页面【期间】【公司SKU】【加权平均单价】中。其中，当所取头程单价币别非‘RMB’时，【加权平均单价】=头程单价*兑换人民币汇率（原币取币别，目标币取rmb，【在财务对接平台/汇率】取生效日期为当前期间倒数第二天的汇率）</span></p><p style="font-size:16px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;">2.2【新增、修改】：</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">新增法人主体：必录，手工录入，限制50个字符；</span></p><p style="font-size:16px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;">2.3【导入、下载导入模板】：</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">①期间右侧新增法人主体列；必录，限制50个字符；提示部分：最后一行改为‘请确保【期间+法人主体+公司SKU】维度唯一，数据重复则导入失败’；</span></p><p style="font-size:16px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;">2.4较重：</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">新增、修改、导入均改为按【期间+法人主体+公司SKU】较重；</span></p><p style="font-size:16px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;">2.5列表：</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">新增【法人主体】列位于期间右侧；</span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:18px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;color:#000000;">3、SKU转换：</span></p><p style="font-size:16px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;">【拉取数据】：</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">新增拉取【成本核算/境外成本核算FBA底稿/匹配SKU】页面对应期间的【法人】【仓库】【FNSKU】【亚马逊SKU】【SKU】（去重）至当前页面【法人主体】【FNSKU】【平台SKU】【公司SKU】中；其余不变</span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 原需求：https://sk4m4b.axshare.com/#g=1&amp;id=fux7r6&amp;p=sku%E8%BD%AC%E6%8D%A2</span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p>
+        </div>
+      </div>
+    </div>
+    <script src="resources/scripts/axure/ios.js"></script>
+  </body>
+</html>
