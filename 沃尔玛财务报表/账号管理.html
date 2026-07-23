@@ -1,0 +1,1189 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>账号管理</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/账号管理/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-3.7.1.min.js"></script>
+    <script src="resources/scripts/axure/axQuery.js"></script>
+    <script src="resources/scripts/axure/globals.js"></script>
+    <script src="resources/scripts/axutils.js"></script>
+    <script src="resources/scripts/axure/annotation.js"></script>
+    <script src="resources/scripts/axure/axQuery.std.js"></script>
+    <script src="resources/scripts/axure/doc.js"></script>
+    <script src="resources/scripts/messagecenter.js"></script>
+    <script src="resources/scripts/axure/events.js"></script>
+    <script src="resources/scripts/axure/recording.js"></script>
+    <script src="resources/scripts/axure/action.js"></script>
+    <script src="resources/scripts/axure/expr.js"></script>
+    <script src="resources/scripts/axure/geometry.js"></script>
+    <script src="resources/scripts/axure/flyout.js"></script>
+    <script src="resources/scripts/axure/model.js"></script>
+    <script src="resources/scripts/axure/repeater.js"></script>
+    <script src="resources/scripts/axure/sto.js"></script>
+    <script src="resources/scripts/axure/utils.temp.js"></script>
+    <script src="resources/scripts/axure/variables.js"></script>
+    <script src="resources/scripts/axure/drag.js"></script>
+    <script src="resources/scripts/axure/move.js"></script>
+    <script src="resources/scripts/axure/visibility.js"></script>
+    <script src="resources/scripts/axure/style.js"></script>
+    <script src="resources/scripts/axure/adaptive.js"></script>
+    <script src="resources/scripts/axure/tree.js"></script>
+    <script src="resources/scripts/axure/init.temp.js"></script>
+    <script src="resources/scripts/axure/legacy.js"></script>
+    <script src="resources/scripts/axure/viewer.js"></script>
+    <script src="resources/scripts/axure/math.js"></script>
+    <script src="resources/scripts/axure/jquery.nicescroll.min.js"></script>
+    <script src="data/document.js"></script>
+    <script src="files/账号管理/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (图像) -->
+      <div id="u2527" class="ax_default _图片_ transition notrs">
+        <img id="u2527_img" class="img " src="images/账号管理/u2527.png"/>
+        <div id="u2527_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u2528" class="ax_default box_2 transition notrs">
+        <div id="u2528_div" class=""></div>
+        <div id="u2528_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u2529" class="ax_default _文本段落 transition notrs">
+        <div id="u2529_div" class=""></div>
+        <div id="u2529_text" class="text ">
+          <p style="font-size:20px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;color:#000000;">1.需求说明</span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">新增Walmart页签至【其他平台】左侧用于维护Walmart账号；</span></p><p style="font-size:20px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;color:#000000;"><br></span></p><p style="font-size:20px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;color:#000000;">2.定时任务：</span></p><p style="font-size:20px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;color:#000000;"><br></span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; 2.1 每月1号0点复制【会计期间】为上一自然月的账号数据生成一份【会计期间】为当前自然月的账号数据； </span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; （初始化：上线时将【基础设置/账号维护/其他平台】页面【平台】=“Walmart”，【账号状态】“正常/停用/冻结”的数据先拉取过来，【会计期间】赋值当前自然月）</span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; 2.2每小时一次在【基础设置/账号维护/其他平台账号】将【平台】=“Walmart”，【账号状态】“正常/停用/冻结”的数据，按照【店铺简称+accountID】维度新增或更新数据至当前页面；</span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 2.2.1新增：在所有“未结存”数据所在的【期间】中均同步新增一份数据；</span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 2.2.2更新：更新当前自然月“未结存”数据；</span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图像) -->
+      <div id="u2530" class="ax_default _图片_ transition notrs">
+        <img id="u2530_img" class="img " src="images/基础类型/u2346.png"/>
+        <div id="u2530_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u2531" class="ax_default _文本段落 transition notrs">
+        <div id="u2531_div" class=""></div>
+        <div id="u2531_text" class="text ">
+          <p><span>Walmart</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图像) -->
+      <div id="u2532" class="ax_default _图片_ transition notrs">
+        <img id="u2532_img" class="img " src="images/基础类型/u2345.png"/>
+        <div id="u2532_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u2533" class="ax_default box_1 transition notrs">
+        <div id="u2533_div" class=""></div>
+        <div id="u2533_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (组合) -->
+      <div id="u2534" class="ax_default" data-left="613" data-top="1194" data-width="1034" data-height="525" layer-opacity="1">
+
+        <!-- Unnamed (表格) -->
+        <div id="u2535" class="ax_default">
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u2536" class="ax_default table_cell transition notrs">
+            <svg data="images/账号管理/u2536.svg" id="u2536_img" class="img generatedImage" viewbox="0 0 346 34">
+
+  <path d="M 1 1  L 346 1  L 346 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(96, 171, 204, 1)" stroke="none" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+  <path d="M 0 0.5  L 346 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+            </svg>
+            <div id="u2536_text" class="text ">
+              <p><span>字段名</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u2537" class="ax_default table_cell transition notrs">
+            <svg data="images/账号管理/u2537.svg" id="u2537_img" class="img generatedImage" viewbox="346 0 675 34">
+
+  <path d="M 1 1  L 674 1  L 674 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(96, 171, 204, 1)" stroke="none" transform="matrix(1 0 0 1 346 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 346 0 )" class="stroke" />
+  <path d="M 0 0.5  L 675 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 346 0 )" class="stroke" />
+  <path d="M 674.5 1  L 674.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 346 0 )" class="stroke" />
+            </svg>
+            <div id="u2537_text" class="text ">
+              <p><span>取值逻辑</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u2538" class="ax_default table_cell transition notrs">
+            <svg data="images/账号管理/u2538.svg" id="u2538_img" class="img generatedImage" viewbox="0 34 346 34">
+
+  <path d="M 1 1  L 346 1  L 346 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 34 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 34 )" class="stroke" />
+  <path d="M 0 0.5  L 346 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 34 )" class="stroke" />
+            </svg>
+            <div id="u2538_text" class="text ">
+              <p><span>期间</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u2539" class="ax_default table_cell transition notrs">
+            <svg data="images/账号管理/u2539.svg" id="u2539_img" class="img generatedImage" viewbox="346 34 675 34">
+
+  <path d="M 1 1  L 674 1  L 674 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 346 34 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 346 34 )" class="stroke" />
+  <path d="M 0 0.5  L 675 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 346 34 )" class="stroke" />
+  <path d="M 674.5 1  L 674.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 346 34 )" class="stroke" />
+            </svg>
+            <div id="u2539_text" class="text ">
+              <p><span>新增：所有未结存期间；更新：当前自然月；</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u2540" class="ax_default table_cell transition notrs">
+            <svg data="images/账号管理/u2540.svg" id="u2540_img" class="img generatedImage" viewbox="0 68 346 34">
+
+  <path d="M 1 1  L 346 1  L 346 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 68 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 68 )" class="stroke" />
+  <path d="M 0 0.5  L 346 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 68 )" class="stroke" />
+            </svg>
+            <div id="u2540_text" class="text ">
+              <p><span>法人主体</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u2541" class="ax_default table_cell transition notrs">
+            <svg data="images/账号管理/u2541.svg" id="u2541_img" class="img generatedImage" viewbox="346 68 675 34">
+
+  <path d="M 1 1  L 674 1  L 674 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 346 68 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 346 68 )" class="stroke" />
+  <path d="M 0 0.5  L 675 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 346 68 )" class="stroke" />
+  <path d="M 674.5 1  L 674.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 346 68 )" class="stroke" />
+            </svg>
+            <div id="u2541_text" class="text ">
+              <p><span>取【账号维护其他平台账号】页面【归属法人主体】；</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u2542" class="ax_default table_cell transition notrs">
+            <svg data="images/账号管理/u2542.svg" id="u2542_img" class="img generatedImage" viewbox="0 102 346 34">
+
+  <path d="M 1 1  L 346 1  L 346 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 102 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 102 )" class="stroke" />
+  <path d="M 0 0.5  L 346 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 102 )" class="stroke" />
+            </svg>
+            <div id="u2542_text" class="text ">
+              <p><span>account ID</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u2543" class="ax_default table_cell transition notrs">
+            <svg data="images/账号管理/u2543.svg" id="u2543_img" class="img generatedImage" viewbox="346 102 675 34">
+
+  <path d="M 1 1  L 674 1  L 674 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 346 102 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 346 102 )" class="stroke" />
+  <path d="M 0 0.5  L 675 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 346 102 )" class="stroke" />
+  <path d="M 674.5 1  L 674.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 346 102 )" class="stroke" />
+            </svg>
+            <div id="u2543_text" class="text ">
+              <p><span>取【账号维护其他平台账号】页面【account ID】；</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u2544" class="ax_default table_cell transition notrs">
+            <svg data="images/账号管理/u2544.svg" id="u2544_img" class="img generatedImage" viewbox="0 136 346 32">
+
+  <path d="M 1 1  L 346 1  L 346 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 136 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 136 )" class="stroke" />
+  <path d="M 0 0.5  L 346 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 136 )" class="stroke" />
+            </svg>
+            <div id="u2544_text" class="text ">
+              <p><span>店铺</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u2545" class="ax_default table_cell transition notrs">
+            <svg data="images/账号管理/u2545.svg" id="u2545_img" class="img generatedImage" viewbox="346 136 675 32">
+
+  <path d="M 1 1  L 674 1  L 674 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 346 136 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 346 136 )" class="stroke" />
+  <path d="M 0 0.5  L 675 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 346 136 )" class="stroke" />
+  <path d="M 674.5 1  L 674.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 346 136 )" class="stroke" />
+            </svg>
+            <div id="u2545_text" class="text ">
+              <p><span>取【账号维护其他平台账号】页面【账号名称】；</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u2546" class="ax_default table_cell transition notrs">
+            <svg data="images/账号管理/u2546.svg" id="u2546_img" class="img generatedImage" viewbox="0 168 346 31">
+
+  <path d="M 1 1  L 346 1  L 346 31  L 1 31  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 168 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 31  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 168 )" class="stroke" />
+  <path d="M 0 0.5  L 346 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 168 )" class="stroke" />
+            </svg>
+            <div id="u2546_text" class="text ">
+              <p><span>店铺简称</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u2547" class="ax_default table_cell transition notrs">
+            <svg data="images/账号管理/u2547.svg" id="u2547_img" class="img generatedImage" viewbox="346 168 675 31">
+
+  <path d="M 1 1  L 674 1  L 674 31  L 1 31  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 346 168 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 31  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 346 168 )" class="stroke" />
+  <path d="M 0 0.5  L 675 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 346 168 )" class="stroke" />
+  <path d="M 674.5 1  L 674.5 31  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 346 168 )" class="stroke" />
+            </svg>
+            <div id="u2547_text" class="text ">
+              <p><span>取【账号维护其他平台账号】页面【英文名称】；</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u2548" class="ax_default table_cell transition notrs">
+            <svg data="images/账号管理/u2548.svg" id="u2548_img" class="img generatedImage" viewbox="0 199 346 30">
+
+  <path d="M 1 1  L 346 1  L 346 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 199 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 199 )" class="stroke" />
+  <path d="M 0 0.5  L 346 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 199 )" class="stroke" />
+            </svg>
+            <div id="u2548_text" class="text ">
+              <p><span>站点</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u2549" class="ax_default table_cell transition notrs">
+            <svg data="images/账号管理/u2549.svg" id="u2549_img" class="img generatedImage" viewbox="346 199 675 30">
+
+  <path d="M 1 1  L 674 1  L 674 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 346 199 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 346 199 )" class="stroke" />
+  <path d="M 0 0.5  L 675 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 346 199 )" class="stroke" />
+  <path d="M 674.5 1  L 674.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 346 199 )" class="stroke" />
+            </svg>
+            <div id="u2549_text" class="text ">
+              <p><span>取【账号维护其他平台账号】页面【国家】英文简称：加拿大=CA；美国=US；</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u2550" class="ax_default table_cell transition notrs">
+            <svg data="images/账号管理/u2550.svg" id="u2550_img" class="img generatedImage" viewbox="0 229 346 32">
+
+  <path d="M 1 1  L 346 1  L 346 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 229 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 229 )" class="stroke" />
+  <path d="M 0 0.5  L 346 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 229 )" class="stroke" />
+            </svg>
+            <div id="u2550_text" class="text ">
+              <p><span>部门</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u2551" class="ax_default table_cell transition notrs">
+            <svg data="images/账号管理/u2551.svg" id="u2551_img" class="img generatedImage" viewbox="346 229 675 32">
+
+  <path d="M 1 1  L 674 1  L 674 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 346 229 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 346 229 )" class="stroke" />
+  <path d="M 0 0.5  L 675 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 346 229 )" class="stroke" />
+  <path d="M 674.5 1  L 674.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 346 229 )" class="stroke" />
+            </svg>
+            <div id="u2551_text" class="text ">
+              <p><span>取【账号维护其他平台账号】页面【小组】；</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u2552" class="ax_default table_cell transition notrs">
+            <svg data="images/账号管理/u2552.svg" id="u2552_img" class="img generatedImage" viewbox="0 261 346 61">
+
+  <path d="M 1 1  L 346 1  L 346 61  L 1 61  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 261 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 61  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 261 )" class="stroke" />
+  <path d="M 0 0.5  L 346 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 261 )" class="stroke" />
+            </svg>
+            <div id="u2552_text" class="text ">
+              <p><span>部门编码</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u2553" class="ax_default table_cell transition notrs">
+            <svg data="images/账号管理/u2553.svg" id="u2553_img" class="img generatedImage" viewbox="346 261 675 61">
+
+  <path d="M 1 1  L 674 1  L 674 61  L 1 61  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 346 261 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 61  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 346 261 )" class="stroke" />
+  <path d="M 0 0.5  L 675 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 346 261 )" class="stroke" />
+  <path d="M 674.5 1  L 674.5 61  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 346 261 )" class="stroke" />
+            </svg>
+            <div id="u2553_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u2554" class="ax_default table_cell transition notrs">
+            <svg data="images/账号管理/u2554.svg" id="u2554_img" class="img generatedImage" viewbox="0 322 346 59">
+
+  <path d="M 1 1  L 346 1  L 346 59  L 1 59  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 322 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 59  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 322 )" class="stroke" />
+  <path d="M 0 0.5  L 346 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 322 )" class="stroke" />
+            </svg>
+            <div id="u2554_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u2555" class="ax_default table_cell transition notrs">
+            <svg data="images/账号管理/u2555.svg" id="u2555_img" class="img generatedImage" viewbox="346 322 675 59">
+
+  <path d="M 1 1  L 674 1  L 674 59  L 1 59  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 346 322 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 59  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 346 322 )" class="stroke" />
+  <path d="M 0 0.5  L 675 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 346 322 )" class="stroke" />
+  <path d="M 674.5 1  L 674.5 59  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 346 322 )" class="stroke" />
+            </svg>
+            <div id="u2555_text" class="text ">
+              <p><span>新增：赋空值，前端展示“-”；更新：不变；</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u2556" class="ax_default table_cell transition notrs">
+            <svg data="images/账号管理/u2556.svg" id="u2556_img" class="img generatedImage" viewbox="0 381 346 32">
+
+  <path d="M 1 1  L 346 1  L 346 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 381 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 381 )" class="stroke" />
+  <path d="M 0 0.5  L 346 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 381 )" class="stroke" />
+            </svg>
+            <div id="u2556_text" class="text ">
+              <p><span>状态</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u2557" class="ax_default table_cell transition notrs">
+            <svg data="images/账号管理/u2557.svg" id="u2557_img" class="img generatedImage" viewbox="346 381 675 32">
+
+  <path d="M 1 1  L 674 1  L 674 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 346 381 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 346 381 )" class="stroke" />
+  <path d="M 0 0.5  L 675 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 346 381 )" class="stroke" />
+  <path d="M 674.5 1  L 674.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 346 381 )" class="stroke" />
+            </svg>
+            <div id="u2557_text" class="text ">
+              <p><span>根据【账号维护其他平台账号】页面【账号状态】取值：当为“正常”时，赋值“正常使用”；否则赋值“暂停使用”；</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u2558" class="ax_default table_cell transition notrs">
+            <svg data="images/账号管理/u2558.svg" id="u2558_img" class="img generatedImage" viewbox="0 413 346 31">
+
+  <path d="M 1 1  L 346 1  L 346 31  L 1 31  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 413 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 31  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 413 )" class="stroke" />
+  <path d="M 0 0.5  L 346 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 413 )" class="stroke" />
+            </svg>
+            <div id="u2558_text" class="text ">
+              <p><span>创建人</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u2559" class="ax_default table_cell transition notrs">
+            <svg data="images/账号管理/u2559.svg" id="u2559_img" class="img generatedImage" viewbox="346 413 675 31">
+
+  <path d="M 1 1  L 674 1  L 674 31  L 1 31  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 346 413 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 31  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 346 413 )" class="stroke" />
+  <path d="M 0 0.5  L 675 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 346 413 )" class="stroke" />
+  <path d="M 674.5 1  L 674.5 31  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 346 413 )" class="stroke" />
+            </svg>
+            <div id="u2559_text" class="text ">
+              <p><span>新增：默认为“system”；更新：不变；</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u2560" class="ax_default table_cell transition notrs">
+            <svg data="images/账号管理/u2560.svg" id="u2560_img" class="img generatedImage" viewbox="0 444 346 31">
+
+  <path d="M 1 1  L 346 1  L 346 31  L 1 31  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 444 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 31  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 444 )" class="stroke" />
+  <path d="M 0 0.5  L 346 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 444 )" class="stroke" />
+            </svg>
+            <div id="u2560_text" class="text ">
+              <p><span>最后修改人</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u2561" class="ax_default table_cell transition notrs">
+            <svg data="images/账号管理/u2561.svg" id="u2561_img" class="img generatedImage" viewbox="346 444 675 31">
+
+  <path d="M 1 1  L 674 1  L 674 31  L 1 31  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 346 444 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 31  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 346 444 )" class="stroke" />
+  <path d="M 0 0.5  L 675 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 346 444 )" class="stroke" />
+  <path d="M 674.5 1  L 674.5 31  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 346 444 )" class="stroke" />
+            </svg>
+            <div id="u2561_text" class="text ">
+              <p><span>新增：赋空值；更新：赋值对应更新人；</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u2562" class="ax_default table_cell transition notrs">
+            <svg data="images/账号管理/u2562.svg" id="u2562_img" class="img generatedImage" viewbox="0 475 346 34">
+
+  <path d="M 1 1  L 346 1  L 346 33  L 1 33  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 475 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 475 )" class="stroke" />
+  <path d="M 0 0.5  L 346 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 475 )" class="stroke" />
+  <path d="M 0 33.5  L 346 33.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 475 )" class="stroke" />
+            </svg>
+            <div id="u2562_text" class="text ">
+              <p><span>数据状态</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u2563" class="ax_default table_cell transition notrs">
+            <svg data="images/账号管理/u2563.svg" id="u2563_img" class="img generatedImage" viewbox="346 475 675 34">
+
+  <path d="M 1 1  L 674 1  L 674 33  L 1 33  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 346 475 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 346 475 )" class="stroke" />
+  <path d="M 0 0.5  L 675 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 346 475 )" class="stroke" />
+  <path d="M 674.5 1  L 674.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 346 475 )" class="stroke" />
+  <path d="M 0 33.5  L 675 33.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 346 475 )" class="stroke" />
+            </svg>
+            <div id="u2563_text" class="text ">
+              <p><span>默认为“未结存”；</span></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u2564" class="ax_default _文本段落 transition notrs">
+          <div id="u2564_div" class=""></div>
+          <div id="u2564_text" class="text ">
+            <p><span>1.取【财务对接平台/EAS基础资料/组织单元】页面【名称】对应编码；</span></p><p><span>2.仅匹配【是否封存】=“否”，【成本中心实体组织】=“是”且【编码】</span><span style="text-decoration:underline ;">非A.开头</span><span>的数据；若匹配到多条则随机取；</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u2565" class="ax_default _文本段落 transition notrs">
+          <div id="u2565_div" class=""></div>
+          <div id="u2565_text" class="text ">
+            <p><span>平台账户名称、编码；收款银行；实体银行名称、编码；</span></p><p><span>第三方收款平台名称、编码；</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 弹窗字段属性 (图像) -->
+      <div id="u2566" class="ax_default _图片_ transition notrs" data-label="弹窗字段属性">
+        <img id="u2566_img" class="img " src="images/账号管理/弹窗字段属性_u2566.png"/>
+        <div id="u2566_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u2567" class="ax_default _文本段落 transition notrs">
+        <div id="u2567_div" class=""></div>
+        <div id="u2567_text" class="text ">
+          <p style="font-size:20px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;color:#000000;">3.按钮控制说明：</span></p><p style="font-size:20px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;color:#000000;"><br></span></p><p style="font-size:18px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;">&nbsp;&nbsp; 3.1【修改信息】：</span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; 3.1.1修改条件：仅支持勾选单条数据修改，否则修改失败，并分情况提示：请先选择数据！或 请选择单条数据！</span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 仅支持修改【数据状态】=“未结存”的数据，否则修改失败并提示：已结存，不可修改！ </span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; 3.1.2点击按钮打开弹窗</span><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;color:#B8741A;">——样式及字段属性详见原型1；</span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 确认时按照【平台账户编码】维度校验列表是否存在重复数据；若存在则修改失败并提示：平台账户编码已存在！</span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:18px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;">&nbsp; 3.2【手动更新】：</span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 3.2.1更新条件：仅支持勾选数据更新，否则更新失败并提示：请先选择数据！</span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 仅支持更新【数据状态】=“未结存”的数据，否则更新失败并提示：已结存，不可修改！</span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; 3.2.2按照【店铺简称+account ID】维度更新所选数据其他字段值，具体参考2.2.2；</span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:18px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;">&nbsp; 3.3【手动新增】：</span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; 3.3.1新增条件：所选期间所有数据【数据状态】=“未结存”；</span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; 3.3.2</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;color:#D9001B;">在所有“未结存”数据所在【期间】均同步新增</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">，数据源：在【基础设置/账号维护/其他平台账号】将【平台】=“Walmart”，【账号状态】“正常/停用/冻结”的数据，按照【店铺简称+account ID】维度把与当前列表不重复</span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 的数据新增至当前页面，具体参考2.2.1；</span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:18px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;">&nbsp; 3.4【导入模板下载】【导入】：</span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图像) -->
+      <div id="u2568" class="ax_default _图片_ transition notrs">
+        <img id="u2568_img" class="img " src="images/账号管理/u2568.png"/>
+        <div id="u2568_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (组合) -->
+      <div id="u2569" class="ax_default ax_default_hidden" style="display:none; visibility: hidden" data-left="808" data-top="188" data-width="552" data-height="592" layer-opacity="1">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u2570" class="ax_default box_1 transition notrs">
+          <div id="u2570_div" class=""></div>
+          <div id="u2570_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u2571" class="ax_default _文本段落 transition notrs">
+          <div id="u2571_div" class=""></div>
+          <div id="u2571_text" class="text ">
+            <p><span>修改信息</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (直线 / 行距) -->
+        <div id="u2572" class="ax_default line transition notrs">
+          <svg data="images/账号管理/u2572.svg" id="u2572_img" class="img generatedImage">
+
+  <g transform="matrix(1 0 0 1 -825 -225 )">
+    <path d="M 0 0.5  L 517 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 825 225 )" class="stroke" />
+  </g>
+          </svg>
+          <div id="u2572_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u2573" class="ax_default _文本段落 transition notrs">
+          <div id="u2573_div" class=""></div>
+          <div id="u2573_text" class="text ">
+            <p><span>法人主体：</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (文本框(单行)) -->
+        <div id="u2574" class="ax_default text_field transition notrs">
+          <div id="u2574_div" class=""></div>
+          <input id="u2574_input" type="text" value="" class="u2574_input"/>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u2575" class="ax_default _文本段落 transition notrs">
+          <div id="u2575_div" class=""></div>
+          <div id="u2575_text" class="text ">
+            <p><span>account ID：</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (文本框(单行)) -->
+        <div id="u2576" class="ax_default text_field transition notrs">
+          <div id="u2576_div" class=""></div>
+          <input id="u2576_input" type="text" value="" class="u2576_input"/>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u2577" class="ax_default _文本段落 transition notrs">
+          <div id="u2577_div" class=""></div>
+          <div id="u2577_text" class="text ">
+            <p><span>店铺：</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (文本框(单行)) -->
+        <div id="u2578" class="ax_default text_field transition notrs">
+          <div id="u2578_div" class=""></div>
+          <input id="u2578_input" type="text" value="" class="u2578_input"/>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u2579" class="ax_default _文本段落 transition notrs">
+          <div id="u2579_div" class=""></div>
+          <div id="u2579_text" class="text ">
+            <p><span>店铺简称：</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (文本框(单行)) -->
+        <div id="u2580" class="ax_default text_field transition notrs">
+          <div id="u2580_div" class=""></div>
+          <input id="u2580_input" type="text" value="" class="u2580_input"/>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u2581" class="ax_default _文本段落 transition notrs">
+          <div id="u2581_div" class=""></div>
+          <div id="u2581_text" class="text ">
+            <p><span>站点/币种：</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (文本框(单行)) -->
+        <div id="u2582" class="ax_default text_field transition notrs">
+          <div id="u2582_div" class=""></div>
+          <input id="u2582_input" type="text" value="" class="u2582_input"/>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u2583" class="ax_default _文本段落 transition notrs">
+          <div id="u2583_div" class=""></div>
+          <div id="u2583_text" class="text ">
+            <p><span>部门：</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (文本框(单行)) -->
+        <div id="u2584" class="ax_default text_field transition notrs">
+          <div id="u2584_div" class=""></div>
+          <input id="u2584_input" type="text" value="" class="u2584_input"/>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u2585" class="ax_default _文本段落 transition notrs">
+          <div id="u2585_div" class=""></div>
+          <div id="u2585_text" class="text ">
+            <p><span>部门编码：</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (文本框(单行)) -->
+        <div id="u2586" class="ax_default text_field transition notrs">
+          <div id="u2586_div" class=""></div>
+          <input id="u2586_input" type="text" value="" class="u2586_input"/>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u2587" class="ax_default _文本段落 transition notrs">
+          <div id="u2587_div" class=""></div>
+          <div id="u2587_text" class="text ">
+            <p><span style="color:#D9001B;">*</span><span>平台账户名称：</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (下拉列表框) -->
+        <div id="u2588" class="ax_default droplist transition notrs">
+          <div id="u2588_div" class=""></div>
+          <select id="u2588_input" class="u2588_input">
+          </select>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u2589" class="ax_default _文本段落 transition notrs">
+          <div id="u2589_div" class=""></div>
+          <div id="u2589_text" class="text ">
+            <p><span>收款银行：</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (文本框(单行)) -->
+        <div id="u2590" class="ax_default text_field transition notrs">
+          <div id="u2590_div" class=""></div>
+          <input id="u2590_input" type="text" value="请输入如果批量请用逗号隔开" class="u2590_input"/>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u2591" class="ax_default _文本段落 transition notrs">
+          <div id="u2591_div" class=""></div>
+          <div id="u2591_text" class="text ">
+            <p><span style="color:#D9001B;">*</span><span>平台账户编码：</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (下拉列表框) -->
+        <div id="u2592" class="ax_default droplist transition notrs">
+          <div id="u2592_div" class=""></div>
+          <select id="u2592_input" class="u2592_input">
+          </select>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u2593" class="ax_default _文本段落 transition notrs">
+          <div id="u2593_div" class=""></div>
+          <div id="u2593_text" class="text ">
+            <p><span>实体银行名称：</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (下拉列表框) -->
+        <div id="u2594" class="ax_default droplist transition notrs">
+          <div id="u2594_div" class=""></div>
+          <select id="u2594_input" class="u2594_input">
+            <option class="u2594_input_option" value="收款银行为实体银行时可编辑">收款银行为实体银行时可编辑</option>
+          </select>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u2595" class="ax_default _文本段落 transition notrs">
+          <div id="u2595_div" class=""></div>
+          <div id="u2595_text" class="text ">
+            <p><span>实体银行编码：</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (下拉列表框) -->
+        <div id="u2596" class="ax_default droplist transition notrs">
+          <div id="u2596_div" class=""></div>
+          <select id="u2596_input" class="u2596_input">
+          </select>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u2597" class="ax_default _文本段落 transition notrs">
+          <div id="u2597_div" class=""></div>
+          <div id="u2597_text" class="text ">
+            <p><span>第三方收款平台名称：</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (下拉列表框) -->
+        <div id="u2598" class="ax_default droplist transition notrs">
+          <div id="u2598_div" class=""></div>
+          <select id="u2598_input" class="u2598_input">
+          </select>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u2599" class="ax_default _文本段落 transition notrs">
+          <div id="u2599_div" class=""></div>
+          <div id="u2599_text" class="text ">
+            <p><span>第三方 收款平台编码：</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (下拉列表框) -->
+        <div id="u2600" class="ax_default droplist transition notrs">
+          <div id="u2600_div" class=""></div>
+          <select id="u2600_input" class="u2600_input">
+          </select>
+        </div>
+
+        <!-- Unnamed (图像) -->
+        <div id="u2601" class="ax_default _图片_ transition notrs">
+          <img id="u2601_img" class="img " src="images/账号管理/u2601.png"/>
+          <div id="u2601_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u2602" class="ax_default _文本段落 transition notrs">
+        <div id="u2602_div" class=""></div>
+        <div id="u2602_text" class="text ">
+          <p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4.1导入时校验【期间、法人主体、account ID、店铺简称、站点、平台账户编码】必录；</span></p><p><span><br></span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4.2按照【期间+法人主体+account ID+店铺简称+站点】维度更新列表其他字段；当【收款银行】=“实体银行”时，导入时校验【实体银行编码】必填，【第三方收款平台编码】置空；</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span style="color:#D9001B;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 存在值且≠“实体银行”时，导入时校验【第三方收款编码】必填，【实体银行编码】置空；</span></p><p><span style="color:#D9001B;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 当【实体银行编码】或【第三方收款平台编码】存在值时，导入时需校验【收款银行】必填；</span></p><p><span><br></span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4.3若列表无对应维度数据，则该部分导入失败，并给出提示如下图所示；</span></p><p><span><br></span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4.4若按照4.2维度校验出文件内部重复，则重复行均导入失败；</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图像) -->
+      <div id="u2603" class="ax_default _图片_ transition notrs">
+        <img id="u2603_img" class="img " src="images/账号管理/u2603.png"/>
+        <div id="u2603_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图像) -->
+      <div id="u2604" class="ax_default _图片_ transition notrs">
+        <img id="u2604_img" class="img " src="images/账号管理/u2604.svg"/>
+        <div id="u2604_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u2605" class="ax_default _文本段落 transition notrs">
+        <div id="u2605_div" class=""></div>
+        <div id="u2605_text" class="text ">
+          <p><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;">&nbsp; 3.5【结存店铺】：</span></p><p><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;"><br></span></p><p><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"> 3.5.1结存条件：仅支持结存【期间】非当前自然月且【数据状态】=“未结存”的数据，否则提示：不可结存当前期间的账号 或 所选期间的店铺已结存，请勿重复操作结存；</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; 3.5.2点击按钮后二次提示“确认后，将结存xx月份的店铺，数据将不可修改！请确认是否结存！”，确认后按照所选【期间】更新数据【数据状态】为“已结存”，最后提示：结存成功！</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp; </span><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;">3.6【重置】【搜索】【导出】：</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">常规操作；支持勾选导出；</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u2606" class="ax_default _文本段落 transition notrs">
+        <div id="u2606_div" class=""></div>
+        <div id="u2606_text" class="text ">
+          <p style="font-size:20px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;color:#000000;">4.列表</span></p><p style="font-size:18px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;">【状态】列：</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">默认为新增/更新后的数据状态；点击后切换为“暂停使用”/“正常使用”；</span><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;color:#B8741A;">——样式参考【账号管理】页面其他平台页签；</span></p><p style="font-size:20px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;color:#000000;"><br></span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u2607" class="ax_default _文本段落 transition notrs">
+        <div id="u2607_div" class=""></div>
+        <div id="u2607_text" class="text ">
+          <p><span>5.筛选条件：</span></p><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (表格) -->
+      <div id="u2608" class="ax_default">
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2609" class="ax_default table_cell transition notrs">
+          <svg data="images/销售数据/u1189.svg" id="u2609_img" class="img generatedImage" viewbox="0 0 159 39">
+
+  <path d="M 1 1  L 159 1  L 159 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(96, 171, 204, 1)" stroke="none" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+  <path d="M 0 0.5  L 159 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+          </svg>
+          <div id="u2609_text" class="text ">
+            <p><span>搜索框</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2610" class="ax_default table_cell transition notrs">
+          <svg data="images/账号管理/u2610.svg" id="u2610_img" class="img generatedImage" viewbox="159 0 543 39">
+
+  <path d="M 1 1  L 542 1  L 542 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(96, 171, 204, 1)" stroke="none" transform="matrix(1 0 0 1 159 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 159 0 )" class="stroke" />
+  <path d="M 0 0.5  L 543 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 159 0 )" class="stroke" />
+  <path d="M 542.5 1  L 542.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 159 0 )" class="stroke" />
+          </svg>
+          <div id="u2610_text" class="text ">
+            <p><span>说明</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2611" class="ax_default table_cell transition notrs">
+          <svg data="images/销售数据/u1191.svg" id="u2611_img" class="img generatedImage" viewbox="0 39 159 30">
+
+  <path d="M 1 1  L 159 1  L 159 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 39 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 39 )" class="stroke" />
+  <path d="M 0 0.5  L 159 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 39 )" class="stroke" />
+          </svg>
+          <div id="u2611_text" class="text ">
+            <p><span>期间</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2612" class="ax_default table_cell transition notrs">
+          <svg data="images/账号管理/u2612.svg" id="u2612_img" class="img generatedImage" viewbox="159 39 543 30">
+
+  <path d="M 1 1  L 542 1  L 542 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 159 39 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 159 39 )" class="stroke" />
+  <path d="M 0 0.5  L 543 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 159 39 )" class="stroke" />
+  <path d="M 542.5 1  L 542.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 159 39 )" class="stroke" />
+          </svg>
+          <div id="u2612_text" class="text ">
+            <p><span>单选日期选择框，必选，默认展示上一自然月；</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2613" class="ax_default table_cell transition notrs">
+          <svg data="images/账号管理/u2613.svg" id="u2613_img" class="img generatedImage" viewbox="0 69 159 27">
+
+  <path d="M 1 1  L 159 1  L 159 27  L 1 27  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 69 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 27  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 69 )" class="stroke" />
+  <path d="M 0 0.5  L 159 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 69 )" class="stroke" />
+          </svg>
+          <div id="u2613_text" class="text ">
+            <p><span>法人主体</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2614" class="ax_default table_cell transition notrs">
+          <svg data="images/账号管理/u2614.svg" id="u2614_img" class="img generatedImage" viewbox="159 69 543 27">
+
+  <path d="M 1 1  L 542 1  L 542 27  L 1 27  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 159 69 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 27  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 159 69 )" class="stroke" />
+  <path d="M 0 0.5  L 543 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 159 69 )" class="stroke" />
+  <path d="M 542.5 1  L 542.5 27  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 159 69 )" class="stroke" />
+          </svg>
+          <div id="u2614_text" class="text ">
+            <p><span>下拉多选，无默认值，选项展示列表去重数据；</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2615" class="ax_default table_cell transition notrs">
+          <svg data="images/账号管理/u2615.svg" id="u2615_img" class="img generatedImage" viewbox="0 96 159 30">
+
+  <path d="M 1 1  L 159 1  L 159 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 96 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 96 )" class="stroke" />
+  <path d="M 0 0.5  L 159 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 96 )" class="stroke" />
+          </svg>
+          <div id="u2615_text" class="text ">
+            <p><span>店铺</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2616" class="ax_default table_cell transition notrs">
+          <svg data="images/账号管理/u2616.svg" id="u2616_img" class="img generatedImage" viewbox="159 96 543 30">
+
+  <path d="M 1 1  L 542 1  L 542 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 159 96 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 159 96 )" class="stroke" />
+  <path d="M 0 0.5  L 543 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 159 96 )" class="stroke" />
+  <path d="M 542.5 1  L 542.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 159 96 )" class="stroke" />
+          </svg>
+          <div id="u2616_text" class="text ">
+            <p><span>弹窗多选，无默认值，选项展示列表去重数据；</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2617" class="ax_default table_cell transition notrs">
+          <svg data="images/账号管理/u2617.svg" id="u2617_img" class="img generatedImage" viewbox="0 126 159 30">
+
+  <path d="M 1 1  L 159 1  L 159 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 126 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 126 )" class="stroke" />
+  <path d="M 0 0.5  L 159 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 126 )" class="stroke" />
+          </svg>
+          <div id="u2617_text" class="text ">
+            <p><span>店铺简称</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2618" class="ax_default table_cell transition notrs">
+          <svg data="images/账号管理/u2618.svg" id="u2618_img" class="img generatedImage" viewbox="159 126 543 30">
+
+  <path d="M 1 1  L 542 1  L 542 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 159 126 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 159 126 )" class="stroke" />
+  <path d="M 0 0.5  L 543 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 159 126 )" class="stroke" />
+  <path d="M 542.5 1  L 542.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 159 126 )" class="stroke" />
+          </svg>
+          <div id="u2618_text" class="text ">
+            <p><span>文本框，支持模糊批量搜索；</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2619" class="ax_default table_cell transition notrs">
+          <svg data="images/账号管理/u2619.svg" id="u2619_img" class="img generatedImage" viewbox="0 156 159 30">
+
+  <path d="M 1 1  L 159 1  L 159 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 156 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 156 )" class="stroke" />
+  <path d="M 0 0.5  L 159 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 156 )" class="stroke" />
+          </svg>
+          <div id="u2619_text" class="text ">
+            <p><span>站点</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2620" class="ax_default table_cell transition notrs">
+          <svg data="images/账号管理/u2620.svg" id="u2620_img" class="img generatedImage" viewbox="159 156 543 30">
+
+  <path d="M 1 1  L 542 1  L 542 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 159 156 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 159 156 )" class="stroke" />
+  <path d="M 0 0.5  L 543 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 159 156 )" class="stroke" />
+  <path d="M 542.5 1  L 542.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 159 156 )" class="stroke" />
+          </svg>
+          <div id="u2620_text" class="text ">
+            <p><span>下拉多选，无默认值，选项展示列表去重数据；</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2621" class="ax_default table_cell transition notrs">
+          <svg data="images/账号管理/u2621.svg" id="u2621_img" class="img generatedImage" viewbox="0 186 159 30">
+
+  <path d="M 1 1  L 159 1  L 159 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 186 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 186 )" class="stroke" />
+  <path d="M 0 0.5  L 159 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 186 )" class="stroke" />
+          </svg>
+          <div id="u2621_text" class="text ">
+            <p><span>部门</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2622" class="ax_default table_cell transition notrs">
+          <svg data="images/账号管理/u2622.svg" id="u2622_img" class="img generatedImage" viewbox="159 186 543 30">
+
+  <path d="M 1 1  L 542 1  L 542 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 159 186 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 159 186 )" class="stroke" />
+  <path d="M 0 0.5  L 543 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 159 186 )" class="stroke" />
+  <path d="M 542.5 1  L 542.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 159 186 )" class="stroke" />
+          </svg>
+          <div id="u2622_text" class="text ">
+            <p><span>弹窗多选，无默认值，选项展示列表去重数据；</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2623" class="ax_default table_cell transition notrs">
+          <svg data="images/账号管理/u2623.svg" id="u2623_img" class="img generatedImage" viewbox="0 216 159 30">
+
+  <path d="M 1 1  L 159 1  L 159 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 216 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 216 )" class="stroke" />
+  <path d="M 0 0.5  L 159 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 216 )" class="stroke" />
+          </svg>
+          <div id="u2623_text" class="text ">
+            <p><span>平台账户名称</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2624" class="ax_default table_cell transition notrs">
+          <svg data="images/账号管理/u2624.svg" id="u2624_img" class="img generatedImage" viewbox="159 216 543 30">
+
+  <path d="M 1 1  L 542 1  L 542 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 159 216 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 159 216 )" class="stroke" />
+  <path d="M 0 0.5  L 543 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 159 216 )" class="stroke" />
+  <path d="M 542.5 1  L 542.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 159 216 )" class="stroke" />
+          </svg>
+          <div id="u2624_text" class="text ">
+            <p><span>文本框，支持模糊批量搜索；</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2625" class="ax_default table_cell transition notrs">
+          <svg data="images/账号管理/u2625.svg" id="u2625_img" class="img generatedImage" viewbox="0 246 159 30">
+
+  <path d="M 1 1  L 159 1  L 159 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 246 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 246 )" class="stroke" />
+  <path d="M 0 0.5  L 159 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 246 )" class="stroke" />
+          </svg>
+          <div id="u2625_text" class="text ">
+            <p><span>收款银行</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2626" class="ax_default table_cell transition notrs">
+          <svg data="images/账号管理/u2626.svg" id="u2626_img" class="img generatedImage" viewbox="159 246 543 30">
+
+  <path d="M 1 1  L 542 1  L 542 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 159 246 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 159 246 )" class="stroke" />
+  <path d="M 0 0.5  L 543 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 159 246 )" class="stroke" />
+  <path d="M 542.5 1  L 542.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 159 246 )" class="stroke" />
+          </svg>
+          <div id="u2626_text" class="text ">
+            <p><span>文本框，支持模糊批量搜索；</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2627" class="ax_default table_cell transition notrs">
+          <svg data="images/账号管理/u2627.svg" id="u2627_img" class="img generatedImage" viewbox="0 276 159 30">
+
+  <path d="M 1 1  L 159 1  L 159 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 276 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 276 )" class="stroke" />
+  <path d="M 0 0.5  L 159 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 276 )" class="stroke" />
+          </svg>
+          <div id="u2627_text" class="text ">
+            <p><span>实体银行名称</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2628" class="ax_default table_cell transition notrs">
+          <svg data="images/账号管理/u2628.svg" id="u2628_img" class="img generatedImage" viewbox="159 276 543 30">
+
+  <path d="M 1 1  L 542 1  L 542 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 159 276 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 159 276 )" class="stroke" />
+  <path d="M 0 0.5  L 543 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 159 276 )" class="stroke" />
+  <path d="M 542.5 1  L 542.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 159 276 )" class="stroke" />
+          </svg>
+          <div id="u2628_text" class="text ">
+            <p><span>文本框，支持模糊批量搜索；</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2629" class="ax_default table_cell transition notrs">
+          <svg data="images/账号管理/u2629.svg" id="u2629_img" class="img generatedImage" viewbox="0 306 159 32">
+
+  <path d="M 1 1  L 159 1  L 159 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 306 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 306 )" class="stroke" />
+  <path d="M 0 0.5  L 159 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 306 )" class="stroke" />
+          </svg>
+          <div id="u2629_text" class="text ">
+            <p><span>第三方收款平台名称</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2630" class="ax_default table_cell transition notrs">
+          <svg data="images/账号管理/u2630.svg" id="u2630_img" class="img generatedImage" viewbox="159 306 543 32">
+
+  <path d="M 1 1  L 542 1  L 542 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 159 306 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 159 306 )" class="stroke" />
+  <path d="M 0 0.5  L 543 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 159 306 )" class="stroke" />
+  <path d="M 542.5 1  L 542.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 159 306 )" class="stroke" />
+          </svg>
+          <div id="u2630_text" class="text ">
+            <p><span>文本框，支持模糊批量搜索；</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2631" class="ax_default table_cell transition notrs">
+          <svg data="images/账号管理/u2631.svg" id="u2631_img" class="img generatedImage" viewbox="0 338 159 30">
+
+  <path d="M 1 1  L 159 1  L 159 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 338 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 338 )" class="stroke" />
+  <path d="M 0 0.5  L 159 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 338 )" class="stroke" />
+          </svg>
+          <div id="u2631_text" class="text ">
+            <p><span>状态</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2632" class="ax_default table_cell transition notrs">
+          <svg data="images/账号管理/u2632.svg" id="u2632_img" class="img generatedImage" viewbox="159 338 543 30">
+
+  <path d="M 1 1  L 542 1  L 542 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 159 338 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 159 338 )" class="stroke" />
+  <path d="M 0 0.5  L 543 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 159 338 )" class="stroke" />
+  <path d="M 542.5 1  L 542.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 159 338 )" class="stroke" />
+          </svg>
+          <div id="u2632_text" class="text ">
+            <p><span>下拉多选，无默认值，选项包括“正常使用”和“暂停使用”；</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2633" class="ax_default table_cell transition notrs">
+          <svg data="images/账号管理/u2633.svg" id="u2633_img" class="img generatedImage" viewbox="0 368 159 30">
+
+  <path d="M 1 1  L 159 1  L 159 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 368 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 368 )" class="stroke" />
+  <path d="M 0 0.5  L 159 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 368 )" class="stroke" />
+  <path d="M 0 29.5  L 159 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 368 )" class="stroke" />
+          </svg>
+          <div id="u2633_text" class="text ">
+            <p><span>数据状态</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2634" class="ax_default table_cell transition notrs">
+          <svg data="images/账号管理/u2634.svg" id="u2634_img" class="img generatedImage" viewbox="159 368 543 30">
+
+  <path d="M 1 1  L 542 1  L 542 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 159 368 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 159 368 )" class="stroke" />
+  <path d="M 0 0.5  L 543 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 159 368 )" class="stroke" />
+  <path d="M 542.5 1  L 542.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 159 368 )" class="stroke" />
+  <path d="M 0 29.5  L 543 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 159 368 )" class="stroke" />
+          </svg>
+          <div id="u2634_text" class="text ">
+            <p><span>下拉多选，无默认值，选项包括“已结存”和“未结存”；</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="resources/scripts/axure/ios.js"></script>
+  </body>
+</html>
