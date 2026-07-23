@@ -1,0 +1,1359 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>新增拉取wayfair平台多渠道出库订单</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/新增拉取wayfair平台多渠道出库订单/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-3.7.1.min.js"></script>
+    <script src="resources/scripts/axure/axQuery.js"></script>
+    <script src="resources/scripts/axure/globals.js"></script>
+    <script src="resources/scripts/axutils.js"></script>
+    <script src="resources/scripts/axure/annotation.js"></script>
+    <script src="resources/scripts/axure/axQuery.std.js"></script>
+    <script src="resources/scripts/axure/doc.js"></script>
+    <script src="resources/scripts/messagecenter.js"></script>
+    <script src="resources/scripts/axure/events.js"></script>
+    <script src="resources/scripts/axure/recording.js"></script>
+    <script src="resources/scripts/axure/action.js"></script>
+    <script src="resources/scripts/axure/expr.js"></script>
+    <script src="resources/scripts/axure/geometry.js"></script>
+    <script src="resources/scripts/axure/flyout.js"></script>
+    <script src="resources/scripts/axure/model.js"></script>
+    <script src="resources/scripts/axure/repeater.js"></script>
+    <script src="resources/scripts/axure/sto.js"></script>
+    <script src="resources/scripts/axure/utils.temp.js"></script>
+    <script src="resources/scripts/axure/variables.js"></script>
+    <script src="resources/scripts/axure/drag.js"></script>
+    <script src="resources/scripts/axure/move.js"></script>
+    <script src="resources/scripts/axure/visibility.js"></script>
+    <script src="resources/scripts/axure/style.js"></script>
+    <script src="resources/scripts/axure/adaptive.js"></script>
+    <script src="resources/scripts/axure/tree.js"></script>
+    <script src="resources/scripts/axure/init.temp.js"></script>
+    <script src="resources/scripts/axure/legacy.js"></script>
+    <script src="resources/scripts/axure/viewer.js"></script>
+    <script src="resources/scripts/axure/math.js"></script>
+    <script src="resources/scripts/axure/jquery.nicescroll.min.js"></script>
+    <script src="data/document.js"></script>
+    <script src="files/新增拉取wayfair平台多渠道出库订单/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (矩形) -->
+      <div id="u592" class="ax_default box_2 transition notrs">
+        <div id="u592_div" class=""></div>
+        <div id="u592_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u593" class="ax_default _文本段落 transition notrs">
+        <div id="u593_div" class=""></div>
+        <div id="u593_text" class="text ">
+          <p><span style="font-family:&quot;Arial Negreta&quot;, &quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:700;">需求说明： </span><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">存在其他平台自发货用wayfair平台仓的货出库的情况（其他平台确认收入，wayfair确认成本）；当前其他平台订单页面尚未拉取到这部分wayfair平台仓的数据需新增；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Negreta&quot;, &quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:700;">定时任务：</span><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">新增拉取wayfair平台多渠道出库订单的定时任务：每月2号起每天凌晨3点拉取当前自然月1号到前一天的数据；每月1号凌晨3点拉取上一自然月1号到最后一天的数据；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; （仅限更新对应自然月wayfair平台未结账的数据，每次先删除对应自然月数据重拉）</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 对应关系如下表所示：</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (表格) -->
+      <div id="u594" class="ax_default">
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u595" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u43.svg" id="u595_img" class="img generatedImage" viewbox="0 0 128 30">
+
+  <path d="M 1 1  L 128 1  L 128 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+          </svg>
+          <div id="u595_text" class="text ">
+            <p><span>当前页面</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u596" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u596.svg" id="u596_img" class="img generatedImage" viewbox="128 0 1036 30">
+
+  <path d="M 1 1  L 1036 1  L 1036 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 0 )" class="stroke" />
+  <path d="M 0 0.5  L 1036 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 0 )" class="stroke" />
+          </svg>
+          <div id="u596_text" class="text ">
+            <p><span>【新自发货/分析统计/销售报表】取【发货时间】范围在当前自然月1号到前一天且【仓库名称】含‘CG发货’的数据</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u597" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u597.svg" id="u597_img" class="img generatedImage" viewbox="1164 0 432 30">
+
+  <path d="M 1 1  L 431 1  L 431 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1164 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 0 )" class="stroke" />
+  <path d="M 0 0.5  L 432 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 0 )" class="stroke" />
+  <path d="M 431.5 1  L 431.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 0 )" class="stroke" />
+          </svg>
+          <div id="u597_text" class="text ">
+            <p><span>备注</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u598" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u46.svg" id="u598_img" class="img generatedImage" viewbox="0 30 128 30">
+
+  <path d="M 1 1  L 128 1  L 128 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 30 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 30 )" class="stroke" />
+          </svg>
+          <div id="u598_text" class="text ">
+            <p><span>期间</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u599" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u599.svg" id="u599_img" class="img generatedImage" viewbox="128 30 1036 30">
+
+  <path d="M 1 1  L 1036 1  L 1036 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 30 )" class="stroke" />
+  <path d="M 0 0.5  L 1036 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 30 )" class="stroke" />
+          </svg>
+          <div id="u599_text" class="text ">
+            <p><span>取发货时间对应年月</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u600" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u600.svg" id="u600_img" class="img generatedImage" viewbox="1164 30 432 30">
+
+  <path d="M 1 1  L 431 1  L 431 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1164 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 30 )" class="stroke" />
+  <path d="M 0 0.5  L 432 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 30 )" class="stroke" />
+  <path d="M 431.5 1  L 431.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 30 )" class="stroke" />
+          </svg>
+          <div id="u600_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u601" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u49.svg" id="u601_img" class="img generatedImage" viewbox="0 60 128 30">
+
+  <path d="M 1 1  L 128 1  L 128 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 60 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 60 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 60 )" class="stroke" />
+          </svg>
+          <div id="u601_text" class="text ">
+            <p><span>法人主体</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u602" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u602.svg" id="u602_img" class="img generatedImage" viewbox="128 60 1036 30">
+
+  <path d="M 1 1  L 1036 1  L 1036 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 60 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 60 )" class="stroke" />
+  <path d="M 0 0.5  L 1036 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 60 )" class="stroke" />
+          </svg>
+          <div id="u602_text" class="text ">
+            <p><span>赋空值</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u603" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u603.svg" id="u603_img" class="img generatedImage" viewbox="1164 60 432 30">
+
+  <path d="M 1 1  L 431 1  L 431 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1164 60 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 60 )" class="stroke" />
+  <path d="M 0 0.5  L 432 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 60 )" class="stroke" />
+  <path d="M 431.5 1  L 431.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 60 )" class="stroke" />
+          </svg>
+          <div id="u603_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u604" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u52.svg" id="u604_img" class="img generatedImage" viewbox="0 90 128 30">
+
+  <path d="M 1 1  L 128 1  L 128 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 90 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 90 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 90 )" class="stroke" />
+          </svg>
+          <div id="u604_text" class="text ">
+            <p><span>平台名称</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u605" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u605.svg" id="u605_img" class="img generatedImage" viewbox="128 90 1036 30">
+
+  <path d="M 1 1  L 1036 1  L 1036 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 90 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 90 )" class="stroke" />
+  <path d="M 0 0.5  L 1036 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 90 )" class="stroke" />
+          </svg>
+          <div id="u605_text" class="text ">
+            <p><span>固定值‘wayfair’</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u606" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u606.svg" id="u606_img" class="img generatedImage" viewbox="1164 90 432 30">
+
+  <path d="M 1 1  L 431 1  L 431 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1164 90 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 90 )" class="stroke" />
+  <path d="M 0 0.5  L 432 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 90 )" class="stroke" />
+  <path d="M 431.5 1  L 431.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 90 )" class="stroke" />
+          </svg>
+          <div id="u606_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u607" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u55.svg" id="u607_img" class="img generatedImage" viewbox="0 120 128 30">
+
+  <path d="M 1 1  L 128 1  L 128 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 120 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 120 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 120 )" class="stroke" />
+          </svg>
+          <div id="u607_text" class="text ">
+            <p><span>平台订单号</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u608" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u608.svg" id="u608_img" class="img generatedImage" viewbox="128 120 1036 30">
+
+  <path d="M 1 1  L 1036 1  L 1036 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 120 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 120 )" class="stroke" />
+  <path d="M 0 0.5  L 1036 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 120 )" class="stroke" />
+          </svg>
+          <div id="u608_text" class="text ">
+            <p><span>取平台订单号</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u609" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u609.svg" id="u609_img" class="img generatedImage" viewbox="1164 120 432 30">
+
+  <path d="M 1 1  L 431 1  L 431 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1164 120 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 120 )" class="stroke" />
+  <path d="M 0 0.5  L 432 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 120 )" class="stroke" />
+  <path d="M 431.5 1  L 431.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 120 )" class="stroke" />
+          </svg>
+          <div id="u609_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u610" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u58.svg" id="u610_img" class="img generatedImage" viewbox="0 150 128 30">
+
+  <path d="M 1 1  L 128 1  L 128 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 150 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 150 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 150 )" class="stroke" />
+          </svg>
+          <div id="u610_text" class="text ">
+            <p><span>客户订单号</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u611" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u611.svg" id="u611_img" class="img generatedImage" viewbox="128 150 1036 30">
+
+  <path d="M 1 1  L 1036 1  L 1036 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 150 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 150 )" class="stroke" />
+  <path d="M 0 0.5  L 1036 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 150 )" class="stroke" />
+          </svg>
+          <div id="u611_text" class="text ">
+            <p><span>赋空值</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u612" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u612.svg" id="u612_img" class="img generatedImage" viewbox="1164 150 432 30">
+
+  <path d="M 1 1  L 431 1  L 431 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1164 150 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 150 )" class="stroke" />
+  <path d="M 0 0.5  L 432 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 150 )" class="stroke" />
+  <path d="M 431.5 1  L 431.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 150 )" class="stroke" />
+          </svg>
+          <div id="u612_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u613" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u613.svg" id="u613_img" class="img generatedImage" viewbox="0 180 128 49">
+
+  <path d="M 1 1  L 128 1  L 128 49  L 1 49  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 180 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 49  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 180 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 180 )" class="stroke" />
+          </svg>
+          <div id="u613_text" class="text ">
+            <p><span>账号</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u614" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u614.svg" id="u614_img" class="img generatedImage" viewbox="128 180 1036 49">
+
+  <path d="M 1 1  L 1036 1  L 1036 49  L 1 49  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 180 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 49  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 180 )" class="stroke" />
+  <path d="M 0 0.5  L 1036 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 180 )" class="stroke" />
+          </svg>
+          <div id="u614_text" class="text ">
+            <p><span>取【仓库】从左往右第一个‘-’和‘第二个-’中间或从左往右第一个‘-’右侧的字段值；</span></p><p><span>两种情况：①【CG发货-daman wayfair】，取daman wayfair；②【CG发货-daman wayfair-USACOPX2841-Light Green】，取daman wayfair；</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u615" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u615.svg" id="u615_img" class="img generatedImage" viewbox="1164 180 432 49">
+
+  <path d="M 1 1  L 431 1  L 431 49  L 1 49  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1164 180 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 49  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 180 )" class="stroke" />
+  <path d="M 0 0.5  L 432 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 180 )" class="stroke" />
+  <path d="M 431.5 1  L 431.5 49  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 180 )" class="stroke" />
+          </svg>
+          <div id="u615_text" class="text ">
+            <p><span>所取账号需在【基础设置/账号维护/其他平台账号】匹配【平台】=‘wayfair’的【账号名称】若未能匹到则该条数据不拉取</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u616" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u616.svg" id="u616_img" class="img generatedImage" viewbox="0 229 128 30">
+
+  <path d="M 1 1  L 128 1  L 128 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 229 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 229 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 229 )" class="stroke" />
+          </svg>
+          <div id="u616_text" class="text ">
+            <p><span>站点</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u617" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u617.svg" id="u617_img" class="img generatedImage" viewbox="128 229 1036 30">
+
+  <path d="M 1 1  L 1036 1  L 1036 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 229 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 229 )" class="stroke" />
+  <path d="M 0 0.5  L 1036 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 229 )" class="stroke" />
+          </svg>
+          <div id="u617_text" class="text ">
+            <p><span>取站点</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u618" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u618.svg" id="u618_img" class="img generatedImage" viewbox="1164 229 432 30">
+
+  <path d="M 1 1  L 431 1  L 431 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1164 229 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 229 )" class="stroke" />
+  <path d="M 0 0.5  L 432 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 229 )" class="stroke" />
+  <path d="M 431.5 1  L 431.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 229 )" class="stroke" />
+          </svg>
+          <div id="u618_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u619" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u619.svg" id="u619_img" class="img generatedImage" viewbox="0 259 128 30">
+
+  <path d="M 1 1  L 128 1  L 128 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 259 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 259 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 259 )" class="stroke" />
+          </svg>
+          <div id="u619_text" class="text ">
+            <p><span>部门</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u620" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u620.svg" id="u620_img" class="img generatedImage" viewbox="128 259 1036 30">
+
+  <path d="M 1 1  L 1036 1  L 1036 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 259 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 259 )" class="stroke" />
+  <path d="M 0 0.5  L 1036 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 259 )" class="stroke" />
+          </svg>
+          <div id="u620_text" class="text ">
+            <p><span>根据【店铺+站点】匹配并获取【账号维护/其他平台账号】对应部门</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u621" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u621.svg" id="u621_img" class="img generatedImage" viewbox="1164 259 432 30">
+
+  <path d="M 1 1  L 431 1  L 431 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1164 259 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 259 )" class="stroke" />
+  <path d="M 0 0.5  L 432 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 259 )" class="stroke" />
+  <path d="M 431.5 1  L 431.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 259 )" class="stroke" />
+          </svg>
+          <div id="u621_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u622" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u622.svg" id="u622_img" class="img generatedImage" viewbox="0 289 128 30">
+
+  <path d="M 1 1  L 128 1  L 128 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 289 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 289 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 289 )" class="stroke" />
+          </svg>
+          <div id="u622_text" class="text ">
+            <p><span>币别</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u623" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u623.svg" id="u623_img" class="img generatedImage" viewbox="128 289 1036 30">
+
+  <path d="M 1 1  L 1036 1  L 1036 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 289 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 289 )" class="stroke" />
+  <path d="M 0 0.5  L 1036 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 289 )" class="stroke" />
+          </svg>
+          <div id="u623_text" class="text ">
+            <p><span>取币种</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u624" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u624.svg" id="u624_img" class="img generatedImage" viewbox="1164 289 432 30">
+
+  <path d="M 1 1  L 431 1  L 431 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1164 289 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 289 )" class="stroke" />
+  <path d="M 0 0.5  L 432 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 289 )" class="stroke" />
+  <path d="M 431.5 1  L 431.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 289 )" class="stroke" />
+          </svg>
+          <div id="u624_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u625" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u625.svg" id="u625_img" class="img generatedImage" viewbox="0 319 128 34">
+
+  <path d="M 1 1  L 128 1  L 128 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 319 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 319 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 319 )" class="stroke" />
+          </svg>
+          <div id="u625_text" class="text ">
+            <p><span>平台SKU</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u626" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u626.svg" id="u626_img" class="img generatedImage" viewbox="128 319 1036 34">
+
+  <path d="M 1 1  L 1036 1  L 1036 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 319 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 319 )" class="stroke" />
+  <path d="M 0 0.5  L 1036 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 319 )" class="stroke" />
+          </svg>
+          <div id="u626_text" class="text ">
+            <p><span>①若所取【仓库】只含一个‘-’，则根据所取【平台+平台SKU】在【新自发货/更多设置/多渠道发货-SKU管理】中匹配并获取对应【多渠道SKU】；②否则，取【仓库】从左往右‘第二个-’右侧的字段值（排除中括号）；</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u627" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u627.svg" id="u627_img" class="img generatedImage" viewbox="1164 319 432 34">
+
+  <path d="M 1 1  L 431 1  L 431 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1164 319 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 319 )" class="stroke" />
+  <path d="M 0 0.5  L 432 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 319 )" class="stroke" />
+  <path d="M 431.5 1  L 431.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 319 )" class="stroke" />
+          </svg>
+          <div id="u627_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u628" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u628.svg" id="u628_img" class="img generatedImage" viewbox="0 353 128 30">
+
+  <path d="M 1 1  L 128 1  L 128 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 353 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 353 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 353 )" class="stroke" />
+          </svg>
+          <div id="u628_text" class="text ">
+            <p><span>公司SKU</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u629" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u629.svg" id="u629_img" class="img generatedImage" viewbox="128 353 1036 30">
+
+  <path d="M 1 1  L 1036 1  L 1036 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 353 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 353 )" class="stroke" />
+  <path d="M 0 0.5  L 1036 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 353 )" class="stroke" />
+          </svg>
+          <div id="u629_text" class="text ">
+            <p><span>根据【期间+平台名称+平台订单号+账号+平台SKU+站点】维度在【平台发货订单中心/基础资料设置】获取审核通过的对应公司SKU</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u630" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u630.svg" id="u630_img" class="img generatedImage" viewbox="1164 353 432 30">
+
+  <path d="M 1 1  L 431 1  L 431 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1164 353 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 353 )" class="stroke" />
+  <path d="M 0 0.5  L 432 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 353 )" class="stroke" />
+  <path d="M 431.5 1  L 431.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 353 )" class="stroke" />
+          </svg>
+          <div id="u630_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u631" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u631.svg" id="u631_img" class="img generatedImage" viewbox="0 383 128 30">
+
+  <path d="M 1 1  L 128 1  L 128 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 383 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 383 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 383 )" class="stroke" />
+          </svg>
+          <div id="u631_text" class="text ">
+            <p><span>产品名称</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u632" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u632.svg" id="u632_img" class="img generatedImage" viewbox="128 383 1036 30">
+
+  <path d="M 1 1  L 1036 1  L 1036 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 383 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 383 )" class="stroke" />
+  <path d="M 0 0.5  L 1036 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 383 )" class="stroke" />
+          </svg>
+          <div id="u632_text" class="text ">
+            <p><span>取SKU名称</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u633" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u633.svg" id="u633_img" class="img generatedImage" viewbox="1164 383 432 30">
+
+  <path d="M 1 1  L 431 1  L 431 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1164 383 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 383 )" class="stroke" />
+  <path d="M 0 0.5  L 432 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 383 )" class="stroke" />
+  <path d="M 431.5 1  L 431.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 383 )" class="stroke" />
+          </svg>
+          <div id="u633_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u634" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u634.svg" id="u634_img" class="img generatedImage" viewbox="0 413 128 34">
+
+  <path d="M 1 1  L 128 1  L 128 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 413 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 413 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 413 )" class="stroke" />
+          </svg>
+          <div id="u634_text" class="text ">
+            <p><span>单价</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u635" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u635.svg" id="u635_img" class="img generatedImage" viewbox="128 413 1036 34">
+
+  <path d="M 1 1  L 1036 1  L 1036 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 413 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 413 )" class="stroke" />
+  <path d="M 0 0.5  L 1036 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 413 )" class="stroke" />
+          </svg>
+          <div id="u635_text" class="text ">
+            <p><span>赋空值</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u636" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u636.svg" id="u636_img" class="img generatedImage" viewbox="1164 413 432 34">
+
+  <path d="M 1 1  L 431 1  L 431 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1164 413 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 413 )" class="stroke" />
+  <path d="M 0 0.5  L 432 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 413 )" class="stroke" />
+  <path d="M 431.5 1  L 431.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 413 )" class="stroke" />
+          </svg>
+          <div id="u636_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u637" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u637.svg" id="u637_img" class="img generatedImage" viewbox="0 447 128 31">
+
+  <path d="M 1 1  L 128 1  L 128 31  L 1 31  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 447 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 31  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 447 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 447 )" class="stroke" />
+          </svg>
+          <div id="u637_text" class="text ">
+            <p><span>数量</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u638" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u638.svg" id="u638_img" class="img generatedImage" viewbox="128 447 1036 31">
+
+  <path d="M 1 1  L 1036 1  L 1036 31  L 1 31  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 447 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 31  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 447 )" class="stroke" />
+  <path d="M 0 0.5  L 1036 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 447 )" class="stroke" />
+          </svg>
+          <div id="u638_text" class="text ">
+            <p><span>取数量</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u639" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u639.svg" id="u639_img" class="img generatedImage" viewbox="1164 447 432 31">
+
+  <path d="M 1 1  L 431 1  L 431 31  L 1 31  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1164 447 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 31  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 447 )" class="stroke" />
+  <path d="M 0 0.5  L 432 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 447 )" class="stroke" />
+  <path d="M 431.5 1  L 431.5 31  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 447 )" class="stroke" />
+          </svg>
+          <div id="u639_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u640" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u640.svg" id="u640_img" class="img generatedImage" viewbox="0 478 128 34">
+
+  <path d="M 1 1  L 128 1  L 128 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 478 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 478 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 478 )" class="stroke" />
+          </svg>
+          <div id="u640_text" class="text ">
+            <p><span>运费</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u641" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u641.svg" id="u641_img" class="img generatedImage" viewbox="128 478 1036 34">
+
+  <path d="M 1 1  L 1036 1  L 1036 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 478 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 478 )" class="stroke" />
+  <path d="M 0 0.5  L 1036 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 478 )" class="stroke" />
+          </svg>
+          <div id="u641_text" class="text ">
+            <p><span>赋空值</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u642" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u642.svg" id="u642_img" class="img generatedImage" viewbox="1164 478 432 34">
+
+  <path d="M 1 1  L 431 1  L 431 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1164 478 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 478 )" class="stroke" />
+  <path d="M 0 0.5  L 432 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 478 )" class="stroke" />
+  <path d="M 431.5 1  L 431.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 478 )" class="stroke" />
+          </svg>
+          <div id="u642_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u643" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u643.svg" id="u643_img" class="img generatedImage" viewbox="0 512 128 27">
+
+  <path d="M 1 1  L 128 1  L 128 27  L 1 27  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 512 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 27  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 512 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 512 )" class="stroke" />
+          </svg>
+          <div id="u643_text" class="text ">
+            <p><span>折扣</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u644" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u644.svg" id="u644_img" class="img generatedImage" viewbox="128 512 1036 27">
+
+  <path d="M 1 1  L 1036 1  L 1036 27  L 1 27  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 512 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 27  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 512 )" class="stroke" />
+  <path d="M 0 0.5  L 1036 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 512 )" class="stroke" />
+          </svg>
+          <div id="u644_text" class="text ">
+            <p><span>赋空值</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u645" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u645.svg" id="u645_img" class="img generatedImage" viewbox="1164 512 432 27">
+
+  <path d="M 1 1  L 431 1  L 431 27  L 1 27  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1164 512 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 27  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 512 )" class="stroke" />
+  <path d="M 0 0.5  L 432 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 512 )" class="stroke" />
+  <path d="M 431.5 1  L 431.5 27  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 512 )" class="stroke" />
+          </svg>
+          <div id="u645_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u646" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u646.svg" id="u646_img" class="img generatedImage" viewbox="0 539 128 30">
+
+  <path d="M 1 1  L 128 1  L 128 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 539 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 539 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 539 )" class="stroke" />
+          </svg>
+          <div id="u646_text" class="text ">
+            <p><span>退款</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u647" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u647.svg" id="u647_img" class="img generatedImage" viewbox="128 539 1036 30">
+
+  <path d="M 1 1  L 1036 1  L 1036 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 539 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 539 )" class="stroke" />
+  <path d="M 0 0.5  L 1036 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 539 )" class="stroke" />
+          </svg>
+          <div id="u647_text" class="text ">
+            <p><span>赋空值</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u648" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u648.svg" id="u648_img" class="img generatedImage" viewbox="1164 539 432 30">
+
+  <path d="M 1 1  L 431 1  L 431 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1164 539 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 539 )" class="stroke" />
+  <path d="M 0 0.5  L 432 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 539 )" class="stroke" />
+  <path d="M 431.5 1  L 431.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 539 )" class="stroke" />
+          </svg>
+          <div id="u648_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u649" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u649.svg" id="u649_img" class="img generatedImage" viewbox="0 569 128 42">
+
+  <path d="M 1 1  L 128 1  L 128 42  L 1 42  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 569 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 42  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 569 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 569 )" class="stroke" />
+          </svg>
+          <div id="u649_text" class="text ">
+            <p><span>总金额</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u650" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u650.svg" id="u650_img" class="img generatedImage" viewbox="128 569 1036 42">
+
+  <path d="M 1 1  L 1036 1  L 1036 42  L 1 42  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 569 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 42  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 569 )" class="stroke" />
+  <path d="M 0 0.5  L 1036 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 569 )" class="stroke" />
+          </svg>
+          <div id="u650_text" class="text ">
+            <p><span>赋空值</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u651" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u651.svg" id="u651_img" class="img generatedImage" viewbox="1164 569 432 42">
+
+  <path d="M 1 1  L 431 1  L 431 42  L 1 42  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1164 569 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 42  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 569 )" class="stroke" />
+  <path d="M 0 0.5  L 432 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 569 )" class="stroke" />
+  <path d="M 431.5 1  L 431.5 42  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 569 )" class="stroke" />
+          </svg>
+          <div id="u651_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u652" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u652.svg" id="u652_img" class="img generatedImage" viewbox="0 611 128 30">
+
+  <path d="M 1 1  L 128 1  L 128 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 611 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 611 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 611 )" class="stroke" />
+          </svg>
+          <div id="u652_text" class="text ">
+            <p><span>销售税</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u653" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u653.svg" id="u653_img" class="img generatedImage" viewbox="128 611 1036 30">
+
+  <path d="M 1 1  L 1036 1  L 1036 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 611 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 611 )" class="stroke" />
+  <path d="M 0 0.5  L 1036 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 611 )" class="stroke" />
+          </svg>
+          <div id="u653_text" class="text ">
+            <p><span>赋空值</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u654" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u654.svg" id="u654_img" class="img generatedImage" viewbox="1164 611 432 30">
+
+  <path d="M 1 1  L 431 1  L 431 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1164 611 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 611 )" class="stroke" />
+  <path d="M 0 0.5  L 432 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 611 )" class="stroke" />
+  <path d="M 431.5 1  L 431.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 611 )" class="stroke" />
+          </svg>
+          <div id="u654_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u655" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u655.svg" id="u655_img" class="img generatedImage" viewbox="0 641 128 30">
+
+  <path d="M 1 1  L 128 1  L 128 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 641 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 641 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 641 )" class="stroke" />
+          </svg>
+          <div id="u655_text" class="text ">
+            <p><span>增值税</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u656" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u656.svg" id="u656_img" class="img generatedImage" viewbox="128 641 1036 30">
+
+  <path d="M 1 1  L 1036 1  L 1036 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 641 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 641 )" class="stroke" />
+  <path d="M 0 0.5  L 1036 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 641 )" class="stroke" />
+          </svg>
+          <div id="u656_text" class="text ">
+            <p><span>赋空值</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u657" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u657.svg" id="u657_img" class="img generatedImage" viewbox="1164 641 432 30">
+
+  <path d="M 1 1  L 431 1  L 431 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1164 641 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 641 )" class="stroke" />
+  <path d="M 0 0.5  L 432 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 641 )" class="stroke" />
+  <path d="M 431.5 1  L 431.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 641 )" class="stroke" />
+          </svg>
+          <div id="u657_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u658" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u658.svg" id="u658_img" class="img generatedImage" viewbox="0 671 128 30">
+
+  <path d="M 1 1  L 128 1  L 128 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 671 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 671 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 671 )" class="stroke" />
+          </svg>
+          <div id="u658_text" class="text ">
+            <p><span>税金总计</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u659" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u659.svg" id="u659_img" class="img generatedImage" viewbox="128 671 1036 30">
+
+  <path d="M 1 1  L 1036 1  L 1036 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 671 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 671 )" class="stroke" />
+  <path d="M 0 0.5  L 1036 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 671 )" class="stroke" />
+          </svg>
+          <div id="u659_text" class="text ">
+            <p><span>赋空值</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u660" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u660.svg" id="u660_img" class="img generatedImage" viewbox="1164 671 432 30">
+
+  <path d="M 1 1  L 431 1  L 431 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1164 671 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 671 )" class="stroke" />
+  <path d="M 0 0.5  L 432 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 671 )" class="stroke" />
+  <path d="M 431.5 1  L 431.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 671 )" class="stroke" />
+          </svg>
+          <div id="u660_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u661" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u661.svg" id="u661_img" class="img generatedImage" viewbox="0 701 128 30">
+
+  <path d="M 1 1  L 128 1  L 128 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 701 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 701 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 701 )" class="stroke" />
+          </svg>
+          <div id="u661_text" class="text ">
+            <p><span>电子垃圾回收费</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u662" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u662.svg" id="u662_img" class="img generatedImage" viewbox="128 701 1036 30">
+
+  <path d="M 1 1  L 1036 1  L 1036 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 701 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 701 )" class="stroke" />
+  <path d="M 0 0.5  L 1036 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 701 )" class="stroke" />
+          </svg>
+          <div id="u662_text" class="text ">
+            <p><span>赋空值</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u663" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u663.svg" id="u663_img" class="img generatedImage" viewbox="1164 701 432 30">
+
+  <path d="M 1 1  L 431 1  L 431 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1164 701 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 701 )" class="stroke" />
+  <path d="M 0 0.5  L 432 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 701 )" class="stroke" />
+  <path d="M 431.5 1  L 431.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 701 )" class="stroke" />
+          </svg>
+          <div id="u663_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u664" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u664.svg" id="u664_img" class="img generatedImage" viewbox="0 731 128 34">
+
+  <path d="M 1 1  L 128 1  L 128 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 731 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 731 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 731 )" class="stroke" />
+          </svg>
+          <div id="u664_text" class="text ">
+            <p><span>下单时间</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u665" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u665.svg" id="u665_img" class="img generatedImage" viewbox="128 731 1036 34">
+
+  <path d="M 1 1  L 1036 1  L 1036 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 731 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 731 )" class="stroke" />
+  <path d="M 0 0.5  L 1036 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 731 )" class="stroke" />
+          </svg>
+          <div id="u665_text" class="text ">
+            <p><span>取创建时间</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u666" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u666.svg" id="u666_img" class="img generatedImage" viewbox="1164 731 432 34">
+
+  <path d="M 1 1  L 431 1  L 431 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1164 731 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 731 )" class="stroke" />
+  <path d="M 0 0.5  L 432 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 731 )" class="stroke" />
+  <path d="M 431.5 1  L 431.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 731 )" class="stroke" />
+          </svg>
+          <div id="u666_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u667" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u667.svg" id="u667_img" class="img generatedImage" viewbox="0 765 128 42">
+
+  <path d="M 1 1  L 128 1  L 128 42  L 1 42  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 765 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 42  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 765 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 765 )" class="stroke" />
+          </svg>
+          <div id="u667_text" class="text ">
+            <p><span>发货时间</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u668" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u668.svg" id="u668_img" class="img generatedImage" viewbox="128 765 1036 42">
+
+  <path d="M 1 1  L 1036 1  L 1036 42  L 1 42  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 765 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 42  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 765 )" class="stroke" />
+  <path d="M 0 0.5  L 1036 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 765 )" class="stroke" />
+          </svg>
+          <div id="u668_text" class="text ">
+            <p><span>取发货时间</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u669" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u669.svg" id="u669_img" class="img generatedImage" viewbox="1164 765 432 42">
+
+  <path d="M 1 1  L 431 1  L 431 42  L 1 42  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1164 765 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 42  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 765 )" class="stroke" />
+  <path d="M 0 0.5  L 432 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 765 )" class="stroke" />
+  <path d="M 431.5 1  L 431.5 42  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 765 )" class="stroke" />
+          </svg>
+          <div id="u669_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u670" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u670.svg" id="u670_img" class="img generatedImage" viewbox="0 807 128 26">
+
+  <path d="M 1 1  L 128 1  L 128 26  L 1 26  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 807 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 26  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 807 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 807 )" class="stroke" />
+          </svg>
+          <div id="u670_text" class="text ">
+            <p><span>当地下单时间</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u671" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u671.svg" id="u671_img" class="img generatedImage" viewbox="128 807 1036 26">
+
+  <path d="M 1 1  L 1036 1  L 1036 26  L 1 26  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 807 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 26  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 807 )" class="stroke" />
+  <path d="M 0 0.5  L 1036 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 807 )" class="stroke" />
+          </svg>
+          <div id="u671_text" class="text ">
+            <p><span>=下单时间</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u672" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u672.svg" id="u672_img" class="img generatedImage" viewbox="1164 807 432 26">
+
+  <path d="M 1 1  L 431 1  L 431 26  L 1 26  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1164 807 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 26  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 807 )" class="stroke" />
+  <path d="M 0 0.5  L 432 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 807 )" class="stroke" />
+  <path d="M 431.5 1  L 431.5 26  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 807 )" class="stroke" />
+          </svg>
+          <div id="u672_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u673" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u673.svg" id="u673_img" class="img generatedImage" viewbox="0 833 128 26">
+
+  <path d="M 1 1  L 128 1  L 128 26  L 1 26  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 833 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 26  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 833 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 833 )" class="stroke" />
+          </svg>
+          <div id="u673_text" class="text ">
+            <p><span>当地发货时间</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u674" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u674.svg" id="u674_img" class="img generatedImage" viewbox="128 833 1036 26">
+
+  <path d="M 1 1  L 1036 1  L 1036 26  L 1 26  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 833 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 26  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 833 )" class="stroke" />
+  <path d="M 0 0.5  L 1036 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 833 )" class="stroke" />
+          </svg>
+          <div id="u674_text" class="text ">
+            <p><span>=发货时间</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u675" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u675.svg" id="u675_img" class="img generatedImage" viewbox="1164 833 432 26">
+
+  <path d="M 1 1  L 431 1  L 431 26  L 1 26  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1164 833 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 26  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 833 )" class="stroke" />
+  <path d="M 0 0.5  L 432 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 833 )" class="stroke" />
+  <path d="M 431.5 1  L 431.5 26  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 833 )" class="stroke" />
+          </svg>
+          <div id="u675_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u676" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u676.svg" id="u676_img" class="img generatedImage" viewbox="0 859 128 30">
+
+  <path d="M 1 1  L 128 1  L 128 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 859 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 859 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 859 )" class="stroke" />
+          </svg>
+          <div id="u676_text" class="text ">
+            <p><span>订单状态</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u677" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u677.svg" id="u677_img" class="img generatedImage" viewbox="128 859 1036 30">
+
+  <path d="M 1 1  L 1036 1  L 1036 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 859 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 859 )" class="stroke" />
+  <path d="M 0 0.5  L 1036 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 859 )" class="stroke" />
+          </svg>
+          <div id="u677_text" class="text ">
+            <p><span>赋值‘已发货’</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u678" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u678.svg" id="u678_img" class="img generatedImage" viewbox="1164 859 432 30">
+
+  <path d="M 1 1  L 431 1  L 431 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1164 859 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 859 )" class="stroke" />
+  <path d="M 0 0.5  L 432 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 859 )" class="stroke" />
+  <path d="M 431.5 1  L 431.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 859 )" class="stroke" />
+          </svg>
+          <div id="u678_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u679" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u679.svg" id="u679_img" class="img generatedImage" viewbox="0 889 128 30">
+
+  <path d="M 1 1  L 128 1  L 128 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 889 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 889 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 889 )" class="stroke" />
+          </svg>
+          <div id="u679_text" class="text ">
+            <p><span>描述</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u680" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u680.svg" id="u680_img" class="img generatedImage" viewbox="128 889 1036 30">
+
+  <path d="M 1 1  L 1036 1  L 1036 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 889 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 889 )" class="stroke" />
+  <path d="M 0 0.5  L 1036 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 889 )" class="stroke" />
+          </svg>
+          <div id="u680_text" class="text ">
+            <p><span>‘CG发货’</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u681" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u681.svg" id="u681_img" class="img generatedImage" viewbox="1164 889 432 30">
+
+  <path d="M 1 1  L 431 1  L 431 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1164 889 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 889 )" class="stroke" />
+  <path d="M 0 0.5  L 432 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 889 )" class="stroke" />
+  <path d="M 431.5 1  L 431.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 889 )" class="stroke" />
+          </svg>
+          <div id="u681_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u682" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u682.svg" id="u682_img" class="img generatedImage" viewbox="0 919 128 30">
+
+  <path d="M 1 1  L 128 1  L 128 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 919 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 919 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 919 )" class="stroke" />
+          </svg>
+          <div id="u682_text" class="text ">
+            <p><span>数据来源</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u683" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u683.svg" id="u683_img" class="img generatedImage" viewbox="128 919 1036 30">
+
+  <path d="M 1 1  L 1036 1  L 1036 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 919 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 919 )" class="stroke" />
+  <path d="M 0 0.5  L 1036 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 919 )" class="stroke" />
+          </svg>
+          <div id="u683_text" class="text ">
+            <p><span>固定值‘系统’</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u684" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u684.svg" id="u684_img" class="img generatedImage" viewbox="1164 919 432 30">
+
+  <path d="M 1 1  L 431 1  L 431 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1164 919 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 919 )" class="stroke" />
+  <path d="M 0 0.5  L 432 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 919 )" class="stroke" />
+  <path d="M 431.5 1  L 431.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 919 )" class="stroke" />
+          </svg>
+          <div id="u684_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u685" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u685.svg" id="u685_img" class="img generatedImage" viewbox="0 949 128 30">
+
+  <path d="M 1 1  L 128 1  L 128 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 949 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 949 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 949 )" class="stroke" />
+          </svg>
+          <div id="u685_text" class="text ">
+            <p><span>操作人</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u686" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u686.svg" id="u686_img" class="img generatedImage" viewbox="128 949 1036 30">
+
+  <path d="M 1 1  L 1036 1  L 1036 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 949 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 949 )" class="stroke" />
+  <path d="M 0 0.5  L 1036 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 949 )" class="stroke" />
+          </svg>
+          <div id="u686_text" class="text ">
+            <p><span>固定值‘系统’</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u687" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u687.svg" id="u687_img" class="img generatedImage" viewbox="1164 949 432 30">
+
+  <path d="M 1 1  L 431 1  L 431 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1164 949 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 949 )" class="stroke" />
+  <path d="M 0 0.5  L 432 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 949 )" class="stroke" />
+  <path d="M 431.5 1  L 431.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 949 )" class="stroke" />
+          </svg>
+          <div id="u687_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u688" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u688.svg" id="u688_img" class="img generatedImage" viewbox="0 979 128 26">
+
+  <path d="M 1 1  L 128 1  L 128 25  L 1 25  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 979 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 25  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 979 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 979 )" class="stroke" />
+  <path d="M 0 25.5  L 128 25.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 979 )" class="stroke" />
+          </svg>
+          <div id="u688_text" class="text ">
+            <p><span>结账状态</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u689" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u689.svg" id="u689_img" class="img generatedImage" viewbox="128 979 1036 26">
+
+  <path d="M 1 1  L 1036 1  L 1036 25  L 1 25  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 979 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 25  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 979 )" class="stroke" />
+  <path d="M 0 0.5  L 1036 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 979 )" class="stroke" />
+  <path d="M 0 25.5  L 1036 25.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 979 )" class="stroke" />
+          </svg>
+          <div id="u689_text" class="text ">
+            <p><span>赋值‘未结账’</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u690" class="ax_default table_cell transition notrs">
+          <svg data="images/新增拉取wayfair平台多渠道出库订单/u690.svg" id="u690_img" class="img generatedImage" viewbox="1164 979 432 26">
+
+  <path d="M 1 1  L 431 1  L 431 25  L 1 25  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1164 979 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 25  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 979 )" class="stroke" />
+  <path d="M 0 0.5  L 432 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 979 )" class="stroke" />
+  <path d="M 431.5 1  L 431.5 25  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 979 )" class="stroke" />
+  <path d="M 0 25.5  L 432 25.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1164 979 )" class="stroke" />
+          </svg>
+          <div id="u690_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="resources/scripts/axure/ios.js"></script>
+  </body>
+</html>

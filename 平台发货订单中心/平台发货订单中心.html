@@ -1,0 +1,1255 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>平台发货订单中心</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/平台发货订单中心/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-3.7.1.min.js"></script>
+    <script src="resources/scripts/axure/axQuery.js"></script>
+    <script src="resources/scripts/axure/globals.js"></script>
+    <script src="resources/scripts/axutils.js"></script>
+    <script src="resources/scripts/axure/annotation.js"></script>
+    <script src="resources/scripts/axure/axQuery.std.js"></script>
+    <script src="resources/scripts/axure/doc.js"></script>
+    <script src="resources/scripts/messagecenter.js"></script>
+    <script src="resources/scripts/axure/events.js"></script>
+    <script src="resources/scripts/axure/recording.js"></script>
+    <script src="resources/scripts/axure/action.js"></script>
+    <script src="resources/scripts/axure/expr.js"></script>
+    <script src="resources/scripts/axure/geometry.js"></script>
+    <script src="resources/scripts/axure/flyout.js"></script>
+    <script src="resources/scripts/axure/model.js"></script>
+    <script src="resources/scripts/axure/repeater.js"></script>
+    <script src="resources/scripts/axure/sto.js"></script>
+    <script src="resources/scripts/axure/utils.temp.js"></script>
+    <script src="resources/scripts/axure/variables.js"></script>
+    <script src="resources/scripts/axure/drag.js"></script>
+    <script src="resources/scripts/axure/move.js"></script>
+    <script src="resources/scripts/axure/visibility.js"></script>
+    <script src="resources/scripts/axure/style.js"></script>
+    <script src="resources/scripts/axure/adaptive.js"></script>
+    <script src="resources/scripts/axure/tree.js"></script>
+    <script src="resources/scripts/axure/init.temp.js"></script>
+    <script src="resources/scripts/axure/legacy.js"></script>
+    <script src="resources/scripts/axure/viewer.js"></script>
+    <script src="resources/scripts/axure/math.js"></script>
+    <script src="resources/scripts/axure/jquery.nicescroll.min.js"></script>
+    <script src="data/document.js"></script>
+    <script src="files/平台发货订单中心/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (矩形) -->
+      <div id="u38" class="ax_default box_2 transition notrs">
+        <div id="u38_div" class=""></div>
+        <div id="u38_text" class="text ">
+          <p><span>&nbsp;</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u39" class="ax_default _文本段落 transition notrs">
+        <div id="u39_div" class=""></div>
+        <div id="u39_text" class="text ">
+          <p style="font-size:18px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;">1.新增tiktok定时任务：</span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">拉取oversea_self_shipment_order_center.tiktok_order；oversea_self_shipment_order_center.tiktok_order_item的数据，一小时同步一次，仅新增、更新未结账期间数据； </span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">20240614：仅拉取订单状态=‘COMPLETED’和‘DELIVERED’和</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;color:#D9001B;">20240731新增‘IN_TRANSIT’</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">的数据（若已拉取数据订单状态更新为非这两种状态，未结账期间内需删除；若未拉取数据订单状态更新为这两种状态，则新增拉取）</span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 仅拉取oversea_self_shipment_order_center.tiktok_order中fulfillment_type=FULFILLMENT_BY_TIKTOK 的数据</span></p><p style="font-size:18px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;"><br></span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图像) -->
+      <div id="u40" class="ax_default _图片_ transition notrs">
+        <img id="u40_img" class="img " src="images/平台发货订单中心/u40.png"/>
+        <div id="u40_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (表格) -->
+      <div id="u41" class="ax_default">
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u42" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u42.svg" id="u42_img" class="img generatedImage" viewbox="0 0 128 30">
+
+  <path d="M 1 1  L 128 1  L 128 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+          </svg>
+          <div id="u42_text" class="text ">
+            <p><span>当前页面</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u43" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u43.svg" id="u43_img" class="img generatedImage" viewbox="128 0 861 30">
+
+  <path d="M 1 1  L 861 1  L 861 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 0 )" class="stroke" />
+  <path d="M 0 0.5  L 861 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 0 )" class="stroke" />
+          </svg>
+          <div id="u43_text" class="text ">
+            <p><span>tiktok_order_item</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u44" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u44.svg" id="u44_img" class="img generatedImage" viewbox="989 0 509 30">
+
+  <path d="M 1 1  L 508 1  L 508 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 989 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 0 )" class="stroke" />
+  <path d="M 0 0.5  L 509 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 0 )" class="stroke" />
+  <path d="M 508.5 1  L 508.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 0 )" class="stroke" />
+          </svg>
+          <div id="u44_text" class="text ">
+            <p><span>tiktok_order</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u45" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u45.svg" id="u45_img" class="img generatedImage" viewbox="0 30 128 30">
+
+  <path d="M 1 1  L 128 1  L 128 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 30 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 30 )" class="stroke" />
+          </svg>
+          <div id="u45_text" class="text ">
+            <p><span>期间</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u46" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u46.svg" id="u46_img" class="img generatedImage" viewbox="128 30 861 30">
+
+  <path d="M 1 1  L 861 1  L 861 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 30 )" class="stroke" />
+  <path d="M 0 0.5  L 861 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 30 )" class="stroke" />
+          </svg>
+          <div id="u46_text" class="text ">
+            <p><span>取发货时间对应年月</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u47" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u47.svg" id="u47_img" class="img generatedImage" viewbox="989 30 509 30">
+
+  <path d="M 1 1  L 508 1  L 508 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 989 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 30 )" class="stroke" />
+  <path d="M 0 0.5  L 509 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 30 )" class="stroke" />
+  <path d="M 508.5 1  L 508.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 30 )" class="stroke" />
+          </svg>
+          <div id="u47_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u48" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u48.svg" id="u48_img" class="img generatedImage" viewbox="0 60 128 30">
+
+  <path d="M 1 1  L 128 1  L 128 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 60 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 60 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 60 )" class="stroke" />
+          </svg>
+          <div id="u48_text" class="text ">
+            <p><span>法人主体</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u49" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u49.svg" id="u49_img" class="img generatedImage" viewbox="128 60 861 30">
+
+  <path d="M 1 1  L 861 1  L 861 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 60 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 60 )" class="stroke" />
+  <path d="M 0 0.5  L 861 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 60 )" class="stroke" />
+          </svg>
+          <div id="u49_text" class="text ">
+            <p><span>赋空值</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u50" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u50.svg" id="u50_img" class="img generatedImage" viewbox="989 60 509 30">
+
+  <path d="M 1 1  L 508 1  L 508 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 989 60 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 60 )" class="stroke" />
+  <path d="M 0 0.5  L 509 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 60 )" class="stroke" />
+  <path d="M 508.5 1  L 508.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 60 )" class="stroke" />
+          </svg>
+          <div id="u50_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u51" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u51.svg" id="u51_img" class="img generatedImage" viewbox="0 90 128 30">
+
+  <path d="M 1 1  L 128 1  L 128 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 90 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 90 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 90 )" class="stroke" />
+          </svg>
+          <div id="u51_text" class="text ">
+            <p><span>平台名称</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u52" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u52.svg" id="u52_img" class="img generatedImage" viewbox="128 90 861 30">
+
+  <path d="M 1 1  L 861 1  L 861 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 90 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 90 )" class="stroke" />
+  <path d="M 0 0.5  L 861 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 90 )" class="stroke" />
+          </svg>
+          <div id="u52_text" class="text ">
+            <p><span>固定值‘Tiktok’</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u53" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u53.svg" id="u53_img" class="img generatedImage" viewbox="989 90 509 30">
+
+  <path d="M 1 1  L 508 1  L 508 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 989 90 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 90 )" class="stroke" />
+  <path d="M 0 0.5  L 509 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 90 )" class="stroke" />
+  <path d="M 508.5 1  L 508.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 90 )" class="stroke" />
+          </svg>
+          <div id="u53_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u54" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u54.svg" id="u54_img" class="img generatedImage" viewbox="0 120 128 30">
+
+  <path d="M 1 1  L 128 1  L 128 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 120 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 120 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 120 )" class="stroke" />
+          </svg>
+          <div id="u54_text" class="text ">
+            <p><span>平台订单号</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u55" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u55.svg" id="u55_img" class="img generatedImage" viewbox="128 120 861 30">
+
+  <path d="M 1 1  L 861 1  L 861 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 120 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 120 )" class="stroke" />
+  <path d="M 0 0.5  L 861 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 120 )" class="stroke" />
+          </svg>
+          <div id="u55_text" class="text ">
+            <p><span>order id</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u56" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u56.svg" id="u56_img" class="img generatedImage" viewbox="989 120 509 30">
+
+  <path d="M 1 1  L 508 1  L 508 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 989 120 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 120 )" class="stroke" />
+  <path d="M 0 0.5  L 509 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 120 )" class="stroke" />
+  <path d="M 508.5 1  L 508.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 120 )" class="stroke" />
+          </svg>
+          <div id="u56_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u57" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u57.svg" id="u57_img" class="img generatedImage" viewbox="0 150 128 30">
+
+  <path d="M 1 1  L 128 1  L 128 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 150 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 150 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 150 )" class="stroke" />
+          </svg>
+          <div id="u57_text" class="text ">
+            <p><span>账号</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u58" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u58.svg" id="u58_img" class="img generatedImage" viewbox="128 150 861 30">
+
+  <path d="M 1 1  L 861 1  L 861 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 150 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 150 )" class="stroke" />
+  <path d="M 0 0.5  L 861 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 150 )" class="stroke" />
+          </svg>
+          <div id="u58_text" class="text ">
+            <p><span>account ID匹配并获取【账号维护/其他平台账号】对应账号名称</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u59" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u59.svg" id="u59_img" class="img generatedImage" viewbox="989 150 509 30">
+
+  <path d="M 1 1  L 508 1  L 508 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 989 150 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 150 )" class="stroke" />
+  <path d="M 0 0.5  L 509 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 150 )" class="stroke" />
+  <path d="M 508.5 1  L 508.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 150 )" class="stroke" />
+          </svg>
+          <div id="u59_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u60" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u60.svg" id="u60_img" class="img generatedImage" viewbox="0 180 128 30">
+
+  <path d="M 1 1  L 128 1  L 128 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 180 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 180 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 180 )" class="stroke" />
+          </svg>
+          <div id="u60_text" class="text ">
+            <p><span>站点</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u61" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u61.svg" id="u61_img" class="img generatedImage" viewbox="128 180 861 30">
+
+  <path d="M 1 1  L 861 1  L 861 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 180 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 180 )" class="stroke" />
+  <path d="M 0 0.5  L 861 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 180 )" class="stroke" />
+          </svg>
+          <div id="u61_text" class="text ">
+            <p><span>site</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u62" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u62.svg" id="u62_img" class="img generatedImage" viewbox="989 180 509 30">
+
+  <path d="M 1 1  L 508 1  L 508 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 989 180 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 180 )" class="stroke" />
+  <path d="M 0 0.5  L 509 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 180 )" class="stroke" />
+  <path d="M 508.5 1  L 508.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 180 )" class="stroke" />
+          </svg>
+          <div id="u62_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u63" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u63.svg" id="u63_img" class="img generatedImage" viewbox="0 210 128 30">
+
+  <path d="M 1 1  L 128 1  L 128 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 210 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 210 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 210 )" class="stroke" />
+          </svg>
+          <div id="u63_text" class="text ">
+            <p><span>部门</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u64" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u64.svg" id="u64_img" class="img generatedImage" viewbox="128 210 861 30">
+
+  <path d="M 1 1  L 861 1  L 861 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 210 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 210 )" class="stroke" />
+  <path d="M 0 0.5  L 861 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 210 )" class="stroke" />
+          </svg>
+          <div id="u64_text" class="text ">
+            <p><span>account ID匹配并获取【账号维护/其他平台账号】对应部门</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u65" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u65.svg" id="u65_img" class="img generatedImage" viewbox="989 210 509 30">
+
+  <path d="M 1 1  L 508 1  L 508 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 989 210 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 210 )" class="stroke" />
+  <path d="M 0 0.5  L 509 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 210 )" class="stroke" />
+  <path d="M 508.5 1  L 508.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 210 )" class="stroke" />
+          </svg>
+          <div id="u65_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u66" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u66.svg" id="u66_img" class="img generatedImage" viewbox="0 240 128 30">
+
+  <path d="M 1 1  L 128 1  L 128 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 240 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 240 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 240 )" class="stroke" />
+          </svg>
+          <div id="u66_text" class="text ">
+            <p><span>币别</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u67" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u67.svg" id="u67_img" class="img generatedImage" viewbox="128 240 861 30">
+
+  <path d="M 1 1  L 861 1  L 861 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 240 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 240 )" class="stroke" />
+  <path d="M 0 0.5  L 861 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 240 )" class="stroke" />
+          </svg>
+          <div id="u67_text" class="text ">
+            <p><span>currency</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u68" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u68.svg" id="u68_img" class="img generatedImage" viewbox="989 240 509 30">
+
+  <path d="M 1 1  L 508 1  L 508 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 989 240 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 240 )" class="stroke" />
+  <path d="M 0 0.5  L 509 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 240 )" class="stroke" />
+  <path d="M 508.5 1  L 508.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 240 )" class="stroke" />
+          </svg>
+          <div id="u68_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u69" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u69.svg" id="u69_img" class="img generatedImage" viewbox="0 270 128 30">
+
+  <path d="M 1 1  L 128 1  L 128 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 270 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 270 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 270 )" class="stroke" />
+          </svg>
+          <div id="u69_text" class="text ">
+            <p><span>平台SKU</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u70" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u70.svg" id="u70_img" class="img generatedImage" viewbox="128 270 861 30">
+
+  <path d="M 1 1  L 861 1  L 861 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 270 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 270 )" class="stroke" />
+  <path d="M 0 0.5  L 861 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 270 )" class="stroke" />
+          </svg>
+          <div id="u70_text" class="text ">
+            <p><span>seller_sku</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u71" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u71.svg" id="u71_img" class="img generatedImage" viewbox="989 270 509 30">
+
+  <path d="M 1 1  L 508 1  L 508 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 989 270 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 270 )" class="stroke" />
+  <path d="M 0 0.5  L 509 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 270 )" class="stroke" />
+  <path d="M 508.5 1  L 508.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 270 )" class="stroke" />
+          </svg>
+          <div id="u71_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u72" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u72.svg" id="u72_img" class="img generatedImage" viewbox="0 300 128 30">
+
+  <path d="M 1 1  L 128 1  L 128 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 300 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 300 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 300 )" class="stroke" />
+          </svg>
+          <div id="u72_text" class="text ">
+            <p><span>公司SKU</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u73" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u73.svg" id="u73_img" class="img generatedImage" viewbox="128 300 861 30">
+
+  <path d="M 1 1  L 861 1  L 861 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 300 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 300 )" class="stroke" />
+  <path d="M 0 0.5  L 861 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 300 )" class="stroke" />
+          </svg>
+          <div id="u73_text" class="text ">
+            <p><span>根据【期间+平台名称+平台订单号+账号+平台SKU】维度在【平台发货订单中心/基础资料设置】获取审核通过的对应公司SKU</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u74" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u74.svg" id="u74_img" class="img generatedImage" viewbox="989 300 509 30">
+
+  <path d="M 1 1  L 508 1  L 508 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 989 300 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 300 )" class="stroke" />
+  <path d="M 0 0.5  L 509 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 300 )" class="stroke" />
+  <path d="M 508.5 1  L 508.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 300 )" class="stroke" />
+          </svg>
+          <div id="u74_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u75" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u75.svg" id="u75_img" class="img generatedImage" viewbox="0 330 128 30">
+
+  <path d="M 1 1  L 128 1  L 128 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 330 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 330 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 330 )" class="stroke" />
+          </svg>
+          <div id="u75_text" class="text ">
+            <p><span>产品名称</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u76" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u76.svg" id="u76_img" class="img generatedImage" viewbox="128 330 861 30">
+
+  <path d="M 1 1  L 861 1  L 861 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 330 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 330 )" class="stroke" />
+  <path d="M 0 0.5  L 861 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 330 )" class="stroke" />
+          </svg>
+          <div id="u76_text" class="text ">
+            <p><span>product_name</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u77" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u77.svg" id="u77_img" class="img generatedImage" viewbox="989 330 509 30">
+
+  <path d="M 1 1  L 508 1  L 508 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 989 330 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 330 )" class="stroke" />
+  <path d="M 0 0.5  L 509 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 330 )" class="stroke" />
+  <path d="M 508.5 1  L 508.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 330 )" class="stroke" />
+          </svg>
+          <div id="u77_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u78" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u78.svg" id="u78_img" class="img generatedImage" viewbox="0 360 128 34">
+
+  <path d="M 1 1  L 128 1  L 128 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 360 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 360 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 360 )" class="stroke" />
+          </svg>
+          <div id="u78_text" class="text ">
+            <p><span>单价</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u79" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u79.svg" id="u79_img" class="img generatedImage" viewbox="128 360 861 34">
+
+  <path d="M 1 1  L 861 1  L 861 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 360 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 360 )" class="stroke" />
+  <path d="M 0 0.5  L 861 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 360 )" class="stroke" />
+          </svg>
+          <div id="u79_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u80" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u80.svg" id="u80_img" class="img generatedImage" viewbox="989 360 509 34">
+
+  <path d="M 1 1  L 508 1  L 508 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 989 360 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 360 )" class="stroke" />
+  <path d="M 0 0.5  L 509 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 360 )" class="stroke" />
+  <path d="M 508.5 1  L 508.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 360 )" class="stroke" />
+          </svg>
+          <div id="u80_text" class="text ">
+            <p><span>20240701：(original_total_product_price - seller_discount + shipping_fee)/同一订单号维度下的总数量</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u81" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u81.svg" id="u81_img" class="img generatedImage" viewbox="0 394 128 30">
+
+  <path d="M 1 1  L 128 1  L 128 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 394 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 394 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 394 )" class="stroke" />
+          </svg>
+          <div id="u81_text" class="text ">
+            <p><span>数量</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u82" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u82.svg" id="u82_img" class="img generatedImage" viewbox="128 394 861 30">
+
+  <path d="M 1 1  L 861 1  L 861 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 394 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 394 )" class="stroke" />
+  <path d="M 0 0.5  L 861 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 394 )" class="stroke" />
+          </svg>
+          <div id="u82_text" class="text ">
+            <p><span>Quantity</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u83" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u83.svg" id="u83_img" class="img generatedImage" viewbox="989 394 509 30">
+
+  <path d="M 1 1  L 508 1  L 508 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 989 394 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 394 )" class="stroke" />
+  <path d="M 0 0.5  L 509 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 394 )" class="stroke" />
+  <path d="M 508.5 1  L 508.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 394 )" class="stroke" />
+          </svg>
+          <div id="u83_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u84" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u84.svg" id="u84_img" class="img generatedImage" viewbox="0 424 128 34">
+
+  <path d="M 1 1  L 128 1  L 128 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 424 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 424 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 424 )" class="stroke" />
+          </svg>
+          <div id="u84_text" class="text ">
+            <p><span>运费</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u85" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u85.svg" id="u85_img" class="img generatedImage" viewbox="128 424 861 34">
+
+  <path d="M 1 1  L 861 1  L 861 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 424 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 424 )" class="stroke" />
+  <path d="M 0 0.5  L 861 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 424 )" class="stroke" />
+          </svg>
+          <div id="u85_text" class="text ">
+            <p><span>赋空值</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u86" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u86.svg" id="u86_img" class="img generatedImage" viewbox="989 424 509 34">
+
+  <path d="M 1 1  L 508 1  L 508 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 989 424 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 424 )" class="stroke" />
+  <path d="M 0 0.5  L 509 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 424 )" class="stroke" />
+  <path d="M 508.5 1  L 508.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 424 )" class="stroke" />
+          </svg>
+          <div id="u86_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u87" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u87.svg" id="u87_img" class="img generatedImage" viewbox="0 458 128 30">
+
+  <path d="M 1 1  L 128 1  L 128 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 458 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 458 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 458 )" class="stroke" />
+          </svg>
+          <div id="u87_text" class="text ">
+            <p><span>折扣</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u88" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u88.svg" id="u88_img" class="img generatedImage" viewbox="128 458 861 30">
+
+  <path d="M 1 1  L 861 1  L 861 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 458 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 458 )" class="stroke" />
+  <path d="M 0 0.5  L 861 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 458 )" class="stroke" />
+          </svg>
+          <div id="u88_text" class="text ">
+            <p><span>赋空值</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u89" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u89.svg" id="u89_img" class="img generatedImage" viewbox="989 458 509 30">
+
+  <path d="M 1 1  L 508 1  L 508 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 989 458 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 458 )" class="stroke" />
+  <path d="M 0 0.5  L 509 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 458 )" class="stroke" />
+  <path d="M 508.5 1  L 508.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 458 )" class="stroke" />
+          </svg>
+          <div id="u89_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u90" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u90.svg" id="u90_img" class="img generatedImage" viewbox="0 488 128 30">
+
+  <path d="M 1 1  L 128 1  L 128 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 488 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 488 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 488 )" class="stroke" />
+          </svg>
+          <div id="u90_text" class="text ">
+            <p><span>退款</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u91" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u91.svg" id="u91_img" class="img generatedImage" viewbox="128 488 861 30">
+
+  <path d="M 1 1  L 861 1  L 861 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 488 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 488 )" class="stroke" />
+  <path d="M 0 0.5  L 861 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 488 )" class="stroke" />
+          </svg>
+          <div id="u91_text" class="text ">
+            <p><span>赋空值</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u92" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u92.svg" id="u92_img" class="img generatedImage" viewbox="989 488 509 30">
+
+  <path d="M 1 1  L 508 1  L 508 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 989 488 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 488 )" class="stroke" />
+  <path d="M 0 0.5  L 509 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 488 )" class="stroke" />
+  <path d="M 508.5 1  L 508.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 488 )" class="stroke" />
+          </svg>
+          <div id="u92_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u93" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u93.svg" id="u93_img" class="img generatedImage" viewbox="0 518 128 42">
+
+  <path d="M 1 1  L 128 1  L 128 42  L 1 42  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 518 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 42  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 518 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 518 )" class="stroke" />
+          </svg>
+          <div id="u93_text" class="text ">
+            <p><span>总金额</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u94" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u94.svg" id="u94_img" class="img generatedImage" viewbox="128 518 861 42">
+
+  <path d="M 1 1  L 861 1  L 861 42  L 1 42  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 518 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 42  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 518 )" class="stroke" />
+  <path d="M 0 0.5  L 861 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 518 )" class="stroke" />
+          </svg>
+          <div id="u94_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u95" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u95.svg" id="u95_img" class="img generatedImage" viewbox="989 518 509 42">
+
+  <path d="M 1 1  L 508 1  L 508 42  L 1 42  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 989 518 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 42  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 518 )" class="stroke" />
+  <path d="M 0 0.5  L 509 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 518 )" class="stroke" />
+  <path d="M 508.5 1  L 508.5 42  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 518 )" class="stroke" />
+          </svg>
+          <div id="u95_text" class="text ">
+            <p><span>20240701：计算出来的单价*数量</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u96" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u96.svg" id="u96_img" class="img generatedImage" viewbox="0 560 128 30">
+
+  <path d="M 1 1  L 128 1  L 128 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 560 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 560 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 560 )" class="stroke" />
+          </svg>
+          <div id="u96_text" class="text ">
+            <p><span>销售税</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u97" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u97.svg" id="u97_img" class="img generatedImage" viewbox="128 560 861 30">
+
+  <path d="M 1 1  L 861 1  L 861 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 560 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 560 )" class="stroke" />
+  <path d="M 0 0.5  L 861 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 560 )" class="stroke" />
+          </svg>
+          <div id="u97_text" class="text ">
+            <p><span>赋空值</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u98" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u98.svg" id="u98_img" class="img generatedImage" viewbox="989 560 509 30">
+
+  <path d="M 1 1  L 508 1  L 508 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 989 560 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 560 )" class="stroke" />
+  <path d="M 0 0.5  L 509 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 560 )" class="stroke" />
+  <path d="M 508.5 1  L 508.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 560 )" class="stroke" />
+          </svg>
+          <div id="u98_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u99" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u99.svg" id="u99_img" class="img generatedImage" viewbox="0 590 128 30">
+
+  <path d="M 1 1  L 128 1  L 128 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 590 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 590 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 590 )" class="stroke" />
+          </svg>
+          <div id="u99_text" class="text ">
+            <p><span>增值税</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u100" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u100.svg" id="u100_img" class="img generatedImage" viewbox="128 590 861 30">
+
+  <path d="M 1 1  L 861 1  L 861 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 590 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 590 )" class="stroke" />
+  <path d="M 0 0.5  L 861 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 590 )" class="stroke" />
+          </svg>
+          <div id="u100_text" class="text ">
+            <p><span>sale_tax</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u101" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u101.svg" id="u101_img" class="img generatedImage" viewbox="989 590 509 30">
+
+  <path d="M 1 1  L 508 1  L 508 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 989 590 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 590 )" class="stroke" />
+  <path d="M 0 0.5  L 509 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 590 )" class="stroke" />
+  <path d="M 508.5 1  L 508.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 590 )" class="stroke" />
+          </svg>
+          <div id="u101_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u102" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u102.svg" id="u102_img" class="img generatedImage" viewbox="0 620 128 30">
+
+  <path d="M 1 1  L 128 1  L 128 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 620 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 620 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 620 )" class="stroke" />
+          </svg>
+          <div id="u102_text" class="text ">
+            <p><span>税金总计</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u103" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u103.svg" id="u103_img" class="img generatedImage" viewbox="128 620 861 30">
+
+  <path d="M 1 1  L 861 1  L 861 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 620 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 620 )" class="stroke" />
+  <path d="M 0 0.5  L 861 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 620 )" class="stroke" />
+          </svg>
+          <div id="u103_text" class="text ">
+            <p><span>赋空值</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u104" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u104.svg" id="u104_img" class="img generatedImage" viewbox="989 620 509 30">
+
+  <path d="M 1 1  L 508 1  L 508 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 989 620 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 620 )" class="stroke" />
+  <path d="M 0 0.5  L 509 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 620 )" class="stroke" />
+  <path d="M 508.5 1  L 508.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 620 )" class="stroke" />
+          </svg>
+          <div id="u104_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u105" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u105.svg" id="u105_img" class="img generatedImage" viewbox="0 650 128 30">
+
+  <path d="M 1 1  L 128 1  L 128 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 650 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 650 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 650 )" class="stroke" />
+          </svg>
+          <div id="u105_text" class="text ">
+            <p><span>电子垃圾回收费</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u106" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u106.svg" id="u106_img" class="img generatedImage" viewbox="128 650 861 30">
+
+  <path d="M 1 1  L 861 1  L 861 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 650 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 650 )" class="stroke" />
+  <path d="M 0 0.5  L 861 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 650 )" class="stroke" />
+          </svg>
+          <div id="u106_text" class="text ">
+            <p><span>赋空值</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u107" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u107.svg" id="u107_img" class="img generatedImage" viewbox="989 650 509 30">
+
+  <path d="M 1 1  L 508 1  L 508 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 989 650 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 650 )" class="stroke" />
+  <path d="M 0 0.5  L 509 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 650 )" class="stroke" />
+  <path d="M 508.5 1  L 508.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 650 )" class="stroke" />
+          </svg>
+          <div id="u107_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u108" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u108.svg" id="u108_img" class="img generatedImage" viewbox="0 680 128 34">
+
+  <path d="M 1 1  L 128 1  L 128 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 680 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 680 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 680 )" class="stroke" />
+          </svg>
+          <div id="u108_text" class="text ">
+            <p><span>下单时间</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u109" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u109.svg" id="u109_img" class="img generatedImage" viewbox="128 680 861 34">
+
+  <path d="M 1 1  L 861 1  L 861 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 680 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 680 )" class="stroke" />
+  <path d="M 0 0.5  L 861 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 680 )" class="stroke" />
+          </svg>
+          <div id="u109_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u110" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u110.svg" id="u110_img" class="img generatedImage" viewbox="989 680 509 34">
+
+  <path d="M 1 1  L 508 1  L 508 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 989 680 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 680 )" class="stroke" />
+  <path d="M 0 0.5  L 509 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 680 )" class="stroke" />
+  <path d="M 508.5 1  L 508.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 680 )" class="stroke" />
+          </svg>
+          <div id="u110_text" class="text ">
+            <p><span>order_create_time（需要根据所在时区转换为当地时间，注意冬夏令时区别）</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u111" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u111.svg" id="u111_img" class="img generatedImage" viewbox="0 714 128 30">
+
+  <path d="M 1 1  L 128 1  L 128 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 714 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 714 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 714 )" class="stroke" />
+          </svg>
+          <div id="u111_text" class="text ">
+            <p><span>发货时间</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u112" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u112.svg" id="u112_img" class="img generatedImage" viewbox="128 714 861 30">
+
+  <path d="M 1 1  L 861 1  L 861 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 714 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 714 )" class="stroke" />
+  <path d="M 0 0.5  L 861 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 714 )" class="stroke" />
+          </svg>
+          <div id="u112_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u113" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u113.svg" id="u113_img" class="img generatedImage" viewbox="989 714 509 30">
+
+  <path d="M 1 1  L 508 1  L 508 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 989 714 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 714 )" class="stroke" />
+  <path d="M 0 0.5  L 509 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 714 )" class="stroke" />
+  <path d="M 508.5 1  L 508.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 714 )" class="stroke" />
+          </svg>
+          <div id="u113_text" class="text ">
+            <p><span>rts_time（需要根据所在时区转换为当地时间，注意冬夏令时区别）</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u114" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u114.svg" id="u114_img" class="img generatedImage" viewbox="0 744 128 30">
+
+  <path d="M 1 1  L 128 1  L 128 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 744 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 744 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 744 )" class="stroke" />
+          </svg>
+          <div id="u114_text" class="text ">
+            <p><span>订单状态</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u115" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u115.svg" id="u115_img" class="img generatedImage" viewbox="128 744 861 30">
+
+  <path d="M 1 1  L 861 1  L 861 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 744 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 744 )" class="stroke" />
+  <path d="M 0 0.5  L 861 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 744 )" class="stroke" />
+          </svg>
+          <div id="u115_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u116" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u116.svg" id="u116_img" class="img generatedImage" viewbox="989 744 509 30">
+
+  <path d="M 1 1  L 508 1  L 508 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 989 744 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 744 )" class="stroke" />
+  <path d="M 0 0.5  L 509 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 744 )" class="stroke" />
+  <path d="M 508.5 1  L 508.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 744 )" class="stroke" />
+          </svg>
+          <div id="u116_text" class="text ">
+            <p><span>status</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u117" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u117.svg" id="u117_img" class="img generatedImage" viewbox="0 774 128 30">
+
+  <path d="M 1 1  L 128 1  L 128 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 774 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 774 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 774 )" class="stroke" />
+          </svg>
+          <div id="u117_text" class="text ">
+            <p><span>描述</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u118" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u118.svg" id="u118_img" class="img generatedImage" viewbox="128 774 861 30">
+
+  <path d="M 1 1  L 861 1  L 861 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 774 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 774 )" class="stroke" />
+  <path d="M 0 0.5  L 861 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 774 )" class="stroke" />
+          </svg>
+          <div id="u118_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u119" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u119.svg" id="u119_img" class="img generatedImage" viewbox="989 774 509 30">
+
+  <path d="M 1 1  L 508 1  L 508 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 989 774 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 774 )" class="stroke" />
+  <path d="M 0 0.5  L 509 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 774 )" class="stroke" />
+  <path d="M 508.5 1  L 508.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 774 )" class="stroke" />
+          </svg>
+          <div id="u119_text" class="text ">
+            <p><span>data_digest</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u120" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u120.svg" id="u120_img" class="img generatedImage" viewbox="0 804 128 30">
+
+  <path d="M 1 1  L 128 1  L 128 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 804 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 804 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 804 )" class="stroke" />
+          </svg>
+          <div id="u120_text" class="text ">
+            <p><span>数据来源</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u121" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u121.svg" id="u121_img" class="img generatedImage" viewbox="128 804 861 30">
+
+  <path d="M 1 1  L 861 1  L 861 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 804 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 804 )" class="stroke" />
+  <path d="M 0 0.5  L 861 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 804 )" class="stroke" />
+          </svg>
+          <div id="u121_text" class="text ">
+            <p><span>固定值‘系统’</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u122" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u122.svg" id="u122_img" class="img generatedImage" viewbox="989 804 509 30">
+
+  <path d="M 1 1  L 508 1  L 508 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 989 804 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 804 )" class="stroke" />
+  <path d="M 0 0.5  L 509 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 804 )" class="stroke" />
+  <path d="M 508.5 1  L 508.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 804 )" class="stroke" />
+          </svg>
+          <div id="u122_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u123" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u123.svg" id="u123_img" class="img generatedImage" viewbox="0 834 128 30">
+
+  <path d="M 1 1  L 128 1  L 128 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 834 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 834 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 834 )" class="stroke" />
+          </svg>
+          <div id="u123_text" class="text ">
+            <p><span>操作人</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u124" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u124.svg" id="u124_img" class="img generatedImage" viewbox="128 834 861 30">
+
+  <path d="M 1 1  L 861 1  L 861 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 834 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 834 )" class="stroke" />
+  <path d="M 0 0.5  L 861 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 834 )" class="stroke" />
+          </svg>
+          <div id="u124_text" class="text ">
+            <p><span>固定值‘系统’</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u125" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u125.svg" id="u125_img" class="img generatedImage" viewbox="989 834 509 30">
+
+  <path d="M 1 1  L 508 1  L 508 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 989 834 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 834 )" class="stroke" />
+  <path d="M 0 0.5  L 509 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 834 )" class="stroke" />
+  <path d="M 508.5 1  L 508.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 834 )" class="stroke" />
+          </svg>
+          <div id="u125_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u126" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u126.svg" id="u126_img" class="img generatedImage" viewbox="0 864 128 26">
+
+  <path d="M 1 1  L 128 1  L 128 25  L 1 25  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 864 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 25  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 864 )" class="stroke" />
+  <path d="M 0 0.5  L 128 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 864 )" class="stroke" />
+  <path d="M 0 25.5  L 128 25.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 864 )" class="stroke" />
+          </svg>
+          <div id="u126_text" class="text ">
+            <p><span>结账状态</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u127" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u127.svg" id="u127_img" class="img generatedImage" viewbox="128 864 861 26">
+
+  <path d="M 1 1  L 861 1  L 861 25  L 1 25  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 128 864 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 25  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 864 )" class="stroke" />
+  <path d="M 0 0.5  L 861 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 864 )" class="stroke" />
+  <path d="M 0 25.5  L 861 25.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 128 864 )" class="stroke" />
+          </svg>
+          <div id="u127_text" class="text ">
+            <p><span>赋值‘未结账’</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u128" class="ax_default table_cell transition notrs">
+          <svg data="images/平台发货订单中心/u128.svg" id="u128_img" class="img generatedImage" viewbox="989 864 509 26">
+
+  <path d="M 1 1  L 508 1  L 508 25  L 1 25  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 989 864 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 25  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 864 )" class="stroke" />
+  <path d="M 0 0.5  L 509 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 864 )" class="stroke" />
+  <path d="M 508.5 1  L 508.5 25  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 864 )" class="stroke" />
+  <path d="M 0 25.5  L 509 25.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 989 864 )" class="stroke" />
+          </svg>
+          <div id="u128_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u129" class="ax_default _文本段落 transition notrs">
+        <div id="u129_div" class=""></div>
+        <div id="u129_text" class="text ">
+          <p style="font-size:16px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;font-size:18px;">2.列表：</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">新增【客户订单号】字段， 位于平台订单号右侧；——数据来源：沃尔玛定时任务新增拉取customer_order_id字段值；</span></p><p style="font-size:18px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;"><br></span></p><p style="font-size:16px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;font-size:18px;">3.搜索框：</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">新增【客户订单号】搜索框，位于平台订单号右侧：支持批量模糊搜索；</span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:16px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;font-size:18px;">4.按钮：</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">导出需新增客户订单号字段；</span></p><p style="font-size:18px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;"><br></span></p>
+        </div>
+      </div>
+    </div>
+    <script src="resources/scripts/axure/ios.js"></script>
+  </body>
+</html>
