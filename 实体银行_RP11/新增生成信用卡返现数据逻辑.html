@@ -1,0 +1,1598 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>新增生成信用卡返现数据逻辑</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/新增生成信用卡返现数据逻辑/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-3.7.1.min.js"></script>
+    <script src="resources/scripts/axure/axQuery.js"></script>
+    <script src="resources/scripts/axure/globals.js"></script>
+    <script src="resources/scripts/axutils.js"></script>
+    <script src="resources/scripts/axure/annotation.js"></script>
+    <script src="resources/scripts/axure/axQuery.std.js"></script>
+    <script src="resources/scripts/axure/doc.js"></script>
+    <script src="resources/scripts/messagecenter.js"></script>
+    <script src="resources/scripts/axure/events.js"></script>
+    <script src="resources/scripts/axure/recording.js"></script>
+    <script src="resources/scripts/axure/action.js"></script>
+    <script src="resources/scripts/axure/expr.js"></script>
+    <script src="resources/scripts/axure/geometry.js"></script>
+    <script src="resources/scripts/axure/flyout.js"></script>
+    <script src="resources/scripts/axure/model.js"></script>
+    <script src="resources/scripts/axure/repeater.js"></script>
+    <script src="resources/scripts/axure/sto.js"></script>
+    <script src="resources/scripts/axure/utils.temp.js"></script>
+    <script src="resources/scripts/axure/variables.js"></script>
+    <script src="resources/scripts/axure/drag.js"></script>
+    <script src="resources/scripts/axure/move.js"></script>
+    <script src="resources/scripts/axure/visibility.js"></script>
+    <script src="resources/scripts/axure/style.js"></script>
+    <script src="resources/scripts/axure/adaptive.js"></script>
+    <script src="resources/scripts/axure/tree.js"></script>
+    <script src="resources/scripts/axure/init.temp.js"></script>
+    <script src="resources/scripts/axure/legacy.js"></script>
+    <script src="resources/scripts/axure/viewer.js"></script>
+    <script src="resources/scripts/axure/math.js"></script>
+    <script src="resources/scripts/axure/jquery.nicescroll.min.js"></script>
+    <script src="data/document.js"></script>
+    <script src="files/新增生成信用卡返现数据逻辑/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (矩形) -->
+      <div id="u8399" class="ax_default box_2 transition notrs">
+        <div id="u8399_div" class=""></div>
+        <div id="u8399_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u8400" class="ax_default _文本段落 transition notrs">
+        <div id="u8400_div" class=""></div>
+        <div id="u8400_text" class="text ">
+          <p><span style="font-family:&quot;Arial Negreta&quot;, &quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:700;">新增【取消返现分摊】按钮：</span><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">弹窗参考返现分摊，确认后按【期间+所属银行+（skyee：支付期间）】维度在当前页面还原返现分摊步骤，即删除所选维度单据类型含返现的数据，再（WF:还原生成原返现数据）；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">（WF：若当前页面所选返现期间对应的期间不存在单据类型含返现的数据，或存在但【凭证生成状态】=‘凭证生成成功’，则取消返现失败并提示不存在符合取消返现条件的数据！Skyee：若当前页面【返现金额维护】弹窗所选返现期间+支付期间不存在是否返现分摊=是的数据，或存在但【凭证生成状态】=‘凭证生成成功’，则取消返现失败并提示不存在符合取消返现条件的数据！）Skyee取消分摊成功后，对应返现金额维度弹窗同维度的【是否返现分摊】需更新为否；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Negreta&quot;, &quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:700;">新增【返现金额维护】按钮位于返现分摊右侧：</span><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">点击按钮打开弹窗如右图：</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">1.搜索框：【返现期间】：日期框默认展示上一自然月精确到月；【支付期间】：日期框无默认值精确到月；【币种】：下拉多选无默认值，选项包括弹窗列表币种去重；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">2.按钮：2.1【新增】：点击在第一行新增编辑行：【所属银行】置灰固定赋值‘Skyee’；【支付期间】：日期框必填，默认展示上一自然月精确到月；【返现期间】：置灰，带出返现时间所在年月；【返现时间】：必填，日期框必填精确到天无默认值；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 【币种】：下拉单选必填，选项为【财务对接平台/EAS基础资料/币别】禁用状态≠作废的数据【编码】中；【金额】：999999999.99~-999999999.99保留两位小数仅限录入数字必填；确认后【是否返现分摊】赋值‘否’</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 2.2【修改】：同上，仅限修改【是否返现分摊】为否的数据；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 2.3【删除】：仅限删除【是否返现分摊】为否的数据；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 2.4【导出】：支持勾选或未勾选按筛选条件导出；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;color:#D9001B;"> ---新增&amp;修改较重：按【所属银行+返现期间+支付期间+币种】维度校验列表是否存在重复数据，存在则失败；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">【删除】按钮：新增逻辑，若删除范围含【单据类型】含返现的数据则全部删除失败，并提示：存在返现数据无法删除！需点击取消返现按钮；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u8401" class="ax_default _文本段落 transition notrs">
+        <div id="u8401_div" class=""></div>
+        <div id="u8401_text" class="text ">
+          <p><span style="font-family:&quot;Arial Negreta&quot;, &quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:700;">需求说明：</span><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">次月信用卡会存在返现金额，需根据返现总金额，按上月（或前几月）信用卡消费金额分摊返现金额并入账；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Negreta&quot;, &quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:700;">【实体银行/信用卡/财务EAS凭证】：</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Negreta&quot;, &quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:700;">新增【返现分摊】按钮位于拉取数据按钮右侧：</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">1.点击按钮打开【生成返现分摊数据范围】弹窗，其中包括【返现期间】：日期框必录，精确到月，默认展示上一自然月；【所属银行】：下拉单选无默认值非必录，选项包括‘world first’和‘Skyee’；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 【支付期间】：当所属银行选择‘world first’时，该字段置灰置空；当选择‘Skyee’时，该字段日期框必录支持多选，精确到月，默认展示上一自然月；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">2.确认后按【期间+所属银行+（skyee：支付期间）】维度在当前页面生成返现数据，具体逻辑如下：</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">（WF：若当前页面所选返现期间对应的期间已存在单据类型含返现的数据，则返现失败并提示该返现期间已返现！Skyee：若当前页面【返现金额维护】弹窗所选返现期间+支付期间存在是否返现分摊=是的数据，则返现失败并提示该返现期间已返现！）</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">2.1生成world first返现分摊数据：2.1.1筛选数据：①返现数据：筛选当前页面【所选期间】数据源主键ID关联信用卡流水对应的【动账类型】=‘返现’ </span><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;color:#D9001B;">且【凭证状态】≠‘凭证生成成功’</span><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">数据；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ②分摊数据：筛选当前页面【所选期间】的上一期间，数据源主键ID关联信用卡流水对应的【动账类型】=‘卡支付’ 且【凭证状态】=‘凭证生成成功’的数据；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --若所选期间没有返现数据或所选分摊数据不存在符合条件的，则直接不生成返现分摊数据，提示‘暂无符合条件的返现/分摊数据可分摊！’</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2.1.2返现分摊：计算分摊比例时，需排除【单据类型】=被代付的数据；复制生成返现数据不排除；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ①将所筛分摊数据的【信用卡金额】，将信用卡币种作为原币，美元作为本位币，在【财务对接平台/汇率】取返现数据对应业务日期向前最近日期的汇率；用信用卡金额*汇率得出美元信用卡金额（保留两位）；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ②计算各行分摊比例：所筛分摊数据各行的【美元信用卡金额】/汇总所筛分摊数据的【美元信用卡金额】（保留两位）；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ③以所筛分摊数据为基础复制生成返现数据（有多少条就生成多少条），对应关系如下：</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ④删除当前页面该条总金额返现数据（后台保存以备还原）；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">2.2生成Skyee返现分摊数据：2.2.1筛选数据：①返现数据：筛选当前页面【返现金额维护】弹窗所选【返现期间+支付期间</span><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;text-decoration:line-through ;color:#D9001B;">+会计期间</span><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">】【是否返现分摊】=’否‘的数据；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; ②分摊数据：筛选当前页面所选【支付期间】对应的【期间】，数据源主键ID关联信用卡流水对应的【交易类型】≠‘账户转入资金’ 且【凭证状态】=‘凭证生成成功’的数据；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; （注意：财务EAS凭证拉取SKYEE数据时需加上拉取数据源主键ID的逻辑，参考WF）</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --若所选期间没有返现数据或所选分摊数据不存在符合条件的，则直接不生成返现分摊数据，提示‘暂无符合条件的返现/分摊数据可分摊！’</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 2.2.2返现分摊：计算分摊比例时，需排除【单据类型】=被代付的数据；复制生成返现数据不排除；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ①按【信用卡币种】的维度分别计算各币种各行分摊比例：所筛分摊数据各行的【信用卡金额】/汇总所筛分摊数据的【信用卡金额】（保留两位）；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ②以所筛分摊数据为基础复制生成返现数据（有多少条就生成多少条），对应关系如下：生成对应返现分摊数据后，【返现金额维护】对应同【返现期间+支付期间+币种】维度的【是否返现分摊】更新为’是‘；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (表格) -->
+      <div id="u8402" class="ax_default">
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8403" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8403.svg" id="u8403_img" class="img generatedImage" viewbox="0 0 127 34">
+
+  <path d="M 1 1  L 127 1  L 127 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(114, 181, 211, 1)" stroke="none" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+  <path d="M 0 0.5  L 127 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+          </svg>
+          <div id="u8403_text" class="text ">
+            <p><span>当前页面字段</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8404" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8404.svg" id="u8404_img" class="img generatedImage" viewbox="127 0 726 34">
+
+  <path d="M 1 1  L 726 1  L 726 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(114, 181, 211, 1)" stroke="none" transform="matrix(1 0 0 1 127 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 0 )" class="stroke" />
+  <path d="M 0 0.5  L 726 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 0 )" class="stroke" />
+          </svg>
+          <div id="u8404_text" class="text ">
+            <p><span>world first</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8405" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8405.svg" id="u8405_img" class="img generatedImage" viewbox="853 0 723 34">
+
+  <path d="M 1 1  L 722 1  L 722 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(114, 181, 211, 1)" stroke="none" transform="matrix(1 0 0 1 853 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 0 )" class="stroke" />
+  <path d="M 0 0.5  L 723 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 0 )" class="stroke" />
+  <path d="M 722.5 1  L 722.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 0 )" class="stroke" />
+          </svg>
+          <div id="u8405_text" class="text ">
+            <p><span>Skyee</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8406" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8406.svg" id="u8406_img" class="img generatedImage" viewbox="0 34 127 39">
+
+  <path d="M 1 1  L 127 1  L 127 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 34 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 34 )" class="stroke" />
+  <path d="M 0 0.5  L 127 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 34 )" class="stroke" />
+          </svg>
+          <div id="u8406_text" class="text ">
+            <p><span>期间</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8407" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8407.svg" id="u8407_img" class="img generatedImage" viewbox="127 34 726 39">
+
+  <path d="M 1 1  L 726 1  L 726 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(236, 220, 251, 1)" stroke="none" transform="matrix(1 0 0 1 127 34 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 34 )" class="stroke" />
+  <path d="M 0 0.5  L 726 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 34 )" class="stroke" />
+          </svg>
+          <div id="u8407_text" class="text ">
+            <p><span>取所筛返现数据期间</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8408" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8408.svg" id="u8408_img" class="img generatedImage" viewbox="853 34 723 39">
+
+  <path d="M 1 1  L 722 1  L 722 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 853 34 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 34 )" class="stroke" />
+  <path d="M 0 0.5  L 723 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 34 )" class="stroke" />
+  <path d="M 722.5 1  L 722.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 34 )" class="stroke" />
+          </svg>
+          <div id="u8408_text" class="text ">
+            <p><span>取所筛返现数据期间</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8409" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8409.svg" id="u8409_img" class="img generatedImage" viewbox="0 73 127 39">
+
+  <path d="M 1 1  L 127 1  L 127 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 73 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 73 )" class="stroke" />
+  <path d="M 0 0.5  L 127 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 73 )" class="stroke" />
+          </svg>
+          <div id="u8409_text" class="text ">
+            <p><span>业务日期</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8410" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8410.svg" id="u8410_img" class="img generatedImage" viewbox="127 73 726 39">
+
+  <path d="M 1 1  L 726 1  L 726 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(236, 220, 251, 1)" stroke="none" transform="matrix(1 0 0 1 127 73 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 73 )" class="stroke" />
+  <path d="M 0 0.5  L 726 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 73 )" class="stroke" />
+          </svg>
+          <div id="u8410_text" class="text ">
+            <p><span>同所筛返现数据对应字段</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8411" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8411.svg" id="u8411_img" class="img generatedImage" viewbox="853 73 723 39">
+
+  <path d="M 1 1  L 722 1  L 722 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 853 73 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 73 )" class="stroke" />
+  <path d="M 0 0.5  L 723 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 73 )" class="stroke" />
+  <path d="M 722.5 1  L 722.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 73 )" class="stroke" />
+          </svg>
+          <div id="u8411_text" class="text ">
+            <p><span>取返现金额维护弹窗同【返现期间+支付期间+（</span><span style="color:#D9001B;">信用卡币种</span><span>）币种】维度的返现时间</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8412" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8412.svg" id="u8412_img" class="img generatedImage" viewbox="0 112 127 49">
+
+  <path d="M 1 1  L 127 1  L 127 49  L 1 49  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 112 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 49  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 112 )" class="stroke" />
+  <path d="M 0 0.5  L 127 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 112 )" class="stroke" />
+          </svg>
+          <div id="u8412_text" class="text ">
+            <p><span>单据编号</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8413" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8413.svg" id="u8413_img" class="img generatedImage" viewbox="127 112 726 49">
+
+  <path d="M 1 1  L 726 1  L 726 49  L 1 49  L 1 1  Z " fill-rule="nonzero" fill="rgba(236, 220, 251, 1)" stroke="none" transform="matrix(1 0 0 1 127 112 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 49  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 112 )" class="stroke" />
+  <path d="M 0 0.5  L 726 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 112 )" class="stroke" />
+          </svg>
+          <div id="u8413_text" class="text ">
+            <p><span>同WF其他单据编号</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8414" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8414.svg" id="u8414_img" class="img generatedImage" viewbox="853 112 723 49">
+
+  <path d="M 1 1  L 722 1  L 722 49  L 1 49  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 853 112 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 49  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 112 )" class="stroke" />
+  <path d="M 0 0.5  L 723 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 112 )" class="stroke" />
+  <path d="M 722.5 1  L 722.5 49  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 112 )" class="stroke" />
+          </svg>
+          <div id="u8414_text" class="text ">
+            <p><span>同Skyee其他单据编号</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8415" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8415.svg" id="u8415_img" class="img generatedImage" viewbox="0 161 127 59">
+
+  <path d="M 1 1  L 127 1  L 127 59  L 1 59  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 161 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 59  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 161 )" class="stroke" />
+  <path d="M 0 0.5  L 127 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 161 )" class="stroke" />
+          </svg>
+          <div id="u8415_text" class="text ">
+            <p><span>单据类型</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8416" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8416.svg" id="u8416_img" class="img generatedImage" viewbox="127 161 726 59">
+
+  <path d="M 1 1  L 726 1  L 726 59  L 1 59  L 1 1  Z " fill-rule="nonzero" fill="rgba(236, 220, 251, 1)" stroke="none" transform="matrix(1 0 0 1 127 161 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 59  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 161 )" class="stroke" />
+  <path d="M 0 0.5  L 726 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 161 )" class="stroke" />
+          </svg>
+          <div id="u8416_text" class="text ">
+            <p><span>取所筛分摊数据的单据类型后拼接’-返现‘，如：代付-返现；</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8417" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8417.svg" id="u8417_img" class="img generatedImage" viewbox="853 161 723 59">
+
+  <path d="M 1 1  L 722 1  L 722 59  L 1 59  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 853 161 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 59  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 161 )" class="stroke" />
+  <path d="M 0 0.5  L 723 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 161 )" class="stroke" />
+  <path d="M 722.5 1  L 722.5 59  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 161 )" class="stroke" />
+          </svg>
+          <div id="u8417_text" class="text ">
+            <p><span>取所筛分摊数据的单据类型后拼接’-返现‘，如：代付-返现；</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8418" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8418.svg" id="u8418_img" class="img generatedImage" viewbox="0 220 127 39">
+
+  <path d="M 1 1  L 127 1  L 127 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 220 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 220 )" class="stroke" />
+  <path d="M 0 0.5  L 127 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 220 )" class="stroke" />
+          </svg>
+          <div id="u8418_text" class="text ">
+            <p><span>法人主体</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8419" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8419.svg" id="u8419_img" class="img generatedImage" viewbox="127 220 726 39">
+
+  <path d="M 1 1  L 726 1  L 726 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(236, 220, 251, 1)" stroke="none" transform="matrix(1 0 0 1 127 220 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 220 )" class="stroke" />
+  <path d="M 0 0.5  L 726 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 220 )" class="stroke" />
+          </svg>
+          <div id="u8419_text" class="text ">
+            <p><span>取所筛分摊数据对应字段</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8420" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8420.svg" id="u8420_img" class="img generatedImage" viewbox="853 220 723 39">
+
+  <path d="M 1 1  L 722 1  L 722 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 853 220 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 220 )" class="stroke" />
+  <path d="M 0 0.5  L 723 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 220 )" class="stroke" />
+  <path d="M 722.5 1  L 722.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 220 )" class="stroke" />
+          </svg>
+          <div id="u8420_text" class="text ">
+            <p><span>取所筛分摊数据对应字段</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8421" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8421.svg" id="u8421_img" class="img generatedImage" viewbox="0 259 127 39">
+
+  <path d="M 1 1  L 127 1  L 127 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 259 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 259 )" class="stroke" />
+  <path d="M 0 0.5  L 127 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 259 )" class="stroke" />
+          </svg>
+          <div id="u8421_text" class="text ">
+            <p><span>所属银行</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8422" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8422.svg" id="u8422_img" class="img generatedImage" viewbox="127 259 726 39">
+
+  <path d="M 1 1  L 726 1  L 726 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(236, 220, 251, 1)" stroke="none" transform="matrix(1 0 0 1 127 259 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 259 )" class="stroke" />
+  <path d="M 0 0.5  L 726 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 259 )" class="stroke" />
+          </svg>
+          <div id="u8422_text" class="text ">
+            <p><span>取所筛分摊数据对应字段</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8423" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8423.svg" id="u8423_img" class="img generatedImage" viewbox="853 259 723 39">
+
+  <path d="M 1 1  L 722 1  L 722 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 853 259 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 259 )" class="stroke" />
+  <path d="M 0 0.5  L 723 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 259 )" class="stroke" />
+  <path d="M 722.5 1  L 722.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 259 )" class="stroke" />
+          </svg>
+          <div id="u8423_text" class="text ">
+            <p><span>取所筛分摊数据对应字段</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8424" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8424.svg" id="u8424_img" class="img generatedImage" viewbox="0 298 127 38">
+
+  <path d="M 1 1  L 127 1  L 127 38  L 1 38  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 298 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 38  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 298 )" class="stroke" />
+  <path d="M 0 0.5  L 127 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 298 )" class="stroke" />
+          </svg>
+          <div id="u8424_text" class="text ">
+            <p><span>开始~结束日期</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8425" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8425.svg" id="u8425_img" class="img generatedImage" viewbox="127 298 726 38">
+
+  <path d="M 1 1  L 726 1  L 726 38  L 1 38  L 1 1  Z " fill-rule="nonzero" fill="rgba(236, 220, 251, 1)" stroke="none" transform="matrix(1 0 0 1 127 298 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 38  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 298 )" class="stroke" />
+  <path d="M 0 0.5  L 726 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 298 )" class="stroke" />
+          </svg>
+          <div id="u8425_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8426" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8426.svg" id="u8426_img" class="img generatedImage" viewbox="853 298 723 38">
+
+  <path d="M 1 1  L 722 1  L 722 38  L 1 38  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 853 298 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 38  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 298 )" class="stroke" />
+  <path d="M 0 0.5  L 723 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 298 )" class="stroke" />
+  <path d="M 722.5 1  L 722.5 38  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 298 )" class="stroke" />
+          </svg>
+          <div id="u8426_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8427" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8427.svg" id="u8427_img" class="img generatedImage" viewbox="0 336 127 38">
+
+  <path d="M 1 1  L 127 1  L 127 38  L 1 38  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 336 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 38  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 336 )" class="stroke" />
+  <path d="M 0 0.5  L 127 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 336 )" class="stroke" />
+          </svg>
+          <div id="u8427_text" class="text ">
+            <p><span>真实卡号</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8428" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8428.svg" id="u8428_img" class="img generatedImage" viewbox="127 336 726 38">
+
+  <path d="M 1 1  L 726 1  L 726 38  L 1 38  L 1 1  Z " fill-rule="nonzero" fill="rgba(236, 220, 251, 1)" stroke="none" transform="matrix(1 0 0 1 127 336 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 38  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 336 )" class="stroke" />
+  <path d="M 0 0.5  L 726 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 336 )" class="stroke" />
+          </svg>
+          <div id="u8428_text" class="text ">
+            <p><span>取所筛分摊数据对应字段</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8429" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8429.svg" id="u8429_img" class="img generatedImage" viewbox="853 336 723 38">
+
+  <path d="M 1 1  L 722 1  L 722 38  L 1 38  L 1 1  Z " fill-rule="nonzero" fill="rgba(236, 220, 251, 1)" stroke="none" transform="matrix(1 0 0 1 853 336 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 38  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 336 )" class="stroke" />
+  <path d="M 0 0.5  L 723 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 336 )" class="stroke" />
+  <path d="M 722.5 1  L 722.5 38  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 336 )" class="stroke" />
+          </svg>
+          <div id="u8429_text" class="text ">
+            <p><span>取所筛分摊数据对应字段</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8430" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8430.svg" id="u8430_img" class="img generatedImage" viewbox="0 374 127 39">
+
+  <path d="M 1 1  L 127 1  L 127 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 374 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 374 )" class="stroke" />
+  <path d="M 0 0.5  L 127 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 374 )" class="stroke" />
+          </svg>
+          <div id="u8430_text" class="text ">
+            <p><span>店铺</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8431" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8431.svg" id="u8431_img" class="img generatedImage" viewbox="127 374 726 39">
+
+  <path d="M 1 1  L 726 1  L 726 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(236, 220, 251, 1)" stroke="none" transform="matrix(1 0 0 1 127 374 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 374 )" class="stroke" />
+  <path d="M 0 0.5  L 726 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 374 )" class="stroke" />
+          </svg>
+          <div id="u8431_text" class="text ">
+            <p><span>取所筛分摊数据对应字段</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8432" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8432.svg" id="u8432_img" class="img generatedImage" viewbox="853 374 723 39">
+
+  <path d="M 1 1  L 722 1  L 722 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(236, 220, 251, 1)" stroke="none" transform="matrix(1 0 0 1 853 374 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 374 )" class="stroke" />
+  <path d="M 0 0.5  L 723 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 374 )" class="stroke" />
+  <path d="M 722.5 1  L 722.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 374 )" class="stroke" />
+          </svg>
+          <div id="u8432_text" class="text ">
+            <p><span>取所筛分摊数据对应字段</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8433" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8433.svg" id="u8433_img" class="img generatedImage" viewbox="0 413 127 39">
+
+  <path d="M 1 1  L 127 1  L 127 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 413 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 413 )" class="stroke" />
+  <path d="M 0 0.5  L 127 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 413 )" class="stroke" />
+          </svg>
+          <div id="u8433_text" class="text ">
+            <p><span>站点</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8434" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8434.svg" id="u8434_img" class="img generatedImage" viewbox="127 413 726 39">
+
+  <path d="M 1 1  L 726 1  L 726 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(236, 220, 251, 1)" stroke="none" transform="matrix(1 0 0 1 127 413 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 413 )" class="stroke" />
+  <path d="M 0 0.5  L 726 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 413 )" class="stroke" />
+          </svg>
+          <div id="u8434_text" class="text ">
+            <p><span>取所筛分摊数据对应字段</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8435" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8435.svg" id="u8435_img" class="img generatedImage" viewbox="853 413 723 39">
+
+  <path d="M 1 1  L 722 1  L 722 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(236, 220, 251, 1)" stroke="none" transform="matrix(1 0 0 1 853 413 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 413 )" class="stroke" />
+  <path d="M 0 0.5  L 723 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 413 )" class="stroke" />
+  <path d="M 722.5 1  L 722.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 413 )" class="stroke" />
+          </svg>
+          <div id="u8435_text" class="text ">
+            <p><span>取所筛分摊数据对应字段</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8436" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8436.svg" id="u8436_img" class="img generatedImage" viewbox="0 452 127 39">
+
+  <path d="M 1 1  L 127 1  L 127 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 452 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 452 )" class="stroke" />
+  <path d="M 0 0.5  L 127 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 452 )" class="stroke" />
+          </svg>
+          <div id="u8436_text" class="text ">
+            <p><span>费用类型</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8437" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8437.svg" id="u8437_img" class="img generatedImage" viewbox="127 452 726 39">
+
+  <path d="M 1 1  L 726 1  L 726 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(236, 220, 251, 1)" stroke="none" transform="matrix(1 0 0 1 127 452 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 452 )" class="stroke" />
+  <path d="M 0 0.5  L 726 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 452 )" class="stroke" />
+          </svg>
+          <div id="u8437_text" class="text ">
+            <p><span>取所筛分摊数据对应字段</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8438" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8438.svg" id="u8438_img" class="img generatedImage" viewbox="853 452 723 39">
+
+  <path d="M 1 1  L 722 1  L 722 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(236, 220, 251, 1)" stroke="none" transform="matrix(1 0 0 1 853 452 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 452 )" class="stroke" />
+  <path d="M 0 0.5  L 723 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 452 )" class="stroke" />
+  <path d="M 722.5 1  L 722.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 452 )" class="stroke" />
+          </svg>
+          <div id="u8438_text" class="text ">
+            <p><span>取所筛分摊数据对应字段</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8439" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8439.svg" id="u8439_img" class="img generatedImage" viewbox="0 491 127 38">
+
+  <path d="M 1 1  L 127 1  L 127 38  L 1 38  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 491 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 38  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 491 )" class="stroke" />
+  <path d="M 0 0.5  L 127 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 491 )" class="stroke" />
+          </svg>
+          <div id="u8439_text" class="text ">
+            <p><span>费用承担主体</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8440" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8440.svg" id="u8440_img" class="img generatedImage" viewbox="127 491 726 38">
+
+  <path d="M 1 1  L 726 1  L 726 38  L 1 38  L 1 1  Z " fill-rule="nonzero" fill="rgba(236, 220, 251, 1)" stroke="none" transform="matrix(1 0 0 1 127 491 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 38  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 491 )" class="stroke" />
+  <path d="M 0 0.5  L 726 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 491 )" class="stroke" />
+          </svg>
+          <div id="u8440_text" class="text ">
+            <p><span>取所筛分摊数据对应字段</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8441" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8441.svg" id="u8441_img" class="img generatedImage" viewbox="853 491 723 38">
+
+  <path d="M 1 1  L 722 1  L 722 38  L 1 38  L 1 1  Z " fill-rule="nonzero" fill="rgba(236, 220, 251, 1)" stroke="none" transform="matrix(1 0 0 1 853 491 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 38  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 491 )" class="stroke" />
+  <path d="M 0 0.5  L 723 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 491 )" class="stroke" />
+  <path d="M 722.5 1  L 722.5 38  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 491 )" class="stroke" />
+          </svg>
+          <div id="u8441_text" class="text ">
+            <p><span>取所筛分摊数据对应字段</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8442" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8442.svg" id="u8442_img" class="img generatedImage" viewbox="0 529 127 39">
+
+  <path d="M 1 1  L 127 1  L 127 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 529 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 529 )" class="stroke" />
+  <path d="M 0 0.5  L 127 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 529 )" class="stroke" />
+          </svg>
+          <div id="u8442_text" class="text ">
+            <p><span>费用承担部门</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8443" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8443.svg" id="u8443_img" class="img generatedImage" viewbox="127 529 726 39">
+
+  <path d="M 1 1  L 726 1  L 726 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(236, 220, 251, 1)" stroke="none" transform="matrix(1 0 0 1 127 529 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 529 )" class="stroke" />
+  <path d="M 0 0.5  L 726 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 529 )" class="stroke" />
+          </svg>
+          <div id="u8443_text" class="text ">
+            <p><span>取所筛分摊数据对应字段</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8444" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8444.svg" id="u8444_img" class="img generatedImage" viewbox="853 529 723 39">
+
+  <path d="M 1 1  L 722 1  L 722 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(236, 220, 251, 1)" stroke="none" transform="matrix(1 0 0 1 853 529 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 529 )" class="stroke" />
+  <path d="M 0 0.5  L 723 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 529 )" class="stroke" />
+  <path d="M 722.5 1  L 722.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 529 )" class="stroke" />
+          </svg>
+          <div id="u8444_text" class="text ">
+            <p><span>取所筛分摊数据对应字段</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8445" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8445.svg" id="u8445_img" class="img generatedImage" viewbox="0 568 127 39">
+
+  <path d="M 1 1  L 127 1  L 127 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 568 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 568 )" class="stroke" />
+  <path d="M 0 0.5  L 127 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 568 )" class="stroke" />
+          </svg>
+          <div id="u8445_text" class="text ">
+            <p><span>入账摘要</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8446" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8446.svg" id="u8446_img" class="img generatedImage" viewbox="127 568 726 39">
+
+  <path d="M 1 1  L 726 1  L 726 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(236, 220, 251, 1)" stroke="none" transform="matrix(1 0 0 1 127 568 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 568 )" class="stroke" />
+  <path d="M 0 0.5  L 726 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 568 )" class="stroke" />
+          </svg>
+          <div id="u8446_text" class="text ">
+            <p><span>前缀为所属银行+‘ 返现：’再+取所筛分摊数据对应字段（去掉金额币种）</span></p><p><span>如：world first返现：2026-02-13 world first信用卡-代范泰克创新有限公司付：范泰克 亚马逊平台费用 锐云迪-UK</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8447" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8447.svg" id="u8447_img" class="img generatedImage" viewbox="853 568 723 39">
+
+  <path d="M 1 1  L 722 1  L 722 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(236, 220, 251, 1)" stroke="none" transform="matrix(1 0 0 1 853 568 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 568 )" class="stroke" />
+  <path d="M 0 0.5  L 723 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 568 )" class="stroke" />
+  <path d="M 722.5 1  L 722.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 568 )" class="stroke" />
+          </svg>
+          <div id="u8447_text" class="text ">
+            <p><span>前缀为所属银行+‘ 返现：’再+取所筛分摊数据对应字段（去掉金额币种）</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8448" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8448.svg" id="u8448_img" class="img generatedImage" viewbox="0 607 127 39">
+
+  <path d="M 1 1  L 127 1  L 127 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 607 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 607 )" class="stroke" />
+  <path d="M 0 0.5  L 127 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 607 )" class="stroke" />
+          </svg>
+          <div id="u8448_text" class="text ">
+            <p><span>信用卡币种</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8449" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8449.svg" id="u8449_img" class="img generatedImage" viewbox="127 607 726 39">
+
+  <path d="M 1 1  L 726 1  L 726 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(236, 220, 251, 1)" stroke="none" transform="matrix(1 0 0 1 127 607 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 607 )" class="stroke" />
+  <path d="M 0 0.5  L 726 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 607 )" class="stroke" />
+          </svg>
+          <div id="u8449_text" class="text ">
+            <p><span>=USD</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8450" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8450.svg" id="u8450_img" class="img generatedImage" viewbox="853 607 723 39">
+
+  <path d="M 1 1  L 722 1  L 722 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(236, 220, 251, 1)" stroke="none" transform="matrix(1 0 0 1 853 607 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 607 )" class="stroke" />
+  <path d="M 0 0.5  L 723 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 607 )" class="stroke" />
+  <path d="M 722.5 1  L 722.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 607 )" class="stroke" />
+          </svg>
+          <div id="u8450_text" class="text ">
+            <p><span>取所筛分摊数据对应字段</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8451" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8451.svg" id="u8451_img" class="img generatedImage" viewbox="0 646 127 49">
+
+  <path d="M 1 1  L 127 1  L 127 49  L 1 49  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 646 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 49  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 646 )" class="stroke" />
+  <path d="M 0 0.5  L 127 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 646 )" class="stroke" />
+          </svg>
+          <div id="u8451_text" class="text ">
+            <p><span>信用卡金额</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8452" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8452.svg" id="u8452_img" class="img generatedImage" viewbox="127 646 726 49">
+
+  <path d="M 1 1  L 726 1  L 726 49  L 1 49  L 1 1  Z " fill-rule="nonzero" fill="rgba(236, 220, 251, 1)" stroke="none" transform="matrix(1 0 0 1 127 646 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 49  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 646 )" class="stroke" />
+  <path d="M 0 0.5  L 726 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 646 )" class="stroke" />
+          </svg>
+          <div id="u8452_text" class="text ">
+            <p><span>=计算出的分摊比例*美元信用卡金额</span><span style="color:#D9001B;">*（-1）</span><span>，保留两位</span></p><p><span>（注意尾差分摊到最大金额当中；特殊处理：【单据类型】=被代付的数据生成返现数据金额等于对应代付数据生成的金额）</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8453" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8453.svg" id="u8453_img" class="img generatedImage" viewbox="853 646 723 49">
+
+  <path d="M 1 1  L 722 1  L 722 49  L 1 49  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 853 646 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 49  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 646 )" class="stroke" />
+  <path d="M 0 0.5  L 723 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 646 )" class="stroke" />
+  <path d="M 722.5 1  L 722.5 49  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 646 )" class="stroke" />
+          </svg>
+          <div id="u8453_text" class="text ">
+            <p><span>=计算出的分摊比例*返现金额维护弹窗同【返现期间+支付期间+（信用卡币种）币种】维度的金额*（-1），保留两位</span></p><p><span>（注意尾差分摊到最大金额当中；特殊处理：【单据类型】=被代付的数据生成返现数据金额等于对应代付数据生成的金额）</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8454" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8454.svg" id="u8454_img" class="img generatedImage" viewbox="0 695 127 39">
+
+  <path d="M 1 1  L 127 1  L 127 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 695 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 695 )" class="stroke" />
+  <path d="M 0 0.5  L 127 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 695 )" class="stroke" />
+          </svg>
+          <div id="u8454_text" class="text ">
+            <p><span>原始币种</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8455" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8455.svg" id="u8455_img" class="img generatedImage" viewbox="127 695 726 39">
+
+  <path d="M 1 1  L 726 1  L 726 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(236, 220, 251, 1)" stroke="none" transform="matrix(1 0 0 1 127 695 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 695 )" class="stroke" />
+  <path d="M 0 0.5  L 726 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 695 )" class="stroke" />
+          </svg>
+          <div id="u8455_text" class="text ">
+            <p><span>取所筛分摊数据对应字段</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8456" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8456.svg" id="u8456_img" class="img generatedImage" viewbox="853 695 723 39">
+
+  <path d="M 1 1  L 722 1  L 722 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(236, 220, 251, 1)" stroke="none" transform="matrix(1 0 0 1 853 695 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 695 )" class="stroke" />
+  <path d="M 0 0.5  L 723 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 695 )" class="stroke" />
+  <path d="M 722.5 1  L 722.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 695 )" class="stroke" />
+          </svg>
+          <div id="u8456_text" class="text ">
+            <p><span>取所筛分摊数据对应字段</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8457" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8457.svg" id="u8457_img" class="img generatedImage" viewbox="0 734 127 49">
+
+  <path d="M 1 1  L 127 1  L 127 49  L 1 49  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 734 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 49  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 734 )" class="stroke" />
+  <path d="M 0 0.5  L 127 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 734 )" class="stroke" />
+          </svg>
+          <div id="u8457_text" class="text ">
+            <p><span>原始金额</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8458" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8458.svg" id="u8458_img" class="img generatedImage" viewbox="127 734 726 49">
+
+  <path d="M 1 1  L 726 1  L 726 49  L 1 49  L 1 1  Z " fill-rule="nonzero" fill="rgba(236, 220, 251, 1)" stroke="none" transform="matrix(1 0 0 1 127 734 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 49  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 734 )" class="stroke" />
+  <path d="M 0 0.5  L 726 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 734 )" class="stroke" />
+          </svg>
+          <div id="u8458_text" class="text ">
+            <p><span>取所筛分摊数据对应字段</span><span style="color:#D9001B;">*（-1）</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8459" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8459.svg" id="u8459_img" class="img generatedImage" viewbox="853 734 723 49">
+
+  <path d="M 1 1  L 722 1  L 722 49  L 1 49  L 1 1  Z " fill-rule="nonzero" fill="rgba(236, 220, 251, 1)" stroke="none" transform="matrix(1 0 0 1 853 734 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 49  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 734 )" class="stroke" />
+  <path d="M 0 0.5  L 723 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 734 )" class="stroke" />
+  <path d="M 722.5 1  L 722.5 49  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 734 )" class="stroke" />
+          </svg>
+          <div id="u8459_text" class="text ">
+            <p><span>取所筛分摊数据对应字段</span><span>*（-1）</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8460" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8460.svg" id="u8460_img" class="img generatedImage" viewbox="0 783 127 39">
+
+  <path d="M 1 1  L 127 1  L 127 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 783 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 783 )" class="stroke" />
+  <path d="M 0 0.5  L 127 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 783 )" class="stroke" />
+          </svg>
+          <div id="u8460_text" class="text ">
+            <p><span>部门</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8461" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8461.svg" id="u8461_img" class="img generatedImage" viewbox="127 783 726 39">
+
+  <path d="M 1 1  L 726 1  L 726 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(236, 220, 251, 1)" stroke="none" transform="matrix(1 0 0 1 127 783 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 783 )" class="stroke" />
+  <path d="M 0 0.5  L 726 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 783 )" class="stroke" />
+          </svg>
+          <div id="u8461_text" class="text ">
+            <p><span>取所筛分摊数据对应字段</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8462" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8462.svg" id="u8462_img" class="img generatedImage" viewbox="853 783 723 39">
+
+  <path d="M 1 1  L 722 1  L 722 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(236, 220, 251, 1)" stroke="none" transform="matrix(1 0 0 1 853 783 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 783 )" class="stroke" />
+  <path d="M 0 0.5  L 723 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 783 )" class="stroke" />
+  <path d="M 722.5 1  L 722.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 783 )" class="stroke" />
+          </svg>
+          <div id="u8462_text" class="text ">
+            <p><span>取所筛分摊数据对应字段</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8463" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8463.svg" id="u8463_img" class="img generatedImage" viewbox="0 822 127 50">
+
+  <path d="M 1 1  L 127 1  L 127 50  L 1 50  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 822 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 50  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 822 )" class="stroke" />
+  <path d="M 0 0.5  L 127 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 822 )" class="stroke" />
+          </svg>
+          <div id="u8463_text" class="text ">
+            <p><span>部门编码</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8464" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8464.svg" id="u8464_img" class="img generatedImage" viewbox="127 822 726 50">
+
+  <path d="M 1 1  L 726 1  L 726 50  L 1 50  L 1 1  Z " fill-rule="nonzero" fill="rgba(236, 220, 251, 1)" stroke="none" transform="matrix(1 0 0 1 127 822 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 50  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 822 )" class="stroke" />
+  <path d="M 0 0.5  L 726 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 822 )" class="stroke" />
+          </svg>
+          <div id="u8464_text" class="text ">
+            <p><span>取所筛分摊数据对应字段</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8465" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8465.svg" id="u8465_img" class="img generatedImage" viewbox="853 822 723 50">
+
+  <path d="M 1 1  L 722 1  L 722 50  L 1 50  L 1 1  Z " fill-rule="nonzero" fill="rgba(236, 220, 251, 1)" stroke="none" transform="matrix(1 0 0 1 853 822 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 50  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 822 )" class="stroke" />
+  <path d="M 0 0.5  L 723 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 822 )" class="stroke" />
+  <path d="M 722.5 1  L 722.5 50  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 822 )" class="stroke" />
+          </svg>
+          <div id="u8465_text" class="text ">
+            <p><span>取所筛分摊数据对应字段</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8466" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8466.svg" id="u8466_img" class="img generatedImage" viewbox="0 872 127 39">
+
+  <path d="M 1 1  L 127 1  L 127 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 872 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 872 )" class="stroke" />
+  <path d="M 0 0.5  L 127 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 872 )" class="stroke" />
+          </svg>
+          <div id="u8466_text" class="text ">
+            <p><span>凭证状态</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8467" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8467.svg" id="u8467_img" class="img generatedImage" viewbox="127 872 726 39">
+
+  <path d="M 1 1  L 726 1  L 726 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 127 872 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 872 )" class="stroke" />
+  <path d="M 0 0.5  L 726 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 872 )" class="stroke" />
+          </svg>
+          <div id="u8467_text" class="text ">
+            <p><span>赋固定值‘待生成凭证’</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8468" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8468.svg" id="u8468_img" class="img generatedImage" viewbox="853 872 723 39">
+
+  <path d="M 1 1  L 722 1  L 722 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 853 872 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 872 )" class="stroke" />
+  <path d="M 0 0.5  L 723 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 872 )" class="stroke" />
+  <path d="M 722.5 1  L 722.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 872 )" class="stroke" />
+          </svg>
+          <div id="u8468_text" class="text ">
+            <p><span>赋固定值‘待生成凭证’</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8469" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8469.svg" id="u8469_img" class="img generatedImage" viewbox="0 911 127 39">
+
+  <path d="M 1 1  L 127 1  L 127 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 911 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 911 )" class="stroke" />
+  <path d="M 0 0.5  L 127 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 911 )" class="stroke" />
+          </svg>
+          <div id="u8469_text" class="text ">
+            <p><span>生成凭证时间</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8470" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8470.svg" id="u8470_img" class="img generatedImage" viewbox="127 911 726 39">
+
+  <path d="M 1 1  L 726 1  L 726 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 127 911 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 911 )" class="stroke" />
+  <path d="M 0 0.5  L 726 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 911 )" class="stroke" />
+          </svg>
+          <div id="u8470_text" class="text ">
+            <p><span>赋空值</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8471" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8471.svg" id="u8471_img" class="img generatedImage" viewbox="853 911 723 39">
+
+  <path d="M 1 1  L 722 1  L 722 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 853 911 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 911 )" class="stroke" />
+  <path d="M 0 0.5  L 723 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 911 )" class="stroke" />
+  <path d="M 722.5 1  L 722.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 911 )" class="stroke" />
+          </svg>
+          <div id="u8471_text" class="text ">
+            <p><span>赋空值</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8472" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8472.svg" id="u8472_img" class="img generatedImage" viewbox="0 950 127 39">
+
+  <path d="M 1 1  L 127 1  L 127 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 950 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 950 )" class="stroke" />
+  <path d="M 0 0.5  L 127 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 950 )" class="stroke" />
+          </svg>
+          <div id="u8472_text" class="text ">
+            <p><span>凭证号</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8473" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8473.svg" id="u8473_img" class="img generatedImage" viewbox="127 950 726 39">
+
+  <path d="M 1 1  L 726 1  L 726 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 127 950 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 950 )" class="stroke" />
+  <path d="M 0 0.5  L 726 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 950 )" class="stroke" />
+          </svg>
+          <div id="u8473_text" class="text ">
+            <p><span>赋空值</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8474" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8474.svg" id="u8474_img" class="img generatedImage" viewbox="853 950 723 39">
+
+  <path d="M 1 1  L 722 1  L 722 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 853 950 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 950 )" class="stroke" />
+  <path d="M 0 0.5  L 723 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 950 )" class="stroke" />
+  <path d="M 722.5 1  L 722.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 950 )" class="stroke" />
+          </svg>
+          <div id="u8474_text" class="text ">
+            <p><span>赋空值</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8475" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8475.svg" id="u8475_img" class="img generatedImage" viewbox="0 989 127 39">
+
+  <path d="M 1 1  L 127 1  L 127 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 989 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 989 )" class="stroke" />
+  <path d="M 0 0.5  L 127 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 989 )" class="stroke" />
+          </svg>
+          <div id="u8475_text" class="text ">
+            <p><span>凭证类型</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8476" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8476.svg" id="u8476_img" class="img generatedImage" viewbox="127 989 726 39">
+
+  <path d="M 1 1  L 726 1  L 726 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 127 989 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 989 )" class="stroke" />
+  <path d="M 0 0.5  L 726 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 989 )" class="stroke" />
+          </svg>
+          <div id="u8476_text" class="text ">
+            <p><span>赋空值</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8477" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8477.svg" id="u8477_img" class="img generatedImage" viewbox="853 989 723 39">
+
+  <path d="M 1 1  L 722 1  L 722 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 853 989 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 989 )" class="stroke" />
+  <path d="M 0 0.5  L 723 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 989 )" class="stroke" />
+  <path d="M 722.5 1  L 722.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 989 )" class="stroke" />
+          </svg>
+          <div id="u8477_text" class="text ">
+            <p><span>赋空值</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8478" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8478.svg" id="u8478_img" class="img generatedImage" viewbox="0 1028 127 37">
+
+  <path d="M 1 1  L 127 1  L 127 37  L 1 37  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 1028 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 37  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 1028 )" class="stroke" />
+  <path d="M 0 0.5  L 127 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 1028 )" class="stroke" />
+          </svg>
+          <div id="u8478_text" class="text ">
+            <p><span>失败原因</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8479" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8479.svg" id="u8479_img" class="img generatedImage" viewbox="127 1028 726 37">
+
+  <path d="M 1 1  L 726 1  L 726 37  L 1 37  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 127 1028 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 37  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 1028 )" class="stroke" />
+  <path d="M 0 0.5  L 726 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 1028 )" class="stroke" />
+          </svg>
+          <div id="u8479_text" class="text ">
+            <p><span>赋空值</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8480" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8480.svg" id="u8480_img" class="img generatedImage" viewbox="853 1028 723 37">
+
+  <path d="M 1 1  L 722 1  L 722 37  L 1 37  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 853 1028 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 37  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 1028 )" class="stroke" />
+  <path d="M 0 0.5  L 723 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 1028 )" class="stroke" />
+  <path d="M 722.5 1  L 722.5 37  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 1028 )" class="stroke" />
+          </svg>
+          <div id="u8480_text" class="text ">
+            <p><span>赋空值</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8481" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8481.svg" id="u8481_img" class="img generatedImage" viewbox="0 1065 127 37">
+
+  <path d="M 1 1  L 127 1  L 127 37  L 1 37  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 1065 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 37  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 1065 )" class="stroke" />
+  <path d="M 0 0.5  L 127 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 1065 )" class="stroke" />
+          </svg>
+          <div id="u8481_text" class="text ">
+            <p><span>数据源主键ID</span></p><p><span>（后台保存）</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8482" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8482.svg" id="u8482_img" class="img generatedImage" viewbox="127 1065 726 37">
+
+  <path d="M 1 1  L 726 1  L 726 37  L 1 37  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 127 1065 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 37  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 1065 )" class="stroke" />
+  <path d="M 0 0.5  L 726 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 1065 )" class="stroke" />
+          </svg>
+          <div id="u8482_text" class="text ">
+            <p><span>赋空值</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8483" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8483.svg" id="u8483_img" class="img generatedImage" viewbox="853 1065 723 37">
+
+  <path d="M 1 1  L 722 1  L 722 37  L 1 37  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 853 1065 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 37  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 1065 )" class="stroke" />
+  <path d="M 0 0.5  L 723 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 1065 )" class="stroke" />
+  <path d="M 722.5 1  L 722.5 37  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 1065 )" class="stroke" />
+          </svg>
+          <div id="u8483_text" class="text ">
+            <p><span>赋空值</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8484" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8484.svg" id="u8484_img" class="img generatedImage" viewbox="0 1102 127 37">
+
+  <path d="M 1 1  L 127 1  L 127 36  L 1 36  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 1102 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 36  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 1102 )" class="stroke" />
+  <path d="M 0 0.5  L 127 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 1102 )" class="stroke" />
+  <path d="M 0 36.5  L 127 36.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 1102 )" class="stroke" />
+          </svg>
+          <div id="u8484_text" class="text ">
+            <p><span>支付期间</span></p><p><span>（后台保存）</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8485" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8485.svg" id="u8485_img" class="img generatedImage" viewbox="127 1102 726 37">
+
+  <path d="M 1 1  L 726 1  L 726 36  L 1 36  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 127 1102 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 36  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 1102 )" class="stroke" />
+  <path d="M 0 0.5  L 726 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 1102 )" class="stroke" />
+  <path d="M 0 36.5  L 726 36.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 1102 )" class="stroke" />
+          </svg>
+          <div id="u8485_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u8486" class="ax_default table_cell1 transition notrs">
+          <svg data="images/新增生成信用卡返现数据逻辑/u8486.svg" id="u8486_img" class="img generatedImage" viewbox="853 1102 723 37">
+
+  <path d="M 1 1  L 722 1  L 722 36  L 1 36  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 853 1102 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 36  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 1102 )" class="stroke" />
+  <path d="M 0 0.5  L 723 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 1102 )" class="stroke" />
+  <path d="M 722.5 1  L 722.5 36  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 1102 )" class="stroke" />
+  <path d="M 0 36.5  L 723 36.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 853 1102 )" class="stroke" />
+          </svg>
+          <div id="u8486_text" class="text ">
+            <p><span>取所筛分摊数据期间</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (组合) -->
+      <div id="u8487" class="ax_default" data-left="210" data-top="2704" data-width="838" data-height="272" layer-opacity="1">
+
+        <!-- Unnamed (组合) -->
+        <div id="u8488" class="ax_default" data-left="210" data-top="2704" data-width="838" data-height="272" layer-opacity="1">
+
+          <!-- Unnamed (矩形) -->
+          <div id="u8489" class="ax_default flow_shape1 transition notrs">
+            <div id="u8489_div" class=""></div>
+            <div id="u8489_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u8490" class="ax_default _文本段落 transition notrs">
+          <div id="u8490_div" class=""></div>
+          <div id="u8490_text" class="text ">
+            <p><span>返现金额维护</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格) -->
+        <div id="u8491" class="ax_default">
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u8492" class="ax_default table_cell1 transition notrs">
+            <svg data="images/银行流水/u926.svg" id="u8492_img" class="img generatedImage" viewbox="0 0 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+            </svg>
+            <div id="u8492_text" class="text ">
+              <p><span>所属银行</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u8493" class="ax_default table_cell1 transition notrs">
+            <svg data="images/银行流水/u927.svg" id="u8493_img" class="img generatedImage" viewbox="100 0 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 100 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 0 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 0 )" class="stroke" />
+            </svg>
+            <div id="u8493_text" class="text ">
+              <p><span>返现期间</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u8494" class="ax_default table_cell1 transition notrs">
+            <svg data="images/银行流水/u928.svg" id="u8494_img" class="img generatedImage" viewbox="200 0 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 0 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 0 )" class="stroke" />
+            </svg>
+            <div id="u8494_text" class="text ">
+              <p><span>返现时间</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u8495" class="ax_default table_cell1 transition notrs">
+            <svg data="images/银行流水/u929.svg" id="u8495_img" class="img generatedImage" viewbox="300 0 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 0 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 0 )" class="stroke" />
+            </svg>
+            <div id="u8495_text" class="text ">
+              <p><span>支付期间</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u8496" class="ax_default table_cell1 transition notrs">
+            <svg data="images/银行流水/u930.svg" id="u8496_img" class="img generatedImage" viewbox="400 0 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 400 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 400 0 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 400 0 )" class="stroke" />
+            </svg>
+            <div id="u8496_text" class="text ">
+              <p><span>币种</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u8497" class="ax_default table_cell1 transition notrs">
+            <svg data="images/财务类型/u7259.svg" id="u8497_img" class="img generatedImage" viewbox="500 0 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 500 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 500 0 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 500 0 )" class="stroke" />
+            </svg>
+            <div id="u8497_text" class="text ">
+              <p><span>金额</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u8498" class="ax_default table_cell1 transition notrs">
+            <svg data="images/财务类型/u7260.svg" id="u8498_img" class="img generatedImage" viewbox="600 0 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 600 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 600 0 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 600 0 )" class="stroke" />
+            </svg>
+            <div id="u8498_text" class="text ">
+              <p><span>是否返现分摊</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u8499" class="ax_default table_cell1 transition notrs">
+            <svg data="images/财务类型/u7261.svg" id="u8499_img" class="img generatedImage" viewbox="700 0 100 30">
+
+  <path d="M 1 1  L 99 1  L 99 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 700 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 700 0 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 700 0 )" class="stroke" />
+  <path d="M 99.5 1  L 99.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 700 0 )" class="stroke" />
+            </svg>
+            <div id="u8499_text" class="text ">
+              <p><span>操作日志</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u8500" class="ax_default table_cell1 transition notrs">
+            <svg data="images/银行流水/u932.svg" id="u8500_img" class="img generatedImage" viewbox="0 30 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 30 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 30 )" class="stroke" />
+            </svg>
+            <div id="u8500_text" class="text ">
+              <p><span>Skyee</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u8501" class="ax_default table_cell1 transition notrs">
+            <svg data="images/银行流水/u933.svg" id="u8501_img" class="img generatedImage" viewbox="100 30 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 100 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 30 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 30 )" class="stroke" />
+            </svg>
+            <div id="u8501_text" class="text ">
+              <p><span>2026-04</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u8502" class="ax_default table_cell1 transition notrs">
+            <svg data="images/银行流水/u934.svg" id="u8502_img" class="img generatedImage" viewbox="200 30 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 30 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 30 )" class="stroke" />
+            </svg>
+            <div id="u8502_text" class="text ">
+              <p><span>2026-04-01</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u8503" class="ax_default table_cell1 transition notrs">
+            <svg data="images/银行流水/u935.svg" id="u8503_img" class="img generatedImage" viewbox="300 30 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 30 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 30 )" class="stroke" />
+            </svg>
+            <div id="u8503_text" class="text ">
+              <p><span>2026-03</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u8504" class="ax_default table_cell1 transition notrs">
+            <svg data="images/银行流水/u936.svg" id="u8504_img" class="img generatedImage" viewbox="400 30 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 400 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 400 30 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 400 30 )" class="stroke" />
+            </svg>
+            <div id="u8504_text" class="text ">
+              <p><span>USD</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u8505" class="ax_default table_cell1 transition notrs">
+            <svg data="images/凭证生成（实体银行）-新增/u2836.svg" id="u8505_img" class="img generatedImage" viewbox="500 30 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 500 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 500 30 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 500 30 )" class="stroke" />
+            </svg>
+            <div id="u8505_text" class="text ">
+              <p><span>100</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u8506" class="ax_default table_cell1 transition notrs">
+            <svg data="images/凭证生成（实体银行）-新增/u2837.svg" id="u8506_img" class="img generatedImage" viewbox="600 30 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 600 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 600 30 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 600 30 )" class="stroke" />
+            </svg>
+            <div id="u8506_text" class="text ">
+              <p><span>是</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u8507" class="ax_default table_cell1 transition notrs">
+            <svg data="images/财务类型/u7269.svg" id="u8507_img" class="img generatedImage" viewbox="700 30 100 30">
+
+  <path d="M 1 1  L 99 1  L 99 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 700 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 700 30 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 700 30 )" class="stroke" />
+  <path d="M 99.5 1  L 99.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 700 30 )" class="stroke" />
+            </svg>
+            <div id="u8507_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u8508" class="ax_default table_cell1 transition notrs">
+            <svg data="images/银行流水/u938.svg" id="u8508_img" class="img generatedImage" viewbox="0 60 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 60 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 60 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 60 )" class="stroke" />
+  <path d="M 0 29.5  L 100 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 60 )" class="stroke" />
+            </svg>
+            <div id="u8508_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u8509" class="ax_default table_cell1 transition notrs">
+            <svg data="images/银行流水/u939.svg" id="u8509_img" class="img generatedImage" viewbox="100 60 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 100 60 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 60 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 60 )" class="stroke" />
+  <path d="M 0 29.5  L 100 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 60 )" class="stroke" />
+            </svg>
+            <div id="u8509_text" class="text ">
+              <p><span>2026-04</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u8510" class="ax_default table_cell1 transition notrs">
+            <svg data="images/银行流水/u940.svg" id="u8510_img" class="img generatedImage" viewbox="200 60 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 60 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 60 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 60 )" class="stroke" />
+  <path d="M 0 29.5  L 100 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 60 )" class="stroke" />
+            </svg>
+            <div id="u8510_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u8511" class="ax_default table_cell1 transition notrs">
+            <svg data="images/银行流水/u941.svg" id="u8511_img" class="img generatedImage" viewbox="300 60 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 60 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 60 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 60 )" class="stroke" />
+  <path d="M 0 29.5  L 100 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 60 )" class="stroke" />
+            </svg>
+            <div id="u8511_text" class="text ">
+              <p><span>2026-02</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u8512" class="ax_default table_cell1 transition notrs">
+            <svg data="images/银行流水/u942.svg" id="u8512_img" class="img generatedImage" viewbox="400 60 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 400 60 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 400 60 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 400 60 )" class="stroke" />
+  <path d="M 0 29.5  L 100 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 400 60 )" class="stroke" />
+            </svg>
+            <div id="u8512_text" class="text ">
+              <p><span>EUR</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u8513" class="ax_default table_cell1 transition notrs">
+            <svg data="images/凭证生成（实体银行）-新增/u2853.svg" id="u8513_img" class="img generatedImage" viewbox="500 60 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 500 60 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 500 60 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 500 60 )" class="stroke" />
+  <path d="M 0 29.5  L 100 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 500 60 )" class="stroke" />
+            </svg>
+            <div id="u8513_text" class="text ">
+              <p><span>200</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u8514" class="ax_default table_cell1 transition notrs">
+            <svg data="images/凭证生成（实体银行）-新增/u2854.svg" id="u8514_img" class="img generatedImage" viewbox="600 60 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 600 60 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 600 60 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 600 60 )" class="stroke" />
+  <path d="M 0 29.5  L 100 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 600 60 )" class="stroke" />
+            </svg>
+            <div id="u8514_text" class="text ">
+              <p><span>否</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u8515" class="ax_default table_cell1 transition notrs">
+            <svg data="images/财务类型/u7277.svg" id="u8515_img" class="img generatedImage" viewbox="700 60 100 30">
+
+  <path d="M 1 1  L 99 1  L 99 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 700 60 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 700 60 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 700 60 )" class="stroke" />
+  <path d="M 99.5 1  L 99.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 700 60 )" class="stroke" />
+  <path d="M 0 29.5  L 100 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 700 60 )" class="stroke" />
+            </svg>
+            <div id="u8515_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u8516" class="ax_default _文本段落 transition notrs">
+          <div id="u8516_div" class=""></div>
+          <div id="u8516_text" class="text ">
+            <p><span>返现期间：&nbsp; &nbsp; &nbsp; &nbsp; 支付期间：&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 币种：</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (图像) -->
+        <div id="u8517" class="ax_default _图片_ transition notrs">
+          <img id="u8517_img" class="img " src="images/新增生成信用卡返现数据逻辑/u8517.png"/>
+          <div id="u8517_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u8518" class="ax_default primary_button transition notrs">
+          <div id="u8518_div" class=""></div>
+          <div id="u8518_text" class="text ">
+            <p><span>修改</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u8519" class="ax_default primary_button transition notrs">
+          <div id="u8519_div" class=""></div>
+          <div id="u8519_text" class="text ">
+            <p><span>删除</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u8520" class="ax_default primary_button transition notrs">
+          <div id="u8520_div" class=""></div>
+          <div id="u8520_text" class="text ">
+            <p><span>导出</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="resources/scripts/axure/ios.js"></script>
+  </body>
+</html>

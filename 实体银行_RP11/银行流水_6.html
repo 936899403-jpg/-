@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>银行流水</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/银行流水_6/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-3.7.1.min.js"></script>
+    <script src="resources/scripts/axure/axQuery.js"></script>
+    <script src="resources/scripts/axure/globals.js"></script>
+    <script src="resources/scripts/axutils.js"></script>
+    <script src="resources/scripts/axure/annotation.js"></script>
+    <script src="resources/scripts/axure/axQuery.std.js"></script>
+    <script src="resources/scripts/axure/doc.js"></script>
+    <script src="resources/scripts/messagecenter.js"></script>
+    <script src="resources/scripts/axure/events.js"></script>
+    <script src="resources/scripts/axure/recording.js"></script>
+    <script src="resources/scripts/axure/action.js"></script>
+    <script src="resources/scripts/axure/expr.js"></script>
+    <script src="resources/scripts/axure/geometry.js"></script>
+    <script src="resources/scripts/axure/flyout.js"></script>
+    <script src="resources/scripts/axure/model.js"></script>
+    <script src="resources/scripts/axure/repeater.js"></script>
+    <script src="resources/scripts/axure/sto.js"></script>
+    <script src="resources/scripts/axure/utils.temp.js"></script>
+    <script src="resources/scripts/axure/variables.js"></script>
+    <script src="resources/scripts/axure/drag.js"></script>
+    <script src="resources/scripts/axure/move.js"></script>
+    <script src="resources/scripts/axure/visibility.js"></script>
+    <script src="resources/scripts/axure/style.js"></script>
+    <script src="resources/scripts/axure/adaptive.js"></script>
+    <script src="resources/scripts/axure/tree.js"></script>
+    <script src="resources/scripts/axure/init.temp.js"></script>
+    <script src="resources/scripts/axure/legacy.js"></script>
+    <script src="resources/scripts/axure/viewer.js"></script>
+    <script src="resources/scripts/axure/math.js"></script>
+    <script src="resources/scripts/axure/jquery.nicescroll.min.js"></script>
+    <script src="data/document.js"></script>
+    <script src="files/银行流水_6/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (图像) -->
+      <div id="u7238" class="ax_default _图片_ transition notrs">
+        <img id="u7238_img" class="img " src="images/银行流水_6/u7238.png"/>
+        <div id="u7238_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u7239" class="ax_default box_2 transition notrs">
+        <div id="u7239_div" class=""></div>
+        <div id="u7239_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u7240" class="ax_default _文本段落 transition notrs">
+        <div id="u7240_div" class=""></div>
+        <div id="u7240_text" class="text ">
+          <p><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;">需求1：</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">实体银行需支持按时间段拉取数据并推凭--现状：拉取数据时按【期间+法人主体+所属银行】校验流水是否生成至财务EAS凭证，若已生成则整个维度无法拉取流水；财务当前一个期间需多次拉取推凭入账；</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">1.拉取数据至银行流水页面和拉取流水至财务EAS凭证页面（确认是否已记录）的逻辑需新增记录数据源ID；</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">2.【拉取数据】：拉取数据前按照所选【期间+法人主体+所属银行】维度分别校验列表是否存在 已生成数据至【财务EAS凭证】页面 的对应流水，存在则该维度拉取数据失败并提示；v6.8.5补充修改&nbsp;&nbsp; ——删除以上逻辑；</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 调整为：拉取数据时根据银行流水页面记录的数据源ID校验列表是否存在已拉取数据：</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2.1存在已拉取数据，根据财务EAS凭证记录的数据源ID判断该条流水是否生成财务EAS凭证；2.1.1若已生成，则该条数据拉取失败并展示失败原因：流水已拉取至财务EAS凭证；</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 2.1.2若未生成，则覆盖更新该条流水；</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2.2不存在已拉取数据，则新增流水；</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;">需求2：</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">1.列表新增财务类型字段，位于数据来源左侧；——数据源详见财务类型需求；</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2.【拉取数据/导入】：拉取或导入时根据列表【摘要】在【基础数据/财务类型】获取财务类型至当前页面对应字段；---注意导入更新仅限更新未生成财务EAS凭证数据的流水；</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;">需求3：</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">拉取银行流水借贷方发生额均为0或余额为0/空时，需提醒操作人；--现状：该部分数据为异常流水，财务需查明原因并重拉；</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 若【所属银行+期间+法人】维度下存在流水借贷方发生额同时为0或余额为0/空的情况，则企微提醒示例如下：</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 【星展银行_2024-12_深圳市傲视电子商务有限公司】：流水拉取共19条，其中成功19条，失败0条！注意：存在x条借贷方发生额均为0或余额为0/空的流水，请检查！</span></p><p><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;"><br></span></p><p><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;"><br></span></p><p><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;">需求4：</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">银行流水支持根据财务类型页面对应关系 获取财务类型；</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">1.列表新增【财务类型】，位于【数据来源】左侧；---数据源：拉取数据/导入时，根据【法人类型+摘要】在【基础数据/财务类型】页面取对应财务类型；</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">2.搜索框新增【财务类型】，位于【数据来源】左侧：下拉多选无默认值，选项为【基础数据/财务类型】中的财务类型列数据去重；+空白选项；</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图像) -->
+      <div id="u7241" class="ax_default _图片_ transition notrs">
+        <img id="u7241_img" class="img " src="images/银行流水_6/u7241.png"/>
+        <div id="u7241_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u7242" class="ax_default _文本段落 transition notrs">
+        <div id="u7242_div" class=""></div>
+        <div id="u7242_text" class="text ">
+          <p style="font-size:13px;"><span>基础数据</span></p><p style="font-size:13px;"><span><br></span></p><p style="font-size:11px;"><span>财务类型</span></p><p style="font-size:11px;"><span><br></span></p><p style="font-size:11px;"><span>部门对应关系</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u7243" class="ax_default _文本段落 transition notrs">
+        <div id="u7243_div" class=""></div>
+        <div id="u7243_text" class="text ">
+          <p><span>实体银行</span></p>
+        </div>
+      </div>
+    </div>
+    <script src="resources/scripts/axure/ios.js"></script>
+  </body>
+</html>
