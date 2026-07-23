@@ -1,0 +1,543 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>国内成本核算/销售出库</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/国内成本核算_销售出库_1/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-3.7.1.min.js"></script>
+    <script src="resources/scripts/axure/axQuery.js"></script>
+    <script src="resources/scripts/axure/globals.js"></script>
+    <script src="resources/scripts/axutils.js"></script>
+    <script src="resources/scripts/axure/annotation.js"></script>
+    <script src="resources/scripts/axure/axQuery.std.js"></script>
+    <script src="resources/scripts/axure/doc.js"></script>
+    <script src="resources/scripts/messagecenter.js"></script>
+    <script src="resources/scripts/axure/events.js"></script>
+    <script src="resources/scripts/axure/recording.js"></script>
+    <script src="resources/scripts/axure/action.js"></script>
+    <script src="resources/scripts/axure/expr.js"></script>
+    <script src="resources/scripts/axure/geometry.js"></script>
+    <script src="resources/scripts/axure/flyout.js"></script>
+    <script src="resources/scripts/axure/model.js"></script>
+    <script src="resources/scripts/axure/repeater.js"></script>
+    <script src="resources/scripts/axure/sto.js"></script>
+    <script src="resources/scripts/axure/utils.temp.js"></script>
+    <script src="resources/scripts/axure/variables.js"></script>
+    <script src="resources/scripts/axure/drag.js"></script>
+    <script src="resources/scripts/axure/move.js"></script>
+    <script src="resources/scripts/axure/visibility.js"></script>
+    <script src="resources/scripts/axure/style.js"></script>
+    <script src="resources/scripts/axure/adaptive.js"></script>
+    <script src="resources/scripts/axure/tree.js"></script>
+    <script src="resources/scripts/axure/init.temp.js"></script>
+    <script src="resources/scripts/axure/legacy.js"></script>
+    <script src="resources/scripts/axure/viewer.js"></script>
+    <script src="resources/scripts/axure/math.js"></script>
+    <script src="resources/scripts/axure/jquery.nicescroll.min.js"></script>
+    <script src="data/document.js"></script>
+    <script src="files/国内成本核算_销售出库_1/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (矩形) -->
+      <div id="u627" class="ax_default box_2 transition notrs">
+        <div id="u627_div" class=""></div>
+        <div id="u627_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u628" class="ax_default _文本段落 transition notrs">
+        <div id="u628_div" class=""></div>
+        <div id="u628_text" class="text ">
+          <p><span><br></span></p><p><span>定时任务、重刷报关单按钮：在原拉取逻辑基础上，校验上一自然月操作日志中的所有调拨单出库 和 撤销出库操作，如果同一调拨单创建时间最新一条为撤销出库操作，则根据调拨单号查询销售出库历史期间所有数据</span><span style="color:#D9001B;">（20240529：根据tr.transfer_no, tr.customs_number, tr.sku, tr.num, tr.shipment_id, tr.fnsku, tr.legal_id维度去重）</span><span>，根据查询到的数据生成一条冲回数据；否则不生成；（如果当前期间海关单号为空的在途数据当期存在冲回数据，则后续不递增到下一期间）&nbsp; &nbsp; &nbsp; </span></p><p><span><br></span></p><p><span>冲回数据生成逻辑如下：&nbsp; &nbsp; &nbsp;&nbsp; </span></p><p><span>1.无海关单号的数据：</span></p><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p><p><span>2.有海关单号的数据：</span></p><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (表格) -->
+      <div id="u629" class="ax_default">
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u630" class="ax_default table_cell transition notrs">
+          <svg data="images/国内成本核算_销售出库_1/u630.svg" id="u630_img" class="img generatedImage" viewbox="0 0 292 30">
+
+  <path d="M 1 1  L 292 1  L 292 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.5333333333333333)" stroke="none" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+  <path d="M 0 0.5  L 292 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+          </svg>
+          <div id="u630_text" class="text ">
+            <p><span>交易期间</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u631" class="ax_default table_cell transition notrs">
+          <svg data="images/国内成本核算_销售出库_1/u631.svg" id="u631_img" class="img generatedImage" viewbox="292 0 151 30">
+
+  <path d="M 1 1  L 151 1  L 151 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.5333333333333333)" stroke="none" transform="matrix(1 0 0 1 292 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 292 0 )" class="stroke" />
+  <path d="M 0 0.5  L 151 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 292 0 )" class="stroke" />
+          </svg>
+          <div id="u631_text" class="text ">
+            <p><span>总数量</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u632" class="ax_default table_cell transition notrs">
+          <svg data="images/国内成本核算_销售出库_1/u632.svg" id="u632_img" class="img generatedImage" viewbox="443 0 149 30">
+
+  <path d="M 1 1  L 149 1  L 149 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.5333333333333333)" stroke="none" transform="matrix(1 0 0 1 443 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 443 0 )" class="stroke" />
+  <path d="M 0 0.5  L 149 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 443 0 )" class="stroke" />
+          </svg>
+          <div id="u632_text" class="text ">
+            <p><span>采购金额</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u633" class="ax_default table_cell transition notrs">
+          <svg data="images/国内成本核算_销售出库_1/u633.svg" id="u633_img" class="img generatedImage" viewbox="592 0 159 30">
+
+  <path d="M 1 1  L 159 1  L 159 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.5333333333333333)" stroke="none" transform="matrix(1 0 0 1 592 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 592 0 )" class="stroke" />
+  <path d="M 0 0.5  L 159 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 592 0 )" class="stroke" />
+          </svg>
+          <div id="u633_text" class="text ">
+            <p><span>销售成本</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u634" class="ax_default table_cell transition notrs">
+          <svg data="images/国内成本核算_销售出库_1/u634.svg" id="u634_img" class="img generatedImage" viewbox="751 0 191 30">
+
+  <path d="M 1 1  L 191 1  L 191 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.5333333333333333)" stroke="none" transform="matrix(1 0 0 1 751 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 751 0 )" class="stroke" />
+  <path d="M 0 0.5  L 191 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 751 0 )" class="stroke" />
+          </svg>
+          <div id="u634_text" class="text ">
+            <p><span>应收出口退税</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u635" class="ax_default table_cell transition notrs">
+          <svg data="images/国内成本核算_销售出库_1/u635.svg" id="u635_img" class="img generatedImage" viewbox="942 0 164 30">
+
+  <path d="M 1 1  L 164 1  L 164 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.5333333333333333)" stroke="none" transform="matrix(1 0 0 1 942 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 942 0 )" class="stroke" />
+  <path d="M 0 0.5  L 164 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 942 0 )" class="stroke" />
+          </svg>
+          <div id="u635_text" class="text ">
+            <p><span>进项税转出</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u636" class="ax_default table_cell transition notrs">
+          <svg data="images/国内成本核算_销售出库_1/u636.svg" id="u636_img" class="img generatedImage" viewbox="1106 0 229 30">
+
+  <path d="M 1 1  L 228 1  L 228 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.5333333333333333)" stroke="none" transform="matrix(1 0 0 1 1106 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1106 0 )" class="stroke" />
+  <path d="M 0 0.5  L 229 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1106 0 )" class="stroke" />
+  <path d="M 228.5 1  L 228.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1106 0 )" class="stroke" />
+          </svg>
+          <div id="u636_text" class="text ">
+            <p><span>其余字段</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u637" class="ax_default table_cell transition notrs">
+          <svg data="images/国内成本核算_销售出库_1/u637.svg" id="u637_img" class="img generatedImage" viewbox="0 30 292 30">
+
+  <path d="M 1 1  L 292 1  L 292 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 30 )" class="stroke" />
+  <path d="M 0 0.5  L 292 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 30 )" class="stroke" />
+  <path d="M 0 29.5  L 292 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 30 )" class="stroke" />
+          </svg>
+          <div id="u637_text" class="text ">
+            <p><span>取当前期间，格式yyyymm，如202402</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u638" class="ax_default table_cell transition notrs">
+          <svg data="images/国内成本核算_销售出库_1/u638.svg" id="u638_img" class="img generatedImage" viewbox="292 30 151 30">
+
+  <path d="M 1 1  L 151 1  L 151 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 292 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 292 30 )" class="stroke" />
+  <path d="M 0 0.5  L 151 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 292 30 )" class="stroke" />
+  <path d="M 0 29.5  L 151 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 292 30 )" class="stroke" />
+          </svg>
+          <div id="u638_text" class="text ">
+            <p><span>原总数量*（-1）</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u639" class="ax_default table_cell transition notrs">
+          <svg data="images/国内成本核算_销售出库_1/u639.svg" id="u639_img" class="img generatedImage" viewbox="443 30 149 30">
+
+  <path d="M 1 1  L 149 1  L 149 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 443 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 443 30 )" class="stroke" />
+  <path d="M 0 0.5  L 149 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 443 30 )" class="stroke" />
+  <path d="M 0 29.5  L 149 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 443 30 )" class="stroke" />
+          </svg>
+          <div id="u639_text" class="text ">
+            <p><span>原采购金额*（-1）</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u640" class="ax_default table_cell transition notrs">
+          <svg data="images/国内成本核算_销售出库_1/u640.svg" id="u640_img" class="img generatedImage" viewbox="592 30 159 30">
+
+  <path d="M 1 1  L 159 1  L 159 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 592 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 592 30 )" class="stroke" />
+  <path d="M 0 0.5  L 159 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 592 30 )" class="stroke" />
+  <path d="M 0 29.5  L 159 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 592 30 )" class="stroke" />
+          </svg>
+          <div id="u640_text" class="text ">
+            <p><span>原销售成本*（-1）</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u641" class="ax_default table_cell transition notrs">
+          <svg data="images/国内成本核算_销售出库_1/u641.svg" id="u641_img" class="img generatedImage" viewbox="751 30 191 30">
+
+  <path d="M 1 1  L 191 1  L 191 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 751 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 751 30 )" class="stroke" />
+  <path d="M 0 0.5  L 191 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 751 30 )" class="stroke" />
+  <path d="M 0 29.5  L 191 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 751 30 )" class="stroke" />
+          </svg>
+          <div id="u641_text" class="text ">
+            <p><span>原应收出口退税*（-1）</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u642" class="ax_default table_cell transition notrs">
+          <svg data="images/国内成本核算_销售出库_1/u642.svg" id="u642_img" class="img generatedImage" viewbox="942 30 164 30">
+
+  <path d="M 1 1  L 164 1  L 164 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 942 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 942 30 )" class="stroke" />
+  <path d="M 0 0.5  L 164 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 942 30 )" class="stroke" />
+  <path d="M 0 29.5  L 164 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 942 30 )" class="stroke" />
+          </svg>
+          <div id="u642_text" class="text ">
+            <p><span>原进项税转出*（-1）</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u643" class="ax_default table_cell transition notrs">
+          <svg data="images/国内成本核算_销售出库_1/u643.svg" id="u643_img" class="img generatedImage" viewbox="1106 30 229 30">
+
+  <path d="M 1 1  L 228 1  L 228 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1106 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1106 30 )" class="stroke" />
+  <path d="M 0 0.5  L 229 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1106 30 )" class="stroke" />
+  <path d="M 228.5 1  L 228.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1106 30 )" class="stroke" />
+  <path d="M 0 29.5  L 229 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1106 30 )" class="stroke" />
+          </svg>
+          <div id="u643_text" class="text ">
+            <p><span>值保持不变</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (表格) -->
+      <div id="u644" class="ax_default">
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u645" class="ax_default table_cell transition notrs">
+          <svg data="images/国内成本核算_销售出库_1/u645.svg" id="u645_img" class="img generatedImage" viewbox="0 0 246 30">
+
+  <path d="M 1 1  L 246 1  L 246 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.5411764705882353)" stroke="none" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+  <path d="M 0 0.5  L 246 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+          </svg>
+          <div id="u645_text" class="text ">
+            <p><span>交易期间</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u646" class="ax_default table_cell transition notrs">
+          <svg data="images/国内成本核算_销售出库_1/u646.svg" id="u646_img" class="img generatedImage" viewbox="246 0 126 30">
+
+  <path d="M 1 1  L 126 1  L 126 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.5411764705882353)" stroke="none" transform="matrix(1 0 0 1 246 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 246 0 )" class="stroke" />
+  <path d="M 0 0.5  L 126 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 246 0 )" class="stroke" />
+          </svg>
+          <div id="u646_text" class="text ">
+            <p><span>总数量</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u647" class="ax_default table_cell transition notrs">
+          <svg data="images/国内成本核算_销售出库_1/u647.svg" id="u647_img" class="img generatedImage" viewbox="372 0 150 30">
+
+  <path d="M 1 1  L 150 1  L 150 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.5411764705882353)" stroke="none" transform="matrix(1 0 0 1 372 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 372 0 )" class="stroke" />
+  <path d="M 0 0.5  L 150 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 372 0 )" class="stroke" />
+          </svg>
+          <div id="u647_text" class="text ">
+            <p><span>采购金额</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u648" class="ax_default table_cell transition notrs">
+          <svg data="images/国内成本核算_销售出库_1/u648.svg" id="u648_img" class="img generatedImage" viewbox="522 0 156 30">
+
+  <path d="M 1 1  L 156 1  L 156 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.5411764705882353)" stroke="none" transform="matrix(1 0 0 1 522 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 522 0 )" class="stroke" />
+  <path d="M 0 0.5  L 156 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 522 0 )" class="stroke" />
+          </svg>
+          <div id="u648_text" class="text ">
+            <p><span>报关金额</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u649" class="ax_default table_cell transition notrs">
+          <svg data="images/国内成本核算_销售出库_1/u649.svg" id="u649_img" class="img generatedImage" viewbox="678 0 219 30">
+
+  <path d="M 1 1  L 219 1  L 219 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.5411764705882353)" stroke="none" transform="matrix(1 0 0 1 678 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 678 0 )" class="stroke" />
+  <path d="M 0 0.5  L 219 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 678 0 )" class="stroke" />
+          </svg>
+          <div id="u649_text" class="text ">
+            <p><span>汇率</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u650" class="ax_default table_cell transition notrs">
+          <svg data="images/国内成本核算_销售出库_1/u650.svg" id="u650_img" class="img generatedImage" viewbox="897 0 135 30">
+
+  <path d="M 1 1  L 135 1  L 135 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.5411764705882353)" stroke="none" transform="matrix(1 0 0 1 897 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 897 0 )" class="stroke" />
+  <path d="M 0 0.5  L 135 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 897 0 )" class="stroke" />
+          </svg>
+          <div id="u650_text" class="text ">
+            <p><span>销售收入</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u651" class="ax_default table_cell transition notrs">
+          <svg data="images/国内成本核算_销售出库_1/u651.svg" id="u651_img" class="img generatedImage" viewbox="1032 0 151 30">
+
+  <path d="M 1 1  L 151 1  L 151 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.5411764705882353)" stroke="none" transform="matrix(1 0 0 1 1032 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1032 0 )" class="stroke" />
+  <path d="M 0 0.5  L 151 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1032 0 )" class="stroke" />
+          </svg>
+          <div id="u651_text" class="text ">
+            <p><span>销售成本</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u652" class="ax_default table_cell transition notrs">
+          <svg data="images/国内成本核算_销售出库_1/u652.svg" id="u652_img" class="img generatedImage" viewbox="1183 0 160 30">
+
+  <path d="M 1 1  L 160 1  L 160 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.5411764705882353)" stroke="none" transform="matrix(1 0 0 1 1183 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1183 0 )" class="stroke" />
+  <path d="M 0 0.5  L 160 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1183 0 )" class="stroke" />
+          </svg>
+          <div id="u652_text" class="text ">
+            <p><span>应收出口退税</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u653" class="ax_default table_cell transition notrs">
+          <svg data="images/国内成本核算_销售出库_1/u653.svg" id="u653_img" class="img generatedImage" viewbox="1343 0 149 30">
+
+  <path d="M 1 1  L 149 1  L 149 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.5411764705882353)" stroke="none" transform="matrix(1 0 0 1 1343 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1343 0 )" class="stroke" />
+  <path d="M 0 0.5  L 149 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1343 0 )" class="stroke" />
+          </svg>
+          <div id="u653_text" class="text ">
+            <p><span>进项税转出</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u654" class="ax_default table_cell transition notrs">
+          <svg data="images/国内成本核算_销售出库_1/u654.svg" id="u654_img" class="img generatedImage" viewbox="1492 0 186 30">
+
+  <path d="M 1 1  L 185 1  L 185 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.5411764705882353)" stroke="none" transform="matrix(1 0 0 1 1492 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1492 0 )" class="stroke" />
+  <path d="M 0 0.5  L 186 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1492 0 )" class="stroke" />
+  <path d="M 185.5 1  L 185.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1492 0 )" class="stroke" />
+          </svg>
+          <div id="u654_text" class="text ">
+            <p><span>其余字段</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u655" class="ax_default table_cell transition notrs">
+          <svg data="images/国内成本核算_销售出库_1/u655.svg" id="u655_img" class="img generatedImage" viewbox="0 30 246 49">
+
+  <path d="M 1 1  L 246 1  L 246 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 30 )" class="stroke" />
+  <path d="M 0 0.5  L 246 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 30 )" class="stroke" />
+  <path d="M 0 48.5  L 246 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 30 )" class="stroke" />
+          </svg>
+          <div id="u655_text" class="text ">
+            <p><span>取当前期间，格式yyyymm，如202402</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u656" class="ax_default table_cell transition notrs">
+          <svg data="images/国内成本核算_销售出库_1/u656.svg" id="u656_img" class="img generatedImage" viewbox="246 30 126 49">
+
+  <path d="M 1 1  L 126 1  L 126 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 246 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 246 30 )" class="stroke" />
+  <path d="M 0 0.5  L 126 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 246 30 )" class="stroke" />
+  <path d="M 0 48.5  L 126 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 246 30 )" class="stroke" />
+          </svg>
+          <div id="u656_text" class="text ">
+            <p><span>原总数量*（-1）</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u657" class="ax_default table_cell transition notrs">
+          <svg data="images/国内成本核算_销售出库_1/u657.svg" id="u657_img" class="img generatedImage" viewbox="372 30 150 49">
+
+  <path d="M 1 1  L 150 1  L 150 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 372 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 372 30 )" class="stroke" />
+  <path d="M 0 0.5  L 150 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 372 30 )" class="stroke" />
+  <path d="M 0 48.5  L 150 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 372 30 )" class="stroke" />
+          </svg>
+          <div id="u657_text" class="text ">
+            <p><span>原采购金额*（-1）</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u658" class="ax_default table_cell transition notrs">
+          <svg data="images/国内成本核算_销售出库_1/u658.svg" id="u658_img" class="img generatedImage" viewbox="522 30 156 49">
+
+  <path d="M 1 1  L 156 1  L 156 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 522 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 522 30 )" class="stroke" />
+  <path d="M 0 0.5  L 156 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 522 30 )" class="stroke" />
+  <path d="M 0 48.5  L 156 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 522 30 )" class="stroke" />
+          </svg>
+          <div id="u658_text" class="text ">
+            <p><span>原报关金额*（-1）</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u659" class="ax_default table_cell transition notrs">
+          <svg data="images/国内成本核算_销售出库_1/u659.svg" id="u659_img" class="img generatedImage" viewbox="678 30 219 49">
+
+  <path d="M 1 1  L 219 1  L 219 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 678 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 678 30 )" class="stroke" />
+  <path d="M 0 0.5  L 219 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 678 30 )" class="stroke" />
+  <path d="M 0 48.5  L 219 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 678 30 )" class="stroke" />
+          </svg>
+          <div id="u659_text" class="text ">
+            <p><span>取当前期间汇率值</span></p><p><span>product_ms.vw_last_currency vlc</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u660" class="ax_default table_cell transition notrs">
+          <svg data="images/国内成本核算_销售出库_1/u660.svg" id="u660_img" class="img generatedImage" viewbox="897 30 135 49">
+
+  <path d="M 1 1  L 135 1  L 135 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 897 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 897 30 )" class="stroke" />
+  <path d="M 0 0.5  L 135 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 897 30 )" class="stroke" />
+  <path d="M 0 48.5  L 135 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 897 30 )" class="stroke" />
+          </svg>
+          <div id="u660_text" class="text ">
+            <p><span>=报关金额*汇率</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u661" class="ax_default table_cell transition notrs">
+          <svg data="images/国内成本核算_销售出库_1/u661.svg" id="u661_img" class="img generatedImage" viewbox="1032 30 151 49">
+
+  <path d="M 1 1  L 151 1  L 151 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1032 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1032 30 )" class="stroke" />
+  <path d="M 0 0.5  L 151 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1032 30 )" class="stroke" />
+  <path d="M 0 48.5  L 151 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1032 30 )" class="stroke" />
+          </svg>
+          <div id="u661_text" class="text ">
+            <p><span>原销售成本*（-1）</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u662" class="ax_default table_cell transition notrs">
+          <svg data="images/国内成本核算_销售出库_1/u662.svg" id="u662_img" class="img generatedImage" viewbox="1183 30 160 49">
+
+  <path d="M 1 1  L 160 1  L 160 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1183 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1183 30 )" class="stroke" />
+  <path d="M 0 0.5  L 160 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1183 30 )" class="stroke" />
+  <path d="M 0 48.5  L 160 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1183 30 )" class="stroke" />
+          </svg>
+          <div id="u662_text" class="text ">
+            <p><span>原应收出口退税（-1）</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u663" class="ax_default table_cell transition notrs">
+          <svg data="images/国内成本核算_销售出库_1/u663.svg" id="u663_img" class="img generatedImage" viewbox="1343 30 149 49">
+
+  <path d="M 1 1  L 149 1  L 149 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1343 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1343 30 )" class="stroke" />
+  <path d="M 0 0.5  L 149 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1343 30 )" class="stroke" />
+  <path d="M 0 48.5  L 149 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1343 30 )" class="stroke" />
+          </svg>
+          <div id="u663_text" class="text ">
+            <p><span>原进项税转出*（-1）</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u664" class="ax_default table_cell transition notrs">
+          <svg data="images/国内成本核算_销售出库_1/u664.svg" id="u664_img" class="img generatedImage" viewbox="1492 30 186 49">
+
+  <path d="M 1 1  L 185 1  L 185 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1492 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1492 30 )" class="stroke" />
+  <path d="M 0 0.5  L 186 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1492 30 )" class="stroke" />
+  <path d="M 185.5 1  L 185.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1492 30 )" class="stroke" />
+  <path d="M 0 48.5  L 186 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1492 30 )" class="stroke" />
+          </svg>
+          <div id="u664_text" class="text ">
+            <p><span>值保持不变</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="resources/scripts/axure/ios.js"></script>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>销售出库</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/销售出库_2/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-3.7.1.min.js"></script>
+    <script src="resources/scripts/axure/axQuery.js"></script>
+    <script src="resources/scripts/axure/globals.js"></script>
+    <script src="resources/scripts/axutils.js"></script>
+    <script src="resources/scripts/axure/annotation.js"></script>
+    <script src="resources/scripts/axure/axQuery.std.js"></script>
+    <script src="resources/scripts/axure/doc.js"></script>
+    <script src="resources/scripts/messagecenter.js"></script>
+    <script src="resources/scripts/axure/events.js"></script>
+    <script src="resources/scripts/axure/recording.js"></script>
+    <script src="resources/scripts/axure/action.js"></script>
+    <script src="resources/scripts/axure/expr.js"></script>
+    <script src="resources/scripts/axure/geometry.js"></script>
+    <script src="resources/scripts/axure/flyout.js"></script>
+    <script src="resources/scripts/axure/model.js"></script>
+    <script src="resources/scripts/axure/repeater.js"></script>
+    <script src="resources/scripts/axure/sto.js"></script>
+    <script src="resources/scripts/axure/utils.temp.js"></script>
+    <script src="resources/scripts/axure/variables.js"></script>
+    <script src="resources/scripts/axure/drag.js"></script>
+    <script src="resources/scripts/axure/move.js"></script>
+    <script src="resources/scripts/axure/visibility.js"></script>
+    <script src="resources/scripts/axure/style.js"></script>
+    <script src="resources/scripts/axure/adaptive.js"></script>
+    <script src="resources/scripts/axure/tree.js"></script>
+    <script src="resources/scripts/axure/init.temp.js"></script>
+    <script src="resources/scripts/axure/legacy.js"></script>
+    <script src="resources/scripts/axure/viewer.js"></script>
+    <script src="resources/scripts/axure/math.js"></script>
+    <script src="resources/scripts/axure/jquery.nicescroll.min.js"></script>
+    <script src="data/document.js"></script>
+    <script src="files/销售出库_2/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1334" class="ax_default box_2 transition notrs">
+        <div id="u1334_div" class=""></div>
+        <div id="u1334_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1335" class="ax_default _文本段落 transition notrs">
+        <div id="u1335_div" class=""></div>
+        <div id="u1335_text" class="text ">
+          <p><span style="text-decoration:line-through ;color:#D9001B;">红字为本次迭代新增逻辑：</span></p><p><span style="text-decoration:line-through ;"><br></span></p><p><span style="text-decoration:line-through ;">定时任务、重刷报关单按钮：在原拉取逻辑基础上，校验上一自然月操作日志中的所有调拨单出库 和 撤销出库操作，如果同一调拨单创建时间最新一条为撤销出库操作，则根据调拨单号 查询销售出库历史期间所有数据，根据查询到的数据生成一条冲回数据；否则不生成；（如果当前期间海关单号为空的在途数据当期存在冲回数据，则后续不递增到下一期间；</span><span style="text-decoration:line-through ;color:#D9001B;">同时将历史期间对应原数据逻辑删除</span><span style="text-decoration:line-through ;">）&nbsp; &nbsp; &nbsp; </span></p><p><span style="text-decoration:line-through ;"><br></span></p><p><span style="text-decoration:line-through ;">原需求链接：https://idwqf9.axshare.com/#id=f5o33g&amp;p=%E5%9B%BD%E5%86%85%E6%88%90%E6%9C%AC%E6%A0%B8%E7%AE%97_%E9%94%80%E5%94%AE%E5%87%BA%E5%BA%93_1&amp;g=1</span></p><p><span><br></span></p><p><span>1.DB开头的</span><span style="color:#D9001B;">递增</span><span>数据，无论当期是否存在海关单号均需删除历史数据；（参考FH开头数据逻辑）</span></p><p><span>2.DB开头数据，下月递增时，2.1若按照【调拨单号+SKU】维度在【调拨汇总】页面查询不到对应数据，</span><span style="color:#D9001B;">则不递增且不删除历史数据</span><span>；——删除红字历史校验逻辑，继续按照当前原数据递增数据，汇率及销售收入按取当前期间获取后重新计算；</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2.2若按照【调拨单号+SKU】维度在【调拨汇总】页面查询到对应数据，则拉取所查询到的数据到当前期间；</span></p><p><span>&nbsp;&nbsp; FH开头数据，下月递增时，2.3未按照【调拨单号+SKU】维度在【品牌线下/统计报表/报关明细表】页面查询不到对应数据，</span><span style="color:#D9001B;">则不递增且不删除历史数据</span><span>；——删除红字校验逻辑，继续按照当前原数据递增数据，汇率及销售收入按取当前期间获取后重新计算；</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2.4若按照【调拨单号+SKU】维度在【品牌线下/统计报表/报关明细表】页面查询到对应数据，则拉取所查询到的数据到当前期间；</span></p><p><span>3.特殊处理：3.1FH开头数据，如果当前期间海关单号为空的在途数据当期存在同个【SKU+单据编号+法人主体+数量】维度的【业务类型】=品牌线下发货撤销出库（入库）的冲回数据，则该数据同样后续不递增到下一期间；</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3.2 https://idwqf9.axshare.com/#id=f5o33g&amp;p=%E5%9B%BD%E5%86%85%E6%88%90%E6%9C%AC%E6%A0%B8%E7%AE%97_%E9%94%80%E5%94%AE%E5%87%BA%E5%BA%93_1&amp;g=1</span></p><p><span><br></span></p><p><span><br></span></p><p><span style="text-decoration:line-through ;"><br></span></p><p><span style="text-decoration:line-through ;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+        </div>
+      </div>
+    </div>
+    <script src="resources/scripts/axure/ios.js"></script>
+  </body>
+</html>
