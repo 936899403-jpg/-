@@ -1,0 +1,577 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>下载详情</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/下载详情_4/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-3.7.1.min.js"></script>
+    <script src="resources/scripts/axure/axQuery.js"></script>
+    <script src="resources/scripts/axure/globals.js"></script>
+    <script src="resources/scripts/axutils.js"></script>
+    <script src="resources/scripts/axure/annotation.js"></script>
+    <script src="resources/scripts/axure/axQuery.std.js"></script>
+    <script src="resources/scripts/axure/doc.js"></script>
+    <script src="resources/scripts/messagecenter.js"></script>
+    <script src="resources/scripts/axure/events.js"></script>
+    <script src="resources/scripts/axure/recording.js"></script>
+    <script src="resources/scripts/axure/action.js"></script>
+    <script src="resources/scripts/axure/expr.js"></script>
+    <script src="resources/scripts/axure/geometry.js"></script>
+    <script src="resources/scripts/axure/flyout.js"></script>
+    <script src="resources/scripts/axure/model.js"></script>
+    <script src="resources/scripts/axure/repeater.js"></script>
+    <script src="resources/scripts/axure/sto.js"></script>
+    <script src="resources/scripts/axure/utils.temp.js"></script>
+    <script src="resources/scripts/axure/variables.js"></script>
+    <script src="resources/scripts/axure/drag.js"></script>
+    <script src="resources/scripts/axure/move.js"></script>
+    <script src="resources/scripts/axure/visibility.js"></script>
+    <script src="resources/scripts/axure/style.js"></script>
+    <script src="resources/scripts/axure/adaptive.js"></script>
+    <script src="resources/scripts/axure/tree.js"></script>
+    <script src="resources/scripts/axure/init.temp.js"></script>
+    <script src="resources/scripts/axure/legacy.js"></script>
+    <script src="resources/scripts/axure/viewer.js"></script>
+    <script src="resources/scripts/axure/math.js"></script>
+    <script src="resources/scripts/axure/jquery.nicescroll.min.js"></script>
+    <script src="data/document.js"></script>
+    <script src="files/下载详情_4/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (矩形) -->
+      <div id="u328" class="ax_default box_2 transition notrs">
+        <div id="u328_div" class=""></div>
+        <div id="u328_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u329" class="ax_default _文本段落 transition notrs">
+        <div id="u329_div" class=""></div>
+        <div id="u329_text" class="text ">
+          <p style="font-size:16px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;font-size:18px;">1.</span><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;font-size:18px;color:#D9001B;">修改</span><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;font-size:18px;">月度汇总账单已补齐提醒定时任务</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">：</span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">原需求文档：https://ta4dzf.axshare.com/#id=d6wcd2&amp;p=%E4%B8%8B%E8%BD%BD%E8%AF%A6%E6%83%85&amp;g=1</span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">定时任务：每月</span><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;color:#B8741A;">15</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">号起至当月月底，每天上午9:00 </span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">1.1判断【生成时间】自2022年12月起至</span><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;color:#B8741A;">当前自然月</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">，定时任务各月份是否已发送邮件，对历史未发送邮件的月份执行操作1.2；（即记录并排除历史已发送邮件的月份）</span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">1.2校验历史未发送邮件的月份数据，若存在部分月份【报表类型】=“月度汇总”的数据【失败原因审核状态】列字段值均≠“待审核”，则将对应月份以邮件形式发送通知至【部门对接人】页面所维护的总账会计邮箱，格式如下：</span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u330" class="ax_default sticky_3 transition notrs">
+        <div id="u330_div" class=""></div>
+        <div id="u330_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u331" class="ax_default _文本段落 transition notrs">
+        <div id="u331_div" class=""></div>
+        <div id="u331_text" class="text ">
+          <p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">下载详情-月度汇总账单提醒定时任务总结：</span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:16px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;font-size:18px;">1.定时任务1：月度汇总账单未补齐提醒 （每月下旬）&nbsp; </span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">https://ucddwa.axshare.com/#id=pewkuq&amp;p=%E4%B8%8B%E8%BD%BD%E8%AF%A6%E6%83%85&amp;g=1</span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; 1.1时间：每月15号及当月后续每周一早上9:00；</span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; 1.2内容：校验【生成时间】自202.12起至</span><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;color:#B8741A;">当前自然月</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">，已推凭的月度交易明细按照【站点+店铺+account ID】维度所对应的月度汇总 【失败原因审核状态】列若≠“已</span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 审核”，则按部门维度发邮件提醒管理会计及总账会计；</span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:16px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;font-size:18px;">2.定时任务2：月度汇总账单未补齐提醒（每月上旬）</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"> https://ta4dzf.axshare.com/#id=d6wcd2&amp;p=%E4%B8%8B%E8%BD%BD%E8%AF%A6%E6%83%85&amp;g=1</span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; 2.1时间：每月1号及当月15号前的每周一早上9:00；</span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; 2.2内容：校验【生成时间】自2022.12起至</span><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;color:#B8741A;">上一自然月</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">，已推凭的月度交易明细按照【站点+店铺+account ID】维度所对应的月度汇总 【失败原因审核状态】列若≠“已</span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 审核”，则按部门维度发邮件提醒管理会计及总账会计；</span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:16px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;font-size:18px;">3.定时任务3：月度汇总账单已补齐提醒</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 当前页面第一点</span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; 3.1时间：每月15号起至当月月底每天上午9:00</span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; 3.2内容：校验【生成时间】自2022.12起至</span><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;color:#B8741A;">当前自然月</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">，若相应月份月度汇总【失败原因审核状态】列均≠“待审核”，则将对应月份发邮件提醒总账会计；</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u332" class="ax_default box_1 transition notrs">
+        <div id="u332_div" class=""></div>
+        <div id="u332_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u333" class="ax_default _文本段落 transition notrs">
+        <div id="u333_div" class=""></div>
+        <div id="u333_text" class="text ">
+          <p><span style="color:#D9001B;">标题：【Amazon财务报表-下载详情-以下月度汇总账单已全部补齐】</span></p><p><span><br></span></p><p><span style="color:#D9001B;">内容：2022-12、2023-01、2023-02月度汇总账单已全部补齐</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u334" class="ax_default _文本段落 transition notrs">
+        <div id="u334_div" class=""></div>
+        <div id="u334_text" class="text ">
+          <p><span>总账会计邮件：</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u335" class="ax_default _文本段落 transition notrs">
+        <div id="u335_div" class=""></div>
+        <div id="u335_text" class="text ">
+          <p style="font-size:18px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;">2.新增月度交易明细校验：</span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:16px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;">2.1按钮控制说明：</span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">2.1.1新增【月度交易明细校验】按钮：</span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 2.1.1.1鼠标移入/移出即可展示/隐藏以下文本提示：校验上月【下载状态】为“下载成功”或“手动成功”且解析报表不为空的月度交易明细，在本月是否下载成功；——详见原型1</span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 点击按钮，操作步骤如下：（每次点击按钮后，先删除所选数据范围【校验结果】列字段值）</span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 2.1.1.2 筛出所选【生成时间】对应月份的上个月，【下载状态】=“下载成功”或“手动成功”、【报表是否为空】＝“否”，且【报表类型】=“月度交易明细”的数据；</span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 2.1.1.3将所筛数据</span><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;color:#B8741A;">（匹配数据）</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">按照【account ID+站点】维度匹配所选【生成时间】对应月份，且【报表类型】=“月度交易明细”的数据</span><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;color:#B8741A;">（被匹配数据）</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">；</span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 1）若存在未匹配到的数据，对应被匹配数据【校验结果】【校验审核状态】【校验审核人】【校验审核时间】均赋空值，前端展示“-”；</span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 2）若匹配成功，①被匹配数据【下载状态】＝“下载失败”或“进行中”，则【校验结果】列赋值“下载不成功”；</span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; a.如果【校验审核状态】不为空，则不做处理；b.如果【校验审核状态】为空，则将该字段值更新为“待审核”；</span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ②被匹配数据【下载状态】＝“下载成功”或“手动成功”，则【校验结果】列赋值“下载/手动成功”；</span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; a.如果【校验审核状态】不为空，则将该字段值更新为空值，前端展示“-”，并清空【校验审核状态】【校验审核人】【校验审核时间】；b.如果【校验审核状态】为空，则不做处理；</span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 2.1.1.4筛选【校验审核状态】＝“待审核”的被匹配数据，取【部门】“-”前的字段值（举例：【部门】：品牌三部-HF-美国组，取“品牌三部”），并将其匹配【部门对接人】页面</span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 【部门】字段，并分别以邮件形式发送通知至对应【管理会计邮箱】，格式如下： （附件列表字段取对应数据行）</span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图像) -->
+      <div id="u336" class="ax_default _图片_ transition notrs">
+        <img id="u336_img" class="img " src="images/下载详情_4/u336.png"/>
+        <div id="u336_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u337" class="ax_default primary_button transition notrs">
+        <div id="u337_div" class=""></div>
+        <div id="u337_text" class="text ">
+          <p><span>月度交易明细校验</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Vertical line) -->
+      <div id="u338" class="compound ax_default arrow transition notrs" data-height="34" data-width="3" CompoundMode="true">
+        <svg data="images/下载详情_4/u338.svg" id="u338_img" class="singleImg img generatedImage">
+
+  <g transform="matrix(1 0 0 1 -1045 -425.5 )">
+    <path d="M 1.5 0  L 1.5 26.99999980535347  " stroke-width="3" stroke-dasharray="0" stroke="rgba(217, 0, 27, 1)" fill="none" transform="matrix(1 0 0 1 1056 427 )" class="stroke" />
+    <path d="M -7.4 25  L 1.5 34  L 10.4 25  L -7.4 25  Z " fill-rule="nonzero" fill="rgba(217, 0, 27, 1)" stroke="none" transform="matrix(1 0 0 1 1056 427 )" class="arrowhead" />
+  </g>
+        </svg>
+        <div id="u338p000" class="ax_vector_shape" WidgetTopLeftX="-0.41742496484490044" WidgetTopLeftY="0.45955703657671787" WidgetTopRightX="-0.4171789244374476" WidgetTopRightY="-0.29043892768699875" WidgetBottomLeftX="0.4325704613205891" WidgetBottomLeftY="0.4874416160886792" WidgetBottomRightX="0.4328165017280455" WidgetBottomRightY="-0.26255434817499257">
+          <svg data="images/下载详情_4/u338p000.svg" id="u338p000_img" class="img generatedImage" viewbox="1038 443 40 2">
+
+  <g transform="matrix(-0.6156614753256686 -0.7880107536067091 0.788010753606712 -0.6156614753256459 1359.4930662931772 1551.0690723604853 )">
+    <path d="M 1.5 0  L 1.5 26.99999980535347  " stroke-width="3" stroke-dasharray="0" stroke="rgba(217, 0, 27, 1)" fill="none" transform="matrix(0.7859868119986093 0.6182432622878011 -0.6182432622878011 0.7859868119986093 1066.8311552408948 429.710859302592 )" class="stroke" />
+    <path d="M -7.4 25  L 1.5 34  L 10.4 25  L -7.4 25  Z " fill-rule="nonzero" fill="rgba(217, 0, 27, 1)" stroke="none" transform="matrix(0.7859868119986093 0.6182432622878011 -0.6182432622878011 0.7859868119986093 1066.8311552408948 429.710859302592 )" class="arrowhead" />
+  </g>
+          </svg>
+        </div>
+        <div id="u338p001" class="ax_vector_shape" WidgetTopLeftX="-0.36147412651757804" WidgetTopLeftY="-0.21485678290131696" WidgetTopRightX="0.03151927948177521" WidgetTopRightY="0.09426484824257386" WidgetBottomLeftX="-3.8648526128151084" WidgetBottomLeftY="4.239068485090797" WidgetBottomRightX="-3.471859206815793" WidgetBottomRightY="4.5481901162346885">
+          <svg data="images/下载详情_4/u338p001.svg" id="u338p001_img" class="img generatedImage" viewbox="1066 429 6 4">
+
+  <path d="M 1.5 0  L 1.5 26.99999980535347  " stroke-width="3" stroke-dasharray="0" stroke="rgba(217, 0, 27, 1)" fill="none" transform="matrix(0.7859868119986093 0.6182432622878011 -0.6182432622878011 0.7859868119986093 1066.8311552408948 429.710859302592 )" class="stroke" />
+  <path d="M -7.4 25  L 1.5 34  L 10.4 25  L -7.4 25  Z " fill-rule="nonzero" fill="rgba(217, 0, 27, 1)" stroke="none" transform="matrix(0.7859868119986093 0.6182432622878011 -0.6182432622878011 0.7859868119986093 1066.8311552408948 429.710859302592 )" class="arrowhead" />
+          </svg>
+        </div>
+        <div id="u338p002" class="ax_vector_shape" WidgetTopLeftX="0.9103571649976452" WidgetTopLeftY="-0.04455159548803746" WidgetTopRightX="0.9100291111210413" WidgetTopRightY="0.06259068512106492" WidgetBottomLeftX="-0.22297006988967405" WidgetBottomLeftY="-0.048535106846889095" WidgetBottomRightX="-0.22329812376628258" WidgetBottomRightY="0.05860717376220691">
+          <svg data="images/下载详情_4/u338p002.svg" id="u338p002_img" class="img generatedImage" viewbox="1036 439 30 26">
+
+  <g transform="matrix(0.6156614753256618 0.7880107536067256 -0.7880107536067212 0.6156614753256556 760.1206500629673 -654.4782888878649 )">
+    <path d="M 1.5 0  L 1.5 26.99999980535347  " stroke-width="3" stroke-dasharray="0" stroke="rgba(217, 0, 27, 1)" fill="none" transform="matrix(0.7859868119986093 0.6182432622878011 -0.6182432622878011 0.7859868119986093 1066.8311552408948 429.710859302592 )" class="stroke" />
+    <path d="M -7.4 25  L 1.5 34  L 10.4 25  L -7.4 25  Z " fill-rule="nonzero" fill="rgba(217, 0, 27, 1)" stroke="none" transform="matrix(0.7859868119986093 0.6182432622878011 -0.6182432622878011 0.7859868119986093 1066.8311552408948 429.710859302592 )" class="arrowhead" />
+  </g>
+          </svg>
+        </div>
+        <div id="u338_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u339" class="ax_default primary_button transition notrs">
+        <div id="u339_div" class=""></div>
+        <div id="u339_text" class="text ">
+          <p><span>校验审核</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (组合) -->
+      <div id="u340" class="ax_default ax_default_hidden" style="display:none; visibility: hidden" data-left="1074" data-top="362" data-width="388" data-height="37" layer-opacity="1">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u341" class="ax_default box_2 transition notrs">
+          <div id="u341_div" class=""></div>
+          <div id="u341_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u342" class="ax_default _文本段落 transition notrs">
+          <div id="u342_div" class=""></div>
+          <div id="u342_text" class="text ">
+            <p><span>校验上月【下载状态】为“下载成功”或“手动成功”且解析报表不为空的</span></p><p><span>月度交易明细，在本月是否下载成功</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u343" class="ax_default box_1 transition notrs">
+        <div id="u343_div" class=""></div>
+        <div id="u343_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Vertical line) -->
+      <div id="u344" class="compound ax_default arrow transition notrs" data-height="28" data-width="3" CompoundMode="true">
+        <svg data="images/下载详情_4/u344.svg" id="u344_img" class="singleImg img generatedImage">
+
+  <g transform="matrix(1 0 0 1 -1168 -516.5 )">
+    <path d="M 1.5 0  L 1.5 20.999999750195347  " stroke-width="3" stroke-dasharray="0" stroke="rgba(217, 0, 27, 1)" fill="none" transform="matrix(1 0 0 1 1179 518 )" class="stroke" />
+    <path d="M -7.4 19  L 1.5 28  L 10.4 19  L -7.4 19  Z " fill-rule="nonzero" fill="rgba(217, 0, 27, 1)" stroke="none" transform="matrix(1 0 0 1 1179 518 )" class="arrowhead" />
+  </g>
+        </svg>
+        <div id="u344p000" class="ax_vector_shape" WidgetTopLeftX="-0.4178616442542593" WidgetTopLeftY="0.2894256626042928" WidgetTopRightX="-0.4185369190557077" WidgetTopRightY="-0.4605523732639696" WidgetBottomLeftX="0.40564365003248465" WidgetBottomLeftY="0.23585386168917655" WidgetBottomRightX="0.4049683752310361" WidgetBottomRightY="-0.5141241741790861">
+          <svg data="images/下载详情_4/u344p000.svg" id="u344p000_img" class="img generatedImage" viewbox="1164 531 34 2">
+
+  <g transform="matrix(0.43837114678909006 0.8987940462991842 -0.8987940462991642 0.438371146789085 1141.4421082732397 -762.6892187711296 )">
+    <path d="M 1.5 0  L 1.5 20.999999750195347  " stroke-width="3" stroke-dasharray="0" stroke="rgba(217, 0, 27, 1)" fill="none" transform="matrix(-0.9021226292013228 -0.4314797351937779 0.4314797351937779 -0.9021226292013228 1175.812467651089 545.2769364116092 )" class="stroke" />
+    <path d="M -7.4 19  L 1.5 28  L 10.4 19  L -7.4 19  Z " fill-rule="nonzero" fill="rgba(217, 0, 27, 1)" stroke="none" transform="matrix(-0.9021226292013228 -0.4314797351937779 0.4314797351937779 -0.9021226292013228 1175.812467651089 545.2769364116092 )" class="arrowhead" />
+  </g>
+          </svg>
+        </div>
+        <div id="u344p001" class="ax_vector_shape" WidgetTopLeftX="0.13541127518146823" WidgetTopLeftY="0.04615606860153321" WidgetTopRightX="-0.31565003941917286" WidgetTopRightY="-0.16958379899536644" WidgetBottomLeftX="2.1489833727524683" WidgetBottomLeftY="-4.163749534337967" WidgetBottomRightX="1.6979220581518273" WidgetBottomRightY="-4.379489401934866">
+          <svg data="images/下载详情_4/u344p001.svg" id="u344p001_img" class="img generatedImage" viewbox="1172 543 6 4">
+
+  <path d="M 1.5 0  L 1.5 20.999999750195347  " stroke-width="3" stroke-dasharray="0" stroke="rgba(217, 0, 27, 1)" fill="none" transform="matrix(-0.9021226292013228 -0.4314797351937779 0.4314797351937779 -0.9021226292013228 1175.812467651089 545.2769364116092 )" class="stroke" />
+  <path d="M -7.4 19  L 1.5 28  L 10.4 19  L -7.4 19  Z " fill-rule="nonzero" fill="rgba(217, 0, 27, 1)" stroke="none" transform="matrix(-0.9021226292013228 -0.4314797351937779 0.4314797351937779 -0.9021226292013228 1175.812467651089 545.2769364116092 )" class="arrowhead" />
+          </svg>
+        </div>
+        <div id="u344p002" class="ax_vector_shape" WidgetTopLeftX="0.7469704865288085" WidgetTopLeftY="-0.038983835437640675" WidgetTopRightX="0.7477904630734246" WidgetTopRightY="0.06815588397211116" WidgetBottomLeftX="-0.25300022796223753" WidgetBottomLeftY="-0.03133072102119535" WidgetBottomRightX="-0.2521802514176215" WidgetBottomRightY="0.07580899838855644">
+          <svg data="images/下载详情_4/u344p002.svg" id="u344p002_img" class="img generatedImage" viewbox="1170 513 28 26">
+
+  <g transform="matrix(-0.43837114678908173 -0.8987940462991715 0.8987940462991633 -0.4383711467890777 1230.2657694449126 1820.755374029274 )">
+    <path d="M 1.5 0  L 1.5 20.999999750195347  " stroke-width="3" stroke-dasharray="0" stroke="rgba(217, 0, 27, 1)" fill="none" transform="matrix(-0.9021226292013228 -0.4314797351937779 0.4314797351937779 -0.9021226292013228 1175.812467651089 545.2769364116092 )" class="stroke" />
+    <path d="M -7.4 19  L 1.5 28  L 10.4 19  L -7.4 19  Z " fill-rule="nonzero" fill="rgba(217, 0, 27, 1)" stroke="none" transform="matrix(-0.9021226292013228 -0.4314797351937779 0.4314797351937779 -0.9021226292013228 1175.812467651089 545.2769364116092 )" class="arrowhead" />
+  </g>
+          </svg>
+        </div>
+        <div id="u344_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u345" class="ax_default _文本段落 transition notrs">
+        <div id="u345_div" class=""></div>
+        <div id="u345_text" class="text ">
+          <p><span>校验结果&nbsp; </span></p><p><span><br></span></p><p><span>-</span></p><p><span>下载/手动成功</span></p><p><span>下载不成功</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u346" class="ax_default _文本段落 transition notrs">
+        <div id="u346_div" class=""></div>
+        <div id="u346_text" class="text ">
+          <p><span>校验审核人</span></p><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p><p><span>xxx</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u347" class="ax_default _文本段落 transition notrs">
+        <div id="u347_div" class=""></div>
+        <div id="u347_text" class="text ">
+          <p><span>校验审核时间</span></p><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p><p><span>xxx</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u348" class="ax_default _文本段落 transition notrs">
+        <div id="u348_div" class=""></div>
+        <div id="u348_text" class="text ">
+          <p><span>校验审核状态</span></p><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p><p><span>xxx</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u349" class="ax_default _文本段落 transition notrs">
+        <div id="u349_div" class=""></div>
+        <div id="u349_text" class="text ">
+          <p><span><br></span></p><p><span><br></span></p><p><span>2.1.2新增【校验审核】按钮：</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 2.1.2.1若未勾选数据，则审核失败，并给出相应提示；</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 2.1.2.2若勾选一条或多条数据，1）如存在【校验结果】＝“下载不成功”的数据，则仅审核该部分数据；其余不审核数据不做提示；</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2）如所有数据【校验结果】≠“下载不成功”，则给出提示：仅支持审核【校验结果】=“下载不成功”的数据；</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 2.1.2.3点击按钮审核成功后，【校验审核状态】列变为“已审核”；</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 【校验审核人】列展示点击按钮的操作人姓名；</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 【校验审核时间】列展示点击按钮的操作时间；格式如：2023-03-16 09:32:58；</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u350" class="ax_default box_1 transition notrs">
+        <div id="u350_div" class=""></div>
+        <div id="u350_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u351" class="ax_default _文本段落 transition notrs">
+        <div id="u351_div" class=""></div>
+        <div id="u351_text" class="text ">
+          <p><span>标题：【Amazon财务报表-下载详情-需补齐月度交易明细账单】</span></p><p><span><br></span></p><p><span>正文：2023-03&nbsp; 需补齐以下月度交易明细账单，详见附件</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (表格) -->
+      <div id="u352" class="ax_default">
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u353" class="ax_default table_cell transition notrs">
+          <svg data="images/下载详情_4/u353.svg" id="u353_img" class="img generatedImage" viewbox="0 0 153 30">
+
+  <path d="M 1 1  L 153 1  L 153 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(215, 215, 215, 1)" stroke="none" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+  <path d="M 0 0.5  L 153 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+          </svg>
+          <div id="u353_text" class="text ">
+            <p><span>生成时间</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u354" class="ax_default table_cell transition notrs">
+          <svg data="images/下载详情_4/u354.svg" id="u354_img" class="img generatedImage" viewbox="153 0 102 30">
+
+  <path d="M 1 1  L 102 1  L 102 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(215, 215, 215, 1)" stroke="none" transform="matrix(1 0 0 1 153 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 153 0 )" class="stroke" />
+  <path d="M 0 0.5  L 102 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 153 0 )" class="stroke" />
+          </svg>
+          <div id="u354_text" class="text ">
+            <p><span>部门</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u355" class="ax_default table_cell transition notrs">
+          <svg data="images/下载详情_4/u355.svg" id="u355_img" class="img generatedImage" viewbox="255 0 78 30">
+
+  <path d="M 1 1  L 78 1  L 78 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(215, 215, 215, 1)" stroke="none" transform="matrix(1 0 0 1 255 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 255 0 )" class="stroke" />
+  <path d="M 0 0.5  L 78 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 255 0 )" class="stroke" />
+          </svg>
+          <div id="u355_text" class="text ">
+            <p><span>站点</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u356" class="ax_default table_cell transition notrs">
+          <svg data="images/下载详情_4/u356.svg" id="u356_img" class="img generatedImage" viewbox="333 0 84 30">
+
+  <path d="M 1 1  L 84 1  L 84 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(215, 215, 215, 1)" stroke="none" transform="matrix(1 0 0 1 333 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 333 0 )" class="stroke" />
+  <path d="M 0 0.5  L 84 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 333 0 )" class="stroke" />
+          </svg>
+          <div id="u356_text" class="text ">
+            <p><span>店铺</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u357" class="ax_default table_cell transition notrs">
+          <svg data="images/下载详情_4/u357.svg" id="u357_img" class="img generatedImage" viewbox="417 0 83 30">
+
+  <path d="M 1 1  L 82 1  L 82 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(215, 215, 215, 1)" stroke="none" transform="matrix(1 0 0 1 417 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 417 0 )" class="stroke" />
+  <path d="M 0 0.5  L 83 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 417 0 )" class="stroke" />
+  <path d="M 82.5 1  L 82.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 417 0 )" class="stroke" />
+          </svg>
+          <div id="u357_text" class="text ">
+            <p><span>account ID</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u358" class="ax_default table_cell transition notrs">
+          <svg data="images/下载详情_4/u358.svg" id="u358_img" class="img generatedImage" viewbox="0 30 153 27">
+
+  <path d="M 1 1  L 153 1  L 153 27  L 1 27  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 27  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 30 )" class="stroke" />
+  <path d="M 0 0.5  L 153 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 30 )" class="stroke" />
+          </svg>
+          <div id="u358_text" class="text ">
+            <p><span>2023-03-01 00:00:00</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u359" class="ax_default table_cell transition notrs">
+          <svg data="images/下载详情_4/u359.svg" id="u359_img" class="img generatedImage" viewbox="153 30 102 27">
+
+  <path d="M 1 1  L 102 1  L 102 27  L 1 27  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 153 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 27  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 153 30 )" class="stroke" />
+  <path d="M 0 0.5  L 102 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 153 30 )" class="stroke" />
+          </svg>
+          <div id="u359_text" class="text ">
+            <p><span>项目七部-A组</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u360" class="ax_default table_cell transition notrs">
+          <svg data="images/下载详情_4/u360.svg" id="u360_img" class="img generatedImage" viewbox="255 30 78 27">
+
+  <path d="M 1 1  L 78 1  L 78 27  L 1 27  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 255 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 27  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 255 30 )" class="stroke" />
+  <path d="M 0 0.5  L 78 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 255 30 )" class="stroke" />
+          </svg>
+          <div id="u360_text" class="text ">
+            <p><span>墨西哥</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u361" class="ax_default table_cell transition notrs">
+          <svg data="images/下载详情_4/u361.svg" id="u361_img" class="img generatedImage" viewbox="333 30 84 27">
+
+  <path d="M 1 1  L 84 1  L 84 27  L 1 27  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 333 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 27  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 333 30 )" class="stroke" />
+  <path d="M 0 0.5  L 84 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 333 30 )" class="stroke" />
+          </svg>
+          <div id="u361_text" class="text ">
+            <p><span>浩克曼</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u362" class="ax_default table_cell transition notrs">
+          <svg data="images/下载详情_4/u362.svg" id="u362_img" class="img generatedImage" viewbox="417 30 83 27">
+
+  <path d="M 1 1  L 82 1  L 82 27  L 1 27  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 417 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 27  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 417 30 )" class="stroke" />
+  <path d="M 0 0.5  L 83 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 417 30 )" class="stroke" />
+  <path d="M 82.5 1  L 82.5 27  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 417 30 )" class="stroke" />
+          </svg>
+          <div id="u362_text" class="text ">
+            <p><span>400996</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u363" class="ax_default table_cell transition notrs">
+          <svg data="images/下载详情_4/u363.svg" id="u363_img" class="img generatedImage" viewbox="0 57 153 30">
+
+  <path d="M 1 1  L 153 1  L 153 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 57 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 57 )" class="stroke" />
+  <path d="M 0 0.5  L 153 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 57 )" class="stroke" />
+  <path d="M 0 29.5  L 153 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 57 )" class="stroke" />
+          </svg>
+          <div id="u363_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u364" class="ax_default table_cell transition notrs">
+          <svg data="images/下载详情_4/u364.svg" id="u364_img" class="img generatedImage" viewbox="153 57 102 30">
+
+  <path d="M 1 1  L 102 1  L 102 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 153 57 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 153 57 )" class="stroke" />
+  <path d="M 0 0.5  L 102 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 153 57 )" class="stroke" />
+  <path d="M 0 29.5  L 102 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 153 57 )" class="stroke" />
+          </svg>
+          <div id="u364_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u365" class="ax_default table_cell transition notrs">
+          <svg data="images/下载详情_4/u365.svg" id="u365_img" class="img generatedImage" viewbox="255 57 78 30">
+
+  <path d="M 1 1  L 78 1  L 78 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 255 57 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 255 57 )" class="stroke" />
+  <path d="M 0 0.5  L 78 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 255 57 )" class="stroke" />
+  <path d="M 0 29.5  L 78 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 255 57 )" class="stroke" />
+          </svg>
+          <div id="u365_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u366" class="ax_default table_cell transition notrs">
+          <svg data="images/下载详情_4/u366.svg" id="u366_img" class="img generatedImage" viewbox="333 57 84 30">
+
+  <path d="M 1 1  L 84 1  L 84 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 333 57 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 333 57 )" class="stroke" />
+  <path d="M 0 0.5  L 84 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 333 57 )" class="stroke" />
+  <path d="M 0 29.5  L 84 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 333 57 )" class="stroke" />
+          </svg>
+          <div id="u366_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u367" class="ax_default table_cell transition notrs">
+          <svg data="images/下载详情_4/u367.svg" id="u367_img" class="img generatedImage" viewbox="417 57 83 30">
+
+  <path d="M 1 1  L 82 1  L 82 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 417 57 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 417 57 )" class="stroke" />
+  <path d="M 0 0.5  L 83 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 417 57 )" class="stroke" />
+  <path d="M 82.5 1  L 82.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 417 57 )" class="stroke" />
+  <path d="M 0 29.5  L 83 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 417 57 )" class="stroke" />
+          </svg>
+          <div id="u367_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u368" class="ax_default _文本段落 transition notrs">
+        <div id="u368_div" class=""></div>
+        <div id="u368_text" class="text ">
+          <p><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;">2.2字段属性：</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">2.2.1搜索栏：</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">2.2.1.1新增【校验结果】：下拉多选，无默认值，选项包含“下载/手动成功”、“下载不成功”；</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">2.2.1.2新增【校验审核状态】：下拉多选，无默认值，选项包含“待审核”和“已审核”；</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">2.2.2列表：</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">2.2.2.1新增【校验结果】：默认值为空，前端展示“-”；字段值包括空、“下载/手动成功”、“下载不成功”；</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">2.2.2.2新增【校验审核状态】：默认值为空，前端展示“-”；字段值包括空、“待审核”和“已审核”；</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">2.2.2.3新增【校验审核人】：默认值为空，前端展示“-”；字段值包括空 和 具体审核人；</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">2.2.2.4新增【校验审核时间】：默认值为空，前端展示“-”；字段值包括空 和 具体审核时间；</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u369" class="ax_default _文本段落 transition notrs">
+        <div id="u369_div" class=""></div>
+        <div id="u369_text" class="text ">
+          <p><span>校验结果：</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (下拉列表框) -->
+      <div id="u370" class="ax_default droplist transition notrs">
+        <div id="u370_div" class=""></div>
+        <select id="u370_input" class="u370_input">
+          <option class="u370_input_option" value=" ">&nbsp;</option>
+          <option class="u370_input_option" value="下载/手动成功">下载/手动成功</option>
+          <option class="u370_input_option" value="下载不成功">下载不成功</option>
+        </select>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u371" class="ax_default _文本段落 transition notrs">
+        <div id="u371_div" class=""></div>
+        <div id="u371_text" class="text ">
+          <p><span>校验审核状态：</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (下拉列表框) -->
+      <div id="u372" class="ax_default droplist transition notrs">
+        <div id="u372_div" class=""></div>
+        <select id="u372_input" class="u372_input">
+          <option class="u372_input_option" value="  ">&nbsp; </option>
+          <option class="u372_input_option" value="待审核">待审核</option>
+          <option class="u372_input_option" value="已审核">已审核</option>
+        </select>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u373" class="ax_default _文本段落 transition notrs">
+        <div id="u373_div" class=""></div>
+        <div id="u373_text" class="text ">
+          <p style="font-size:16px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;font-size:18px;">3.补录账单</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">：</span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">【批量导入】按钮：</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;color:#D9001B;">3.1导入时原需求1.⑤改为：导入后按照【店铺+站点+生成时间前两个自然月】维度校验【平台财务报表/账号管理/Amazon】是否存在对应数据；（原需求https://vzzqmp.axshare.com）</span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3.2导入成功后，根据文件名日期将列表【生成时间】解析固定为yyyy-mm-01 00:00:00；例：文件名日期为：2023-03-15，则【生成时间】=2023-03-01 00:00:00</span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图像) -->
+      <div id="u374" class="ax_default _图片_ transition notrs">
+        <img id="u374_img" class="img " src="images/下载详情_4/u374.png"/>
+        <div id="u374_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (组合) -->
+      <div id="u375" class="ax_default ax_default_hidden" style="display:none; visibility: hidden" data-left="0" data-top="0" data-width="0" data-height="0" layer-opacity="1">
+      </div>
+    </div>
+    <script src="resources/scripts/axure/ios.js"></script>
+  </body>
+</html>
