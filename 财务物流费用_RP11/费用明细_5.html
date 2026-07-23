@@ -1,0 +1,783 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>费用明细</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/费用明细_5/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-3.7.1.min.js"></script>
+    <script src="resources/scripts/axure/axQuery.js"></script>
+    <script src="resources/scripts/axure/globals.js"></script>
+    <script src="resources/scripts/axutils.js"></script>
+    <script src="resources/scripts/axure/annotation.js"></script>
+    <script src="resources/scripts/axure/axQuery.std.js"></script>
+    <script src="resources/scripts/axure/doc.js"></script>
+    <script src="resources/scripts/messagecenter.js"></script>
+    <script src="resources/scripts/axure/events.js"></script>
+    <script src="resources/scripts/axure/recording.js"></script>
+    <script src="resources/scripts/axure/action.js"></script>
+    <script src="resources/scripts/axure/expr.js"></script>
+    <script src="resources/scripts/axure/geometry.js"></script>
+    <script src="resources/scripts/axure/flyout.js"></script>
+    <script src="resources/scripts/axure/model.js"></script>
+    <script src="resources/scripts/axure/repeater.js"></script>
+    <script src="resources/scripts/axure/sto.js"></script>
+    <script src="resources/scripts/axure/utils.temp.js"></script>
+    <script src="resources/scripts/axure/variables.js"></script>
+    <script src="resources/scripts/axure/drag.js"></script>
+    <script src="resources/scripts/axure/move.js"></script>
+    <script src="resources/scripts/axure/visibility.js"></script>
+    <script src="resources/scripts/axure/style.js"></script>
+    <script src="resources/scripts/axure/adaptive.js"></script>
+    <script src="resources/scripts/axure/tree.js"></script>
+    <script src="resources/scripts/axure/init.temp.js"></script>
+    <script src="resources/scripts/axure/legacy.js"></script>
+    <script src="resources/scripts/axure/viewer.js"></script>
+    <script src="resources/scripts/axure/math.js"></script>
+    <script src="resources/scripts/axure/jquery.nicescroll.min.js"></script>
+    <script src="data/document.js"></script>
+    <script src="files/费用明细_5/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (图像) -->
+      <div id="u5997" class="ax_default _图片_ transition notrs">
+        <img id="u5997_img" class="img " src="images/费用明细_5/u5997.png"/>
+        <div id="u5997_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5998" class="ax_default box_2 transition notrs">
+        <div id="u5998_div" class=""></div>
+        <div id="u5998_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5999" class="ax_default _文本段落 transition notrs">
+        <div id="u5999_div" class=""></div>
+        <div id="u5999_text" class="text ">
+          <p><span style="font-family:&quot;Arial Negreta&quot;, &quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:700;">1.需求说明：</span><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">新增同步实际账单数据；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Negreta&quot;, &quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:700;">2.定时任务：</span><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">新增同步实际账单定时任务，每天9点到21点，3h/次，详情如下：</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">在【费用报销/费用管理/费用报销记录】页面，2.1.1筛选【单据审核完成时间】半年前到拉取当天，【业务类型】=‘物流费用（海外、头程）’，【费用类型】含‘海运（头程费用）’，单据状态为“自动关闭”的单据‘；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2.1.2根据报销单号关联TMS系统（账单与预估报表支持佰易接口），拉取对应实际账单数据至当前页面中，对应关系参考预估账单，不同点如下表所示：</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; --注意拉取前需删除未锁定、未对账的数据，若数据在费用明细页面是否锁定为是或对账状态已标识为已对账或延迟对账，则不做删除拉取；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u6000" class="ax_default primary_button transition notrs">
+        <div id="u6000_div" class=""></div>
+        <div id="u6000_text" class="text ">
+          <p><span>拉取实际账单</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u6001" class="ax_default _文本段落 transition notrs">
+        <div id="u6001_div" class=""></div>
+        <div id="u6001_text" class="text ">
+          <p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Negreta&quot;, &quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:700;">3.列表：</span><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">新增新增【对账状态】字段位于是否汇总右侧；新增【报销单号、关联单号】位于账单类型右侧；新增【费用项所属分类】位于费用类型右侧；新增【付款期间、付款时间】位于账单期间右侧；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 新增【金额（人民币）、分摊金额（人民币）】位于分摊金额（本位币）右侧；新增【汇率（人民币）】位于汇率右侧；新增【实际承运商】位于预估承运商右侧；【推送/导入人、推送/导入时间】调整为【创建人、创建时间】---导出同步调整；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Negreta&quot;, &quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:700;">4.按钮：</span></p><p><span style="font-family:&quot;Arial Negreta&quot;, &quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:700;"><br></span></p><p><span style="font-family:&quot;Arial Negreta&quot;, &quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:700;">4.1【导入、导入模板下载】：</span><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">4.1.1导入模板提示①账单类型新增‘实际’；②新增一行提示：当账单类型为‘实际’时，报销单号、实际承运商必录；当账单类型不为‘实际’时，预估承运商必录；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 4.1.2导入模板列表新增【报销单号、实际承运商、费用项所属分类、付款期间、付款时间】；预估承运商取消标黄；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; </span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;color:#D9001B;">&nbsp; 4.1.3新增导入逻辑：</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;color:#D9001B;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 4.1.3.1当账单类型不为‘实际’时，预估承运商必录；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;color:#D9001B;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 4.1.3.2导入【账单类型】=’二次预估‘数据时，先按原逻辑校验是否重复，未重复则正常导入；重复则再按【数据来源(手工导入)+账单类型+账单期间+法人主体+集运单号+费用类型+币种】维度汇总列表+文件内部同维度</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;color:#D9001B;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 数据的【金额（原币）】并判断合计值是否=0；①值=0，支持正常导入数据同时【账单类型】更新为‘二次预估调整’；②值≠0，则弹窗提示‘存在重复二次预估数据，是否导入？’，确认则正常导入数据同时</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;color:#D9001B;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 【账单类型】更新为‘二次预估调整’；不确认则正常返回按原逻辑校验重复的失败原因；---生成【账单类型】=’二次预估调整‘数据后，【是否汇总】赋空值；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;color:#D9001B;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;color:#D9001B;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4.1.3.3导入非二次预估数据正常按原逻辑校验；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Negreta&quot;, &quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:700;">4.2新增【拉取实际账单】：</span><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">4.2.1位于搜索右侧；点击按钮后执行定时任务逻辑；--记录操作日志</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Negreta&quot;, &quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:700;">4.3【锁定数据、解锁数据】：</span><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">4.3.1点击按钮打开新的弹窗：内含两个按钮分别为：预估账单、实际账单；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 4.3.1.1当选择预估账单时打开当前请选择锁定范围弹窗，锁定和解锁逻辑不变；（注意所选范围需排除账单类型为实际的数据）</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4.3.1.2当选择实际账单时打开新的请选择锁定范围弹窗：【账单期间】：日期框必录单选，精确到月，无默认值；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 【报销单号】：手工录入支持批量逗号分隔，支持空格转逗号；必录；--需要支持录入至少100多个报销单号；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 【法人主体、实际承运商】：下拉多选非必录，选项包括列表对应数据去重；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 【费用类型】：下拉多选非必录，选项包括所选账单期间列表费用类型去重；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 【数据来源】：下拉多选非必录，选项包括‘TMS推送，手工导入’；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; （注意所选范围需排除账单类型不为实际的数据）</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4.3.1.3选择实际账单锁定确认后，也要将所选维度列表数据【是否锁定】值更新为‘是’，更新【锁定人】和【锁定时间】(后台记录锁定人邮箱)；注意：所选数据【是否锁定】为‘是’的无需更新锁定人和锁定时间；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 选择实际账单解锁确认后，若所选维度范围存在【对账状态】=‘已对账’的数据，则该维度均解锁数据失败，并提示：所选范围存在已对账数据，无法解锁数据！</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Negreta&quot;, &quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:700;">4.4【刷新基础数据】：</span><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">调整刷新逻辑分为两种情况：</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4.4.1账单类型不为实际的数据按原逻辑刷新；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4.4.2账单类型为实际的数据，4.4.2.1支持（批量）勾选和未勾选按筛选条件刷新小组部门和税率。仅限刷新所选范围内【对账状态】均为未对账；二次提示；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4.4.2.2刷新逻辑：①小组部门：更新【销售小组、销售小组编码、销售部门、小组部门来源】：按照【账单期间+SKU】维度依次匹【基础数据/小组部门/SKU对应小组部门】当前期间及前5个月期间</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; （月份由后向前）并获取对应销售小组、销售小组编码、销售部门，匹到则停止【小组部门来源】赋值‘系统匹配-SKU对应小组部门’，匹不到赋空值；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; ②税率：按照【账单期间+法人主体+实际承运商+费用类型+费用项所属分类】维度在【基础数据/税率】获取并更新【税率】，和【金额（原币、本位币、人民币）】；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4.4.3</span><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;color:#D9001B;">非实际</span><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">账单类型的数据：当匹配【SKU对应小组部门】刷新小组部门时，需新增校验依次匹到的【销售小组】在【财务对接平台/组织单元】匹配【名称】的对应数据是否封存，若已封存则继续匹下一个数据，直到所有数据均</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 已封存，则将【销售小组、销售小组编码、销售部门、小组部门来源】均置空；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Negreta&quot;, &quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:700;">4.5【修改小组部门】：</span><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">修改范围改为仅限修改所选范围内(【账单类型】不为‘实际’，【是否汇总】为否且对应入账期间+法人主体+费用模块(海运头程费)，在法人管理均为当前期间的未关账数据）或（【账单类型】为‘实际’，【对账状态】≠‘已对账’的数据）；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Negreta&quot;, &quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:700;">4.6【计算汇总】：</span><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">弹窗新增提示：仅限计算汇总预估类账单！（在原逻辑上新增范围：仅筛选【账单类型】不为’实际‘的账单汇总）</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Negreta&quot;, &quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:700;">4.7【删除】：</span><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">删除逻辑调整为：逻辑删除仅限删除数据来源=手工导入且</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; ①【账单类型】不为实际且（（是否汇总为否的对应入账期间+法人主体+费用模块在法人管理为当前期间的未关账数据）或（入账期间为空的数据）或（【账单类型】=’二次预估调整‘且【对账状态】=’未对账‘的数据））；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; ②【账单类型】为实际且【对账状态】=’未对账‘的数据；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Negreta&quot;, &quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:700;">5.搜索框：</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">5.1新增【报销单号、关联单号】位于账单类型右侧：手工录入支持批量搜索空格转逗号；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">5.2新增【付款期间】位于账单期间右侧：日期框精确到月，包括开始~结束期间无默认值；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">5.3新增【费用项所属分类】位于费用类型右侧、【实际承运商】位于预估承运商右侧：下拉多选无默认值，选项包括列表数据去重；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">5.4新增【对账状态】字段位于是否汇总右侧：下拉多选无默认值，选项包括‘未对账、已对账、延迟对账’；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Negreta&quot;, &quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:700;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (表格) -->
+      <div id="u6002" class="ax_default">
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6003" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6003.svg" id="u6003_img" class="img generatedImage" viewbox="0 0 178 30">
+
+  <path d="M 1 1  L 178 1  L 178 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(1, 111, 160, 0.5372549019607843)" stroke="none" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+  <path d="M 0 0.5  L 178 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+          </svg>
+          <div id="u6003_text" class="text ">
+            <p><span>当前页面字段</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6004" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6004.svg" id="u6004_img" class="img generatedImage" viewbox="178 0 944 30">
+
+  <path d="M 1 1  L 944 1  L 944 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(1, 111, 160, 0.5372549019607843)" stroke="none" transform="matrix(1 0 0 1 178 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 178 0 )" class="stroke" />
+  <path d="M 0 0.5  L 944 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 178 0 )" class="stroke" />
+          </svg>
+          <div id="u6004_text" class="text ">
+            <p><span>取值逻辑</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6005" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6005.svg" id="u6005_img" class="img generatedImage" viewbox="1122 0 475 30">
+
+  <path d="M 1 1  L 474 1  L 474 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(1, 111, 160, 0.5372549019607843)" stroke="none" transform="matrix(1 0 0 1 1122 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 0 )" class="stroke" />
+  <path d="M 0 0.5  L 475 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 0 )" class="stroke" />
+  <path d="M 474.5 1  L 474.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 0 )" class="stroke" />
+          </svg>
+          <div id="u6005_text" class="text ">
+            <p><span>导入逻辑</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6006" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6006.svg" id="u6006_img" class="img generatedImage" viewbox="0 30 178 39">
+
+  <path d="M 1 1  L 178 1  L 178 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 30 )" class="stroke" />
+  <path d="M 0 0.5  L 178 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 30 )" class="stroke" />
+          </svg>
+          <div id="u6006_text" class="text ">
+            <p><span>账单类型</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6007" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6007.svg" id="u6007_img" class="img generatedImage" viewbox="178 30 944 39">
+
+  <path d="M 1 1  L 944 1  L 944 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 178 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 178 30 )" class="stroke" />
+  <path d="M 0 0.5  L 944 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 178 30 )" class="stroke" />
+          </svg>
+          <div id="u6007_text" class="text ">
+            <p><span>固定值’实际‘</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6008" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6008.svg" id="u6008_img" class="img generatedImage" viewbox="1122 30 475 39">
+
+  <path d="M 1 1  L 474 1  L 474 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1122 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 30 )" class="stroke" />
+  <path d="M 0 0.5  L 475 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 30 )" class="stroke" />
+  <path d="M 474.5 1  L 474.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 30 )" class="stroke" />
+          </svg>
+          <div id="u6008_text" class="text ">
+            <p><span>导入：必录，仅限录入预估或二次预估或财报二次预估或实际；</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6009" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6009.svg" id="u6009_img" class="img generatedImage" viewbox="0 69 178 39">
+
+  <path d="M 1 1  L 178 1  L 178 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 69 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 69 )" class="stroke" />
+  <path d="M 0 0.5  L 178 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 69 )" class="stroke" />
+          </svg>
+          <div id="u6009_text" class="text ">
+            <p><span>报销单号（新增）</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6010" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6010.svg" id="u6010_img" class="img generatedImage" viewbox="178 69 944 39">
+
+  <path d="M 1 1  L 944 1  L 944 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 178 69 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 178 69 )" class="stroke" />
+  <path d="M 0 0.5  L 944 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 178 69 )" class="stroke" />
+          </svg>
+          <div id="u6010_text" class="text ">
+            <p><span>所取报销单号</span><span>（非实际账单则赋空值）</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6011" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6011.svg" id="u6011_img" class="img generatedImage" viewbox="1122 69 475 39">
+
+  <path d="M 1 1  L 474 1  L 474 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1122 69 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 69 )" class="stroke" />
+  <path d="M 0 0.5  L 475 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 69 )" class="stroke" />
+  <path d="M 474.5 1  L 474.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 69 )" class="stroke" />
+          </svg>
+          <div id="u6011_text" class="text ">
+            <p><span>导入：当账单类型为实际时，该字段必录否则非必录，限制50字符；</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6012" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6012.svg" id="u6012_img" class="img generatedImage" viewbox="0 108 178 39">
+
+  <path d="M 1 1  L 178 1  L 178 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 108 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 108 )" class="stroke" />
+  <path d="M 0 0.5  L 178 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 108 )" class="stroke" />
+          </svg>
+          <div id="u6012_text" class="text ">
+            <p><span>关联单号</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6013" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6013.svg" id="u6013_img" class="img generatedImage" viewbox="178 108 944 39">
+
+  <path d="M 1 1  L 944 1  L 944 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 178 108 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 178 108 )" class="stroke" />
+  <path d="M 0 0.5  L 944 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 178 108 )" class="stroke" />
+          </svg>
+          <div id="u6013_text" class="text ">
+            <p><span>-</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6014" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6014.svg" id="u6014_img" class="img generatedImage" viewbox="1122 108 475 39">
+
+  <path d="M 1 1  L 474 1  L 474 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1122 108 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 108 )" class="stroke" />
+  <path d="M 0 0.5  L 475 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 108 )" class="stroke" />
+  <path d="M 474.5 1  L 474.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 108 )" class="stroke" />
+          </svg>
+          <div id="u6014_text" class="text ">
+            <p><span>-</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6015" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6015.svg" id="u6015_img" class="img generatedImage" viewbox="0 147 178 30">
+
+  <path d="M 1 1  L 178 1  L 178 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 147 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 147 )" class="stroke" />
+  <path d="M 0 0.5  L 178 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 147 )" class="stroke" />
+          </svg>
+          <div id="u6015_text" class="text ">
+            <p><span>入账期间</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6016" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6016.svg" id="u6016_img" class="img generatedImage" viewbox="178 147 944 30">
+
+  <path d="M 1 1  L 944 1  L 944 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 178 147 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 178 147 )" class="stroke" />
+  <path d="M 0 0.5  L 944 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 178 147 )" class="stroke" />
+          </svg>
+          <div id="u6016_text" class="text ">
+            <p><span>-</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6017" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6017.svg" id="u6017_img" class="img generatedImage" viewbox="1122 147 475 30">
+
+  <path d="M 1 1  L 474 1  L 474 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1122 147 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 147 )" class="stroke" />
+  <path d="M 0 0.5  L 475 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 147 )" class="stroke" />
+  <path d="M 474.5 1  L 474.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 147 )" class="stroke" />
+          </svg>
+          <div id="u6017_text" class="text ">
+            <p><span>-</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6018" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6018.svg" id="u6018_img" class="img generatedImage" viewbox="0 177 178 39">
+
+  <path d="M 1 1  L 178 1  L 178 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 177 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 177 )" class="stroke" />
+  <path d="M 0 0.5  L 178 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 177 )" class="stroke" />
+          </svg>
+          <div id="u6018_text" class="text ">
+            <p><span>实际承运商</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6019" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6019.svg" id="u6019_img" class="img generatedImage" viewbox="178 177 944 39">
+
+  <path d="M 1 1  L 944 1  L 944 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 178 177 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 178 177 )" class="stroke" />
+  <path d="M 0 0.5  L 944 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 178 177 )" class="stroke" />
+          </svg>
+          <div id="u6019_text" class="text ">
+            <p><span>取数据源【实际承运商】，特殊处理：当所取预估承运商=‘CGFW-MSK（Wayfair）’时，赋值为‘CGFW-MSK(Wayfair)’-【起运港】；如：CGFW-MSK(Wayfair)-越南头顿港&nbsp; &nbsp;&nbsp; （后台存一份所有拼接前的实际承运商）</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6020" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6020.svg" id="u6020_img" class="img generatedImage" viewbox="1122 177 475 39">
+
+  <path d="M 1 1  L 474 1  L 474 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1122 177 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 177 )" class="stroke" />
+  <path d="M 0 0.5  L 475 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 177 )" class="stroke" />
+  <path d="M 474.5 1  L 474.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 177 )" class="stroke" />
+          </svg>
+          <div id="u6020_text" class="text ">
+            <p><span>导入：当账单类型为实际时，该字段必录否则非必录，限制100字符；导入后实际承运商同样需与起运港做拼接</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6021" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6021.svg" id="u6021_img" class="img generatedImage" viewbox="0 216 178 33">
+
+  <path d="M 1 1  L 178 1  L 178 33  L 1 33  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 216 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 216 )" class="stroke" />
+  <path d="M 0 0.5  L 178 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 216 )" class="stroke" />
+          </svg>
+          <div id="u6021_text" class="text ">
+            <p><span>费用项所属分类</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6022" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6022.svg" id="u6022_img" class="img generatedImage" viewbox="178 216 944 33">
+
+  <path d="M 1 1  L 944 1  L 944 33  L 1 33  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 178 216 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 178 216 )" class="stroke" />
+  <path d="M 0 0.5  L 944 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 178 216 )" class="stroke" />
+          </svg>
+          <div id="u6022_text" class="text ">
+            <p><span>取数据源【费用项所属分类】--待定，TMS还没加</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6023" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6023.svg" id="u6023_img" class="img generatedImage" viewbox="1122 216 475 33">
+
+  <path d="M 1 1  L 474 1  L 474 33  L 1 33  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1122 216 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 216 )" class="stroke" />
+  <path d="M 0 0.5  L 475 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 216 )" class="stroke" />
+  <path d="M 474.5 1  L 474.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 216 )" class="stroke" />
+          </svg>
+          <div id="u6023_text" class="text ">
+            <p><span>导入：非必录，限制50字符；</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6024" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6024.svg" id="u6024_img" class="img generatedImage" viewbox="0 249 178 33">
+
+  <path d="M 1 1  L 178 1  L 178 33  L 1 33  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 249 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 249 )" class="stroke" />
+  <path d="M 0 0.5  L 178 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 249 )" class="stroke" />
+          </svg>
+          <div id="u6024_text" class="text ">
+            <p><span>税率</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6025" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6025.svg" id="u6025_img" class="img generatedImage" viewbox="178 249 944 33">
+
+  <path d="M 1 1  L 944 1  L 944 33  L 1 33  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 178 249 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 178 249 )" class="stroke" />
+  <path d="M 0 0.5  L 944 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 178 249 )" class="stroke" />
+          </svg>
+          <div id="u6025_text" class="text ">
+            <p><span>按照【账单期间+法人主体+实际承运商+费用类型+费用项所属分类】维度在【基础数据/税率】获取并更新【税率】，和【金额（原币、本位币、人民币）】；</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6026" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6026.svg" id="u6026_img" class="img generatedImage" viewbox="1122 249 475 33">
+
+  <path d="M 1 1  L 474 1  L 474 33  L 1 33  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1122 249 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 249 )" class="stroke" />
+  <path d="M 0 0.5  L 475 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 249 )" class="stroke" />
+  <path d="M 474.5 1  L 474.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 249 )" class="stroke" />
+          </svg>
+          <div id="u6026_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6027" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6027.svg" id="u6027_img" class="img generatedImage" viewbox="0 282 178 34">
+
+  <path d="M 1 1  L 178 1  L 178 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 282 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 282 )" class="stroke" />
+  <path d="M 0 0.5  L 178 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 282 )" class="stroke" />
+          </svg>
+          <div id="u6027_text" class="text ">
+            <p><span>汇率</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6028" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6028.svg" id="u6028_img" class="img generatedImage" viewbox="178 282 944 34">
+
+  <path d="M 1 1  L 944 1  L 944 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 178 282 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 178 282 )" class="stroke" />
+  <path d="M 0 0.5  L 944 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 178 282 )" class="stroke" />
+          </svg>
+          <div id="u6028_text" class="text ">
+            <p><span>在【财务对接平台/汇率】取离付款时间</span><span>最近的汇率</span><span>，币种作为【原币】，法人主体本位币（法人管理）作为【目标币】的汇率 保留6位作为【汇率】；</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6029" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6029.svg" id="u6029_img" class="img generatedImage" viewbox="1122 282 475 34">
+
+  <path d="M 1 1  L 474 1  L 474 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1122 282 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 282 )" class="stroke" />
+  <path d="M 0 0.5  L 475 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 282 )" class="stroke" />
+  <path d="M 474.5 1  L 474.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 282 )" class="stroke" />
+          </svg>
+          <div id="u6029_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6030" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6030.svg" id="u6030_img" class="img generatedImage" viewbox="0 316 178 33">
+
+  <path d="M 1 1  L 178 1  L 178 33  L 1 33  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 316 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 316 )" class="stroke" />
+  <path d="M 0 0.5  L 178 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 316 )" class="stroke" />
+          </svg>
+          <div id="u6030_text" class="text ">
+            <p><span>汇率（人民币）</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6031" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6031.svg" id="u6031_img" class="img generatedImage" viewbox="178 316 944 33">
+
+  <path d="M 1 1  L 944 1  L 944 33  L 1 33  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 178 316 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 178 316 )" class="stroke" />
+  <path d="M 0 0.5  L 944 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 178 316 )" class="stroke" />
+          </svg>
+          <div id="u6031_text" class="text ">
+            <p><span>在【财务对接平台/汇率】取离付款时间最近的汇率，币种作为【原币】，人民币作为【目标币】的汇率 保留6位作为【汇率】；</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6032" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6032.svg" id="u6032_img" class="img generatedImage" viewbox="1122 316 475 33">
+
+  <path d="M 1 1  L 474 1  L 474 33  L 1 33  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1122 316 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 316 )" class="stroke" />
+  <path d="M 0 0.5  L 475 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 316 )" class="stroke" />
+  <path d="M 474.5 1  L 474.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 316 )" class="stroke" />
+          </svg>
+          <div id="u6032_text" class="text ">
+            <p><span>新增字段，导入后计算</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6033" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6033.svg" id="u6033_img" class="img generatedImage" viewbox="0 349 178 34">
+
+  <path d="M 1 1  L 178 1  L 178 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 349 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 349 )" class="stroke" />
+  <path d="M 0 0.5  L 178 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 349 )" class="stroke" />
+          </svg>
+          <div id="u6033_text" class="text ">
+            <p><span>金额（人民币）、分摊金额（人民币）</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6034" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6034.svg" id="u6034_img" class="img generatedImage" viewbox="178 349 944 34">
+
+  <path d="M 1 1  L 944 1  L 944 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 178 349 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 178 349 )" class="stroke" />
+  <path d="M 0 0.5  L 944 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 178 349 )" class="stroke" />
+          </svg>
+          <div id="u6034_text" class="text ">
+            <p><span>分别为=当前页面【金额、分摊金额（原币）】*汇率（人民币）</span></p><p><span>（前端展示两位，后台及导出保留6位小数）</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6035" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6035.svg" id="u6035_img" class="img generatedImage" viewbox="1122 349 475 34">
+
+  <path d="M 1 1  L 474 1  L 474 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1122 349 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 349 )" class="stroke" />
+  <path d="M 0 0.5  L 475 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 349 )" class="stroke" />
+  <path d="M 474.5 1  L 474.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 349 )" class="stroke" />
+          </svg>
+          <div id="u6035_text" class="text ">
+            <p><span>新增字段，导入后计算</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6036" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6036.svg" id="u6036_img" class="img generatedImage" viewbox="0 383 178 30">
+
+  <path d="M 1 1  L 178 1  L 178 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 383 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 383 )" class="stroke" />
+  <path d="M 0 0.5  L 178 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 383 )" class="stroke" />
+          </svg>
+          <div id="u6036_text" class="text ">
+            <p><span>创建人</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6037" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6037.svg" id="u6037_img" class="img generatedImage" viewbox="178 383 944 30">
+
+  <path d="M 1 1  L 944 1  L 944 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 178 383 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 178 383 )" class="stroke" />
+  <path d="M 0 0.5  L 944 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 178 383 )" class="stroke" />
+          </svg>
+          <div id="u6037_text" class="text ">
+            <p><span>操作人</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6038" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6038.svg" id="u6038_img" class="img generatedImage" viewbox="1122 383 475 30">
+
+  <path d="M 1 1  L 474 1  L 474 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1122 383 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 383 )" class="stroke" />
+  <path d="M 0 0.5  L 475 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 383 )" class="stroke" />
+  <path d="M 474.5 1  L 474.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 383 )" class="stroke" />
+          </svg>
+          <div id="u6038_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6039" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6039.svg" id="u6039_img" class="img generatedImage" viewbox="0 413 178 32">
+
+  <path d="M 1 1  L 178 1  L 178 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 413 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 413 )" class="stroke" />
+  <path d="M 0 0.5  L 178 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 413 )" class="stroke" />
+          </svg>
+          <div id="u6039_text" class="text ">
+            <p><span>创建时间</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6040" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6040.svg" id="u6040_img" class="img generatedImage" viewbox="178 413 944 32">
+
+  <path d="M 1 1  L 944 1  L 944 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 178 413 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 178 413 )" class="stroke" />
+  <path d="M 0 0.5  L 944 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 178 413 )" class="stroke" />
+          </svg>
+          <div id="u6040_text" class="text ">
+            <p><span>操作时间</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6041" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6041.svg" id="u6041_img" class="img generatedImage" viewbox="1122 413 475 32">
+
+  <path d="M 1 1  L 474 1  L 474 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1122 413 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 413 )" class="stroke" />
+  <path d="M 0 0.5  L 475 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 413 )" class="stroke" />
+  <path d="M 474.5 1  L 474.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 413 )" class="stroke" />
+          </svg>
+          <div id="u6041_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6042" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6042.svg" id="u6042_img" class="img generatedImage" viewbox="0 445 178 30">
+
+  <path d="M 1 1  L 178 1  L 178 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 445 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 445 )" class="stroke" />
+  <path d="M 0 0.5  L 178 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 445 )" class="stroke" />
+          </svg>
+          <div id="u6042_text" class="text ">
+            <p><span>对账状态（新增）</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6043" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6043.svg" id="u6043_img" class="img generatedImage" viewbox="178 445 944 30">
+
+  <path d="M 1 1  L 944 1  L 944 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 178 445 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 178 445 )" class="stroke" />
+  <path d="M 0 0.5  L 944 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 178 445 )" class="stroke" />
+          </svg>
+          <div id="u6043_text" class="text ">
+            <p><span>赋值‘未对账’</span><span>（非实际账单同逻辑）</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6044" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6044.svg" id="u6044_img" class="img generatedImage" viewbox="1122 445 475 30">
+
+  <path d="M 1 1  L 474 1  L 474 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1122 445 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 445 )" class="stroke" />
+  <path d="M 0 0.5  L 475 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 445 )" class="stroke" />
+  <path d="M 474.5 1  L 474.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 445 )" class="stroke" />
+          </svg>
+          <div id="u6044_text" class="text ">
+            <p><span>导入后赋值‘未对账’</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6045" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6045.svg" id="u6045_img" class="img generatedImage" viewbox="0 475 178 30">
+
+  <path d="M 1 1  L 178 1  L 178 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 475 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 475 )" class="stroke" />
+  <path d="M 0 0.5  L 178 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 475 )" class="stroke" />
+          </svg>
+          <div id="u6045_text" class="text ">
+            <p><span>是否汇总</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6046" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6046.svg" id="u6046_img" class="img generatedImage" viewbox="178 475 944 30">
+
+  <path d="M 1 1  L 944 1  L 944 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 178 475 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 178 475 )" class="stroke" />
+  <path d="M 0 0.5  L 944 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 178 475 )" class="stroke" />
+          </svg>
+          <div id="u6046_text" class="text ">
+            <p><span>赋空值</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6047" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6047.svg" id="u6047_img" class="img generatedImage" viewbox="1122 475 475 30">
+
+  <path d="M 1 1  L 474 1  L 474 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1122 475 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 475 )" class="stroke" />
+  <path d="M 0 0.5  L 475 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 475 )" class="stroke" />
+  <path d="M 474.5 1  L 474.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 475 )" class="stroke" />
+          </svg>
+          <div id="u6047_text" class="text ">
+            <p><span>导入后当账单类型为实际时该字段赋空值</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6048" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6048.svg" id="u6048_img" class="img generatedImage" viewbox="0 505 178 29">
+
+  <path d="M 1 1  L 178 1  L 178 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 505 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 505 )" class="stroke" />
+  <path d="M 0 0.5  L 178 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 505 )" class="stroke" />
+          </svg>
+          <div id="u6048_text" class="text ">
+            <p><span>付款期间（新增）</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6049" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6049.svg" id="u6049_img" class="img generatedImage" viewbox="178 505 944 29">
+
+  <path d="M 1 1  L 944 1  L 944 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 178 505 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 178 505 )" class="stroke" />
+  <path d="M 0 0.5  L 944 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 178 505 )" class="stroke" />
+          </svg>
+          <div id="u6049_text" class="text ">
+            <p><span>取费用报销单据审核完成时间所在的年月，格式yyyy-mm</span><span>（非实际账单赋空值）</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6050" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6050.svg" id="u6050_img" class="img generatedImage" viewbox="1122 505 475 29">
+
+  <path d="M 1 1  L 474 1  L 474 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1122 505 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 505 )" class="stroke" />
+  <path d="M 0 0.5  L 475 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 505 )" class="stroke" />
+  <path d="M 474.5 1  L 474.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 505 )" class="stroke" />
+          </svg>
+          <div id="u6050_text" class="text ">
+            <p><span>导入：当账单类型为实际时，该字段必录否则非必录，限制yyyy-mm；</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6051" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6051.svg" id="u6051_img" class="img generatedImage" viewbox="0 534 178 36">
+
+  <path d="M 1 1  L 178 1  L 178 35  L 1 35  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 534 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 35  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 534 )" class="stroke" />
+  <path d="M 0 0.5  L 178 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 534 )" class="stroke" />
+  <path d="M 0 35.5  L 178 35.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 534 )" class="stroke" />
+          </svg>
+          <div id="u6051_text" class="text ">
+            <p><span>付款时间（新增）</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6052" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6052.svg" id="u6052_img" class="img generatedImage" viewbox="178 534 944 36">
+
+  <path d="M 1 1  L 944 1  L 944 35  L 1 35  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 178 534 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 35  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 178 534 )" class="stroke" />
+  <path d="M 0 0.5  L 944 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 178 534 )" class="stroke" />
+  <path d="M 0 35.5  L 944 35.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 178 534 )" class="stroke" />
+          </svg>
+          <div id="u6052_text" class="text ">
+            <p><span>取费用报销单据审核完成时间，格式yyyy-mm hh:mm:ss</span><span>（非实际账单赋空值）</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u6053" class="ax_default table_cell1 transition notrs">
+          <svg data="images/费用明细_5/u6053.svg" id="u6053_img" class="img generatedImage" viewbox="1122 534 475 36">
+
+  <path d="M 1 1  L 474 1  L 474 35  L 1 35  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1122 534 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 35  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 534 )" class="stroke" />
+  <path d="M 0 0.5  L 475 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 534 )" class="stroke" />
+  <path d="M 474.5 1  L 474.5 35  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 534 )" class="stroke" />
+  <path d="M 0 35.5  L 475 35.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1122 534 )" class="stroke" />
+          </svg>
+          <div id="u6053_text" class="text ">
+            <p><span>导入：当账单类型为实际时，该字段必录否则非必录，限制yyyy-mm hh:mm:ss；</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="resources/scripts/axure/ios.js"></script>
+  </body>
+</html>
