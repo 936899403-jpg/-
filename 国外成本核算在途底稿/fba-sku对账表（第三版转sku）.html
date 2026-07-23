@@ -1,0 +1,1735 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>FBA-sku对账表（第三版转SKU）</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/fba-sku对账表（第三版转sku）/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-3.7.1.min.js"></script>
+    <script src="resources/scripts/axure/axQuery.js"></script>
+    <script src="resources/scripts/axure/globals.js"></script>
+    <script src="resources/scripts/axutils.js"></script>
+    <script src="resources/scripts/axure/annotation.js"></script>
+    <script src="resources/scripts/axure/axQuery.std.js"></script>
+    <script src="resources/scripts/axure/doc.js"></script>
+    <script src="resources/scripts/messagecenter.js"></script>
+    <script src="resources/scripts/axure/events.js"></script>
+    <script src="resources/scripts/axure/recording.js"></script>
+    <script src="resources/scripts/axure/action.js"></script>
+    <script src="resources/scripts/axure/expr.js"></script>
+    <script src="resources/scripts/axure/geometry.js"></script>
+    <script src="resources/scripts/axure/flyout.js"></script>
+    <script src="resources/scripts/axure/model.js"></script>
+    <script src="resources/scripts/axure/repeater.js"></script>
+    <script src="resources/scripts/axure/sto.js"></script>
+    <script src="resources/scripts/axure/utils.temp.js"></script>
+    <script src="resources/scripts/axure/variables.js"></script>
+    <script src="resources/scripts/axure/drag.js"></script>
+    <script src="resources/scripts/axure/move.js"></script>
+    <script src="resources/scripts/axure/visibility.js"></script>
+    <script src="resources/scripts/axure/style.js"></script>
+    <script src="resources/scripts/axure/adaptive.js"></script>
+    <script src="resources/scripts/axure/tree.js"></script>
+    <script src="resources/scripts/axure/init.temp.js"></script>
+    <script src="resources/scripts/axure/legacy.js"></script>
+    <script src="resources/scripts/axure/viewer.js"></script>
+    <script src="resources/scripts/axure/math.js"></script>
+    <script src="resources/scripts/axure/jquery.nicescroll.min.js"></script>
+    <script src="data/document.js"></script>
+    <script src="files/fba-sku对账表（第三版转sku）/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (矩形) -->
+      <div id="u4039" class="ax_default box_11 transition notrs">
+        <div id="u4039_div" class=""></div>
+        <div id="u4039_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u4040" class="ax_default _文本段落 transition notrs">
+        <div id="u4040_div" class=""></div>
+        <div id="u4040_text" class="text ">
+          <p><span>③[生成转SKU数据]：</span></p><p><span>前提条件：限制同一 </span><span style="text-decoration:underline ;">FNSKU</span><span>编号 和 同一 </span><span style="text-decoration:underline ;">仓库</span><span>类型；</span><span style="color:#D9001B;">（FNSKU、单据编号为空则不做处理）</span></p><p><span style="color:#000000;">按照以下步骤执行程序并生成转SKU数据：</span></p><p><span>A.过滤同一FNSKU及仓库限制条件下，所有期末数量不为0的SKU数据行；</span></p><p><span>B.若SKU期末数量为负数，则将SKU数据行按照绝对值大小降序排列；</span></p><p><span>C.若SKU期末数量为正数，则将SKU数据行按照实际大小降序排列；</span></p><p><span>D.按照相应规则填充负数值，生成转SKU数据；</span></p><p><span style="text-decoration:underline ;"><br></span></p><p><span><br></span></p><p><span>举例具体说明：</span></p><p><span>1.过滤出同一FNSKU编号及仓库限制条件下期末数量不为0的数据；</span></p><p><span>2.①将期末数量为负数的SKU数据行按照绝对值大小降序排列；②将期末数量为正数的SKU数据行按照实际大小降序排序；</span></p><p><span><br></span></p><p><span style="text-decoration:underline ;"><br></span></p><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (表格) -->
+      <div id="u4041" class="ax_default">
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4042" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1392.svg" id="u4042_img" class="img generatedImage" viewbox="0 0 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(245, 154, 35, 1)" stroke="none" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+          </svg>
+          <div id="u4042_text" class="text ">
+            <p><span>期间</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4043" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1393.svg" id="u4043_img" class="img generatedImage" viewbox="100 0 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(245, 154, 35, 1)" stroke="none" transform="matrix(1 0 0 1 100 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 0 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 0 )" class="stroke" />
+          </svg>
+          <div id="u4043_text" class="text ">
+            <p><span>仓库</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4044" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1394.svg" id="u4044_img" class="img generatedImage" viewbox="200 0 109 30">
+
+  <path d="M 1 1  L 109 1  L 109 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(245, 154, 35, 1)" stroke="none" transform="matrix(1 0 0 1 200 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 0 )" class="stroke" />
+  <path d="M 0 0.5  L 109 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 0 )" class="stroke" />
+          </svg>
+          <div id="u4044_text" class="text ">
+            <p><span>单据编号</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4045" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1395.svg" id="u4045_img" class="img generatedImage" viewbox="309 0 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(245, 154, 35, 1)" stroke="none" transform="matrix(1 0 0 1 309 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 309 0 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 309 0 )" class="stroke" />
+          </svg>
+          <div id="u4045_text" class="text ">
+            <p><span>SKU</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4046" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1396.svg" id="u4046_img" class="img generatedImage" viewbox="409 0 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(245, 154, 35, 1)" stroke="none" transform="matrix(1 0 0 1 409 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 409 0 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 409 0 )" class="stroke" />
+          </svg>
+          <div id="u4046_text" class="text ">
+            <p><span>FNSKU</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4047" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1397.svg" id="u4047_img" class="img generatedImage" viewbox="509 0 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(245, 154, 35, 1)" stroke="none" transform="matrix(1 0 0 1 509 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 509 0 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 509 0 )" class="stroke" />
+          </svg>
+          <div id="u4047_text" class="text ">
+            <p><span>期初数量</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4048" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1398.svg" id="u4048_img" class="img generatedImage" viewbox="609 0 100 30">
+
+  <path d="M 1 1  L 99 1  L 99 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(245, 154, 35, 1)" stroke="none" transform="matrix(1 0 0 1 609 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 609 0 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 609 0 )" class="stroke" />
+  <path d="M 99.5 1  L 99.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 609 0 )" class="stroke" />
+          </svg>
+          <div id="u4048_text" class="text ">
+            <p><span>期末数量</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4049" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1399.svg" id="u4049_img" class="img generatedImage" viewbox="0 30 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 30 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 30 )" class="stroke" />
+          </svg>
+          <div id="u4049_text" class="text ">
+            <p><span>2022-6</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4050" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1400.svg" id="u4050_img" class="img generatedImage" viewbox="100 30 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 100 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 30 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 30 )" class="stroke" />
+          </svg>
+          <div id="u4050_text" class="text ">
+            <p><span>FBA-头程-在途</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4051" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1401.svg" id="u4051_img" class="img generatedImage" viewbox="200 30 109 30">
+
+  <path d="M 1 1  L 109 1  L 109 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 30 )" class="stroke" />
+  <path d="M 0 0.5  L 109 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 30 )" class="stroke" />
+          </svg>
+          <div id="u4051_text" class="text ">
+            <p><span>k001</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4052" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1402.svg" id="u4052_img" class="img generatedImage" viewbox="309 30 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 309 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 309 30 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 309 30 )" class="stroke" />
+          </svg>
+          <div id="u4052_text" class="text ">
+            <p><span>A</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4053" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1403.svg" id="u4053_img" class="img generatedImage" viewbox="409 30 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 409 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 409 30 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 409 30 )" class="stroke" />
+          </svg>
+          <div id="u4053_text" class="text ">
+            <p><span>001</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4054" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1404.svg" id="u4054_img" class="img generatedImage" viewbox="509 30 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 509 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 509 30 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 509 30 )" class="stroke" />
+          </svg>
+          <div id="u4054_text" class="text ">
+            <p><span>1</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4055" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1405.svg" id="u4055_img" class="img generatedImage" viewbox="609 30 100 30">
+
+  <path d="M 1 1  L 99 1  L 99 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 609 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 609 30 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 609 30 )" class="stroke" />
+  <path d="M 99.5 1  L 99.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 609 30 )" class="stroke" />
+          </svg>
+          <div id="u4055_text" class="text ">
+            <p><span>-500</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4056" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1406.svg" id="u4056_img" class="img generatedImage" viewbox="0 60 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 60 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 60 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 60 )" class="stroke" />
+          </svg>
+          <div id="u4056_text" class="text ">
+            <p><span>2022-6</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4057" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1407.svg" id="u4057_img" class="img generatedImage" viewbox="100 60 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 100 60 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 60 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 60 )" class="stroke" />
+          </svg>
+          <div id="u4057_text" class="text ">
+            <p><span>FBA-头程-在途</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4058" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1408.svg" id="u4058_img" class="img generatedImage" viewbox="200 60 109 30">
+
+  <path d="M 1 1  L 109 1  L 109 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 60 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 60 )" class="stroke" />
+  <path d="M 0 0.5  L 109 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 60 )" class="stroke" />
+          </svg>
+          <div id="u4058_text" class="text ">
+            <p><span>g002</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4059" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1409.svg" id="u4059_img" class="img generatedImage" viewbox="309 60 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 309 60 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 309 60 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 309 60 )" class="stroke" />
+          </svg>
+          <div id="u4059_text" class="text ">
+            <p><span>D</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4060" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1410.svg" id="u4060_img" class="img generatedImage" viewbox="409 60 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 409 60 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 409 60 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 409 60 )" class="stroke" />
+          </svg>
+          <div id="u4060_text" class="text ">
+            <p><span>001</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4061" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1411.svg" id="u4061_img" class="img generatedImage" viewbox="509 60 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 509 60 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 509 60 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 509 60 )" class="stroke" />
+          </svg>
+          <div id="u4061_text" class="text ">
+            <p><span>2</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4062" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1412.svg" id="u4062_img" class="img generatedImage" viewbox="609 60 100 30">
+
+  <path d="M 1 1  L 99 1  L 99 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 609 60 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 609 60 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 609 60 )" class="stroke" />
+  <path d="M 99.5 1  L 99.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 609 60 )" class="stroke" />
+          </svg>
+          <div id="u4062_text" class="text ">
+            <p><span>-400</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4063" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4063.svg" id="u4063_img" class="img generatedImage" viewbox="0 90 100 33">
+
+  <path d="M 1 1  L 100 1  L 100 33  L 1 33  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 90 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 90 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 90 )" class="stroke" />
+          </svg>
+          <div id="u4063_text" class="text ">
+            <p><span>2022-6</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4064" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4064.svg" id="u4064_img" class="img generatedImage" viewbox="100 90 100 33">
+
+  <path d="M 1 1  L 100 1  L 100 33  L 1 33  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 100 90 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 90 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 90 )" class="stroke" />
+          </svg>
+          <div id="u4064_text" class="text ">
+            <p><span>FBA-头程-在途</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4065" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4065.svg" id="u4065_img" class="img generatedImage" viewbox="200 90 109 33">
+
+  <path d="M 1 1  L 109 1  L 109 33  L 1 33  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 90 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 90 )" class="stroke" />
+  <path d="M 0 0.5  L 109 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 90 )" class="stroke" />
+          </svg>
+          <div id="u4065_text" class="text ">
+            <p><span>q001</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4066" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4066.svg" id="u4066_img" class="img generatedImage" viewbox="309 90 100 33">
+
+  <path d="M 1 1  L 100 1  L 100 33  L 1 33  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 309 90 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 309 90 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 309 90 )" class="stroke" />
+          </svg>
+          <div id="u4066_text" class="text ">
+            <p><span>B</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4067" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4067.svg" id="u4067_img" class="img generatedImage" viewbox="409 90 100 33">
+
+  <path d="M 1 1  L 100 1  L 100 33  L 1 33  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 409 90 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 409 90 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 409 90 )" class="stroke" />
+          </svg>
+          <div id="u4067_text" class="text ">
+            <p><span>001</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4068" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4068.svg" id="u4068_img" class="img generatedImage" viewbox="509 90 100 33">
+
+  <path d="M 1 1  L 100 1  L 100 33  L 1 33  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 509 90 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 509 90 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 509 90 )" class="stroke" />
+          </svg>
+          <div id="u4068_text" class="text ">
+            <p><span>2</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4069" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4069.svg" id="u4069_img" class="img generatedImage" viewbox="609 90 100 33">
+
+  <path d="M 1 1  L 99 1  L 99 33  L 1 33  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 609 90 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 609 90 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 609 90 )" class="stroke" />
+  <path d="M 99.5 1  L 99.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 609 90 )" class="stroke" />
+          </svg>
+          <div id="u4069_text" class="text ">
+            <p><span>-100</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4070" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4070.svg" id="u4070_img" class="img generatedImage" viewbox="0 123 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 123 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 123 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 123 )" class="stroke" />
+          </svg>
+          <div id="u4070_text" class="text ">
+            <p><span>2022-6</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4071" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4071.svg" id="u4071_img" class="img generatedImage" viewbox="100 123 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 100 123 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 123 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 123 )" class="stroke" />
+          </svg>
+          <div id="u4071_text" class="text ">
+            <p><span>FBA-头程-在途</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4072" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4072.svg" id="u4072_img" class="img generatedImage" viewbox="200 123 109 30">
+
+  <path d="M 1 1  L 109 1  L 109 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 123 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 123 )" class="stroke" />
+  <path d="M 0 0.5  L 109 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 123 )" class="stroke" />
+          </svg>
+          <div id="u4072_text" class="text ">
+            <p><span>z002</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4073" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4073.svg" id="u4073_img" class="img generatedImage" viewbox="309 123 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 309 123 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 309 123 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 309 123 )" class="stroke" />
+          </svg>
+          <div id="u4073_text" class="text ">
+            <p><span>C</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4074" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4074.svg" id="u4074_img" class="img generatedImage" viewbox="409 123 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 409 123 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 409 123 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 409 123 )" class="stroke" />
+          </svg>
+          <div id="u4074_text" class="text ">
+            <p><span>001</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4075" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4075.svg" id="u4075_img" class="img generatedImage" viewbox="509 123 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 509 123 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 509 123 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 509 123 )" class="stroke" />
+          </svg>
+          <div id="u4075_text" class="text ">
+            <p><span>1</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4076" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4076.svg" id="u4076_img" class="img generatedImage" viewbox="609 123 100 30">
+
+  <path d="M 1 1  L 99 1  L 99 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 609 123 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 609 123 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 609 123 )" class="stroke" />
+  <path d="M 99.5 1  L 99.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 609 123 )" class="stroke" />
+          </svg>
+          <div id="u4076_text" class="text ">
+            <p><span>400</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4077" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4077.svg" id="u4077_img" class="img generatedImage" viewbox="0 153 100 31">
+
+  <path d="M 1 1  L 100 1  L 100 31  L 1 31  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 153 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 31  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 153 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 153 )" class="stroke" />
+          </svg>
+          <div id="u4077_text" class="text ">
+            <p><span>2022-6</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4078" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4078.svg" id="u4078_img" class="img generatedImage" viewbox="100 153 100 31">
+
+  <path d="M 1 1  L 100 1  L 100 31  L 1 31  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 100 153 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 31  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 153 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 153 )" class="stroke" />
+          </svg>
+          <div id="u4078_text" class="text ">
+            <p><span>FBA-头程-在途</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4079" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4079.svg" id="u4079_img" class="img generatedImage" viewbox="200 153 109 31">
+
+  <path d="M 1 1  L 109 1  L 109 31  L 1 31  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 153 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 31  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 153 )" class="stroke" />
+  <path d="M 0 0.5  L 109 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 153 )" class="stroke" />
+          </svg>
+          <div id="u4079_text" class="text ">
+            <p><span>z001</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4080" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4080.svg" id="u4080_img" class="img generatedImage" viewbox="309 153 100 31">
+
+  <path d="M 1 1  L 100 1  L 100 31  L 1 31  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 309 153 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 31  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 309 153 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 309 153 )" class="stroke" />
+          </svg>
+          <div id="u4080_text" class="text ">
+            <p><span>C</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4081" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4081.svg" id="u4081_img" class="img generatedImage" viewbox="409 153 100 31">
+
+  <path d="M 1 1  L 100 1  L 100 31  L 1 31  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 409 153 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 31  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 409 153 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 409 153 )" class="stroke" />
+          </svg>
+          <div id="u4081_text" class="text ">
+            <p><span>001</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4082" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4082.svg" id="u4082_img" class="img generatedImage" viewbox="509 153 100 31">
+
+  <path d="M 1 1  L 100 1  L 100 31  L 1 31  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 509 153 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 31  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 509 153 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 509 153 )" class="stroke" />
+          </svg>
+          <div id="u4082_text" class="text ">
+            <p><span>3</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4083" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4083.svg" id="u4083_img" class="img generatedImage" viewbox="609 153 100 31">
+
+  <path d="M 1 1  L 99 1  L 99 31  L 1 31  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 609 153 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 31  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 609 153 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 609 153 )" class="stroke" />
+  <path d="M 99.5 1  L 99.5 31  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 609 153 )" class="stroke" />
+          </svg>
+          <div id="u4083_text" class="text ">
+            <p><span>300</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4084" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4084.svg" id="u4084_img" class="img generatedImage" viewbox="0 184 100 28">
+
+  <path d="M 1 1  L 100 1  L 100 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 184 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 184 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 184 )" class="stroke" />
+          </svg>
+          <div id="u4084_text" class="text ">
+            <p><span>2022-6</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4085" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4085.svg" id="u4085_img" class="img generatedImage" viewbox="100 184 100 28">
+
+  <path d="M 1 1  L 100 1  L 100 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 100 184 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 184 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 184 )" class="stroke" />
+          </svg>
+          <div id="u4085_text" class="text ">
+            <p><span>FBA-头程-在途</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4086" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4086.svg" id="u4086_img" class="img generatedImage" viewbox="200 184 109 28">
+
+  <path d="M 1 1  L 109 1  L 109 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 184 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 184 )" class="stroke" />
+  <path d="M 0 0.5  L 109 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 184 )" class="stroke" />
+          </svg>
+          <div id="u4086_text" class="text ">
+            <p><span>q002</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4087" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4087.svg" id="u4087_img" class="img generatedImage" viewbox="309 184 100 28">
+
+  <path d="M 1 1  L 100 1  L 100 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 309 184 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 309 184 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 309 184 )" class="stroke" />
+          </svg>
+          <div id="u4087_text" class="text ">
+            <p><span>B</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4088" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4088.svg" id="u4088_img" class="img generatedImage" viewbox="409 184 100 28">
+
+  <path d="M 1 1  L 100 1  L 100 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 409 184 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 409 184 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 409 184 )" class="stroke" />
+          </svg>
+          <div id="u4088_text" class="text ">
+            <p><span>001</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4089" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4089.svg" id="u4089_img" class="img generatedImage" viewbox="509 184 100 28">
+
+  <path d="M 1 1  L 100 1  L 100 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 509 184 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 509 184 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 509 184 )" class="stroke" />
+          </svg>
+          <div id="u4089_text" class="text ">
+            <p><span>2</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4090" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4090.svg" id="u4090_img" class="img generatedImage" viewbox="609 184 100 28">
+
+  <path d="M 1 1  L 99 1  L 99 28  L 1 28  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 609 184 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 609 184 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 609 184 )" class="stroke" />
+  <path d="M 99.5 1  L 99.5 28  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 609 184 )" class="stroke" />
+          </svg>
+          <div id="u4090_text" class="text ">
+            <p><span>200</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4091" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4091.svg" id="u4091_img" class="img generatedImage" viewbox="0 212 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 212 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 212 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 212 )" class="stroke" />
+          </svg>
+          <div id="u4091_text" class="text ">
+            <p><span>2022-6</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4092" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4092.svg" id="u4092_img" class="img generatedImage" viewbox="100 212 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 100 212 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 212 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 212 )" class="stroke" />
+          </svg>
+          <div id="u4092_text" class="text ">
+            <p><span>FBA-头程-在途</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4093" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4093.svg" id="u4093_img" class="img generatedImage" viewbox="200 212 109 30">
+
+  <path d="M 1 1  L 109 1  L 109 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 212 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 212 )" class="stroke" />
+  <path d="M 0 0.5  L 109 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 212 )" class="stroke" />
+          </svg>
+          <div id="u4093_text" class="text ">
+            <p><span>k002</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4094" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4094.svg" id="u4094_img" class="img generatedImage" viewbox="309 212 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 309 212 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 309 212 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 309 212 )" class="stroke" />
+          </svg>
+          <div id="u4094_text" class="text ">
+            <p><span>A</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4095" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4095.svg" id="u4095_img" class="img generatedImage" viewbox="409 212 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 409 212 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 409 212 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 409 212 )" class="stroke" />
+          </svg>
+          <div id="u4095_text" class="text ">
+            <p><span>001</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4096" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4096.svg" id="u4096_img" class="img generatedImage" viewbox="509 212 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 509 212 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 509 212 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 509 212 )" class="stroke" />
+          </svg>
+          <div id="u4096_text" class="text ">
+            <p><span>1</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4097" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4097.svg" id="u4097_img" class="img generatedImage" viewbox="609 212 100 30">
+
+  <path d="M 1 1  L 99 1  L 99 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 609 212 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 609 212 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 609 212 )" class="stroke" />
+  <path d="M 99.5 1  L 99.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 609 212 )" class="stroke" />
+          </svg>
+          <div id="u4097_text" class="text ">
+            <p><span>100</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4098" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4098.svg" id="u4098_img" class="img generatedImage" viewbox="0 242 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 242 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 242 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 242 )" class="stroke" />
+  <path d="M 0 29.5  L 100 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 242 )" class="stroke" />
+          </svg>
+          <div id="u4098_text" class="text ">
+            <p><span>2022-6</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4099" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4099.svg" id="u4099_img" class="img generatedImage" viewbox="100 242 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 100 242 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 242 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 242 )" class="stroke" />
+  <path d="M 0 29.5  L 100 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 242 )" class="stroke" />
+          </svg>
+          <div id="u4099_text" class="text ">
+            <p><span>FBA-头程-在途</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4100" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4100.svg" id="u4100_img" class="img generatedImage" viewbox="200 242 109 30">
+
+  <path d="M 1 1  L 109 1  L 109 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 242 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 242 )" class="stroke" />
+  <path d="M 0 0.5  L 109 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 242 )" class="stroke" />
+  <path d="M 0 29.5  L 109 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 242 )" class="stroke" />
+          </svg>
+          <div id="u4100_text" class="text ">
+            <p><span>g001</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4101" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4101.svg" id="u4101_img" class="img generatedImage" viewbox="309 242 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 309 242 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 309 242 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 309 242 )" class="stroke" />
+  <path d="M 0 29.5  L 100 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 309 242 )" class="stroke" />
+          </svg>
+          <div id="u4101_text" class="text ">
+            <p><span>D</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4102" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4102.svg" id="u4102_img" class="img generatedImage" viewbox="409 242 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 409 242 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 409 242 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 409 242 )" class="stroke" />
+  <path d="M 0 29.5  L 100 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 409 242 )" class="stroke" />
+          </svg>
+          <div id="u4102_text" class="text ">
+            <p><span>001</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4103" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4103.svg" id="u4103_img" class="img generatedImage" viewbox="509 242 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 509 242 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 509 242 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 509 242 )" class="stroke" />
+  <path d="M 0 29.5  L 100 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 509 242 )" class="stroke" />
+          </svg>
+          <div id="u4103_text" class="text ">
+            <p><span>4</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4104" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4104.svg" id="u4104_img" class="img generatedImage" viewbox="609 242 100 30">
+
+  <path d="M 1 1  L 99 1  L 99 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 609 242 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 609 242 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 609 242 )" class="stroke" />
+  <path d="M 99.5 1  L 99.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 609 242 )" class="stroke" />
+  <path d="M 0 29.5  L 100 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 609 242 )" class="stroke" />
+          </svg>
+          <div id="u4104_text" class="text ">
+            <p><span>100</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u4105" class="ax_default _文本段落 transition notrs">
+        <div id="u4105_div" class=""></div>
+        <div id="u4105_text" class="text ">
+          <p><span style="font-family:&quot;Arial Negreta&quot;, &quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:700;color:#D9001B;">——该表为过程表，不做展示；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u4106" class="ax_default _文本段落 transition notrs">
+        <div id="u4106_div" class=""></div>
+        <div id="u4106_text" class="text ">
+          <p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">3.按照排列顺序将期末数量为正数的SKU依次填充至期末数量为负数的SKU中去，直至负数被填充至0（SKU负数期末数量足以被填充至0）或正数已全部填充完毕（SKU负数期末数量不足以被填充至0）；</span><span style="font-family:&quot;Arial Negreta&quot;, &quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:700;color:#D9001B;">——该数据会同步至【国外成本核算在途底稿/转SKU】列表中</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (表格) -->
+      <div id="u4107" class="ax_default">
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4108" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1392.svg" id="u4108_img" class="img generatedImage" viewbox="0 0 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(245, 154, 35, 1)" stroke="none" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+          </svg>
+          <div id="u4108_text" class="text ">
+            <p><span>期间</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4109" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1393.svg" id="u4109_img" class="img generatedImage" viewbox="100 0 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(245, 154, 35, 1)" stroke="none" transform="matrix(1 0 0 1 100 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 0 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 0 )" class="stroke" />
+          </svg>
+          <div id="u4109_text" class="text ">
+            <p><span>法人</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4110" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1431.svg" id="u4110_img" class="img generatedImage" viewbox="200 0 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(245, 154, 35, 1)" stroke="none" transform="matrix(1 0 0 1 200 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 0 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 0 )" class="stroke" />
+          </svg>
+          <div id="u4110_text" class="text ">
+            <p><span>类型1</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4111" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1432.svg" id="u4111_img" class="img generatedImage" viewbox="300 0 104 30">
+
+  <path d="M 1 1  L 104 1  L 104 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(245, 154, 35, 1)" stroke="none" transform="matrix(1 0 0 1 300 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 0 )" class="stroke" />
+  <path d="M 0 0.5  L 104 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 0 )" class="stroke" />
+          </svg>
+          <div id="u4111_text" class="text ">
+            <p><span>类型2</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4112" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1433.svg" id="u4112_img" class="img generatedImage" viewbox="404 0 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(245, 154, 35, 1)" stroke="none" transform="matrix(1 0 0 1 404 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 404 0 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 404 0 )" class="stroke" />
+          </svg>
+          <div id="u4112_text" class="text ">
+            <p><span>原SKU</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4113" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1434.svg" id="u4113_img" class="img generatedImage" viewbox="504 0 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(245, 154, 35, 1)" stroke="none" transform="matrix(1 0 0 1 504 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 504 0 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 504 0 )" class="stroke" />
+          </svg>
+          <div id="u4113_text" class="text ">
+            <p><span>新SKU</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4114" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1435.svg" id="u4114_img" class="img generatedImage" viewbox="604 0 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(245, 154, 35, 1)" stroke="none" transform="matrix(1 0 0 1 604 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 604 0 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 604 0 )" class="stroke" />
+          </svg>
+          <div id="u4114_text" class="text ">
+            <p><span>FNSKU</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4115" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1436.svg" id="u4115_img" class="img generatedImage" viewbox="704 0 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(245, 154, 35, 1)" stroke="none" transform="matrix(1 0 0 1 704 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 704 0 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 704 0 )" class="stroke" />
+          </svg>
+          <div id="u4115_text" class="text ">
+            <p><span>数量</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4116" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1437.svg" id="u4116_img" class="img generatedImage" viewbox="804 0 104 30">
+
+  <path d="M 1 1  L 104 1  L 104 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(245, 154, 35, 1)" stroke="none" transform="matrix(1 0 0 1 804 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 804 0 )" class="stroke" />
+  <path d="M 0 0.5  L 104 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 804 0 )" class="stroke" />
+          </svg>
+          <div id="u4116_text" class="text ">
+            <p><span>原SKU单据编号</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4117" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1438.svg" id="u4117_img" class="img generatedImage" viewbox="908 0 104 30">
+
+  <path d="M 1 1  L 103 1  L 103 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(245, 154, 35, 1)" stroke="none" transform="matrix(1 0 0 1 908 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 908 0 )" class="stroke" />
+  <path d="M 0 0.5  L 104 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 908 0 )" class="stroke" />
+  <path d="M 103.5 1  L 103.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 908 0 )" class="stroke" />
+          </svg>
+          <div id="u4117_text" class="text ">
+            <p><span>新SKU单据编号</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4118" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1439.svg" id="u4118_img" class="img generatedImage" viewbox="0 30 100 32">
+
+  <path d="M 1 1  L 100 1  L 100 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 30 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 30 )" class="stroke" />
+          </svg>
+          <div id="u4118_text" class="text ">
+            <p><span>2022-6</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4119" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1440.svg" id="u4119_img" class="img generatedImage" viewbox="100 30 100 32">
+
+  <path d="M 1 1  L 100 1  L 100 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 100 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 30 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 30 )" class="stroke" />
+          </svg>
+          <div id="u4119_text" class="text ">
+            <p><span>傲基国际</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4120" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1441.svg" id="u4120_img" class="img generatedImage" viewbox="200 30 100 32">
+
+  <path d="M 1 1  L 100 1  L 100 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 30 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 30 )" class="stroke" />
+          </svg>
+          <div id="u4120_text" class="text ">
+            <p><span>头程</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4121" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1442.svg" id="u4121_img" class="img generatedImage" viewbox="300 30 104 32">
+
+  <path d="M 1 1  L 104 1  L 104 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 30 )" class="stroke" />
+  <path d="M 0 0.5  L 104 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 30 )" class="stroke" />
+          </svg>
+          <div id="u4121_text" class="text ">
+            <p><span>FBA</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4122" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1443.svg" id="u4122_img" class="img generatedImage" viewbox="404 30 100 32">
+
+  <path d="M 1 1  L 100 1  L 100 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 404 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 404 30 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 404 30 )" class="stroke" />
+          </svg>
+          <div id="u4122_text" class="text ">
+            <p><span>C</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4123" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1444.svg" id="u4123_img" class="img generatedImage" viewbox="504 30 100 32">
+
+  <path d="M 1 1  L 100 1  L 100 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 504 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 504 30 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 504 30 )" class="stroke" />
+          </svg>
+          <div id="u4123_text" class="text ">
+            <p><span>A</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4124" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1445.svg" id="u4124_img" class="img generatedImage" viewbox="604 30 100 32">
+
+  <path d="M 1 1  L 100 1  L 100 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 604 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 604 30 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 604 30 )" class="stroke" />
+          </svg>
+          <div id="u4124_text" class="text ">
+            <p><span>001</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4125" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1446.svg" id="u4125_img" class="img generatedImage" viewbox="704 30 100 32">
+
+  <path d="M 1 1  L 100 1  L 100 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 704 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 704 30 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 704 30 )" class="stroke" />
+          </svg>
+          <div id="u4125_text" class="text ">
+            <p><span>400</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4126" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1447.svg" id="u4126_img" class="img generatedImage" viewbox="804 30 104 32">
+
+  <path d="M 1 1  L 104 1  L 104 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 804 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 804 30 )" class="stroke" />
+  <path d="M 0 0.5  L 104 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 804 30 )" class="stroke" />
+          </svg>
+          <div id="u4126_text" class="text ">
+            <p><span>z002</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4127" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1448.svg" id="u4127_img" class="img generatedImage" viewbox="908 30 104 32">
+
+  <path d="M 1 1  L 103 1  L 103 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 908 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 908 30 )" class="stroke" />
+  <path d="M 0 0.5  L 104 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 908 30 )" class="stroke" />
+  <path d="M 103.5 1  L 103.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 908 30 )" class="stroke" />
+          </svg>
+          <div id="u4127_text" class="text ">
+            <p><span>k001</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4128" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4128.svg" id="u4128_img" class="img generatedImage" viewbox="0 62 100 34">
+
+  <path d="M 1 1  L 100 1  L 100 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 62 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 62 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 62 )" class="stroke" />
+          </svg>
+          <div id="u4128_text" class="text ">
+            <p><span>2022-6</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4129" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4129.svg" id="u4129_img" class="img generatedImage" viewbox="100 62 100 34">
+
+  <path d="M 1 1  L 100 1  L 100 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 100 62 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 62 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 62 )" class="stroke" />
+          </svg>
+          <div id="u4129_text" class="text ">
+            <p><span>傲基国际</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4130" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4130.svg" id="u4130_img" class="img generatedImage" viewbox="200 62 100 34">
+
+  <path d="M 1 1  L 100 1  L 100 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 62 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 62 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 62 )" class="stroke" />
+          </svg>
+          <div id="u4130_text" class="text ">
+            <p><span>头程</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4131" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4131.svg" id="u4131_img" class="img generatedImage" viewbox="300 62 104 34">
+
+  <path d="M 1 1  L 104 1  L 104 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 62 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 62 )" class="stroke" />
+  <path d="M 0 0.5  L 104 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 62 )" class="stroke" />
+          </svg>
+          <div id="u4131_text" class="text ">
+            <p><span>FBA</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4132" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4132.svg" id="u4132_img" class="img generatedImage" viewbox="404 62 100 34">
+
+  <path d="M 1 1  L 100 1  L 100 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 404 62 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 404 62 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 404 62 )" class="stroke" />
+          </svg>
+          <div id="u4132_text" class="text ">
+            <p><span>C</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4133" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4133.svg" id="u4133_img" class="img generatedImage" viewbox="504 62 100 34">
+
+  <path d="M 1 1  L 100 1  L 100 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 504 62 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 504 62 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 504 62 )" class="stroke" />
+          </svg>
+          <div id="u4133_text" class="text ">
+            <p><span>A</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4134" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4134.svg" id="u4134_img" class="img generatedImage" viewbox="604 62 100 34">
+
+  <path d="M 1 1  L 100 1  L 100 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 604 62 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 604 62 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 604 62 )" class="stroke" />
+          </svg>
+          <div id="u4134_text" class="text ">
+            <p><span>001</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4135" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4135.svg" id="u4135_img" class="img generatedImage" viewbox="704 62 100 34">
+
+  <path d="M 1 1  L 100 1  L 100 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 704 62 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 704 62 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 704 62 )" class="stroke" />
+          </svg>
+          <div id="u4135_text" class="text ">
+            <p><span>100</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4136" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4136.svg" id="u4136_img" class="img generatedImage" viewbox="804 62 104 34">
+
+  <path d="M 1 1  L 104 1  L 104 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 804 62 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 804 62 )" class="stroke" />
+  <path d="M 0 0.5  L 104 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 804 62 )" class="stroke" />
+          </svg>
+          <div id="u4136_text" class="text ">
+            <p><span>z001</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4137" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4137.svg" id="u4137_img" class="img generatedImage" viewbox="908 62 104 34">
+
+  <path d="M 1 1  L 103 1  L 103 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 908 62 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 908 62 )" class="stroke" />
+  <path d="M 0 0.5  L 104 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 908 62 )" class="stroke" />
+  <path d="M 103.5 1  L 103.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 908 62 )" class="stroke" />
+          </svg>
+          <div id="u4137_text" class="text ">
+            <p><span>k001</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4138" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1724.svg" id="u4138_img" class="img generatedImage" viewbox="0 96 100 32">
+
+  <path d="M 1 1  L 100 1  L 100 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 96 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 96 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 96 )" class="stroke" />
+          </svg>
+          <div id="u4138_text" class="text ">
+            <p><span>2022-6</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4139" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1725.svg" id="u4139_img" class="img generatedImage" viewbox="100 96 100 32">
+
+  <path d="M 1 1  L 100 1  L 100 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 100 96 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 96 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 96 )" class="stroke" />
+          </svg>
+          <div id="u4139_text" class="text ">
+            <p><span>傲基国际</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4140" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1726.svg" id="u4140_img" class="img generatedImage" viewbox="200 96 100 32">
+
+  <path d="M 1 1  L 100 1  L 100 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 96 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 96 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 96 )" class="stroke" />
+          </svg>
+          <div id="u4140_text" class="text ">
+            <p><span>头程</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4141" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1727.svg" id="u4141_img" class="img generatedImage" viewbox="300 96 104 32">
+
+  <path d="M 1 1  L 104 1  L 104 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 96 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 96 )" class="stroke" />
+  <path d="M 0 0.5  L 104 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 96 )" class="stroke" />
+          </svg>
+          <div id="u4141_text" class="text ">
+            <p><span>FBA</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4142" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1728.svg" id="u4142_img" class="img generatedImage" viewbox="404 96 100 32">
+
+  <path d="M 1 1  L 100 1  L 100 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 404 96 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 404 96 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 404 96 )" class="stroke" />
+          </svg>
+          <div id="u4142_text" class="text ">
+            <p><span>C</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4143" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1729.svg" id="u4143_img" class="img generatedImage" viewbox="504 96 100 32">
+
+  <path d="M 1 1  L 100 1  L 100 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 504 96 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 504 96 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 504 96 )" class="stroke" />
+          </svg>
+          <div id="u4143_text" class="text ">
+            <p><span>D</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4144" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1730.svg" id="u4144_img" class="img generatedImage" viewbox="604 96 100 32">
+
+  <path d="M 1 1  L 100 1  L 100 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 604 96 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 604 96 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 604 96 )" class="stroke" />
+          </svg>
+          <div id="u4144_text" class="text ">
+            <p><span>001</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4145" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1731.svg" id="u4145_img" class="img generatedImage" viewbox="704 96 100 32">
+
+  <path d="M 1 1  L 100 1  L 100 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 704 96 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 704 96 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 704 96 )" class="stroke" />
+          </svg>
+          <div id="u4145_text" class="text ">
+            <p><span>200</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4146" class="ax_default table_cell transition notrs">
+          <svg data="images/3_5_2_fba-sku___/u1732.svg" id="u4146_img" class="img generatedImage" viewbox="804 96 104 32">
+
+  <path d="M 1 1  L 104 1  L 104 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 804 96 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 804 96 )" class="stroke" />
+  <path d="M 0 0.5  L 104 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 804 96 )" class="stroke" />
+          </svg>
+          <div id="u4146_text" class="text ">
+            <p><span>z001</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4147" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4147.svg" id="u4147_img" class="img generatedImage" viewbox="908 96 104 32">
+
+  <path d="M 1 1  L 103 1  L 103 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 908 96 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 908 96 )" class="stroke" />
+  <path d="M 0 0.5  L 104 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 908 96 )" class="stroke" />
+  <path d="M 103.5 1  L 103.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 908 96 )" class="stroke" />
+          </svg>
+          <div id="u4147_text" class="text ">
+            <p><span>g002</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4148" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4148.svg" id="u4148_img" class="img generatedImage" viewbox="0 128 100 32">
+
+  <path d="M 1 1  L 100 1  L 100 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 128 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 128 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 128 )" class="stroke" />
+          </svg>
+          <div id="u4148_text" class="text ">
+            <p><span>2022-6</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4149" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4149.svg" id="u4149_img" class="img generatedImage" viewbox="100 128 100 32">
+
+  <path d="M 1 1  L 100 1  L 100 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 100 128 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 128 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 128 )" class="stroke" />
+          </svg>
+          <div id="u4149_text" class="text ">
+            <p><span>傲基国际</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4150" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4150.svg" id="u4150_img" class="img generatedImage" viewbox="200 128 100 32">
+
+  <path d="M 1 1  L 100 1  L 100 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 128 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 128 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 128 )" class="stroke" />
+          </svg>
+          <div id="u4150_text" class="text ">
+            <p><span>头程</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4151" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4151.svg" id="u4151_img" class="img generatedImage" viewbox="300 128 104 32">
+
+  <path d="M 1 1  L 104 1  L 104 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 128 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 128 )" class="stroke" />
+  <path d="M 0 0.5  L 104 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 128 )" class="stroke" />
+          </svg>
+          <div id="u4151_text" class="text ">
+            <p><span>FBA</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4152" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4152.svg" id="u4152_img" class="img generatedImage" viewbox="404 128 100 32">
+
+  <path d="M 1 1  L 100 1  L 100 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 404 128 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 404 128 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 404 128 )" class="stroke" />
+          </svg>
+          <div id="u4152_text" class="text ">
+            <p><span>B</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4153" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4153.svg" id="u4153_img" class="img generatedImage" viewbox="504 128 100 32">
+
+  <path d="M 1 1  L 100 1  L 100 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 504 128 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 504 128 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 504 128 )" class="stroke" />
+          </svg>
+          <div id="u4153_text" class="text ">
+            <p><span>D</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4154" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4154.svg" id="u4154_img" class="img generatedImage" viewbox="604 128 100 32">
+
+  <path d="M 1 1  L 100 1  L 100 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 604 128 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 604 128 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 604 128 )" class="stroke" />
+          </svg>
+          <div id="u4154_text" class="text ">
+            <p><span>001</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4155" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4155.svg" id="u4155_img" class="img generatedImage" viewbox="704 128 100 32">
+
+  <path d="M 1 1  L 100 1  L 100 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 704 128 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 704 128 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 704 128 )" class="stroke" />
+          </svg>
+          <div id="u4155_text" class="text ">
+            <p><span>200</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4156" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4156.svg" id="u4156_img" class="img generatedImage" viewbox="804 128 104 32">
+
+  <path d="M 1 1  L 104 1  L 104 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 804 128 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 804 128 )" class="stroke" />
+  <path d="M 0 0.5  L 104 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 804 128 )" class="stroke" />
+          </svg>
+          <div id="u4156_text" class="text ">
+            <p><span>q002</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4157" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4157.svg" id="u4157_img" class="img generatedImage" viewbox="908 128 104 32">
+
+  <path d="M 1 1  L 103 1  L 103 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 908 128 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 908 128 )" class="stroke" />
+  <path d="M 0 0.5  L 104 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 908 128 )" class="stroke" />
+  <path d="M 103.5 1  L 103.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 908 128 )" class="stroke" />
+          </svg>
+          <div id="u4157_text" class="text ">
+            <p><span>g002</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4158" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4158.svg" id="u4158_img" class="img generatedImage" viewbox="0 160 100 32">
+
+  <path d="M 1 1  L 100 1  L 100 31  L 1 31  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 160 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 31  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 160 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 160 )" class="stroke" />
+  <path d="M 0 31.5  L 100 31.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 160 )" class="stroke" />
+          </svg>
+          <div id="u4158_text" class="text ">
+            <p><span>2022-6</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4159" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4159.svg" id="u4159_img" class="img generatedImage" viewbox="100 160 100 32">
+
+  <path d="M 1 1  L 100 1  L 100 31  L 1 31  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 100 160 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 31  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 160 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 160 )" class="stroke" />
+  <path d="M 0 31.5  L 100 31.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 160 )" class="stroke" />
+          </svg>
+          <div id="u4159_text" class="text ">
+            <p><span>傲基国际</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4160" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4160.svg" id="u4160_img" class="img generatedImage" viewbox="200 160 100 32">
+
+  <path d="M 1 1  L 100 1  L 100 31  L 1 31  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 160 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 31  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 160 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 160 )" class="stroke" />
+  <path d="M 0 31.5  L 100 31.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 160 )" class="stroke" />
+          </svg>
+          <div id="u4160_text" class="text ">
+            <p><span>头程</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4161" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4161.svg" id="u4161_img" class="img generatedImage" viewbox="300 160 104 32">
+
+  <path d="M 1 1  L 104 1  L 104 31  L 1 31  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 160 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 31  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 160 )" class="stroke" />
+  <path d="M 0 0.5  L 104 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 160 )" class="stroke" />
+  <path d="M 0 31.5  L 104 31.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 160 )" class="stroke" />
+          </svg>
+          <div id="u4161_text" class="text ">
+            <p><span>FBA</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4162" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4162.svg" id="u4162_img" class="img generatedImage" viewbox="404 160 100 32">
+
+  <path d="M 1 1  L 100 1  L 100 31  L 1 31  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 404 160 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 31  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 404 160 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 404 160 )" class="stroke" />
+  <path d="M 0 31.5  L 100 31.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 404 160 )" class="stroke" />
+          </svg>
+          <div id="u4162_text" class="text ">
+            <p><span>A</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4163" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4163.svg" id="u4163_img" class="img generatedImage" viewbox="504 160 100 32">
+
+  <path d="M 1 1  L 100 1  L 100 31  L 1 31  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 504 160 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 31  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 504 160 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 504 160 )" class="stroke" />
+  <path d="M 0 31.5  L 100 31.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 504 160 )" class="stroke" />
+          </svg>
+          <div id="u4163_text" class="text ">
+            <p><span>B</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4164" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4164.svg" id="u4164_img" class="img generatedImage" viewbox="604 160 100 32">
+
+  <path d="M 1 1  L 100 1  L 100 31  L 1 31  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 604 160 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 31  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 604 160 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 604 160 )" class="stroke" />
+  <path d="M 0 31.5  L 100 31.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 604 160 )" class="stroke" />
+          </svg>
+          <div id="u4164_text" class="text ">
+            <p><span>001</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4165" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4165.svg" id="u4165_img" class="img generatedImage" viewbox="704 160 100 32">
+
+  <path d="M 1 1  L 100 1  L 100 31  L 1 31  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 704 160 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 31  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 704 160 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 704 160 )" class="stroke" />
+  <path d="M 0 31.5  L 100 31.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 704 160 )" class="stroke" />
+          </svg>
+          <div id="u4165_text" class="text ">
+            <p><span>100</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4166" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4166.svg" id="u4166_img" class="img generatedImage" viewbox="804 160 104 32">
+
+  <path d="M 1 1  L 104 1  L 104 31  L 1 31  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 804 160 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 31  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 804 160 )" class="stroke" />
+  <path d="M 0 0.5  L 104 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 804 160 )" class="stroke" />
+  <path d="M 0 31.5  L 104 31.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 804 160 )" class="stroke" />
+          </svg>
+          <div id="u4166_text" class="text ">
+            <p><span>k002</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4167" class="ax_default table_cell transition notrs">
+          <svg data="images/fba-sku对账表（第三版转sku）/u4167.svg" id="u4167_img" class="img generatedImage" viewbox="908 160 104 32">
+
+  <path d="M 1 1  L 103 1  L 103 31  L 1 31  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 908 160 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 31  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 908 160 )" class="stroke" />
+  <path d="M 0 0.5  L 104 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 908 160 )" class="stroke" />
+  <path d="M 103.5 1  L 103.5 31  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 908 160 )" class="stroke" />
+  <path d="M 0 31.5  L 104 31.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 908 160 )" class="stroke" />
+          </svg>
+          <div id="u4167_text" class="text ">
+            <p><span>q001</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u4168" class="ax_default _文本段落 transition notrs">
+        <div id="u4168_div" class=""></div>
+        <div id="u4168_text" class="text ">
+          <p><span>该表为负数期末数量足以被填充至0的情况。</span></p>
+        </div>
+      </div>
+    </div>
+    <script src="resources/scripts/axure/ios.js"></script>
+  </body>
+</html>

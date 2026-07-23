@@ -1,0 +1,443 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>草稿</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/草稿/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-3.7.1.min.js"></script>
+    <script src="resources/scripts/axure/axQuery.js"></script>
+    <script src="resources/scripts/axure/globals.js"></script>
+    <script src="resources/scripts/axutils.js"></script>
+    <script src="resources/scripts/axure/annotation.js"></script>
+    <script src="resources/scripts/axure/axQuery.std.js"></script>
+    <script src="resources/scripts/axure/doc.js"></script>
+    <script src="resources/scripts/messagecenter.js"></script>
+    <script src="resources/scripts/axure/events.js"></script>
+    <script src="resources/scripts/axure/recording.js"></script>
+    <script src="resources/scripts/axure/action.js"></script>
+    <script src="resources/scripts/axure/expr.js"></script>
+    <script src="resources/scripts/axure/geometry.js"></script>
+    <script src="resources/scripts/axure/flyout.js"></script>
+    <script src="resources/scripts/axure/model.js"></script>
+    <script src="resources/scripts/axure/repeater.js"></script>
+    <script src="resources/scripts/axure/sto.js"></script>
+    <script src="resources/scripts/axure/utils.temp.js"></script>
+    <script src="resources/scripts/axure/variables.js"></script>
+    <script src="resources/scripts/axure/drag.js"></script>
+    <script src="resources/scripts/axure/move.js"></script>
+    <script src="resources/scripts/axure/visibility.js"></script>
+    <script src="resources/scripts/axure/style.js"></script>
+    <script src="resources/scripts/axure/adaptive.js"></script>
+    <script src="resources/scripts/axure/tree.js"></script>
+    <script src="resources/scripts/axure/init.temp.js"></script>
+    <script src="resources/scripts/axure/legacy.js"></script>
+    <script src="resources/scripts/axure/viewer.js"></script>
+    <script src="resources/scripts/axure/math.js"></script>
+    <script src="resources/scripts/axure/jquery.nicescroll.min.js"></script>
+    <script src="data/document.js"></script>
+    <script src="files/草稿/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (矩形) -->
+      <div id="u2361" class="ax_default _文本段落 transition notrs">
+        <div id="u2361_div" class=""></div>
+        <div id="u2361_text" class="text ">
+          <p><span>1）优化点：①新增字段信息；②</span><span style="color:#000000;">导入模板</span><span>修改；</span></p><p><span><br></span></p><p><span>2）主要逻辑说明：</span></p><p><span style="text-decoration:underline ;"><br></span></p><p><span style="text-decoration:underline ;">字段逻辑说明：</span></p><p><span>①[类型1]与[单据编号]：</span></p><p><span>a.当[单据编号]开头为“DB”时，[类型1]取“头程”；</span></p><p><span>b.当[单据编号]开头为“TF”时，[类型1]取“二程”；</span></p><p><span>c.当[单据编号]开头为“FBATH”时，[类型1]取“退仓”；</span></p><p><span>d.当[单据编号]为空值时，[类型1]不取值；（[类型1]可通过导入模板导入其他数据）</span></p><p><span><br></span></p><p><span>②[类型2]与[业务类型]和[线路仓]：</span></p><p><span>a.当[业务类型]为“亚马逊退仓”“入库库存”“FBA退货计划”时，[类型2]取“FBA”；</span></p><p><span>b.当[业务类型]为“调拨出库”，若</span><span style="color:#D9001B;">[线路仓]字段含“FBA”</span><span style="color:#000000;">时，则[类型2]取“”FBA“；</span><span style="color:#D9001B;">若[线路仓]字段不含“FBA”，则[类型2]不取值；</span></p><p><span style="color:#000000;">c.当[业务类型]为“调拨入库”时，[类型1]取“中转仓”；</span></p><p><span style="color:#000000;">d.当[业务类型]为“”调拨出库“，且</span><span style="color:#D9001B;">[线路仓]字段含”中转仓“</span><span style="color:#000000;">时，[类型2]取”中转仓“；</span><span style="color:#D9001B;">若[线路仓]字段不含“中转仓”，则[类型2]不取值；</span></p><p><span style="color:#000000;">e.当[业务类型]为“其他入库”“其他出库”时，</span><span style="color:#D9001B;">[类型2]不取值？</span><span style="color:#000000;">；</span></p><p><span><br></span></p><p><span>③[单据编号]与[业务类型]：</span></p><p><span>a.当[业务类型]为“调拨入库”“调拨出库”</span><span style="color:#D9001B;">“入库库存”</span><span>时，[单据编号]需校验以“DB、TF”开头；</span></p><p><span>b.当[业务类型]为“FBA退货计划”“亚马逊退仓”时，[单据编号]需校验以</span><span style="color:#D9001B;">“FBATH”开头；</span></p><p><span>c.当[业务类型]为“其他入库”“其他出库”时，[单据编号]不校验，不赋值；</span></p><p><span><br></span></p><p><span>④[时间]与[单据编号]和[业务类型]：</span></p><p><span>a.当[业务类型]为“调拨入库”“调拨出库”</span><span style="color:#D9001B;">“入库库存”</span><span>时，[时间]取[单据编号]前</span><span style="color:#D9001B;">3-8</span><span>位，并将其解析为日期格式：yyyy-mm-dd 展示。如[单据编号]=DB22061500001，则[时间]取“220615”，展示为“2022-06-15”；</span></p><p><span>b.当[业务类型]为“FBA退货计划“时，[时间]不取值；</span></p><p><span>c.当[业务类型]为“亚马逊退仓”时，[时间]取亚马逊退仓的当前期间；</span><span style="color:#D9001B;">（期初这里不校验？数据为导入）</span></p><p><span>d.</span><span style="color:#D9001B;">当[业务类型]为“其他入库”“其他出库”时，[时间]不取值；</span></p><p><span><br></span></p><p><span style="text-decoration:underline ;">模板导入说明：</span></p><p><span>①模板导入时仅校验字段逻辑③是否正确，a.若正确则直接导入，并按导入数据列表展示；b.若不正确则</span><span style="color:#D9001B;">提示：存在x处单据编号与业务类型不匹配，请重新导入！</span><span>，同时数据不导入； （其中x为校验逻辑不匹配次数）</span></p><p><span>②点击【更新数据】按钮，校验其余字段逻辑：</span></p><p><span>a.校验字段逻辑④，若导入的[时间]字段内容与字段逻辑④不匹配，则重新按照字段逻辑④赋值，并自动替换原值；若匹配，则无需更新数据；</span></p><p><span>b.校验字段逻辑①，若导入的[类型1]字段内容与字段逻辑①不匹配，则重新按照字段逻辑①赋值，并自动替换原值；若匹配，则无需更新数据；</span></p><p><span>c.校验字段逻辑②，若导入的[类型2]字段内容与字段逻辑②不匹配，则重新按照字段逻辑②赋值，并自动替换原值；若匹配，则无需更新数据；</span></p><p><span><br></span></p><p><span>替换原值完毕后，</span><span style="color:#D9001B;">提示：成功更新数据！时间已替换x处，类型1已替换x处，类型2已替换x处。</span></p><p><span>无需更新数据，</span><span style="color:#D9001B;">提示：未发现需要更新的数据。</span></p><p><span>③按照【期间＋法人＋类型1＋类型2＋SKU】维度更新导入数据；</span></p><p><span><br></span></p><p><span><br></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (表格) -->
+      <div id="u2362" class="ax_default">
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2363" class="ax_default table_cell transition notrs">
+          <svg data="images/草稿/u2363.svg" id="u2363_img" class="img generatedImage" viewbox="0 0 225 36">
+
+  <path d="M 1 1  L 225 1  L 225 36  L 1 36  L 1 1  Z " fill-rule="nonzero" fill="rgba(245, 154, 35, 1)" stroke="none" class="fill" />
+  <path d="M 0.5 1  L 0.5 36  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+  <path d="M 0 0.5  L 225 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+          </svg>
+          <div id="u2363_text" class="text ">
+            <p><span>字段名</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2364" class="ax_default table_cell transition notrs">
+          <svg data="images/草稿/u2364.svg" id="u2364_img" class="img generatedImage" viewbox="225 0 78 36">
+
+  <path d="M 1 1  L 78 1  L 78 36  L 1 36  L 1 1  Z " fill-rule="nonzero" fill="rgba(245, 154, 35, 1)" stroke="none" transform="matrix(1 0 0 1 225 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 36  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 225 0 )" class="stroke" />
+  <path d="M 0 0.5  L 78 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 225 0 )" class="stroke" />
+          </svg>
+          <div id="u2364_text" class="text ">
+            <p><span>字段类型</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2365" class="ax_default table_cell transition notrs">
+          <svg data="images/草稿/u2365.svg" id="u2365_img" class="img generatedImage" viewbox="303 0 742 36">
+
+  <path d="M 1 1  L 742 1  L 742 36  L 1 36  L 1 1  Z " fill-rule="nonzero" fill="rgba(245, 154, 35, 1)" stroke="none" transform="matrix(1 0 0 1 303 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 36  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 303 0 )" class="stroke" />
+  <path d="M 0 0.5  L 742 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 303 0 )" class="stroke" />
+          </svg>
+          <div id="u2365_text" class="text ">
+            <p><span>控制说明</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2366" class="ax_default table_cell transition notrs">
+          <svg data="images/草稿/u2366.svg" id="u2366_img" class="img generatedImage" viewbox="1045 0 63 36">
+
+  <path d="M 1 1  L 62 1  L 62 36  L 1 36  L 1 1  Z " fill-rule="nonzero" fill="rgba(245, 154, 35, 1)" stroke="none" transform="matrix(1 0 0 1 1045 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 36  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1045 0 )" class="stroke" />
+  <path d="M 0 0.5  L 63 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1045 0 )" class="stroke" />
+  <path d="M 62.5 1  L 62.5 36  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1045 0 )" class="stroke" />
+          </svg>
+          <div id="u2366_text" class="text ">
+            <p><span>是否必录</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2367" class="ax_default table_cell transition notrs">
+          <svg data="images/草稿/u2367.svg" id="u2367_img" class="img generatedImage" viewbox="0 36 225 40">
+
+  <path d="M 1 1  L 225 1  L 225 40  L 1 40  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 36 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 40  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 36 )" class="stroke" />
+  <path d="M 0 0.5  L 225 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 36 )" class="stroke" />
+          </svg>
+          <div id="u2367_text" class="text ">
+            <p><span>账户、区域、sellersku、移除订单号、线路仓、目标仓</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2368" class="ax_default table_cell transition notrs">
+          <svg data="images/草稿/u2368.svg" id="u2368_img" class="img generatedImage" viewbox="225 36 78 40">
+
+  <path d="M 1 1  L 78 1  L 78 40  L 1 40  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 225 36 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 40  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 225 36 )" class="stroke" />
+  <path d="M 0 0.5  L 78 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 225 36 )" class="stroke" />
+          </svg>
+          <div id="u2368_text" class="text ">
+            <p><span>\</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2369" class="ax_default table_cell transition notrs">
+          <svg data="images/草稿/u2369.svg" id="u2369_img" class="img generatedImage" viewbox="303 36 742 40">
+
+  <path d="M 1 1  L 742 1  L 742 40  L 1 40  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 303 36 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 40  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 303 36 )" class="stroke" />
+  <path d="M 0 0.5  L 742 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 303 36 )" class="stroke" />
+          </svg>
+          <div id="u2369_text" class="text ">
+            <p><span>数据来源：手工导入或拉取【国外成本核算FBA或佰易底稿/调拨】，详见2）主要逻辑说明；</span></p><p><span><br></span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2370" class="ax_default table_cell transition notrs">
+          <svg data="images/草稿/u2370.svg" id="u2370_img" class="img generatedImage" viewbox="1045 36 63 40">
+
+  <path d="M 1 1  L 62 1  L 62 40  L 1 40  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1045 36 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 40  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1045 36 )" class="stroke" />
+  <path d="M 0 0.5  L 63 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1045 36 )" class="stroke" />
+  <path d="M 62.5 1  L 62.5 40  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1045 36 )" class="stroke" />
+          </svg>
+          <div id="u2370_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2371" class="ax_default table_cell transition notrs">
+          <svg data="images/草稿/u2371.svg" id="u2371_img" class="img generatedImage" viewbox="0 76 225 39">
+
+  <path d="M 1 1  L 225 1  L 225 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 76 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 76 )" class="stroke" />
+  <path d="M 0 0.5  L 225 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 76 )" class="stroke" />
+          </svg>
+          <div id="u2371_text" class="text ">
+            <p><span>类型1</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2372" class="ax_default table_cell transition notrs">
+          <svg data="images/草稿/u2372.svg" id="u2372_img" class="img generatedImage" viewbox="225 76 78 39">
+
+  <path d="M 1 1  L 78 1  L 78 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 225 76 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 225 76 )" class="stroke" />
+  <path d="M 0 0.5  L 78 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 225 76 )" class="stroke" />
+          </svg>
+          <div id="u2372_text" class="text ">
+            <p><span>文本</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2373" class="ax_default table_cell transition notrs">
+          <svg data="images/草稿/u2373.svg" id="u2373_img" class="img generatedImage" viewbox="303 76 742 39">
+
+  <path d="M 1 1  L 742 1  L 742 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 303 76 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 303 76 )" class="stroke" />
+  <path d="M 0 0.5  L 742 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 303 76 )" class="stroke" />
+          </svg>
+          <div id="u2373_text" class="text ">
+            <p><span>数据来源：手工导入或根据其他字段逻辑规则带出，包括“头程”“二程”“退仓”，详见2）主要逻辑说明①；</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2374" class="ax_default table_cell transition notrs">
+          <svg data="images/草稿/u2374.svg" id="u2374_img" class="img generatedImage" viewbox="1045 76 63 39">
+
+  <path d="M 1 1  L 62 1  L 62 39  L 1 39  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1045 76 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1045 76 )" class="stroke" />
+  <path d="M 0 0.5  L 63 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1045 76 )" class="stroke" />
+  <path d="M 62.5 1  L 62.5 39  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1045 76 )" class="stroke" />
+          </svg>
+          <div id="u2374_text" class="text ">
+            <p><span>是</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2375" class="ax_default table_cell transition notrs">
+          <svg data="images/草稿/u2375.svg" id="u2375_img" class="img generatedImage" viewbox="0 115 225 36">
+
+  <path d="M 1 1  L 225 1  L 225 36  L 1 36  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 115 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 36  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 115 )" class="stroke" />
+  <path d="M 0 0.5  L 225 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 115 )" class="stroke" />
+          </svg>
+          <div id="u2375_text" class="text ">
+            <p><span>类型2</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2376" class="ax_default table_cell transition notrs">
+          <svg data="images/草稿/u2376.svg" id="u2376_img" class="img generatedImage" viewbox="225 115 78 36">
+
+  <path d="M 1 1  L 78 1  L 78 36  L 1 36  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 225 115 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 36  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 225 115 )" class="stroke" />
+  <path d="M 0 0.5  L 78 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 225 115 )" class="stroke" />
+          </svg>
+          <div id="u2376_text" class="text ">
+            <p><span>文本</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2377" class="ax_default table_cell transition notrs">
+          <svg data="images/草稿/u2377.svg" id="u2377_img" class="img generatedImage" viewbox="303 115 742 36">
+
+  <path d="M 1 1  L 742 1  L 742 36  L 1 36  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 303 115 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 36  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 303 115 )" class="stroke" />
+  <path d="M 0 0.5  L 742 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 303 115 )" class="stroke" />
+          </svg>
+          <div id="u2377_text" class="text ">
+            <p><span>数据来源：手工导入或根据其他字段逻辑规则带出，包括“FBA”和“中转仓”，详见2）主要逻辑说明②；</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2378" class="ax_default table_cell transition notrs">
+          <svg data="images/草稿/u2378.svg" id="u2378_img" class="img generatedImage" viewbox="1045 115 63 36">
+
+  <path d="M 1 1  L 62 1  L 62 36  L 1 36  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1045 115 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 36  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1045 115 )" class="stroke" />
+  <path d="M 0 0.5  L 63 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1045 115 )" class="stroke" />
+  <path d="M 62.5 1  L 62.5 36  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1045 115 )" class="stroke" />
+          </svg>
+          <div id="u2378_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2379" class="ax_default table_cell transition notrs">
+          <svg data="images/草稿/u2379.svg" id="u2379_img" class="img generatedImage" viewbox="0 151 225 36">
+
+  <path d="M 1 1  L 225 1  L 225 36  L 1 36  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 151 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 36  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 151 )" class="stroke" />
+  <path d="M 0 0.5  L 225 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 151 )" class="stroke" />
+          </svg>
+          <div id="u2379_text" class="text ">
+            <p><span>业务类型</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2380" class="ax_default table_cell transition notrs">
+          <svg data="images/草稿/u2380.svg" id="u2380_img" class="img generatedImage" viewbox="225 151 78 36">
+
+  <path d="M 1 1  L 78 1  L 78 36  L 1 36  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 225 151 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 36  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 225 151 )" class="stroke" />
+  <path d="M 0 0.5  L 78 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 225 151 )" class="stroke" />
+          </svg>
+          <div id="u2380_text" class="text ">
+            <p><span>文本</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2381" class="ax_default table_cell transition notrs">
+          <svg data="images/草稿/u2381.svg" id="u2381_img" class="img generatedImage" viewbox="303 151 742 36">
+
+  <path d="M 1 1  L 742 1  L 742 36  L 1 36  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 303 151 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 36  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 303 151 )" class="stroke" />
+  <path d="M 0 0.5  L 742 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 303 151 )" class="stroke" />
+          </svg>
+          <div id="u2381_text" class="text ">
+            <p><span>数据来源：手工导入或拉取【国外成本核算FBA或佰易底稿/调拨】中[业务类型]字段信息（该字段需先于【商品收发明细报表】拉取新增至【调拨】），详见2）主要逻辑说明；</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2382" class="ax_default table_cell transition notrs">
+          <svg data="images/草稿/u2382.svg" id="u2382_img" class="img generatedImage" viewbox="1045 151 63 36">
+
+  <path d="M 1 1  L 62 1  L 62 36  L 1 36  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1045 151 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 36  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1045 151 )" class="stroke" />
+  <path d="M 0 0.5  L 63 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1045 151 )" class="stroke" />
+  <path d="M 62.5 1  L 62.5 36  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1045 151 )" class="stroke" />
+          </svg>
+          <div id="u2382_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2383" class="ax_default table_cell transition notrs">
+          <svg data="images/草稿/u2383.svg" id="u2383_img" class="img generatedImage" viewbox="0 187 225 34">
+
+  <path d="M 1 1  L 225 1  L 225 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 187 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 187 )" class="stroke" />
+  <path d="M 0 0.5  L 225 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 187 )" class="stroke" />
+          </svg>
+          <div id="u2383_text" class="text ">
+            <p><span>单据编号</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2384" class="ax_default table_cell transition notrs">
+          <svg data="images/草稿/u2384.svg" id="u2384_img" class="img generatedImage" viewbox="225 187 78 34">
+
+  <path d="M 1 1  L 78 1  L 78 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 225 187 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 225 187 )" class="stroke" />
+  <path d="M 0 0.5  L 78 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 225 187 )" class="stroke" />
+          </svg>
+          <div id="u2384_text" class="text ">
+            <p><span>文本</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2385" class="ax_default table_cell transition notrs">
+          <svg data="images/草稿/u2385.svg" id="u2385_img" class="img generatedImage" viewbox="303 187 742 34">
+
+  <path d="M 1 1  L 742 1  L 742 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 303 187 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 303 187 )" class="stroke" />
+  <path d="M 0 0.5  L 742 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 303 187 )" class="stroke" />
+          </svg>
+          <div id="u2385_text" class="text ">
+            <p><span>数据来源：手工导入或拉取【国外成本核算FBA或佰易底稿/调拨】中[单据编号]字段信息（该字段需先于【商品收发明细报表】拉取新增至【调拨】），详见2）主要逻辑说明；</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2386" class="ax_default table_cell transition notrs">
+          <svg data="images/草稿/u2386.svg" id="u2386_img" class="img generatedImage" viewbox="1045 187 63 34">
+
+  <path d="M 1 1  L 62 1  L 62 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1045 187 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1045 187 )" class="stroke" />
+  <path d="M 0 0.5  L 63 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1045 187 )" class="stroke" />
+  <path d="M 62.5 1  L 62.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1045 187 )" class="stroke" />
+          </svg>
+          <div id="u2386_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2387" class="ax_default table_cell transition notrs">
+          <svg data="images/草稿/u2387.svg" id="u2387_img" class="img generatedImage" viewbox="0 221 225 33">
+
+  <path d="M 1 1  L 225 1  L 225 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 221 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 221 )" class="stroke" />
+  <path d="M 0 0.5  L 225 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 221 )" class="stroke" />
+  <path d="M 0 32.5  L 225 32.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 221 )" class="stroke" />
+          </svg>
+          <div id="u2387_text" class="text ">
+            <p><span>时间</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2388" class="ax_default table_cell transition notrs">
+          <svg data="images/草稿/u2388.svg" id="u2388_img" class="img generatedImage" viewbox="225 221 78 33">
+
+  <path d="M 1 1  L 78 1  L 78 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 225 221 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 225 221 )" class="stroke" />
+  <path d="M 0 0.5  L 78 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 225 221 )" class="stroke" />
+  <path d="M 0 32.5  L 78 32.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 225 221 )" class="stroke" />
+          </svg>
+          <div id="u2388_text" class="text ">
+            <p><span>日期</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2389" class="ax_default table_cell transition notrs">
+          <svg data="images/草稿/u2389.svg" id="u2389_img" class="img generatedImage" viewbox="303 221 742 33">
+
+  <path d="M 1 1  L 742 1  L 742 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 303 221 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 303 221 )" class="stroke" />
+  <path d="M 0 0.5  L 742 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 303 221 )" class="stroke" />
+  <path d="M 0 32.5  L 742 32.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 303 221 )" class="stroke" />
+          </svg>
+          <div id="u2389_text" class="text ">
+            <p><span>数据来源：手工导入或根据其他字段逻辑规则带出，详见2）主要逻辑说明；</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u2390" class="ax_default table_cell transition notrs">
+          <svg data="images/草稿/u2390.svg" id="u2390_img" class="img generatedImage" viewbox="1045 221 63 33">
+
+  <path d="M 1 1  L 62 1  L 62 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1045 221 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1045 221 )" class="stroke" />
+  <path d="M 0 0.5  L 63 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1045 221 )" class="stroke" />
+  <path d="M 62.5 1  L 62.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1045 221 )" class="stroke" />
+  <path d="M 0 32.5  L 63 32.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1045 221 )" class="stroke" />
+          </svg>
+          <div id="u2390_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="resources/scripts/axure/ios.js"></script>
+  </body>
+</html>
