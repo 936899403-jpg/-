@@ -1,0 +1,872 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>下载详情</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/下载详情/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-3.7.1.min.js"></script>
+    <script src="resources/scripts/axure/axQuery.js"></script>
+    <script src="resources/scripts/axure/globals.js"></script>
+    <script src="resources/scripts/axutils.js"></script>
+    <script src="resources/scripts/axure/annotation.js"></script>
+    <script src="resources/scripts/axure/axQuery.std.js"></script>
+    <script src="resources/scripts/axure/doc.js"></script>
+    <script src="resources/scripts/messagecenter.js"></script>
+    <script src="resources/scripts/axure/events.js"></script>
+    <script src="resources/scripts/axure/recording.js"></script>
+    <script src="resources/scripts/axure/action.js"></script>
+    <script src="resources/scripts/axure/expr.js"></script>
+    <script src="resources/scripts/axure/geometry.js"></script>
+    <script src="resources/scripts/axure/flyout.js"></script>
+    <script src="resources/scripts/axure/model.js"></script>
+    <script src="resources/scripts/axure/repeater.js"></script>
+    <script src="resources/scripts/axure/sto.js"></script>
+    <script src="resources/scripts/axure/utils.temp.js"></script>
+    <script src="resources/scripts/axure/variables.js"></script>
+    <script src="resources/scripts/axure/drag.js"></script>
+    <script src="resources/scripts/axure/move.js"></script>
+    <script src="resources/scripts/axure/visibility.js"></script>
+    <script src="resources/scripts/axure/style.js"></script>
+    <script src="resources/scripts/axure/adaptive.js"></script>
+    <script src="resources/scripts/axure/tree.js"></script>
+    <script src="resources/scripts/axure/init.temp.js"></script>
+    <script src="resources/scripts/axure/legacy.js"></script>
+    <script src="resources/scripts/axure/viewer.js"></script>
+    <script src="resources/scripts/axure/math.js"></script>
+    <script src="resources/scripts/axure/jquery.nicescroll.min.js"></script>
+    <script src="data/document.js"></script>
+    <script src="files/下载详情/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (矩形) -->
+      <div id="u100" class="ax_default box_2 transition notrs">
+        <div id="u100_div" class=""></div>
+        <div id="u100_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u101" class="ax_default _文本段落 transition notrs">
+        <div id="u101_div" class=""></div>
+        <div id="u101_text" class="text ">
+          <p style="font-size:13px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;font-size:15px;">需求说明：</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;color:#D9001B;">亚马逊下载详情US和USBETA账单上传优化</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u102" class="ax_default _文本段落 transition notrs">
+        <div id="u102_div" class=""></div>
+        <div id="u102_text" class="text ">
+          <p><span>1.【账号管理】页面中【站点】=“USBETA”的数据，不对应生成【下载详情】页面中【报表类型】=“自定义交易明细”“月度汇总”“月度交易明细”的数据；</span></p><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p><p><span>2.就【下载详情】页面中【站点】=“美国”的数据行，在点击【审核】按钮时调整解析逻辑，具体如下：（【报表类型】=“月度汇总”的数据无需解析）</span></p><p><span style="color:#494949;"><br></span></p><p><span>在解析文件时：</span></p><p><span style="text-decoration:underline ;">1）若不存在【account type】字段：</span></p><p><span>解析相应字段信息后，【报表详情】【销售数据】页面对应数据行【站点】字段更新为“美国”；</span></p><p><span><br></span></p><p><span style="text-decoration:underline ;">2）若存在【account type】字段：</span></p><p><span>①当字段值=“Invoiced Orders”，校验【account ID】字段在【账号管理】页面是否已维护【站点】=“USBETA”的数据；</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a.如未维护，则解析失败，并在【失败原因】字段展示具体原因；——详见下述 新增【失败原因】字段 需求；</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; b.如已维护，解析相应字段信息后，【报表详情】【销售数据】页面对应数据行【站点】字段更新为“美国beta”；</span></p><p><span><br></span></p><p><span>②当字段值=“Standard Order”，校验【account ID】字段在【账号管理】页面是否已维护【站点】=“US”的数据；</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; a.如未维护，则解析失败，并在【失败原因】字段展示具体原因；——详见下述 新增【失败原因】字段 需求；</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; b.如已维护，解析相应字段信息后，【报表详情】【销售数据】页面对应数据行【站点】字段更新为“美国”；</span></p><p><span><br></span></p><p><span style="color:#D9001B;">注：若同一账单同时存在USBETA和US的数据，其中部分解析失败，则整个账单审核失败；</span></p><p><span><br></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u103" class="ax_default box_2 transition notrs">
+        <div id="u103_div" class=""></div>
+        <div id="u103_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u104" class="ax_default _文本段落 transition notrs">
+        <div id="u104_div" class=""></div>
+        <div id="u104_text" class="text ">
+          <p style="font-size:13px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;font-size:15px;">需求说明：</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;color:#D9001B;">亚马逊下载详情审核失败需展示失败原因</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u105" class="ax_default _文本段落 transition notrs">
+        <div id="u105_div" class=""></div>
+        <div id="u105_text" class="text ">
+          <p><span>列表新增【失败原因】字段，默认值“-”，当审核失败时，根据以下情形分别展示内容：——针对【报表类型】=“月度交易明细”“自定义交易明细”的数据</span></p><p><span><br></span></p><p><span>1.当账单内容/格式存在问题：</span></p><p><span>1）账单日期解析失败，展示：解析账单日期失败；</span></p><p><span style="text-decoration:line-through ;color:#D9001B;">2）文件编码格式有误，展示：解析报表格式变更；</span></p><p><span>3）账单内容数据部分缺失，展示：解析账单内容数据部分缺失；</span></p><p><span>4）解析【站点】=“美国”的数据，审核时若存在【account type】字段且字段值=“Invoiced Orders”，当校验【account ID】在【账号管理】页面未维护【站点】=“USBETA”，展示：未维护USBETA站点；</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 审核时若存在【account type】字段且字段值=“Standard Order”，当校验【account ID】在【账号管理】页面未维护【站点】=“US”，展示：未维护US站点；</span></p><p><span style="text-decoration:line-through ;color:#D9001B;"><br></span></p><p><span style="text-decoration:line-through ;color:#D9001B;">2.当解析逻辑配置-条件存在问题，则展示：解析条件异常；</span></p><p><span style="text-decoration:line-through ;color:#D9001B;"><br></span></p><p><span style="text-decoration:line-through ;color:#D9001B;">3.当解析逻辑配置-算法存在问题，则展示：解析计算公式异常；</span></p><p><span><br></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图像) -->
+      <div id="u106" class="ax_default _图片_ transition notrs">
+        <img id="u106_img" class="img " src="images/下载详情/u106.png"/>
+        <div id="u106_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u107" class="ax_default box_2 transition notrs">
+        <div id="u107_div" class=""></div>
+        <div id="u107_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u108" class="ax_default _文本段落 transition notrs">
+        <div id="u108_div" class=""></div>
+        <div id="u108_text" class="text ">
+          <p style="font-size:13px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;font-size:15px;">需求说明：</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;color:#D9001B;">亚马逊下载详情提醒补齐账单通知</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u109" class="ax_default _文本段落 transition notrs">
+        <div id="u109_div" class=""></div>
+        <div id="u109_text" class="text ">
+          <p><span>2.每月15号，校验所拉取的【报表类型】=“月度交易明细”且【数据阶段】=“已推凭”的数据（</span><span style="color:#D9001B;">2022年12月1日之前的数据无需处理</span><span>），是否存在对应【站点+店铺+account ID】维度、【报表类型】=“月度汇总”且【下载状态】=“进行中”或“下载失败”的数据；</span></p><p><span>若存在，</span><span style="text-decoration:line-through ;">且该部分【报表类型】=“月度交易明细”的数据【结账状态】均=“是”，此时</span><span>；</span></p><p><span>&nbsp;1)当【失败原因审核状态】≠“已审核”时，取【部门】字段“-”前的数据（举例：【部门】：AUKEY事业部-线上运营部-A组，取”AUKEY事业部“），将其匹配【部门对接人】页面【部门】字段，并分别以邮件形式发送通知至对应【管理会计邮箱】和【总账会计邮箱】，</span></p><p><span style="text-decoration:underline ;">提醒次数：每月15号、及当月后续每周一早上9:00 进行提醒；（若重复则仅提醒一次）&nbsp;&nbsp; </span></p><p><span>格式如下：</span></p><p><span><br></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (组合) -->
+      <div id="u110" class="ax_default" data-left="149" data-top="2349" data-width="1547" data-height="227" layer-opacity="1">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u111" class="ax_default box_1 transition notrs">
+          <div id="u111_div" class=""></div>
+          <div id="u111_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u112" class="ax_default _文本段落 transition notrs">
+          <div id="u112_div" class=""></div>
+          <div id="u112_text" class="text ">
+            <p><span>标题：请尽快补齐以下月度汇总账单</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u113" class="ax_default _文本段落 transition notrs">
+          <div id="u113_div" class=""></div>
+          <div id="u113_text" class="text ">
+            <p><span>管理会计邮件：</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u114" class="ax_default _文本段落 transition notrs">
+          <div id="u114_div" class=""></div>
+          <div id="u114_text" class="text ">
+            <p><span>正文：</span></p><p><span><br></span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格) -->
+        <div id="u115" class="ax_default">
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u116" class="ax_default table_cell transition notrs">
+            <svg data="images/下载详情/u116.svg" id="u116_img" class="img generatedImage" viewbox="0 0 127 30">
+
+  <path d="M 1 1  L 127 1  L 127 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(215, 215, 215, 1)" stroke="none" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+  <path d="M 0 0.5  L 127 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+            </svg>
+            <div id="u116_text" class="text ">
+              <p><span>生成时间</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u117" class="ax_default table_cell transition notrs">
+            <svg data="images/下载详情/u117.svg" id="u117_img" class="img generatedImage" viewbox="127 0 190 30">
+
+  <path d="M 1 1  L 190 1  L 190 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(215, 215, 215, 1)" stroke="none" transform="matrix(1 0 0 1 127 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 0 )" class="stroke" />
+  <path d="M 0 0.5  L 190 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 0 )" class="stroke" />
+            </svg>
+            <div id="u117_text" class="text ">
+              <p><span>部门</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u118" class="ax_default table_cell transition notrs">
+            <svg data="images/下载详情/u118.svg" id="u118_img" class="img generatedImage" viewbox="317 0 58 30">
+
+  <path d="M 1 1  L 58 1  L 58 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(215, 215, 215, 1)" stroke="none" transform="matrix(1 0 0 1 317 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 317 0 )" class="stroke" />
+  <path d="M 0 0.5  L 58 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 317 0 )" class="stroke" />
+            </svg>
+            <div id="u118_text" class="text ">
+              <p><span>站点</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u119" class="ax_default table_cell transition notrs">
+            <svg data="images/下载详情/u119.svg" id="u119_img" class="img generatedImage" viewbox="375 0 110 30">
+
+  <path d="M 1 1  L 110 1  L 110 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(215, 215, 215, 1)" stroke="none" transform="matrix(1 0 0 1 375 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 375 0 )" class="stroke" />
+  <path d="M 0 0.5  L 110 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 375 0 )" class="stroke" />
+            </svg>
+            <div id="u119_text" class="text ">
+              <p><span>店铺</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u120" class="ax_default table_cell transition notrs">
+            <svg data="images/下载详情/u120.svg" id="u120_img" class="img generatedImage" viewbox="485 0 91 30">
+
+  <path d="M 1 1  L 90 1  L 90 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(215, 215, 215, 1)" stroke="none" transform="matrix(1 0 0 1 485 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 485 0 )" class="stroke" />
+  <path d="M 0 0.5  L 91 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 485 0 )" class="stroke" />
+  <path d="M 90.5 1  L 90.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 485 0 )" class="stroke" />
+            </svg>
+            <div id="u120_text" class="text ">
+              <p><span>account ID</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u121" class="ax_default table_cell transition notrs">
+            <svg data="images/下载详情/u121.svg" id="u121_img" class="img generatedImage" viewbox="0 30 127 34">
+
+  <path d="M 1 1  L 127 1  L 127 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 30 )" class="stroke" />
+  <path d="M 0 0.5  L 127 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 30 )" class="stroke" />
+            </svg>
+            <div id="u121_text" class="text ">
+              <p><span>2022-09-01 00:00:00</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u122" class="ax_default table_cell transition notrs">
+            <svg data="images/下载详情/u122.svg" id="u122_img" class="img generatedImage" viewbox="127 30 190 34">
+
+  <path d="M 1 1  L 190 1  L 190 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 127 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 30 )" class="stroke" />
+  <path d="M 0 0.5  L 190 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 30 )" class="stroke" />
+            </svg>
+            <div id="u122_text" class="text ">
+              <p><span>AUKEY事业部-线上运营部-A组</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u123" class="ax_default table_cell transition notrs">
+            <svg data="images/下载详情/u123.svg" id="u123_img" class="img generatedImage" viewbox="317 30 58 34">
+
+  <path d="M 1 1  L 58 1  L 58 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 317 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 317 30 )" class="stroke" />
+  <path d="M 0 0.5  L 58 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 317 30 )" class="stroke" />
+            </svg>
+            <div id="u123_text" class="text ">
+              <p><span>荷兰</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u124" class="ax_default table_cell transition notrs">
+            <svg data="images/下载详情/u124.svg" id="u124_img" class="img generatedImage" viewbox="375 30 110 34">
+
+  <path d="M 1 1  L 110 1  L 110 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 375 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 375 30 )" class="stroke" />
+  <path d="M 0 0.5  L 110 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 375 30 )" class="stroke" />
+            </svg>
+            <div id="u124_text" class="text ">
+              <p><span>香九龄</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u125" class="ax_default table_cell transition notrs">
+            <svg data="images/下载详情/u125.svg" id="u125_img" class="img generatedImage" viewbox="485 30 91 34">
+
+  <path d="M 1 1  L 90 1  L 90 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 485 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 485 30 )" class="stroke" />
+  <path d="M 0 0.5  L 91 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 485 30 )" class="stroke" />
+  <path d="M 90.5 1  L 90.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 485 30 )" class="stroke" />
+            </svg>
+            <div id="u125_text" class="text ">
+              <p><span>400947</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u126" class="ax_default table_cell transition notrs">
+            <svg data="images/下载详情/u126.svg" id="u126_img" class="img generatedImage" viewbox="0 64 127 30">
+
+  <path d="M 1 1  L 127 1  L 127 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 64 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 64 )" class="stroke" />
+  <path d="M 0 0.5  L 127 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 64 )" class="stroke" />
+  <path d="M 0 29.5  L 127 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 64 )" class="stroke" />
+            </svg>
+            <div id="u126_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u127" class="ax_default table_cell transition notrs">
+            <svg data="images/下载详情/u127.svg" id="u127_img" class="img generatedImage" viewbox="127 64 190 30">
+
+  <path d="M 1 1  L 190 1  L 190 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 127 64 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 64 )" class="stroke" />
+  <path d="M 0 0.5  L 190 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 64 )" class="stroke" />
+  <path d="M 0 29.5  L 190 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 127 64 )" class="stroke" />
+            </svg>
+            <div id="u127_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u128" class="ax_default table_cell transition notrs">
+            <svg data="images/下载详情/u128.svg" id="u128_img" class="img generatedImage" viewbox="317 64 58 30">
+
+  <path d="M 1 1  L 58 1  L 58 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 317 64 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 317 64 )" class="stroke" />
+  <path d="M 0 0.5  L 58 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 317 64 )" class="stroke" />
+  <path d="M 0 29.5  L 58 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 317 64 )" class="stroke" />
+            </svg>
+            <div id="u128_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u129" class="ax_default table_cell transition notrs">
+            <svg data="images/下载详情/u129.svg" id="u129_img" class="img generatedImage" viewbox="375 64 110 30">
+
+  <path d="M 1 1  L 110 1  L 110 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 375 64 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 375 64 )" class="stroke" />
+  <path d="M 0 0.5  L 110 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 375 64 )" class="stroke" />
+  <path d="M 0 29.5  L 110 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 375 64 )" class="stroke" />
+            </svg>
+            <div id="u129_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u130" class="ax_default table_cell transition notrs">
+            <svg data="images/下载详情/u130.svg" id="u130_img" class="img generatedImage" viewbox="485 64 91 30">
+
+  <path d="M 1 1  L 90 1  L 90 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 485 64 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 485 64 )" class="stroke" />
+  <path d="M 0 0.5  L 91 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 485 64 )" class="stroke" />
+  <path d="M 90.5 1  L 90.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 485 64 )" class="stroke" />
+  <path d="M 0 29.5  L 91 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 485 64 )" class="stroke" />
+            </svg>
+            <div id="u130_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u131" class="ax_default _文本段落 transition notrs">
+          <div id="u131_div" class=""></div>
+          <div id="u131_text" class="text ">
+            <p><span>总账会计邮件：</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u132" class="ax_default box_1 transition notrs">
+          <div id="u132_div" class=""></div>
+          <div id="u132_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u133" class="ax_default _文本段落 transition notrs">
+          <div id="u133_div" class=""></div>
+          <div id="u133_text" class="text ">
+            <p><span>标题：月度汇总账单未补齐明细详情</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u134" class="ax_default _文本段落 transition notrs">
+          <div id="u134_div" class=""></div>
+          <div id="u134_text" class="text ">
+            <p><span>正文：</span></p><p><span><br></span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格) -->
+        <div id="u135" class="ax_default">
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u136" class="ax_default table_cell transition notrs">
+            <svg data="images/下载详情/u136.svg" id="u136_img" class="img generatedImage" viewbox="0 0 132 34">
+
+  <path d="M 1 1  L 132 1  L 132 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(215, 215, 215, 1)" stroke="none" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+  <path d="M 0 0.5  L 132 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+            </svg>
+            <div id="u136_text" class="text ">
+              <p><span>生成时间</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u137" class="ax_default table_cell transition notrs">
+            <svg data="images/下载详情/u137.svg" id="u137_img" class="img generatedImage" viewbox="132 0 186 34">
+
+  <path d="M 1 1  L 186 1  L 186 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(215, 215, 215, 1)" stroke="none" transform="matrix(1 0 0 1 132 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 132 0 )" class="stroke" />
+  <path d="M 0 0.5  L 186 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 132 0 )" class="stroke" />
+            </svg>
+            <div id="u137_text" class="text ">
+              <p><span>部门</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u138" class="ax_default table_cell transition notrs">
+            <svg data="images/下载详情/u138.svg" id="u138_img" class="img generatedImage" viewbox="318 0 57 34">
+
+  <path d="M 1 1  L 57 1  L 57 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(215, 215, 215, 1)" stroke="none" transform="matrix(1 0 0 1 318 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 318 0 )" class="stroke" />
+  <path d="M 0 0.5  L 57 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 318 0 )" class="stroke" />
+            </svg>
+            <div id="u138_text" class="text ">
+              <p><span>站点</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u139" class="ax_default table_cell transition notrs">
+            <svg data="images/下载详情/u139.svg" id="u139_img" class="img generatedImage" viewbox="375 0 110 34">
+
+  <path d="M 1 1  L 110 1  L 110 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(215, 215, 215, 1)" stroke="none" transform="matrix(1 0 0 1 375 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 375 0 )" class="stroke" />
+  <path d="M 0 0.5  L 110 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 375 0 )" class="stroke" />
+            </svg>
+            <div id="u139_text" class="text ">
+              <p><span>店铺</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u140" class="ax_default table_cell transition notrs">
+            <svg data="images/下载详情/u140.svg" id="u140_img" class="img generatedImage" viewbox="485 0 92 34">
+
+  <path d="M 1 1  L 92 1  L 92 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(215, 215, 215, 1)" stroke="none" transform="matrix(1 0 0 1 485 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 485 0 )" class="stroke" />
+  <path d="M 0 0.5  L 92 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 485 0 )" class="stroke" />
+            </svg>
+            <div id="u140_text" class="text ">
+              <p><span>account ID</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u141" class="ax_default table_cell transition notrs">
+            <svg data="images/下载详情/u141.svg" id="u141_img" class="img generatedImage" viewbox="577 0 84 34">
+
+  <path d="M 1 1  L 84 1  L 84 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(215, 215, 215, 1)" stroke="none" transform="matrix(1 0 0 1 577 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 577 0 )" class="stroke" />
+  <path d="M 0 0.5  L 84 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 577 0 )" class="stroke" />
+            </svg>
+            <div id="u141_text" class="text ">
+              <p><span>管理会计</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u142" class="ax_default table_cell transition notrs">
+            <svg data="images/下载详情/u142.svg" id="u142_img" class="img generatedImage" viewbox="661 0 242 34">
+
+  <path d="M 1 1  L 241 1  L 241 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(215, 215, 215, 1)" stroke="none" transform="matrix(1 0 0 1 661 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 661 0 )" class="stroke" />
+  <path d="M 0 0.5  L 242 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 661 0 )" class="stroke" />
+  <path d="M 241.5 1  L 241.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 661 0 )" class="stroke" />
+            </svg>
+            <div id="u142_text" class="text ">
+              <p><span>是否填写失败原因</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u143" class="ax_default table_cell transition notrs">
+            <svg data="images/下载详情/u143.svg" id="u143_img" class="img generatedImage" viewbox="0 34 132 29">
+
+  <path d="M 1 1  L 132 1  L 132 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 34 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 34 )" class="stroke" />
+  <path d="M 0 0.5  L 132 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 34 )" class="stroke" />
+            </svg>
+            <div id="u143_text" class="text ">
+              <p><span>2022-09-01 00:00:00</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u144" class="ax_default table_cell transition notrs">
+            <svg data="images/下载详情/u144.svg" id="u144_img" class="img generatedImage" viewbox="132 34 186 29">
+
+  <path d="M 1 1  L 186 1  L 186 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 132 34 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 132 34 )" class="stroke" />
+  <path d="M 0 0.5  L 186 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 132 34 )" class="stroke" />
+            </svg>
+            <div id="u144_text" class="text ">
+              <p><span>AUKEY事业部-线上运营部-A组</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u145" class="ax_default table_cell transition notrs">
+            <svg data="images/下载详情/u145.svg" id="u145_img" class="img generatedImage" viewbox="318 34 57 29">
+
+  <path d="M 1 1  L 57 1  L 57 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 318 34 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 318 34 )" class="stroke" />
+  <path d="M 0 0.5  L 57 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 318 34 )" class="stroke" />
+            </svg>
+            <div id="u145_text" class="text ">
+              <p><span>荷兰</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u146" class="ax_default table_cell transition notrs">
+            <svg data="images/下载详情/u146.svg" id="u146_img" class="img generatedImage" viewbox="375 34 110 29">
+
+  <path d="M 1 1  L 110 1  L 110 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 375 34 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 375 34 )" class="stroke" />
+  <path d="M 0 0.5  L 110 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 375 34 )" class="stroke" />
+            </svg>
+            <div id="u146_text" class="text ">
+              <p><span>香九龄</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u147" class="ax_default table_cell transition notrs">
+            <svg data="images/下载详情/u147.svg" id="u147_img" class="img generatedImage" viewbox="485 34 92 29">
+
+  <path d="M 1 1  L 92 1  L 92 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 485 34 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 485 34 )" class="stroke" />
+  <path d="M 0 0.5  L 92 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 485 34 )" class="stroke" />
+            </svg>
+            <div id="u147_text" class="text ">
+              <p><span>400947</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u148" class="ax_default table_cell transition notrs">
+            <svg data="images/下载详情/u148.svg" id="u148_img" class="img generatedImage" viewbox="577 34 84 29">
+
+  <path d="M 1 1  L 84 1  L 84 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 577 34 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 577 34 )" class="stroke" />
+  <path d="M 0 0.5  L 84 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 577 34 )" class="stroke" />
+            </svg>
+            <div id="u148_text" class="text ">
+              <p><span>张三</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u149" class="ax_default table_cell transition notrs">
+            <svg data="images/下载详情/u149.svg" id="u149_img" class="img generatedImage" viewbox="661 34 242 29">
+
+  <path d="M 1 1  L 241 1  L 241 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 661 34 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 661 34 )" class="stroke" />
+  <path d="M 0 0.5  L 242 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 661 34 )" class="stroke" />
+  <path d="M 241.5 1  L 241.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 661 34 )" class="stroke" />
+            </svg>
+            <div id="u149_text" class="text ">
+              <p><span>是</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u150" class="ax_default table_cell transition notrs">
+            <svg data="images/下载详情/u150.svg" id="u150_img" class="img generatedImage" viewbox="0 63 132 34">
+
+  <path d="M 1 1  L 132 1  L 132 33  L 1 33  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 63 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 63 )" class="stroke" />
+  <path d="M 0 0.5  L 132 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 63 )" class="stroke" />
+  <path d="M 0 33.5  L 132 33.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 63 )" class="stroke" />
+            </svg>
+            <div id="u150_text" class="text ">
+              <p><span>2022-09-01 00:00:00</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u151" class="ax_default table_cell transition notrs">
+            <svg data="images/下载详情/u151.svg" id="u151_img" class="img generatedImage" viewbox="132 63 186 34">
+
+  <path d="M 1 1  L 186 1  L 186 33  L 1 33  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 132 63 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 132 63 )" class="stroke" />
+  <path d="M 0 0.5  L 186 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 132 63 )" class="stroke" />
+  <path d="M 0 33.5  L 186 33.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 132 63 )" class="stroke" />
+            </svg>
+            <div id="u151_text" class="text ">
+              <p><span>品牌一部-AUKEY-公摊</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u152" class="ax_default table_cell transition notrs">
+            <svg data="images/下载详情/u152.svg" id="u152_img" class="img generatedImage" viewbox="318 63 57 34">
+
+  <path d="M 1 1  L 57 1  L 57 33  L 1 33  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 318 63 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 318 63 )" class="stroke" />
+  <path d="M 0 0.5  L 57 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 318 63 )" class="stroke" />
+  <path d="M 0 33.5  L 57 33.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 318 63 )" class="stroke" />
+            </svg>
+            <div id="u152_text" class="text ">
+              <p><span>法国</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u153" class="ax_default table_cell transition notrs">
+            <svg data="images/下载详情/u153.svg" id="u153_img" class="img generatedImage" viewbox="375 63 110 34">
+
+  <path d="M 1 1  L 110 1  L 110 33  L 1 33  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 375 63 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 375 63 )" class="stroke" />
+  <path d="M 0 0.5  L 110 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 375 63 )" class="stroke" />
+  <path d="M 0 33.5  L 110 33.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 375 63 )" class="stroke" />
+            </svg>
+            <div id="u153_text" class="text ">
+              <p><span>赤霄</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u154" class="ax_default table_cell transition notrs">
+            <svg data="images/下载详情/u154.svg" id="u154_img" class="img generatedImage" viewbox="485 63 92 34">
+
+  <path d="M 1 1  L 92 1  L 92 33  L 1 33  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 485 63 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 485 63 )" class="stroke" />
+  <path d="M 0 0.5  L 92 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 485 63 )" class="stroke" />
+  <path d="M 0 33.5  L 92 33.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 485 63 )" class="stroke" />
+            </svg>
+            <div id="u154_text" class="text ">
+              <p><span>400928</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u155" class="ax_default table_cell transition notrs">
+            <svg data="images/下载详情/u155.svg" id="u155_img" class="img generatedImage" viewbox="577 63 84 34">
+
+  <path d="M 1 1  L 84 1  L 84 33  L 1 33  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 577 63 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 577 63 )" class="stroke" />
+  <path d="M 0 0.5  L 84 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 577 63 )" class="stroke" />
+  <path d="M 0 33.5  L 84 33.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 577 63 )" class="stroke" />
+            </svg>
+            <div id="u155_text" class="text ">
+              <p><span>李四</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格单元) -->
+          <div id="u156" class="ax_default table_cell transition notrs">
+            <svg data="images/下载详情/u156.svg" id="u156_img" class="img generatedImage" viewbox="661 63 242 34">
+
+  <path d="M 1 1  L 241 1  L 241 33  L 1 33  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 661 63 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 661 63 )" class="stroke" />
+  <path d="M 0 0.5  L 242 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 661 63 )" class="stroke" />
+  <path d="M 241.5 1  L 241.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 661 63 )" class="stroke" />
+  <path d="M 0 33.5  L 242 33.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 661 63 )" class="stroke" />
+            </svg>
+            <div id="u156_text" class="text ">
+              <p><span>否</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u157" class="ax_default _文本段落 transition notrs">
+        <div id="u157_div" class=""></div>
+        <div id="u157_text" class="text ">
+          <p><span>管理会计邮件：取【下载详情】页面【生成时间】【部门】【站点】【店铺】【account ID】字段值；</span></p><p><span>总账会计邮件：取【下载详情】页面【生成时间】【部门】【站点】【店铺】【account ID】及【基础数据/部门对接人】页面对应【管理会计】字段值；</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 【是否填写失败原因】：当【失败原因】为空时，此时展示“否”；否则展示“是”；</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u158" class="ax_default _文本段落 transition notrs">
+        <div id="u158_div" class=""></div>
+        <div id="u158_text" class="text ">
+          <p><span>2)当【失败原因审核状态】=“已审核”时，则不进行处理；</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u159" class="ax_default primary_button transition notrs">
+        <div id="u159_div" class=""></div>
+        <div id="u159_text" class="text ">
+          <p><span>修改失败原因</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Vertical line) -->
+      <div id="u160" class="ax_default arrow transition notrs">
+        <svg data="images/下载详情/u160.svg" id="u160_img" class="img generatedImage">
+
+  <g transform="matrix(1 0 0 1 -789 -348.5 )">
+    <path d="M 2.5 0  L 2.5 22.99999999961566  " stroke-width="5" stroke-dasharray="0" stroke="rgba(217, 0, 27, 1)" fill="none" transform="matrix(1 0 0 1 802 351 )" class="stroke" />
+    <path d="M -9 20  L 2.5 32  L 14 20  L -9 20  Z " fill-rule="nonzero" fill="rgba(217, 0, 27, 1)" stroke="none" transform="matrix(1 0 0 1 802 351 )" class="arrowhead" />
+  </g>
+        </svg>
+        <div id="u160_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u161" class="ax_default _文本段落 transition notrs">
+        <div id="u161_div" class=""></div>
+        <div id="u161_text" class="text ">
+          <p><span>1.1）新增【修改失败原因】按钮：</span></p><p><span>——仅限修改【报表类型】=“月度汇总”，【下载状态】=“进行中”或“下载失败”的数据（前提条件：该数据对应【站点+店铺+account ID】维度的【报表类型】=“月度交易明细”的数据【数据阶段】应为“已推凭”），否则提示：仅限修改【报表类型】=“月度汇总”的数据 / 仅限修改【下载状态】=“进行中”或“下载失败”的数据 / 该数据对应【站点+店铺+accountID】维度(xx)的月度交易明细【数据阶段】≠已推凭，无法修改；</span></p><p><span>勾选一条或多条数据行，点击按钮，弹出弹窗如下：</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (组合) -->
+      <div id="u162" class="ax_default" data-left="142" data-top="1638" data-width="300" data-height="170" layer-opacity="1">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u163" class="ax_default box_2 transition notrs">
+          <div id="u163_div" class=""></div>
+          <div id="u163_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (直线 / 行距) -->
+        <div id="u164" class="ax_default line transition notrs">
+          <svg data="images/下载详情/u164.svg" id="u164_img" class="img generatedImage">
+
+  <g transform="matrix(1 0 0 1 -149 -1664 )">
+    <path d="M 0 0.5  L 284 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 149 1664 )" class="stroke" />
+  </g>
+          </svg>
+          <div id="u164_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u165" class="ax_default _文本段落 transition notrs">
+          <div id="u165_div" class=""></div>
+          <div id="u165_text" class="text ">
+            <p><span>失败原因：</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (文本框(单行)) -->
+        <div id="u166" class="ax_default text_field transition notrs">
+          <div id="u166_div" class=""></div>
+          <input id="u166_input" type="text" value="" class="u166_input"/>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u167" class="ax_default _文本段落 transition notrs">
+          <div id="u167_div" class=""></div>
+          <div id="u167_text" class="text ">
+            <p><span>修改失败原因</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u168" class="ax_default primary_button transition notrs">
+          <div id="u168_div" class=""></div>
+          <div id="u168_text" class="text ">
+            <p><span>确认</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u169" class="ax_default button transition notrs">
+          <div id="u169_div" class=""></div>
+          <div id="u169_text" class="text ">
+            <p><span>取消</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u170" class="ax_default _文本段落 transition notrs">
+        <div id="u170_div" class=""></div>
+        <div id="u170_text" class="text ">
+          <p><span><br></span></p><p><span>【失败原因】字段：手工录入，默认展示【失败原因】字段值，限制100个字符；</span></p><p><span>&nbsp;&nbsp; </span></p><p><span>&nbsp;&nbsp; 点击确认后，对应【失败原因】字段同步完成修改。勾选多行则完成批量修改。</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u171" class="ax_default primary_button transition notrs">
+        <div id="u171_div" class=""></div>
+        <div id="u171_text" class="text ">
+          <p><span>总账审核</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u172" class="ax_default _文本段落 transition notrs">
+        <div id="u172_div" class=""></div>
+        <div id="u172_text" class="text ">
+          <p><span>失败原因审核状态&nbsp;&nbsp; 失败原因审核人&nbsp;&nbsp; 失败原因审核时间</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u173" class="ax_default _文本段落 transition notrs">
+        <div id="u173_div" class=""></div>
+        <div id="u173_text" class="text ">
+          <p><span>2）新增【总账审核】按钮：</span></p><p><span>——审核限制条件：①【报表类型】=“月度汇总”，【下载状态】=“进行中”或“下载失败”的数据（前提条件：该数据对应【站点+店铺+account ID】维度的【报表类型】=“月度交易明细”的数据【数据阶段】应为“已推凭”）；</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; ②【失败原因审核状态】=“待审核”；</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 否则提示：仅限审核【报表类型】=“月度汇总”的数据/仅限审核【下载状态】=“进行中”或“下载失败”的数据；</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 该数据对应【站点+店铺+accountID】维度(xx)的月度交易明细【数据阶段】≠已推凭，无法审核；</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 仅限审核【失败原因审核状态】=“待审核”的数据；</span></p><p><span>勾选一条或多条数据行，点击按钮，二次提示：是否确认审核？ 点击确认后【失败原因审核状态】由“待审核”变为“已审核”，【失败原因审核人】展示点击按钮操作人，【失败原因审核时间】展示点击按钮操作时间；</span></p><p><span><br></span></p><p><span><br></span></p><p><span>3）搜索栏新增【失败原因】搜索框：下拉单选框，选项包括“为空”和“不为空”；</span></p><p><span><br></span></p><p><span>4）列表新增【失败原因审核状态】：</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; ①【报表类型】=“月度汇总”，【下载状态】=“进行中”或“下载失败”的数据（前提条件：该数据对应【站点+店铺+account ID】维度的【报表类型】=“月度交易明细”的数据【数据阶段】应为“已推凭”）默认值为“待审核”；</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; ②其他情况，数据默认值为”-“；</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; ③当点击【总账审核】按钮完成审核后，此时由“待审核”变为“已审核”；</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 【失败原因审核人】：默认值为“-”，点击【总账审核】按钮并成功审核后，展示点击按钮操作人；</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 【失败原因审核时间】：默认值为“-”，点击【总账审核】按钮并成功审核后，展示点击按钮操作时间；</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 注意：用户重新上传账单，【下载状态】重置为“手动成功”后，a.若原【失败原因审核状态】=“待审核”，则该字段值更新为空值，前端展示“-”；</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; b.若原【失败原因审核状态】=“已审核”，则该字段值保持不变，仍为“已审核”；</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 用户点击【清除】按钮，【下载状态】变更为“下载失败”后，a.若原【失败原因审核状态】=“待审核”，则该字段值保持不变，仍为“待审核”；</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; b.若原【失败原因审核状态】=“已审核”，则该字段值更新为“待审核”，同时【失败原因审核人】【失败原因审核时间】清空，前端展示“-”；</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; c.若原【失败原因审核状态】为空，则该字段值更新为“待审核”；</span></p><p><span style="color:#D9001B;"><br></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u174" class="ax_default _文本段落 transition notrs">
+        <div id="u174_div" class=""></div>
+        <div id="u174_text" class="text ">
+          <p><span>失败原因：</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (下拉列表框) -->
+      <div id="u175" class="ax_default droplist transition notrs">
+        <div id="u175_div" class=""></div>
+        <select id="u175_input" class="u175_input">
+          <option class="u175_input_option" selected value="不为空">不为空</option>
+          <option class="u175_input_option" value="为空">为空</option>
+        </select>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u176" class="ax_default _文本段落 transition notrs">
+        <div id="u176_div" class=""></div>
+        <div id="u176_text" class="text ">
+          <p><span>3.【财务对接平台】对应模块点击【生成凭证】按钮时，校验【下载详情】页面【生成时间】距离当前月份两个月及之前的对应数据（参考2.对应条件所拉取的月度汇总账单）是否存在【失败原因审核状态】=“待审核”的字段值，如存在，则该数据行【部门】所对应【财务EAS凭证】页面相应【部门】字段的数据推凭失败，并在【生成凭证错误描述】字段中展示原因为“存在未上传成功的月度汇总账单，请处理后再生成凭证”；（</span><span style="color:#D9001B;">2022年12月1日之前的数据无需处理</span><span>）</span></p><p><span><br></span></p><p><span><br></span></p><p><span>例：9月10日校验7月及以前数据，若存在生成时间为7月1日的对应数据【失败原因审核状态】仍然为“待审核”，则该数据【部门】所对应的EAS凭证数据无法生成凭证，并给出相应生成凭证错误描述；</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u177" class="ax_default box_1 transition notrs">
+        <div id="u177_div" class=""></div>
+        <div id="u177_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <script src="resources/scripts/axure/ios.js"></script>
+  </body>
+</html>

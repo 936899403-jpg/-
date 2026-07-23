@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>SKU维护</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/sku维护/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-3.7.1.min.js"></script>
+    <script src="resources/scripts/axure/axQuery.js"></script>
+    <script src="resources/scripts/axure/globals.js"></script>
+    <script src="resources/scripts/axutils.js"></script>
+    <script src="resources/scripts/axure/annotation.js"></script>
+    <script src="resources/scripts/axure/axQuery.std.js"></script>
+    <script src="resources/scripts/axure/doc.js"></script>
+    <script src="resources/scripts/messagecenter.js"></script>
+    <script src="resources/scripts/axure/events.js"></script>
+    <script src="resources/scripts/axure/recording.js"></script>
+    <script src="resources/scripts/axure/action.js"></script>
+    <script src="resources/scripts/axure/expr.js"></script>
+    <script src="resources/scripts/axure/geometry.js"></script>
+    <script src="resources/scripts/axure/flyout.js"></script>
+    <script src="resources/scripts/axure/model.js"></script>
+    <script src="resources/scripts/axure/repeater.js"></script>
+    <script src="resources/scripts/axure/sto.js"></script>
+    <script src="resources/scripts/axure/utils.temp.js"></script>
+    <script src="resources/scripts/axure/variables.js"></script>
+    <script src="resources/scripts/axure/drag.js"></script>
+    <script src="resources/scripts/axure/move.js"></script>
+    <script src="resources/scripts/axure/visibility.js"></script>
+    <script src="resources/scripts/axure/style.js"></script>
+    <script src="resources/scripts/axure/adaptive.js"></script>
+    <script src="resources/scripts/axure/tree.js"></script>
+    <script src="resources/scripts/axure/init.temp.js"></script>
+    <script src="resources/scripts/axure/legacy.js"></script>
+    <script src="resources/scripts/axure/viewer.js"></script>
+    <script src="resources/scripts/axure/math.js"></script>
+    <script src="resources/scripts/axure/jquery.nicescroll.min.js"></script>
+    <script src="data/document.js"></script>
+    <script src="files/sku维护/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (矩形) -->
+      <div id="u101" class="ax_default sticky_3 transition notrs">
+        <div id="u101_div" class=""></div>
+        <div id="u101_text" class="text ">
+          <p><span style="font-family:&quot;微软雅黑 Bold&quot;, &quot;微软雅黑&quot;, sans-serif;font-weight:700;font-style:normal;text-decoration:underline ;color:#0000FF;">4.采购单价明细表：</span></p><p><span style="font-family:&quot;微软雅黑&quot;, sans-serif;font-weight:400;font-style:normal;color:#000000;">每天凌晨4点，将【佰易-统计报表-采购入库财务查询】</span><span style="font-family:&quot;微软雅黑&quot;, sans-serif;font-weight:400;font-style:normal;color:#FF0000;">入库日期为当前自然日前一天</span><span style="font-family:&quot;微软雅黑&quot;, sans-serif;font-weight:400;font-style:normal;color:#000000;">的数据（初始数据，推送当前自然日前一天自然月的采购入库财务查询数据）</span><span style="font-family:'微软雅黑', sans-serif;font-weight:400;font-style:normal;color:#000000;">，拉取至【采购明细表】</span></p><p><span style="font-family:&quot;微软雅黑&quot;, sans-serif;font-weight:400;font-style:normal;color:#000000;">&nbsp; </span><span style="font-family:&quot;微软雅黑 Oblique&quot;, &quot;微软雅黑&quot;, sans-serif;font-weight:400;font-style:oblique;color:#000000;">推送逻辑：</span></p><p><span style="font-family:'微软雅黑', sans-serif;font-weight:400;font-style:normal;color:#000000;">&nbsp;A.计算SKU在</span><span style="font-family:&quot;微软雅黑 Bold&quot;, &quot;微软雅黑&quot;, sans-serif;font-weight:700;font-style:normal;color:#990033;">某一期间段</span><span style="font-family:'微软雅黑', sans-serif;font-weight:400;font-style:normal;color:#000000;">的加权采购单价</span></p><p><span style="font-family:'微软雅黑', sans-serif;font-weight:400;font-style:normal;color:#000000;">①区分法人为两个类型：国内法人即法人非傲基国际有限公司的法人都为国内法人；国际法人即法人为傲基国际有限公司</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;font-style:normal;color:#000000;">②根据SKU+法人类型维度汇总入库日期所在自然月入库本位币金额与入库数量：得出国内法人的入库本位币金额与国际法人的入库本位币金额与入库数量</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;font-style:normal;color:#000000;">③</span><span style="font-family:'微软雅黑', sans-serif;font-weight:400;font-style:normal;color:#000000;">SKU在</span><span style="font-family:&quot;微软雅黑 Bold&quot;, &quot;微软雅黑&quot;, sans-serif;font-weight:700;font-style:normal;color:#990033;">某一期间段</span><span style="font-family:'微软雅黑', sans-serif;font-weight:400;font-style:normal;color:#000000;">的加权采购单价=（国内法人的入库本位币金额/1.13+国际法人的入库本位币金额）/（国内法人的入库数量+国际法人的入库数量）</span></p><p><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;font-style:normal;color:#000000;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 上述【</span><span style="font-family:&quot;微软雅黑 Bold&quot;, &quot;微软雅黑&quot;, sans-serif;font-weight:700;font-style:normal;color:#990033;">某一期间段</span><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;font-style:normal;color:#000000;">】指：</span><span style="font-family:&quot;微软雅黑&quot;, sans-serif;font-weight:400;font-style:normal;text-decoration:underline ;color:#FF0000;">入库日期为当前自然日前一天所在自然月的1号</span><span style="font-family:&quot;微软雅黑&quot;, sans-serif;font-weight:400;font-style:normal;color:#000000;">至</span><span style="font-family:&quot;微软雅黑&quot;, sans-serif;font-weight:400;font-style:normal;text-decoration:underline ;color:#FF0000;">入库日期为当前自然日前一天</span></p><p><span style="font-family:'微软雅黑', sans-serif;font-weight:400;font-style:normal;color:#000000;">&nbsp;B.按【日期+SKU】去更新或插入【采购明细表】</span></p><p><span style="font-family:'微软雅黑', sans-serif;font-weight:400;font-style:normal;color:#000000;">&nbsp;&nbsp;&nbsp; 若更新，则将A步计算的加权采购单价，更新至【采购单价】</span></p><p><span style="font-family:'微软雅黑', sans-serif;font-weight:400;font-style:normal;color:#000000;">&nbsp;&nbsp;&nbsp; 若插入，则插入【日期、SKU、产品名称、采购单价】</span></p><p><span style="font-family:'微软雅黑', sans-serif;font-weight:400;font-style:normal;color:#000000;"><br></span></p><p><span style="font-family:'微软雅黑', sans-serif;font-weight:400;font-style:normal;color:#000000;">【SKU维护表】关联查询：</span></p><p><span style="font-family:'微软雅黑', sans-serif;font-weight:400;font-style:normal;color:#000000;">若当前【SKU维护表】存在采购明细表中的【SKU】，则根据当前表的结束日期查询出SKU对应的单价，并保存在【SKU维护表】中的采购单价列</span></p><p><span style="font-family:'微软雅黑', sans-serif;font-weight:400;font-style:normal;color:#000000;">若当前【SKU维护表】不存在采购明细表中的【SKU】，则新增数据行【开始日期为当前自然月1号；结束日期为当前自然月最后一天】并同步【采购明细表】的【SKU、产品名称、采购单价】至【SKU维护表】。后续根据【结束日期】查询展示SKU对应的【采购单价】即可。</span></p><p><span style="font-family:'微软雅黑', sans-serif;font-weight:400;font-style:normal;color:#000000;">&nbsp;</span><span style="font-family:&quot;微软雅黑&quot;, sans-serif;font-weight:400;font-style:normal;color:#000000;">并插入任务列表：</span></p><p><span style="font-family:&quot;微软雅黑&quot;, sans-serif;font-weight:400;font-style:normal;color:#000000;">&nbsp;创建时间：本次任务创建时间</span></p><p><span style="font-family:&quot;微软雅黑&quot;, sans-serif;font-weight:400;font-style:normal;color:#000000;">&nbsp;任务名称：</span><span style="font-family:&quot;微软雅黑 Bold&quot;, &quot;微软雅黑&quot;, sans-serif;font-weight:700;font-style:normal;color:#990033;">拉取2020-06-04</span><span style="font-family:&quot;微软雅黑&quot;, sans-serif;font-weight:400;font-style:normal;color:#000000;">采购单价明细表 </span></p><p><span style="font-family:&quot;微软雅黑&quot;, sans-serif;font-weight:400;font-style:normal;color:#000000;">&nbsp;任务模块：SKU维护</span></p><p><span style="font-family:&quot;微软雅黑&quot;, sans-serif;font-weight:400;font-style:normal;color:#000000;">&nbsp;状态：正在执行 or 执行失败 or 已完成 or 等待执行(根据实际情况，更新任务状态）</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u102" class="ax_default box_1 transition notrs">
+        <div id="u102_div" class=""></div>
+        <div id="u102_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u103" class="ax_default _文本段落 transition notrs">
+        <div id="u103_div" class=""></div>
+        <div id="u103_text" class="text ">
+          <p style="font-size:13px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;font-size:14px;color:#D9001B;">现需求改为</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;color:#D9001B;">：</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">A步骤&nbsp; 计算SKU某一期间段加权采购单价①区分法人为两个类型：</span></p><p style="font-size:13px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p><p style="font-size:13px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 查询法人表：`supplier2`.`base_corporation` ：1）若【法人主体】为含税法人，则为国内法人；2)若【法人主体】为非税法人，则为国际法人；</span></p><p style="font-size:13px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:13px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:13px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">数据库表：/* 采购单价明细表 */ `finance_report_bi`.`sku_purchase`</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (直线 / 行距) -->
+      <div id="u104" class="ax_default arrow transition notrs">
+        <svg data="images/sku维护/u104.svg" id="u104_img" class="img generatedImage">
+
+  <g transform="matrix(1 0 0 1 -104.5 -326 )">
+    <path d="M 0 2.5  L 241.99999979876068 2.5  " stroke-width="5" stroke-dasharray="0" stroke="rgba(217, 0, 27, 1)" fill="none" transform="matrix(1 0 0 1 107 339 )" class="stroke" />
+    <path d="M 239 14  L 251 2.5  L 239 -9  L 239 14  Z " fill-rule="nonzero" fill="rgba(217, 0, 27, 1)" stroke="none" transform="matrix(1 0 0 1 107 339 )" class="arrowhead" />
+  </g>
+        </svg>
+        <div id="u104_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u105" class="ax_default box_1 transition notrs">
+        <div id="u105_div" class=""></div>
+        <div id="u105_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <script src="resources/scripts/axure/ios.js"></script>
+  </body>
+</html>
