@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>拉取延迟交易数据优化--月结前发</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/拉取延迟交易数据优化--月结前发/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-3.7.1.min.js"></script>
+    <script src="resources/scripts/axure/axQuery.js"></script>
+    <script src="resources/scripts/axure/globals.js"></script>
+    <script src="resources/scripts/axutils.js"></script>
+    <script src="resources/scripts/axure/annotation.js"></script>
+    <script src="resources/scripts/axure/axQuery.std.js"></script>
+    <script src="resources/scripts/axure/doc.js"></script>
+    <script src="resources/scripts/messagecenter.js"></script>
+    <script src="resources/scripts/axure/events.js"></script>
+    <script src="resources/scripts/axure/recording.js"></script>
+    <script src="resources/scripts/axure/action.js"></script>
+    <script src="resources/scripts/axure/expr.js"></script>
+    <script src="resources/scripts/axure/geometry.js"></script>
+    <script src="resources/scripts/axure/flyout.js"></script>
+    <script src="resources/scripts/axure/model.js"></script>
+    <script src="resources/scripts/axure/repeater.js"></script>
+    <script src="resources/scripts/axure/sto.js"></script>
+    <script src="resources/scripts/axure/utils.temp.js"></script>
+    <script src="resources/scripts/axure/variables.js"></script>
+    <script src="resources/scripts/axure/drag.js"></script>
+    <script src="resources/scripts/axure/move.js"></script>
+    <script src="resources/scripts/axure/visibility.js"></script>
+    <script src="resources/scripts/axure/style.js"></script>
+    <script src="resources/scripts/axure/adaptive.js"></script>
+    <script src="resources/scripts/axure/tree.js"></script>
+    <script src="resources/scripts/axure/init.temp.js"></script>
+    <script src="resources/scripts/axure/legacy.js"></script>
+    <script src="resources/scripts/axure/viewer.js"></script>
+    <script src="resources/scripts/axure/math.js"></script>
+    <script src="resources/scripts/axure/jquery.nicescroll.min.js"></script>
+    <script src="data/document.js"></script>
+    <script src="files/拉取延迟交易数据优化--月结前发/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (矩形) -->
+      <div id="u711" class="ax_default box_2 transition notrs">
+        <div id="u711_div" class=""></div>
+        <div id="u711_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u712" class="ax_default _文本段落 transition notrs">
+        <div id="u712_div" class=""></div>
+        <div id="u712_text" class="text ">
+          <p><span style="font-family:&quot;Arial Negreta&quot;, &quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:700;">需求1：</span><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">延迟交易计算汇总维度需加上账单期间</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">【平台财务报表/amazon/延迟交易数据】：两个页签【计算汇总】按钮计算汇总的维度均改为按【入账期间+</span><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;color:#D9001B;">账单期间</span><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">+店铺+站点+部门+币种】维度</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Negreta&quot;, &quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:700;">需求2：</span><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">允许重新拉取未汇总的延迟交易数据；--现状：只能按期间拉取延迟交易数据，存在已汇总数据则无法重拉，各个部门管会要分别核对处理数据</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">【平台财务报表/amazon/延迟交易数据】：两个页签【拉取数据】按钮均调整以下逻辑：</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">仅限拉取是否汇总均为否的数据---调整为按【入账期间+店铺+站点+部门】维度判断同一维度下若存在是否汇总为是的数据，则该维度数据拉取时不做更新，其余是否汇总为否的数据删除后重拉；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Negreta&quot;, &quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:700;">需求3：</span><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">【实体银行/银行账户管理/余额管理】：【结账/反结账】按钮去掉弹窗，支持按勾选或未勾选按筛选条件结账/反结账，点击按钮时需校验所选均为同一期间数据，若存在不同期间则结账/反结账失败并给出相应提示：</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图像) -->
+      <div id="u713" class="ax_default _图片 transition notrs">
+        <img id="u713_img" class="img " src="images/拉取延迟交易数据优化--月结前发/u713.png"/>
+        <div id="u713_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <script src="resources/scripts/axure/ios.js"></script>
+  </body>
+</html>
