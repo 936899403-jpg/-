@@ -1,0 +1,281 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>整体实现思路</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/整体实现思路/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-3.7.1.min.js"></script>
+    <script src="resources/scripts/axure/axQuery.js"></script>
+    <script src="resources/scripts/axure/globals.js"></script>
+    <script src="resources/scripts/axutils.js"></script>
+    <script src="resources/scripts/axure/annotation.js"></script>
+    <script src="resources/scripts/axure/axQuery.std.js"></script>
+    <script src="resources/scripts/axure/doc.js"></script>
+    <script src="resources/scripts/messagecenter.js"></script>
+    <script src="resources/scripts/axure/events.js"></script>
+    <script src="resources/scripts/axure/recording.js"></script>
+    <script src="resources/scripts/axure/action.js"></script>
+    <script src="resources/scripts/axure/expr.js"></script>
+    <script src="resources/scripts/axure/geometry.js"></script>
+    <script src="resources/scripts/axure/flyout.js"></script>
+    <script src="resources/scripts/axure/model.js"></script>
+    <script src="resources/scripts/axure/repeater.js"></script>
+    <script src="resources/scripts/axure/sto.js"></script>
+    <script src="resources/scripts/axure/utils.temp.js"></script>
+    <script src="resources/scripts/axure/variables.js"></script>
+    <script src="resources/scripts/axure/drag.js"></script>
+    <script src="resources/scripts/axure/move.js"></script>
+    <script src="resources/scripts/axure/visibility.js"></script>
+    <script src="resources/scripts/axure/style.js"></script>
+    <script src="resources/scripts/axure/adaptive.js"></script>
+    <script src="resources/scripts/axure/tree.js"></script>
+    <script src="resources/scripts/axure/init.temp.js"></script>
+    <script src="resources/scripts/axure/legacy.js"></script>
+    <script src="resources/scripts/axure/viewer.js"></script>
+    <script src="resources/scripts/axure/math.js"></script>
+    <script src="resources/scripts/axure/jquery.nicescroll.min.js"></script>
+    <script src="data/document.js"></script>
+    <script src="files/整体实现思路/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (矩形) -->
+      <div id="u17" class="ax_default box_1 transition notrs">
+        <div id="u17_div" class=""></div>
+        <div id="u17_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u18" class="ax_default box_1 transition notrs">
+        <div id="u18_div" class=""></div>
+        <div id="u18_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u19" class="ax_default _文本段落 transition notrs">
+        <div id="u19_div" class=""></div>
+        <div id="u19_text" class="text ">
+          <p style="font-size:14px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;">1.待解决问题：</span></p><p style="font-size:13px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">1）业务类型=“贝宝支付”的数据因缺失部分字段信息暂未实现一键推凭，目前由财务手工进行处理；&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p><p style="font-size:13px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">2）存在A公司代B公司支付的业务场景，此场景下需分别生成两张A、B法人下的凭证；</span></p><p style="font-size:13px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:14px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;">2.实现方案：</span></p><p style="font-size:13px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">1）拉取费用报销相关字段至【贝宝财务报表/财务EAS凭证】页面以实现推凭；</span></p><p style="font-size:13px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">2）如存在跨法人代支付业务场景，则在【财务EAS凭证】页面同时生成两条数据，分别进行推凭；</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u20" class="ax_default box_2 transition notrs">
+        <div id="u20_div" class=""></div>
+        <div id="u20_text" class="text ">
+          <p><span>贝宝财务报表/财务EAS凭证</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u21" class="ax_default box_2 transition notrs">
+        <div id="u21_div" class=""></div>
+        <div id="u21_text" class="text ">
+          <p><span>费用报销记录、预付申请记录</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Vertical line) -->
+      <div id="u22" class="compound ax_default arrow transition notrs" data-height="51" data-width="1" CompoundMode="true">
+        <svg data="images/整体实现思路/u22.svg" id="u22_img" class="singleImg img generatedImage">
+
+  <g transform="matrix(1 0 0 1 -256 -652 )">
+    <path d="M 0.5 0  L 0.5 46.00000000144067  " stroke-width="1" stroke-dasharray="9,4,2,4,2,4" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 265 652 )" class="stroke" />
+    <path d="M -5.8 45  L 0.5 51  L 6.8 45  L -5.8 45  Z " fill-rule="nonzero" fill="rgba(121, 121, 121, 1)" stroke="none" transform="matrix(1 0 0 1 265 652 )" class="arrowhead" />
+  </g>
+        </svg>
+        <div id="u22p000" class="ax_vector_shape" WidgetTopLeftX="-0.44642857142857145" WidgetTopLeftY="0.16666666666666666" WidgetTopRightX="-0.44642857142857145" WidgetTopRightY="0" WidgetBottomLeftX="0.4642857142857143" WidgetBottomLeftY="0.16666666666666666" WidgetBottomRightX="0.4642857142857143" WidgetBottomRightY="0">
+          <svg data="images/整体实现思路/u22p000.svg" id="u22p000_img" class="img generatedImage" viewbox="238 675 56 4">
+
+  <g transform="matrix(0 -1 1 0 -411 943 )">
+    <path d="M 0.5 0  L 0.5 46.00000000144067  " stroke-width="1" stroke-dasharray="9,4,2,4,2,4" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 265 652 )" class="stroke" />
+    <path d="M -5.8 45  L 0.5 51  L 6.8 45  L -5.8 45  Z " fill-rule="nonzero" fill="rgba(121, 121, 121, 1)" stroke="none" transform="matrix(1 0 0 1 265 652 )" class="arrowhead" />
+  </g>
+          </svg>
+        </div>
+        <div id="u22p001" class="ax_vector_shape" WidgetTopLeftX="-0.25" WidgetTopLeftY="0" WidgetTopRightX="0" WidgetTopRightY="0" WidgetBottomLeftX="-0.25" WidgetBottomLeftY="12.75" WidgetBottomRightX="0" WidgetBottomRightY="12.75">
+          <svg data="images/整体实现思路/u22p001.svg" id="u22p001_img" class="img generatedImage" viewbox="264 651 4 2">
+
+  <path d="M 0.5 0  L 0.5 46.00000000144067  " stroke-width="1" stroke-dasharray="9,4,2,4,2,4" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 265 652 )" class="stroke" />
+  <path d="M -5.8 45  L 0.5 51  L 6.8 45  L -5.8 45  Z " fill-rule="nonzero" fill="rgba(121, 121, 121, 1)" stroke="none" transform="matrix(1 0 0 1 265 652 )" class="arrowhead" />
+          </svg>
+        </div>
+        <div id="u22p002" class="ax_vector_shape" WidgetTopLeftX="2.1363636363636362" WidgetTopLeftY="0" WidgetTopRightX="2.1363636363636362" WidgetTopRightY="0.045454545454545456" WidgetBottomLeftX="-0.18181818181818182" WidgetBottomLeftY="0" WidgetBottomRightX="-0.18181818181818182" WidgetBottomRightY="0.045454545454545456">
+          <svg data="images/整体实现思路/u22p002.svg" id="u22p002_img" class="img generatedImage" viewbox="254 689 22 20">
+
+  <g transform="matrix(0 1 -1 0 964 434 )">
+    <path d="M 0.5 0  L 0.5 46.00000000144067  " stroke-width="1" stroke-dasharray="9,4,2,4,2,4" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 265 652 )" class="stroke" />
+    <path d="M -5.8 45  L 0.5 51  L 6.8 45  L -5.8 45  Z " fill-rule="nonzero" fill="rgba(121, 121, 121, 1)" stroke="none" transform="matrix(1 0 0 1 265 652 )" class="arrowhead" />
+  </g>
+          </svg>
+        </div>
+        <div id="u22_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u23" class="ax_default _文本段落 transition notrs">
+        <div id="u23_div" class=""></div>
+        <div id="u23_text" class="text ">
+          <p><span>匹配【交易号】</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u24" class="ax_default box_2 transition notrs">
+        <div id="u24_div" class=""></div>
+        <div id="u24_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u25" class="ax_default _文本段落 transition notrs">
+        <div id="u25_div" class=""></div>
+        <div id="u25_text" class="text ">
+          <p><span>借：其他应付款</span></p><p><span>&nbsp; 贷：银行存款</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u26" class="ax_default box_2 transition notrs">
+        <div id="u26_div" class=""></div>
+        <div id="u26_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u27" class="ax_default _文本段落 transition notrs">
+        <div id="u27_div" class=""></div>
+        <div id="u27_text" class="text ">
+          <p><span>借：XX费用/预付账款</span></p><p><span>&nbsp; 贷：银行存款</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u28" class="ax_default box_2 transition notrs">
+        <div id="u28_div" class=""></div>
+        <div id="u28_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u29" class="ax_default _文本段落 transition notrs">
+        <div id="u29_div" class=""></div>
+        <div id="u29_text" class="text ">
+          <p><span>①代付A公司：</span></p><p><span>借：其他应收款</span></p><p><span>&nbsp; 贷：银行存款</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接符) -->
+      <div id="u30" class="ax_default _连接">
+        <img id="u30_seg0" class="img " src="images/整体实现思路/u30_seg0.svg" alt="u30_seg0"/>
+        <div id="u30_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接符) -->
+      <div id="u31" class="ax_default _连接">
+        <img id="u31_seg0" class="img " src="images/整体实现思路/u31_seg0.svg" alt="u31_seg0"/>
+        <img id="u31_seg1" class="img " src="images/整体实现思路/u31_seg1.svg" alt="u31_seg1"/>
+        <div id="u31_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u32" class="ax_default _文本段落 transition notrs">
+        <div id="u32_div" class=""></div>
+        <div id="u32_text" class="text ">
+          <p><span>匹配失败</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u33" class="ax_default _文本段落 transition notrs">
+        <div id="u33_div" class=""></div>
+        <div id="u33_text" class="text ">
+          <p><span>匹配成功</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接符) -->
+      <div id="u34" class="ax_default _连接">
+        <img id="u34_seg0" class="img " src="images/整体实现思路/u34_seg0.svg" alt="u34_seg0"/>
+        <img id="u34_seg1" class="img " src="images/整体实现思路/u34_seg1.svg" alt="u34_seg1"/>
+        <div id="u34_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u35" class="ax_default box_2 transition notrs">
+        <div id="u35_div" class=""></div>
+        <div id="u35_text" class="text ">
+          <p><span>会 计 分 录</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u36" class="ax_default _文本段落 transition notrs">
+        <div id="u36_div" class=""></div>
+        <div id="u36_text" class="text ">
+          <p><span>法人主体不一致</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u37" class="ax_default _文本段落 transition notrs">
+        <div id="u37_div" class=""></div>
+        <div id="u37_text" class="text ">
+          <p><span>法人主体一致</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u38" class="ax_default box_1 transition notrs">
+        <div id="u38_div" class=""></div>
+        <div id="u38_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u39" class="ax_default _文本段落 transition notrs">
+        <div id="u39_div" class=""></div>
+        <div id="u39_text" class="text ">
+          <p><span>②B公司：</span></p><p><span>借：XX费用/预付账款</span></p><p><span>&nbsp; 贷：其他应付款</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u40" class="ax_default box_1 transition notrs">
+        <div id="u40_div" class=""></div>
+        <div id="u40_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <script src="resources/scripts/axure/ios.js"></script>
+  </body>
+</html>

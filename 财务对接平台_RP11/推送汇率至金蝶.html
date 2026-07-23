@@ -1,0 +1,603 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>推送汇率至金蝶</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/推送汇率至金蝶/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-3.7.1.min.js"></script>
+    <script src="resources/scripts/axure/axQuery.js"></script>
+    <script src="resources/scripts/axure/globals.js"></script>
+    <script src="resources/scripts/axutils.js"></script>
+    <script src="resources/scripts/axure/annotation.js"></script>
+    <script src="resources/scripts/axure/axQuery.std.js"></script>
+    <script src="resources/scripts/axure/doc.js"></script>
+    <script src="resources/scripts/messagecenter.js"></script>
+    <script src="resources/scripts/axure/events.js"></script>
+    <script src="resources/scripts/axure/recording.js"></script>
+    <script src="resources/scripts/axure/action.js"></script>
+    <script src="resources/scripts/axure/expr.js"></script>
+    <script src="resources/scripts/axure/geometry.js"></script>
+    <script src="resources/scripts/axure/flyout.js"></script>
+    <script src="resources/scripts/axure/model.js"></script>
+    <script src="resources/scripts/axure/repeater.js"></script>
+    <script src="resources/scripts/axure/sto.js"></script>
+    <script src="resources/scripts/axure/utils.temp.js"></script>
+    <script src="resources/scripts/axure/variables.js"></script>
+    <script src="resources/scripts/axure/drag.js"></script>
+    <script src="resources/scripts/axure/move.js"></script>
+    <script src="resources/scripts/axure/visibility.js"></script>
+    <script src="resources/scripts/axure/style.js"></script>
+    <script src="resources/scripts/axure/adaptive.js"></script>
+    <script src="resources/scripts/axure/tree.js"></script>
+    <script src="resources/scripts/axure/init.temp.js"></script>
+    <script src="resources/scripts/axure/legacy.js"></script>
+    <script src="resources/scripts/axure/viewer.js"></script>
+    <script src="resources/scripts/axure/math.js"></script>
+    <script src="resources/scripts/axure/jquery.nicescroll.min.js"></script>
+    <script src="data/document.js"></script>
+    <script src="files/推送汇率至金蝶/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (矩形) -->
+      <div id="u358" class="ax_default box_1 transition notrs">
+        <div id="u358_div" class=""></div>
+        <div id="u358_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u359" class="ax_default _文本段落 transition notrs">
+        <div id="u359_div" class=""></div>
+        <div id="u359_text" class="text ">
+          <p><span style="font-family:&quot;Arial Negreta&quot;, &quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:700;">1.需求说明：</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;支持将RPA对接获取的汇率按规则推送至金蝶EAS；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Negreta&quot;, &quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:700;">2.需求方案：</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;text-decoration:underline ;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">【财务对接平台/EAS基础资料/汇率】：新增【推送汇率至金蝶】按钮：点击按钮打开弹窗如原型所示：</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">2.1列表数据生成逻辑：</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; 2.1.1中国银行汇率：①正常情况下，每月1、8、15、22号及最后一个工作日获取RPA日期为当天的汇率（生效日期为倒数第一天）+最后一个工作日取平均汇率（生效日期为倒数第二天）；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --需排除生成柬埔寨瑞尔、科威特第纳尔、蒙古图格里克、南非兰特汇率</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; ②特殊处理：若1、8、15、22号为周六日，则顺延取后续日期为下周一的汇率。（比如若1号取1号汇率，1号为周六，则实际在3号取3号汇率替代1号生成生效日期为1号的文件）</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;text-decoration:line-through ;">若最后一天为周六日，则往前取周五的汇率。（比如若31号为周日，则实际在29号取29号汇率替代31号生成生效日期为31的文件）</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp;&nbsp; 2.1.2世界货币汇率：①正常情况下，每月2、9、16、23号及最后一个工作日的第二天获取RPA日期为前一天的汇率（生效日期为倒数第一天）+最后一个工作日的第二天取平均汇率（生效日期为倒数第二天）；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ②特殊处理：若2、9、16、23号所取的前一天汇率日期为周六日，则顺延在下周二取后续日期为下周一的汇率。（比如若2号取1号汇率，1号为周六，则实际在4号取3号汇率替代1号生成生效日期为1号的文件）</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;text-decoration:line-through ;">若最后一个工作日的第二天为周六日，则往前取周五的汇率。（比如若31号为周日，则实际在30号取29号汇率替代31号生成生效日期为31的文件）</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; 2.1.3数据生成格式：生效日期分别取1、8、15、22号倒数第二天及最后一天；文件名为生效日期+中国银行/世界货币汇率；（支持下载删除上传）推送状态赋值‘待推送’；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 文件格式需转换为下述格式：（中国银行汇率取汇率+折算汇率；世界货币汇率取兑换人民币汇率）</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">2.2按钮：2.2.1【推送汇率至金蝶】：支持勾选或未勾选按筛选条件点击推送汇率至金蝶按钮，二次确认，确认后将所选范围内【推送状态】为待推送的数据推送至金蝶，推送成功后【推送状态】更新为已推送，已推送文件不允许删除；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 2.2.2【重刷汇率信息】：支持勾选或未勾选按筛选条件重刷，将所选数据各自按【生效日期+原币+目标币+文件内部的汇率值】校验所推汇率是否均在金蝶不存在，不存在则【推送状态】更新为待推送；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">2.3搜索框：【生效日期】：日期框精确到日，包括开始~结束日期无默认值；【推送状态】：下拉多选无默认值，选项包括待推送已推送；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">其他：PRA中国银行和世界货币平均汇率的逻辑改为：各自获取当月最后一个工作日汇率后，分别生成平均汇率；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;text-decoration:underline ;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图像) -->
+      <div id="u360" class="ax_default _图片_ transition notrs">
+        <img id="u360_img" class="img " src="images/推送汇率至金蝶/u360.png"/>
+        <div id="u360_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u361" class="ax_default primary_button transition notrs">
+        <div id="u361_div" class=""></div>
+        <div id="u361_text" class="text ">
+          <p><span>推送汇率至金蝶</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u362" class="ax_default box_1 transition notrs">
+        <div id="u362_div" class=""></div>
+        <div id="u362_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u363" class="ax_default _文本段落 transition notrs">
+        <div id="u363_div" class=""></div>
+        <div id="u363_text" class="text ">
+          <p><span>推送汇率至金蝶</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (表格) -->
+      <div id="u364" class="ax_default">
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u365" class="ax_default table_cell1 transition notrs">
+          <svg data="images/推送汇率至金蝶/u365.svg" id="u365_img" class="img generatedImage" viewbox="0 0 25 30">
+
+  <path d="M 1 1  L 25 1  L 25 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+  <path d="M 0 0.5  L 25 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+          </svg>
+          <div id="u365_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u366" class="ax_default table_cell1 transition notrs">
+          <svg data="images/推送汇率至金蝶/u366.svg" id="u366_img" class="img generatedImage" viewbox="25 0 90 30">
+
+  <path d="M 1 1  L 90 1  L 90 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 25 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 25 0 )" class="stroke" />
+  <path d="M 0 0.5  L 90 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 25 0 )" class="stroke" />
+          </svg>
+          <div id="u366_text" class="text ">
+            <p><span>生效日期</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u367" class="ax_default table_cell1 transition notrs">
+          <svg data="images/推送汇率至金蝶/u367.svg" id="u367_img" class="img generatedImage" viewbox="115 0 194 30">
+
+  <path d="M 1 1  L 194 1  L 194 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 115 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 115 0 )" class="stroke" />
+  <path d="M 0 0.5  L 194 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 115 0 )" class="stroke" />
+          </svg>
+          <div id="u367_text" class="text ">
+            <p><span>文件名</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u368" class="ax_default table_cell1 transition notrs">
+          <svg data="images/推送汇率至金蝶/u368.svg" id="u368_img" class="img generatedImage" viewbox="309 0 82 30">
+
+  <path d="M 1 1  L 81 1  L 81 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 309 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 309 0 )" class="stroke" />
+  <path d="M 0 0.5  L 82 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 309 0 )" class="stroke" />
+  <path d="M 81.5 1  L 81.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 309 0 )" class="stroke" />
+          </svg>
+          <div id="u368_text" class="text ">
+            <p><span>推送状态</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u369" class="ax_default table_cell1 transition notrs">
+          <svg data="images/推送汇率至金蝶/u369.svg" id="u369_img" class="img generatedImage" viewbox="0 30 25 30">
+
+  <path d="M 1 1  L 25 1  L 25 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 30 )" class="stroke" />
+  <path d="M 0 0.5  L 25 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 30 )" class="stroke" />
+          </svg>
+          <div id="u369_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u370" class="ax_default table_cell1 transition notrs">
+          <svg data="images/推送汇率至金蝶/u370.svg" id="u370_img" class="img generatedImage" viewbox="25 30 90 30">
+
+  <path d="M 1 1  L 90 1  L 90 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 25 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 25 30 )" class="stroke" />
+  <path d="M 0 0.5  L 90 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 25 30 )" class="stroke" />
+          </svg>
+          <div id="u370_text" class="text ">
+            <p><span>2026-04-22</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u371" class="ax_default table_cell1 transition notrs">
+          <svg data="images/推送汇率至金蝶/u371.svg" id="u371_img" class="img generatedImage" viewbox="115 30 194 30">
+
+  <path d="M 1 1  L 194 1  L 194 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 115 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 115 30 )" class="stroke" />
+  <path d="M 0 0.5  L 194 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 115 30 )" class="stroke" />
+          </svg>
+          <div id="u371_text" class="text ">
+            <p><span>2026-04-22中国银行汇率</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u372" class="ax_default table_cell1 transition notrs">
+          <svg data="images/推送汇率至金蝶/u372.svg" id="u372_img" class="img generatedImage" viewbox="309 30 82 30">
+
+  <path d="M 1 1  L 81 1  L 81 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 309 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 309 30 )" class="stroke" />
+  <path d="M 0 0.5  L 82 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 309 30 )" class="stroke" />
+  <path d="M 81.5 1  L 81.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 309 30 )" class="stroke" />
+          </svg>
+          <div id="u372_text" class="text ">
+            <p><span>待推送</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u373" class="ax_default table_cell1 transition notrs">
+          <svg data="images/推送汇率至金蝶/u373.svg" id="u373_img" class="img generatedImage" viewbox="0 60 25 30">
+
+  <path d="M 1 1  L 25 1  L 25 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 60 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 60 )" class="stroke" />
+  <path d="M 0 0.5  L 25 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 60 )" class="stroke" />
+  <path d="M 0 29.5  L 25 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 60 )" class="stroke" />
+          </svg>
+          <div id="u373_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u374" class="ax_default table_cell1 transition notrs">
+          <svg data="images/推送汇率至金蝶/u374.svg" id="u374_img" class="img generatedImage" viewbox="25 60 90 30">
+
+  <path d="M 1 1  L 90 1  L 90 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 25 60 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 25 60 )" class="stroke" />
+  <path d="M 0 0.5  L 90 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 25 60 )" class="stroke" />
+  <path d="M 0 29.5  L 90 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 25 60 )" class="stroke" />
+          </svg>
+          <div id="u374_text" class="text ">
+            <p><span>2026-04-15</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u375" class="ax_default table_cell1 transition notrs">
+          <svg data="images/推送汇率至金蝶/u375.svg" id="u375_img" class="img generatedImage" viewbox="115 60 194 30">
+
+  <path d="M 1 1  L 194 1  L 194 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 115 60 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 115 60 )" class="stroke" />
+  <path d="M 0 0.5  L 194 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 115 60 )" class="stroke" />
+  <path d="M 0 29.5  L 194 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 115 60 )" class="stroke" />
+          </svg>
+          <div id="u375_text" class="text ">
+            <p><span>2026-04-15世界货币汇率</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u376" class="ax_default table_cell1 transition notrs">
+          <svg data="images/推送汇率至金蝶/u376.svg" id="u376_img" class="img generatedImage" viewbox="309 60 82 30">
+
+  <path d="M 1 1  L 81 1  L 81 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 309 60 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 309 60 )" class="stroke" />
+  <path d="M 0 0.5  L 82 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 309 60 )" class="stroke" />
+  <path d="M 81.5 1  L 81.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 309 60 )" class="stroke" />
+  <path d="M 0 29.5  L 82 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 309 60 )" class="stroke" />
+          </svg>
+          <div id="u376_text" class="text ">
+            <p><span>已推送</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (图像) -->
+      <div id="u377" class="ax_default _图片_ transition notrs">
+        <img id="u377_img" class="img " src="images/推送汇率至金蝶/u377.png"/>
+        <div id="u377_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图像) -->
+      <div id="u378" class="ax_default _图片_ transition notrs">
+        <img id="u378_img" class="img " src="images/推送汇率至金蝶/u377.png"/>
+        <div id="u378_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u379" class="ax_default _文本段落 transition notrs">
+        <div id="u379_div" class=""></div>
+        <div id="u379_text" class="text ">
+          <p><span>生效日期：&nbsp; 推送状态：</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图像) -->
+      <div id="u380" class="ax_default _图片_ transition notrs">
+        <img id="u380_img" class="img " src="images/推送汇率至金蝶/u380.png"/>
+        <div id="u380_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图像) -->
+      <div id="u381" class="ax_default _图片_ transition notrs">
+        <img id="u381_img" class="img " src="images/推送汇率至金蝶/u381.png"/>
+        <div id="u381_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图像) -->
+      <div id="u382" class="ax_default _图片_ transition notrs">
+        <img id="u382_img" class="img " src="images/推送汇率至金蝶/u382.png"/>
+        <div id="u382_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (表格) -->
+      <div id="u383" class="ax_default">
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u384" class="ax_default table_cell1 transition notrs">
+          <svg data="images/推送汇率至金蝶/u384.svg" id="u384_img" class="img generatedImage" viewbox="0 0 200 30">
+
+  <path d="M 1 1  L 200 1  L 200 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(1, 111, 160, 0.49019607843137253)" stroke="none" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+  <path d="M 0 0.5  L 200 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+          </svg>
+          <div id="u384_text" class="text ">
+            <p><span>当前生成文件</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u385" class="ax_default table_cell1 transition notrs">
+          <svg data="images/推送汇率至金蝶/u385.svg" id="u385_img" class="img generatedImage" viewbox="200 0 902 30">
+
+  <path d="M 1 1  L 901 1  L 901 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(1, 111, 160, 0.49019607843137253)" stroke="none" transform="matrix(1 0 0 1 200 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 0 )" class="stroke" />
+  <path d="M 0 0.5  L 902 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 0 )" class="stroke" />
+  <path d="M 901.5 1  L 901.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 0 )" class="stroke" />
+          </svg>
+          <div id="u385_text" class="text ">
+            <p><span>PRA文件</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u386" class="ax_default table_cell1 transition notrs">
+          <svg data="images/推送汇率至金蝶/u386.svg" id="u386_img" class="img generatedImage" viewbox="0 30 200 34">
+
+  <path d="M 1 1  L 200 1  L 200 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 30 )" class="stroke" />
+  <path d="M 0 0.5  L 200 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 30 )" class="stroke" />
+          </svg>
+          <div id="u386_text" class="text ">
+            <p><span>*汇率兑换关系$原币别_编码</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u387" class="ax_default table_cell1 transition notrs">
+          <svg data="images/推送汇率至金蝶/u387.svg" id="u387_img" class="img generatedImage" viewbox="200 30 902 34">
+
+  <path d="M 1 1  L 901 1  L 901 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 30 )" class="stroke" />
+  <path d="M 0 0.5  L 902 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 30 )" class="stroke" />
+  <path d="M 901.5 1  L 901.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 30 )" class="stroke" />
+          </svg>
+          <div id="u387_text" class="text ">
+            <p><span>货币币种</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u388" class="ax_default table_cell1 transition notrs">
+          <svg data="images/推送汇率至金蝶/u388.svg" id="u388_img" class="img generatedImage" viewbox="0 64 200 30">
+
+  <path d="M 1 1  L 200 1  L 200 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 64 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 64 )" class="stroke" />
+  <path d="M 0 0.5  L 200 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 64 )" class="stroke" />
+          </svg>
+          <div id="u388_text" class="text ">
+            <p><span>汇率兑换关系$原币别_名称_l1</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u389" class="ax_default table_cell1 transition notrs">
+          <svg data="images/推送汇率至金蝶/u389.svg" id="u389_img" class="img generatedImage" viewbox="200 64 902 30">
+
+  <path d="M 1 1  L 901 1  L 901 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 64 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 64 )" class="stroke" />
+  <path d="M 0 0.5  L 902 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 64 )" class="stroke" />
+  <path d="M 901.5 1  L 901.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 64 )" class="stroke" />
+          </svg>
+          <div id="u389_text" class="text ">
+            <p><span>-</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u390" class="ax_default table_cell1 transition notrs">
+          <svg data="images/推送汇率至金蝶/u390.svg" id="u390_img" class="img generatedImage" viewbox="0 94 200 34">
+
+  <path d="M 1 1  L 200 1  L 200 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 94 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 94 )" class="stroke" />
+  <path d="M 0 0.5  L 200 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 94 )" class="stroke" />
+          </svg>
+          <div id="u390_text" class="text ">
+            <p><span>*汇率兑换关系$目标币别_编码</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u391" class="ax_default table_cell1 transition notrs">
+          <svg data="images/推送汇率至金蝶/u391.svg" id="u391_img" class="img generatedImage" viewbox="200 94 902 34">
+
+  <path d="M 1 1  L 901 1  L 901 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 94 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 94 )" class="stroke" />
+  <path d="M 0 0.5  L 902 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 94 )" class="stroke" />
+  <path d="M 901.5 1  L 901.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 94 )" class="stroke" />
+          </svg>
+          <div id="u391_text" class="text ">
+            <p><span>①取中国银行汇率的汇率、世界货币汇率的兑换人民币汇率时，赋RMB；②取中国银行汇率的折算汇率时，赋折算汇率编码；（如折美元汇率，则赋USD）</span></p><p><span style="color:#D9001B;">③取各自平均汇率的平均汇率时，赋RMB；④取各自平均汇率的折算汇率时，赋折算汇率编码；</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u392" class="ax_default table_cell1 transition notrs">
+          <svg data="images/推送汇率至金蝶/u392.svg" id="u392_img" class="img generatedImage" viewbox="0 128 200 30">
+
+  <path d="M 1 1  L 200 1  L 200 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 128 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 128 )" class="stroke" />
+  <path d="M 0 0.5  L 200 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 128 )" class="stroke" />
+          </svg>
+          <div id="u392_text" class="text ">
+            <p><span>汇率兑换关系$目标币别_名称_l1</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u393" class="ax_default table_cell1 transition notrs">
+          <svg data="images/推送汇率至金蝶/u393.svg" id="u393_img" class="img generatedImage" viewbox="200 128 902 30">
+
+  <path d="M 1 1  L 901 1  L 901 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 128 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 128 )" class="stroke" />
+  <path d="M 0 0.5  L 902 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 128 )" class="stroke" />
+  <path d="M 901.5 1  L 901.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 128 )" class="stroke" />
+          </svg>
+          <div id="u393_text" class="text ">
+            <p><span>-</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u394" class="ax_default table_cell1 transition notrs">
+          <svg data="images/推送汇率至金蝶/u394.svg" id="u394_img" class="img generatedImage" viewbox="0 158 200 30">
+
+  <path d="M 1 1  L 200 1  L 200 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 158 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 158 )" class="stroke" />
+  <path d="M 0 0.5  L 200 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 158 )" class="stroke" />
+          </svg>
+          <div id="u394_text" class="text ">
+            <p><span>*汇率值</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u395" class="ax_default table_cell1 transition notrs">
+          <svg data="images/推送汇率至金蝶/u395.svg" id="u395_img" class="img generatedImage" viewbox="200 158 902 30">
+
+  <path d="M 1 1  L 901 1  L 901 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 158 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 158 )" class="stroke" />
+  <path d="M 0 0.5  L 902 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 158 )" class="stroke" />
+  <path d="M 901.5 1  L 901.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 158 )" class="stroke" />
+          </svg>
+          <div id="u395_text" class="text ">
+            <p><span>取汇率或兑换人民币汇率或折算汇率或</span><span style="color:#D9001B;">平均汇率</span><span>值；</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u396" class="ax_default table_cell1 transition notrs">
+          <svg data="images/推送汇率至金蝶/u396.svg" id="u396_img" class="img generatedImage" viewbox="0 188 200 30">
+
+  <path d="M 1 1  L 200 1  L 200 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 188 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 188 )" class="stroke" />
+  <path d="M 0 0.5  L 200 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 188 )" class="stroke" />
+          </svg>
+          <div id="u396_text" class="text ">
+            <p><span>*生效日期</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u397" class="ax_default table_cell1 transition notrs">
+          <svg data="images/推送汇率至金蝶/u397.svg" id="u397_img" class="img generatedImage" viewbox="200 188 902 30">
+
+  <path d="M 1 1  L 901 1  L 901 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 188 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 188 )" class="stroke" />
+  <path d="M 0 0.5  L 902 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 188 )" class="stroke" />
+  <path d="M 901.5 1  L 901.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 188 )" class="stroke" />
+          </svg>
+          <div id="u397_text" class="text ">
+            <p><span>根据上述汇率获取情况分别为1、8、15、22号倒数第二天（平均汇率）和倒数第一天；格式为yyyy-mm-dd</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u398" class="ax_default table_cell1 transition notrs">
+          <svg data="images/推送汇率至金蝶/u398.svg" id="u398_img" class="img generatedImage" viewbox="0 218 200 30">
+
+  <path d="M 1 1  L 200 1  L 200 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 218 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 218 )" class="stroke" />
+  <path d="M 0 0.5  L 200 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 218 )" class="stroke" />
+          </svg>
+          <div id="u398_text" class="text ">
+            <p><span>汇率兑换关系_精度</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u399" class="ax_default table_cell1 transition notrs">
+          <svg data="images/推送汇率至金蝶/u399.svg" id="u399_img" class="img generatedImage" viewbox="200 218 902 30">
+
+  <path d="M 1 1  L 901 1  L 901 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 218 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 218 )" class="stroke" />
+  <path d="M 0 0.5  L 902 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 218 )" class="stroke" />
+  <path d="M 901.5 1  L 901.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 218 )" class="stroke" />
+          </svg>
+          <div id="u399_text" class="text ">
+            <p><span>-</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u400" class="ax_default table_cell1 transition notrs">
+          <svg data="images/推送汇率至金蝶/u400.svg" id="u400_img" class="img generatedImage" viewbox="0 248 200 30">
+
+  <path d="M 1 1  L 200 1  L 200 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 248 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 248 )" class="stroke" />
+  <path d="M 0 0.5  L 200 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 248 )" class="stroke" />
+          </svg>
+          <div id="u400_text" class="text ">
+            <p><span>汇率兑换关系_汇率类型</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u401" class="ax_default table_cell1 transition notrs">
+          <svg data="images/推送汇率至金蝶/u401.svg" id="u401_img" class="img generatedImage" viewbox="200 248 902 30">
+
+  <path d="M 1 1  L 901 1  L 901 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 248 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 248 )" class="stroke" />
+  <path d="M 0 0.5  L 902 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 248 )" class="stroke" />
+  <path d="M 901.5 1  L 901.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 248 )" class="stroke" />
+          </svg>
+          <div id="u401_text" class="text ">
+            <p><span>-</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u402" class="ax_default table_cell1 transition notrs">
+          <svg data="images/推送汇率至金蝶/u402.svg" id="u402_img" class="img generatedImage" viewbox="0 278 200 30">
+
+  <path d="M 1 1  L 200 1  L 200 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 278 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 278 )" class="stroke" />
+  <path d="M 0 0.5  L 200 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 278 )" class="stroke" />
+  <path d="M 0 29.5  L 200 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 278 )" class="stroke" />
+          </svg>
+          <div id="u402_text" class="text ">
+            <p><span>*用于预算</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u403" class="ax_default table_cell1 transition notrs">
+          <svg data="images/推送汇率至金蝶/u403.svg" id="u403_img" class="img generatedImage" viewbox="200 278 902 30">
+
+  <path d="M 1 1  L 901 1  L 901 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 278 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 278 )" class="stroke" />
+  <path d="M 0 0.5  L 902 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 278 )" class="stroke" />
+  <path d="M 901.5 1  L 901.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 278 )" class="stroke" />
+  <path d="M 0 29.5  L 902 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 278 )" class="stroke" />
+          </svg>
+          <div id="u403_text" class="text ">
+            <p><span>赋值FALSE</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u404" class="ax_default primary_button transition notrs">
+        <div id="u404_div" class=""></div>
+        <div id="u404_text" class="text ">
+          <p><span>重刷汇率信息</span></p>
+        </div>
+      </div>
+    </div>
+    <script src="resources/scripts/axure/ios.js"></script>
+  </body>
+</html>
