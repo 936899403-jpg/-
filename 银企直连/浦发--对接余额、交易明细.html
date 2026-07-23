@@ -1,0 +1,2188 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>浦发--对接余额、交易明细</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/浦发--对接余额、交易明细/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-3.7.1.min.js"></script>
+    <script src="resources/scripts/axure/axQuery.js"></script>
+    <script src="resources/scripts/axure/globals.js"></script>
+    <script src="resources/scripts/axutils.js"></script>
+    <script src="resources/scripts/axure/annotation.js"></script>
+    <script src="resources/scripts/axure/axQuery.std.js"></script>
+    <script src="resources/scripts/axure/doc.js"></script>
+    <script src="resources/scripts/messagecenter.js"></script>
+    <script src="resources/scripts/axure/events.js"></script>
+    <script src="resources/scripts/axure/recording.js"></script>
+    <script src="resources/scripts/axure/action.js"></script>
+    <script src="resources/scripts/axure/expr.js"></script>
+    <script src="resources/scripts/axure/geometry.js"></script>
+    <script src="resources/scripts/axure/flyout.js"></script>
+    <script src="resources/scripts/axure/model.js"></script>
+    <script src="resources/scripts/axure/repeater.js"></script>
+    <script src="resources/scripts/axure/sto.js"></script>
+    <script src="resources/scripts/axure/utils.temp.js"></script>
+    <script src="resources/scripts/axure/variables.js"></script>
+    <script src="resources/scripts/axure/drag.js"></script>
+    <script src="resources/scripts/axure/move.js"></script>
+    <script src="resources/scripts/axure/visibility.js"></script>
+    <script src="resources/scripts/axure/style.js"></script>
+    <script src="resources/scripts/axure/adaptive.js"></script>
+    <script src="resources/scripts/axure/tree.js"></script>
+    <script src="resources/scripts/axure/init.temp.js"></script>
+    <script src="resources/scripts/axure/legacy.js"></script>
+    <script src="resources/scripts/axure/viewer.js"></script>
+    <script src="resources/scripts/axure/math.js"></script>
+    <script src="resources/scripts/axure/jquery.nicescroll.min.js"></script>
+    <script src="data/document.js"></script>
+    <script src="files/浦发--对接余额、交易明细/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (矩形) -->
+      <div id="u2608" class="ax_default sticky_3 transition notrs">
+        <div id="u2608_div" class=""></div>
+        <div id="u2608_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u2609" class="ax_default _文本段落 transition notrs">
+        <div id="u2609_div" class=""></div>
+        <div id="u2609_text" class="text ">
+          <p><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;">需求说明：</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">1、实时余额页面：</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; 浦发银行：新增定时任务：新增拉取浦发银行数据 </span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 每</span><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;color:#D9001B;">1H更新</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">一次数据（按照【账号+币种】维度新增/覆盖原数据）；其中，</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.1列表【账号+币种+账户状态】：获取【实体银行-银行账户管理-账户设置】中 【所属银行】为‘浦发银行’的【法人主体+银行账号+币别+账户状态】；（销户账号如不能获取则账面、可用、冻结余额更新为0）</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.2根据1.1所取【银行账号】（排除账户状态=‘销户’的账号）通过接口</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;color:#D9001B;">（4402账户余额查询接口）</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">获取数据到当前页面，对应关系如下：（注意：请求接口返回的所有字段值均需保留至数据库中）</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 更新余额信息按钮逻辑同上，同时参考https://r4tgd0.axshare.com/#g=1&amp;id=0t4nmy&amp;p=%E5%AE%9E%E6%97%B6%E4%BD%99%E9%A2%9D_1</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">2、历史余额页面：</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp;&nbsp; 浦发银行：新增定时任务：新增拉取浦发银行数据</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;color:#D9001B;">每天上午9点</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">更新前一天数据（按照【日期+账号+币种】维度新增/覆盖原数据）；其中，</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 2.1列表【账号+币种+账户状态】：获取【实体银行-银行账户管理-账户设置】中 【所属银行】为‘浦发银行’的【法人主体+银行账号+币别+账户状态】；（销户状态如不能获取同样新增对应日期账号，此时账面余额更新为0）</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 2.2根据1.1所取【银行账号】+前一天的【开始日期~结束日期】（例：20240813~20240813）（排除账户状态=‘销户’的账号）通过接口</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;color:#D9001B;">（4403对公活期账户历史余额查询接口</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">）获取【账户余额】数据到当前页面【账面金额】；（注意：请求接口返回的所有字段均需保留至数据库中）</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 2.3列表【汇率（本位币）】：在新增汇率表取原币为币种，目标币为法人本位币的最新汇率；【汇率（人民币）】：取原币为币种，目标币为人民币的最新汇率；</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 计算【账面余额（本位币）】=账面余额*汇率（本位币）；【账面余额（人民币）】=账面余额*汇率（人民币）；</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 2.4列表【所属银行】赋值‘浦发银行’；【日期】为前一天日期yyyymmdd； 【更新人】赋值‘system’；【更新时间】记录更新时间精确到秒；</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; （注意：请求接口返回的所有字段值均需保留至数据库中）</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">3、当日交易明细页面：</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp;&nbsp; 浦发银行：新增拉取浦发银行数据定时任务：每</span><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;color:#D9001B;">1h更新</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">一次数据（按照【账号+币种】维度新增/覆盖原数据；）其中，</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 3.1列表【账号+币种】：获取【实体银行-银行账户管理-账户设置】中【所属银行】为‘浦发银行’且【账户状态】=‘正常’的【法人主体+银行账号</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;text-decoration:line-through ;">+币别</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">】；</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 3.2根据3.1所取的【账号</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;text-decoration:line-through ;">+币种</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">+自然日交易起始日期~自然日交易终止日期（当天）】通过接口</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;color:#D9001B;">（A561交易明细查询接口）</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">获取数据到当前页面，对应关系如下表：</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; （注意：请求接口返回的所有字段值均需保留至数据库中）</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (动态面板) -->
+      <div id="u2610" class="ax_default">
+        <div id="u2610_state0" class="panel_state" data-label="State1" style="">
+          <div id="u2610_state0_content" class="panel_state_content">
+
+            <!-- Unnamed (表格) -->
+            <div id="u2611" class="ax_default">
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2612" class="ax_default table_cell transition notrs">
+                <svg data="images/实时余额_1/u1893.svg" id="u2612_img" class="img generatedImage" viewbox="0 0 124 33">
+
+  <path d="M 1 1  L 124 1  L 124 33  L 1 33  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" class="fill" />
+  <path d="M 0.5 1  L 0.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+  <path d="M 0 0.5  L 124 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+                </svg>
+                <div id="u2612_text" class="text ">
+                  <p><span>所属银行</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2613" class="ax_default table_cell transition notrs">
+                <svg data="images/实时余额_1/u1894.svg" id="u2613_img" class="img generatedImage" viewbox="124 0 125 33">
+
+  <path d="M 1 1  L 125 1  L 125 33  L 1 33  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 124 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 124 0 )" class="stroke" />
+  <path d="M 0 0.5  L 125 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 124 0 )" class="stroke" />
+                </svg>
+                <div id="u2613_text" class="text ">
+                  <p><span>法人主体</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2614" class="ax_default table_cell transition notrs">
+                <svg data="images/实时余额_1/u1895.svg" id="u2614_img" class="img generatedImage" viewbox="249 0 108 33">
+
+  <path d="M 1 1  L 108 1  L 108 33  L 1 33  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 249 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 249 0 )" class="stroke" />
+  <path d="M 0 0.5  L 108 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 249 0 )" class="stroke" />
+                </svg>
+                <div id="u2614_text" class="text ">
+                  <p><span>账号</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2615" class="ax_default table_cell transition notrs">
+                <svg data="images/实时余额_1/u1896.svg" id="u2615_img" class="img generatedImage" viewbox="357 0 107 33">
+
+  <path d="M 1 1  L 107 1  L 107 33  L 1 33  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 357 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 357 0 )" class="stroke" />
+  <path d="M 0 0.5  L 107 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 357 0 )" class="stroke" />
+                </svg>
+                <div id="u2615_text" class="text ">
+                  <p><span>账户名称</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2616" class="ax_default table_cell transition notrs">
+                <svg data="images/实时余额_1/u1897.svg" id="u2616_img" class="img generatedImage" viewbox="464 0 100 33">
+
+  <path d="M 1 1  L 100 1  L 100 33  L 1 33  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 464 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 464 0 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 464 0 )" class="stroke" />
+                </svg>
+                <div id="u2616_text" class="text ">
+                  <p><span>币种</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2617" class="ax_default table_cell transition notrs">
+                <svg data="images/实时余额_1/u1898.svg" id="u2617_img" class="img generatedImage" viewbox="564 0 100 33">
+
+  <path d="M 1 1  L 100 1  L 100 33  L 1 33  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 564 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 564 0 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 564 0 )" class="stroke" />
+                </svg>
+                <div id="u2617_text" class="text ">
+                  <p><span>账户状态</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2618" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2618.svg" id="u2618_img" class="img generatedImage" viewbox="664 0 134 33">
+
+  <path d="M 1 1  L 134 1  L 134 33  L 1 33  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 664 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 664 0 )" class="stroke" />
+  <path d="M 0 0.5  L 134 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 664 0 )" class="stroke" />
+                </svg>
+                <div id="u2618_text" class="text ">
+                  <p><span>账面余额</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2619" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2619.svg" id="u2619_img" class="img generatedImage" viewbox="798 0 126 33">
+
+  <path d="M 1 1  L 126 1  L 126 33  L 1 33  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 798 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 798 0 )" class="stroke" />
+  <path d="M 0 0.5  L 126 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 798 0 )" class="stroke" />
+                </svg>
+                <div id="u2619_text" class="text ">
+                  <p><span>可用余额</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2620" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2620.svg" id="u2620_img" class="img generatedImage" viewbox="924 0 123 33">
+
+  <path d="M 1 1  L 123 1  L 123 33  L 1 33  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 924 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 924 0 )" class="stroke" />
+  <path d="M 0 0.5  L 123 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 924 0 )" class="stroke" />
+                </svg>
+                <div id="u2620_text" class="text ">
+                  <p><span>冻结金额</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2621" class="ax_default table_cell transition notrs">
+                <svg data="images/实时余额_1/u1902.svg" id="u2621_img" class="img generatedImage" viewbox="1047 0 299 33">
+
+  <path d="M 1 1  L 299 1  L 299 33  L 1 33  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 1047 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1047 0 )" class="stroke" />
+  <path d="M 0 0.5  L 299 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1047 0 )" class="stroke" />
+                </svg>
+                <div id="u2621_text" class="text ">
+                  <p><span>汇率（本位币）</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2622" class="ax_default table_cell transition notrs">
+                <svg data="images/实时余额_1/u1903.svg" id="u2622_img" class="img generatedImage" viewbox="1346 0 194 33">
+
+  <path d="M 1 1  L 194 1  L 194 33  L 1 33  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 1346 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1346 0 )" class="stroke" />
+  <path d="M 0 0.5  L 194 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1346 0 )" class="stroke" />
+                </svg>
+                <div id="u2622_text" class="text ">
+                  <p><span>账面余额（本位币）</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2623" class="ax_default table_cell transition notrs">
+                <svg data="images/实时余额_1/u1904.svg" id="u2623_img" class="img generatedImage" viewbox="1540 0 275 33">
+
+  <path d="M 1 1  L 275 1  L 275 33  L 1 33  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 1540 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1540 0 )" class="stroke" />
+  <path d="M 0 0.5  L 275 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1540 0 )" class="stroke" />
+                </svg>
+                <div id="u2623_text" class="text ">
+                  <p><span>汇率（人民币）</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2624" class="ax_default table_cell transition notrs">
+                <svg data="images/实时余额_1/u1905.svg" id="u2624_img" class="img generatedImage" viewbox="1815 0 209 33">
+
+  <path d="M 1 1  L 209 1  L 209 33  L 1 33  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 1815 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1815 0 )" class="stroke" />
+  <path d="M 0 0.5  L 209 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1815 0 )" class="stroke" />
+                </svg>
+                <div id="u2624_text" class="text ">
+                  <p><span>账面余额（人民币）</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2625" class="ax_default table_cell transition notrs">
+                <svg data="images/实时余额_1/u1906.svg" id="u2625_img" class="img generatedImage" viewbox="2024 0 161 33">
+
+  <path d="M 1 1  L 161 1  L 161 33  L 1 33  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 2024 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2024 0 )" class="stroke" />
+  <path d="M 0 0.5  L 161 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2024 0 )" class="stroke" />
+                </svg>
+                <div id="u2625_text" class="text ">
+                  <p><span>最后交易日期</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2626" class="ax_default table_cell transition notrs">
+                <svg data="images/实时余额_1/u1907.svg" id="u2626_img" class="img generatedImage" viewbox="2185 0 143 33">
+
+  <path d="M 1 1  L 143 1  L 143 33  L 1 33  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 2185 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2185 0 )" class="stroke" />
+  <path d="M 0 0.5  L 143 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2185 0 )" class="stroke" />
+                </svg>
+                <div id="u2626_text" class="text ">
+                  <p><span>更新人</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2627" class="ax_default table_cell transition notrs">
+                <svg data="images/实时余额_1/u1908.svg" id="u2627_img" class="img generatedImage" viewbox="2328 0 149 33">
+
+  <path d="M 1 1  L 148 1  L 148 33  L 1 33  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 2328 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2328 0 )" class="stroke" />
+  <path d="M 0 0.5  L 149 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2328 0 )" class="stroke" />
+  <path d="M 148.5 1  L 148.5 33  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2328 0 )" class="stroke" />
+                </svg>
+                <div id="u2627_text" class="text ">
+                  <p><span>更新时间</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2628" class="ax_default table_cell transition notrs">
+                <svg data="images/实时余额_1/u1909.svg" id="u2628_img" class="img generatedImage" viewbox="0 33 124 49">
+
+  <path d="M 1 1  L 124 1  L 124 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 33 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 33 )" class="stroke" />
+  <path d="M 0 0.5  L 124 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 33 )" class="stroke" />
+  <path d="M 0 48.5  L 124 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 33 )" class="stroke" />
+                </svg>
+                <div id="u2628_text" class="text ">
+                  <p><span>赋固定值‘浦发银行’</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2629" class="ax_default table_cell transition notrs">
+                <svg data="images/实时余额_1/u1910.svg" id="u2629_img" class="img generatedImage" viewbox="124 33 125 49">
+
+  <path d="M 1 1  L 125 1  L 125 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 124 33 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 124 33 )" class="stroke" />
+  <path d="M 0 0.5  L 125 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 124 33 )" class="stroke" />
+  <path d="M 0 48.5  L 125 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 124 33 )" class="stroke" />
+                </svg>
+                <div id="u2629_text" class="text ">
+                  <p><span>账户设置数据</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2630" class="ax_default table_cell transition notrs">
+                <svg data="images/实时余额_1/u1911.svg" id="u2630_img" class="img generatedImage" viewbox="249 33 108 49">
+
+  <path d="M 1 1  L 108 1  L 108 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 249 33 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 249 33 )" class="stroke" />
+  <path d="M 0 0.5  L 108 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 249 33 )" class="stroke" />
+  <path d="M 0 48.5  L 108 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 249 33 )" class="stroke" />
+                </svg>
+                <div id="u2630_text" class="text ">
+                  <p><span>账户设置数据</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2631" class="ax_default table_cell transition notrs">
+                <svg data="images/实时余额_1/u1912.svg" id="u2631_img" class="img generatedImage" viewbox="357 33 107 49">
+
+  <path d="M 1 1  L 107 1  L 107 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 357 33 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 357 33 )" class="stroke" />
+  <path d="M 0 0.5  L 107 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 357 33 )" class="stroke" />
+  <path d="M 0 48.5  L 107 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 357 33 )" class="stroke" />
+                </svg>
+                <div id="u2631_text" class="text ">
+                  <p><span>赋空值‘-’</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2632" class="ax_default table_cell transition notrs">
+                <svg data="images/实时余额_1/u1913.svg" id="u2632_img" class="img generatedImage" viewbox="464 33 100 49">
+
+  <path d="M 1 1  L 100 1  L 100 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 464 33 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 464 33 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 464 33 )" class="stroke" />
+  <path d="M 0 48.5  L 100 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 464 33 )" class="stroke" />
+                </svg>
+                <div id="u2632_text" class="text ">
+                  <p><span>账户设置数据</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2633" class="ax_default table_cell transition notrs">
+                <svg data="images/实时余额_1/u1914.svg" id="u2633_img" class="img generatedImage" viewbox="564 33 100 49">
+
+  <path d="M 1 1  L 100 1  L 100 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 564 33 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 564 33 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 564 33 )" class="stroke" />
+  <path d="M 0 48.5  L 100 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 564 33 )" class="stroke" />
+                </svg>
+                <div id="u2633_text" class="text ">
+                  <p><span>账户设置数据</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2634" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2634.svg" id="u2634_img" class="img generatedImage" viewbox="664 33 134 49">
+
+  <path d="M 1 1  L 134 1  L 134 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 664 33 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 664 33 )" class="stroke" />
+  <path d="M 0 0.5  L 134 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 664 33 )" class="stroke" />
+  <path d="M 0 48.5  L 134 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 664 33 )" class="stroke" />
+                </svg>
+                <div id="u2634_text" class="text ">
+                  <p><span>接口返回账号余额</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2635" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2635.svg" id="u2635_img" class="img generatedImage" viewbox="798 33 126 49">
+
+  <path d="M 1 1  L 126 1  L 126 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 798 33 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 798 33 )" class="stroke" />
+  <path d="M 0 0.5  L 126 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 798 33 )" class="stroke" />
+  <path d="M 0 48.5  L 126 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 798 33 )" class="stroke" />
+                </svg>
+                <div id="u2635_text" class="text ">
+                  <p><span>接口返回可用余额</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2636" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2636.svg" id="u2636_img" class="img generatedImage" viewbox="924 33 123 49">
+
+  <path d="M 1 1  L 123 1  L 123 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 924 33 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 924 33 )" class="stroke" />
+  <path d="M 0 0.5  L 123 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 924 33 )" class="stroke" />
+  <path d="M 0 48.5  L 123 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 924 33 )" class="stroke" />
+                </svg>
+                <div id="u2636_text" class="text ">
+                  <p><span>接口返回冻结余额</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2637" class="ax_default table_cell transition notrs">
+                <svg data="images/实时余额_1/u1918.svg" id="u2637_img" class="img generatedImage" viewbox="1047 33 299 49">
+
+  <path d="M 1 1  L 299 1  L 299 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1047 33 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1047 33 )" class="stroke" />
+  <path d="M 0 0.5  L 299 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1047 33 )" class="stroke" />
+  <path d="M 0 48.5  L 299 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1047 33 )" class="stroke" />
+                </svg>
+                <div id="u2637_text" class="text ">
+                  <p><span>在新增汇率表取原币为币种，目标币为法人本位币的最新汇率</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2638" class="ax_default table_cell transition notrs">
+                <svg data="images/实时余额_1/u1919.svg" id="u2638_img" class="img generatedImage" viewbox="1346 33 194 49">
+
+  <path d="M 1 1  L 194 1  L 194 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1346 33 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1346 33 )" class="stroke" />
+  <path d="M 0 0.5  L 194 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1346 33 )" class="stroke" />
+  <path d="M 0 48.5  L 194 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1346 33 )" class="stroke" />
+                </svg>
+                <div id="u2638_text" class="text ">
+                  <p><span>=账面余额*汇率（本位币）</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2639" class="ax_default table_cell transition notrs">
+                <svg data="images/实时余额_1/u1920.svg" id="u2639_img" class="img generatedImage" viewbox="1540 33 275 49">
+
+  <path d="M 1 1  L 275 1  L 275 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1540 33 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1540 33 )" class="stroke" />
+  <path d="M 0 0.5  L 275 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1540 33 )" class="stroke" />
+  <path d="M 0 48.5  L 275 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1540 33 )" class="stroke" />
+                </svg>
+                <div id="u2639_text" class="text ">
+                  <p><span>在新增汇率表取原币为币种，目标币为人民币的最新汇率</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2640" class="ax_default table_cell transition notrs">
+                <svg data="images/实时余额_1/u1921.svg" id="u2640_img" class="img generatedImage" viewbox="1815 33 209 49">
+
+  <path d="M 1 1  L 209 1  L 209 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1815 33 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1815 33 )" class="stroke" />
+  <path d="M 0 0.5  L 209 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1815 33 )" class="stroke" />
+  <path d="M 0 48.5  L 209 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1815 33 )" class="stroke" />
+                </svg>
+                <div id="u2640_text" class="text ">
+                  <p><span>=账面余额*汇率（人民币）</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2641" class="ax_default table_cell transition notrs">
+                <svg data="images/实时余额_1/u1922.svg" id="u2641_img" class="img generatedImage" viewbox="2024 33 161 49">
+
+  <path d="M 1 1  L 161 1  L 161 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2024 33 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2024 33 )" class="stroke" />
+  <path d="M 0 0.5  L 161 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2024 33 )" class="stroke" />
+  <path d="M 0 48.5  L 161 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2024 33 )" class="stroke" />
+                </svg>
+                <div id="u2641_text" class="text ">
+                  <p><span>赋空值‘-’</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2642" class="ax_default table_cell transition notrs">
+                <svg data="images/实时余额_1/u1923.svg" id="u2642_img" class="img generatedImage" viewbox="2185 33 143 49">
+
+  <path d="M 1 1  L 143 1  L 143 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2185 33 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2185 33 )" class="stroke" />
+  <path d="M 0 0.5  L 143 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2185 33 )" class="stroke" />
+  <path d="M 0 48.5  L 143 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2185 33 )" class="stroke" />
+                </svg>
+                <div id="u2642_text" class="text ">
+                  <p><span>赋固定值‘system’</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2643" class="ax_default table_cell transition notrs">
+                <svg data="images/实时余额_1/u1924.svg" id="u2643_img" class="img generatedImage" viewbox="2328 33 149 49">
+
+  <path d="M 1 1  L 148 1  L 148 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2328 33 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2328 33 )" class="stroke" />
+  <path d="M 0 0.5  L 149 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2328 33 )" class="stroke" />
+  <path d="M 148.5 1  L 148.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2328 33 )" class="stroke" />
+  <path d="M 0 48.5  L 149 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2328 33 )" class="stroke" />
+                </svg>
+                <div id="u2643_text" class="text ">
+                  <p><span>记录更新时间精确到秒</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (动态面板) -->
+      <div id="u2644" class="ax_default">
+        <div id="u2644_state0" class="panel_state" data-label="State1" style="">
+          <div id="u2644_state0_content" class="panel_state_content">
+
+            <!-- Unnamed (表格) -->
+            <div id="u2645" class="ax_default">
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2646" class="ax_default table_cell transition notrs">
+                <svg data="images/当日交易明细/u2225.svg" id="u2646_img" class="img generatedImage" viewbox="0 0 124 30">
+
+  <path d="M 1 1  L 124 1  L 124 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+  <path d="M 0 0.5  L 124 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+                </svg>
+                <div id="u2646_text" class="text ">
+                  <p><span>所属银行</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2647" class="ax_default table_cell transition notrs">
+                <svg data="images/当日交易明细/u2226.svg" id="u2647_img" class="img generatedImage" viewbox="124 0 165 30">
+
+  <path d="M 1 1  L 165 1  L 165 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 124 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 124 0 )" class="stroke" />
+  <path d="M 0 0.5  L 165 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 124 0 )" class="stroke" />
+                </svg>
+                <div id="u2647_text" class="text ">
+                  <p><span>法人主体</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2648" class="ax_default table_cell transition notrs">
+                <svg data="images/当日交易明细/u2227.svg" id="u2648_img" class="img generatedImage" viewbox="289 0 139 30">
+
+  <path d="M 1 1  L 139 1  L 139 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 289 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 289 0 )" class="stroke" />
+  <path d="M 0 0.5  L 139 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 289 0 )" class="stroke" />
+                </svg>
+                <div id="u2648_text" class="text ">
+                  <p><span>交易日期</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2649" class="ax_default table_cell transition notrs">
+                <svg data="images/当日交易明细/u2228.svg" id="u2649_img" class="img generatedImage" viewbox="428 0 139 30">
+
+  <path d="M 1 1  L 139 1  L 139 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 428 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 428 0 )" class="stroke" />
+  <path d="M 0 0.5  L 139 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 428 0 )" class="stroke" />
+                </svg>
+                <div id="u2649_text" class="text ">
+                  <p><span>交易时间</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2650" class="ax_default table_cell transition notrs">
+                <svg data="images/当日交易明细/u2229.svg" id="u2650_img" class="img generatedImage" viewbox="567 0 105 30">
+
+  <path d="M 1 1  L 105 1  L 105 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 567 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 567 0 )" class="stroke" />
+  <path d="M 0 0.5  L 105 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 567 0 )" class="stroke" />
+                </svg>
+                <div id="u2650_text" class="text ">
+                  <p><span>账号</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2651" class="ax_default table_cell transition notrs">
+                <svg data="images/当日交易明细/u2230.svg" id="u2651_img" class="img generatedImage" viewbox="672 0 139 30">
+
+  <path d="M 1 1  L 139 1  L 139 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 672 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 672 0 )" class="stroke" />
+  <path d="M 0 0.5  L 139 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 672 0 )" class="stroke" />
+                </svg>
+                <div id="u2651_text" class="text ">
+                  <p><span>账户名称</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2652" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2652.svg" id="u2652_img" class="img generatedImage" viewbox="811 0 87 30">
+
+  <path d="M 1 1  L 87 1  L 87 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 811 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 811 0 )" class="stroke" />
+  <path d="M 0 0.5  L 87 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 811 0 )" class="stroke" />
+                </svg>
+                <div id="u2652_text" class="text ">
+                  <p><span>账户行名</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2653" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2653.svg" id="u2653_img" class="img generatedImage" viewbox="898 0 252 30">
+
+  <path d="M 1 1  L 252 1  L 252 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 898 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 898 0 )" class="stroke" />
+  <path d="M 0 0.5  L 252 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 898 0 )" class="stroke" />
+                </svg>
+                <div id="u2653_text" class="text ">
+                  <p><span>币种</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2654" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2654.svg" id="u2654_img" class="img generatedImage" viewbox="1150 0 283 30">
+
+  <path d="M 1 1  L 283 1  L 283 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 1150 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1150 0 )" class="stroke" />
+  <path d="M 0 0.5  L 283 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1150 0 )" class="stroke" />
+                </svg>
+                <div id="u2654_text" class="text ">
+                  <p><span>收款金额</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2655" class="ax_default table_cell transition notrs">
+                <svg data="images/当日交易明细/u2234.svg" id="u2655_img" class="img generatedImage" viewbox="1433 0 379 30">
+
+  <path d="M 1 1  L 379 1  L 379 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 1433 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1433 0 )" class="stroke" />
+  <path d="M 0 0.5  L 379 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1433 0 )" class="stroke" />
+                </svg>
+                <div id="u2655_text" class="text ">
+                  <p><span>付款金额</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2656" class="ax_default table_cell transition notrs">
+                <svg data="images/当日交易明细/u2235.svg" id="u2656_img" class="img generatedImage" viewbox="1812 0 178 30">
+
+  <path d="M 1 1  L 178 1  L 178 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 1812 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1812 0 )" class="stroke" />
+  <path d="M 0 0.5  L 178 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1812 0 )" class="stroke" />
+                </svg>
+                <div id="u2656_text" class="text ">
+                  <p><span>余额</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2657" class="ax_default table_cell transition notrs">
+                <svg data="images/当日交易明细/u2236.svg" id="u2657_img" class="img generatedImage" viewbox="1990 0 154 30">
+
+  <path d="M 1 1  L 154 1  L 154 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 1990 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1990 0 )" class="stroke" />
+  <path d="M 0 0.5  L 154 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1990 0 )" class="stroke" />
+                </svg>
+                <div id="u2657_text" class="text ">
+                  <p><span>对方账号</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2658" class="ax_default table_cell transition notrs">
+                <svg data="images/当日交易明细/u2237.svg" id="u2658_img" class="img generatedImage" viewbox="2144 0 137 30">
+
+  <path d="M 1 1  L 137 1  L 137 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 2144 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2144 0 )" class="stroke" />
+  <path d="M 0 0.5  L 137 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2144 0 )" class="stroke" />
+                </svg>
+                <div id="u2658_text" class="text ">
+                  <p><span>对方户名</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2659" class="ax_default table_cell transition notrs">
+                <svg data="images/当日交易明细/u2238.svg" id="u2659_img" class="img generatedImage" viewbox="2281 0 144 30">
+
+  <path d="M 1 1  L 144 1  L 144 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 2281 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2281 0 )" class="stroke" />
+  <path d="M 0 0.5  L 144 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2281 0 )" class="stroke" />
+                </svg>
+                <div id="u2659_text" class="text ">
+                  <p><span>对方行名</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2660" class="ax_default table_cell transition notrs">
+                <svg data="images/当日交易明细/u2239.svg" id="u2660_img" class="img generatedImage" viewbox="2425 0 158 30">
+
+  <path d="M 1 1  L 158 1  L 158 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 2425 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2425 0 )" class="stroke" />
+  <path d="M 0 0.5  L 158 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2425 0 )" class="stroke" />
+                </svg>
+                <div id="u2660_text" class="text ">
+                  <p><span>交易流水号</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2661" class="ax_default table_cell transition notrs">
+                <svg data="images/当日交易明细/u2240.svg" id="u2661_img" class="img generatedImage" viewbox="2583 0 151 30">
+
+  <path d="M 1 1  L 151 1  L 151 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 2583 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2583 0 )" class="stroke" />
+  <path d="M 0 0.5  L 151 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2583 0 )" class="stroke" />
+                </svg>
+                <div id="u2661_text" class="text ">
+                  <p><span>摘要</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2662" class="ax_default table_cell transition notrs">
+                <svg data="images/当日交易明细/u2241.svg" id="u2662_img" class="img generatedImage" viewbox="2734 0 149 30">
+
+  <path d="M 1 1  L 149 1  L 149 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 2734 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2734 0 )" class="stroke" />
+  <path d="M 0 0.5  L 149 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2734 0 )" class="stroke" />
+                </svg>
+                <div id="u2662_text" class="text ">
+                  <p><span>备注</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2663" class="ax_default table_cell transition notrs">
+                <svg data="images/当日交易明细/u2242.svg" id="u2663_img" class="img generatedImage" viewbox="2883 0 125 30">
+
+  <path d="M 1 1  L 125 1  L 125 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 2883 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2883 0 )" class="stroke" />
+  <path d="M 0 0.5  L 125 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2883 0 )" class="stroke" />
+                </svg>
+                <div id="u2663_text" class="text ">
+                  <p><span>附言</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2664" class="ax_default table_cell transition notrs">
+                <svg data="images/当日交易明细/u2243.svg" id="u2664_img" class="img generatedImage" viewbox="3008 0 125 30">
+
+  <path d="M 1 1  L 125 1  L 125 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 3008 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3008 0 )" class="stroke" />
+  <path d="M 0 0.5  L 125 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3008 0 )" class="stroke" />
+                </svg>
+                <div id="u2664_text" class="text ">
+                  <p><span>更新人</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2665" class="ax_default table_cell transition notrs">
+                <svg data="images/当日交易明细/u2244.svg" id="u2665_img" class="img generatedImage" viewbox="3133 0 162 30">
+
+  <path d="M 1 1  L 161 1  L 161 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 3133 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3133 0 )" class="stroke" />
+  <path d="M 0 0.5  L 162 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3133 0 )" class="stroke" />
+  <path d="M 161.5 1  L 161.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3133 0 )" class="stroke" />
+                </svg>
+                <div id="u2665_text" class="text ">
+                  <p><span>更新时间</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2666" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2666.svg" id="u2666_img" class="img generatedImage" viewbox="0 30 124 61">
+
+  <path d="M 1 1  L 124 1  L 124 61  L 1 61  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 61  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 30 )" class="stroke" />
+  <path d="M 0 0.5  L 124 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 30 )" class="stroke" />
+                </svg>
+                <div id="u2666_text" class="text ">
+                  <p><span>赋固定值‘浦发银行’</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2667" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2667.svg" id="u2667_img" class="img generatedImage" viewbox="124 30 165 61">
+
+  <path d="M 1 1  L 165 1  L 165 61  L 1 61  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 124 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 61  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 124 30 )" class="stroke" />
+  <path d="M 0 0.5  L 165 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 124 30 )" class="stroke" />
+                </svg>
+                <div id="u2667_text" class="text ">
+                  <p><span>账户设置数据</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2668" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2668.svg" id="u2668_img" class="img generatedImage" viewbox="289 30 139 61">
+
+  <path d="M 1 1  L 139 1  L 139 61  L 1 61  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 289 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 61  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 289 30 )" class="stroke" />
+  <path d="M 0 0.5  L 139 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 289 30 )" class="stroke" />
+                </svg>
+                <div id="u2668_text" class="text ">
+                  <p><span>yyyymmdd，展示当天年月日</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2669" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2669.svg" id="u2669_img" class="img generatedImage" viewbox="428 30 139 61">
+
+  <path d="M 1 1  L 139 1  L 139 61  L 1 61  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 428 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 61  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 428 30 )" class="stroke" />
+  <path d="M 0 0.5  L 139 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 428 30 )" class="stroke" />
+                </svg>
+                <div id="u2669_text" class="text ">
+                  <p><span>接口返回</span></p><p><span>交易时间</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2670" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2670.svg" id="u2670_img" class="img generatedImage" viewbox="567 30 105 61">
+
+  <path d="M 1 1  L 105 1  L 105 61  L 1 61  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 567 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 61  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 567 30 )" class="stroke" />
+  <path d="M 0 0.5  L 105 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 567 30 )" class="stroke" />
+                </svg>
+                <div id="u2670_text" class="text ">
+                  <p><span>账户设置数据</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2671" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2671.svg" id="u2671_img" class="img generatedImage" viewbox="672 30 139 61">
+
+  <path d="M 1 1  L 139 1  L 139 61  L 1 61  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 672 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 61  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 672 30 )" class="stroke" />
+  <path d="M 0 0.5  L 139 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 672 30 )" class="stroke" />
+                </svg>
+                <div id="u2671_text" class="text ">
+                  <p><span>赋空值‘-’</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2672" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2672.svg" id="u2672_img" class="img generatedImage" viewbox="811 30 87 61">
+
+  <path d="M 1 1  L 87 1  L 87 61  L 1 61  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 811 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 61  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 811 30 )" class="stroke" />
+  <path d="M 0 0.5  L 87 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 811 30 )" class="stroke" />
+                </svg>
+                <div id="u2672_text" class="text ">
+                  <p><span>赋空值‘-’</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2673" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2673.svg" id="u2673_img" class="img generatedImage" viewbox="898 30 252 61">
+
+  <path d="M 1 1  L 252 1  L 252 61  L 1 61  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 898 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 61  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 898 30 )" class="stroke" />
+  <path d="M 0 0.5  L 252 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 898 30 )" class="stroke" />
+                </svg>
+                <div id="u2673_text" class="text ">
+                  <p><span>接口返回货币代号</span></p><p><span>中文在【财务对接平台/币别】取对应编码</span></p><p><span><br></span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2674" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2674.svg" id="u2674_img" class="img generatedImage" viewbox="1150 30 283 61">
+
+  <path d="M 1 1  L 283 1  L 283 61  L 1 61  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1150 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 61  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1150 30 )" class="stroke" />
+  <path d="M 0 0.5  L 283 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1150 30 )" class="stroke" />
+                </svg>
+                <div id="u2674_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2675" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2675.svg" id="u2675_img" class="img generatedImage" viewbox="1433 30 379 61">
+
+  <path d="M 1 1  L 379 1  L 379 61  L 1 61  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1433 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 61  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1433 30 )" class="stroke" />
+  <path d="M 0 0.5  L 379 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1433 30 )" class="stroke" />
+                </svg>
+                <div id="u2675_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2676" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2676.svg" id="u2676_img" class="img generatedImage" viewbox="1812 30 178 61">
+
+  <path d="M 1 1  L 178 1  L 178 61  L 1 61  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1812 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 61  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1812 30 )" class="stroke" />
+  <path d="M 0 0.5  L 178 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1812 30 )" class="stroke" />
+                </svg>
+                <div id="u2676_text" class="text ">
+                  <p><span>接口返回交易后账户余额</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2677" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2677.svg" id="u2677_img" class="img generatedImage" viewbox="1990 30 154 61">
+
+  <path d="M 1 1  L 154 1  L 154 61  L 1 61  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1990 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 61  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1990 30 )" class="stroke" />
+  <path d="M 0 0.5  L 154 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1990 30 )" class="stroke" />
+                </svg>
+                <div id="u2677_text" class="text ">
+                  <p><span>接口返回对方账号</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2678" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2678.svg" id="u2678_img" class="img generatedImage" viewbox="2144 30 137 61">
+
+  <path d="M 1 1  L 137 1  L 137 61  L 1 61  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2144 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 61  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2144 30 )" class="stroke" />
+  <path d="M 0 0.5  L 137 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2144 30 )" class="stroke" />
+                </svg>
+                <div id="u2678_text" class="text ">
+                  <p><span>接口返回对方户名</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2679" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2679.svg" id="u2679_img" class="img generatedImage" viewbox="2281 30 144 61">
+
+  <path d="M 1 1  L 144 1  L 144 61  L 1 61  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2281 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 61  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2281 30 )" class="stroke" />
+  <path d="M 0 0.5  L 144 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2281 30 )" class="stroke" />
+                </svg>
+                <div id="u2679_text" class="text ">
+                  <p><span>接口返回对方行名</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2680" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2680.svg" id="u2680_img" class="img generatedImage" viewbox="2425 30 158 61">
+
+  <path d="M 1 1  L 158 1  L 158 61  L 1 61  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2425 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 61  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2425 30 )" class="stroke" />
+  <path d="M 0 0.5  L 158 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2425 30 )" class="stroke" />
+                </svg>
+                <div id="u2680_text" class="text ">
+                  <p><span>接口返回唯一标识码</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2681" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2681.svg" id="u2681_img" class="img generatedImage" viewbox="2583 30 151 61">
+
+  <path d="M 1 1  L 151 1  L 151 61  L 1 61  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2583 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 61  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2583 30 )" class="stroke" />
+  <path d="M 0 0.5  L 151 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2583 30 )" class="stroke" />
+                </svg>
+                <div id="u2681_text" class="text ">
+                  <p><span>接口返回摘要代码</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2682" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2682.svg" id="u2682_img" class="img generatedImage" viewbox="2734 30 149 61">
+
+  <path d="M 1 1  L 149 1  L 149 61  L 1 61  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2734 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 61  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2734 30 )" class="stroke" />
+  <path d="M 0 0.5  L 149 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2734 30 )" class="stroke" />
+                </svg>
+                <div id="u2682_text" class="text ">
+                  <p><span>接口返回备注</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2683" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2683.svg" id="u2683_img" class="img generatedImage" viewbox="2883 30 125 61">
+
+  <path d="M 1 1  L 125 1  L 125 61  L 1 61  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2883 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 61  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2883 30 )" class="stroke" />
+  <path d="M 0 0.5  L 125 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2883 30 )" class="stroke" />
+                </svg>
+                <div id="u2683_text" class="text ">
+                  <p><span>接口返回客户附言</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2684" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2684.svg" id="u2684_img" class="img generatedImage" viewbox="3008 30 125 61">
+
+  <path d="M 1 1  L 125 1  L 125 61  L 1 61  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 3008 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 61  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3008 30 )" class="stroke" />
+  <path d="M 0 0.5  L 125 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3008 30 )" class="stroke" />
+                </svg>
+                <div id="u2684_text" class="text ">
+                  <p><span>赋固定值‘system’</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2685" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2685.svg" id="u2685_img" class="img generatedImage" viewbox="3133 30 162 61">
+
+  <path d="M 1 1  L 161 1  L 161 61  L 1 61  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 3133 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 61  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3133 30 )" class="stroke" />
+  <path d="M 0 0.5  L 162 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3133 30 )" class="stroke" />
+  <path d="M 161.5 1  L 161.5 61  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3133 30 )" class="stroke" />
+                </svg>
+                <div id="u2685_text" class="text ">
+                  <p><span>记录更新时间精确到秒</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2686" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2686.svg" id="u2686_img" class="img generatedImage" viewbox="0 91 124 49">
+
+  <path d="M 1 1  L 124 1  L 124 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 91 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 91 )" class="stroke" />
+  <path d="M 0 0.5  L 124 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 91 )" class="stroke" />
+  <path d="M 0 48.5  L 124 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 91 )" class="stroke" />
+                </svg>
+                <div id="u2686_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2687" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2687.svg" id="u2687_img" class="img generatedImage" viewbox="124 91 165 49">
+
+  <path d="M 1 1  L 165 1  L 165 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 124 91 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 124 91 )" class="stroke" />
+  <path d="M 0 0.5  L 165 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 124 91 )" class="stroke" />
+  <path d="M 0 48.5  L 165 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 124 91 )" class="stroke" />
+                </svg>
+                <div id="u2687_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2688" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2688.svg" id="u2688_img" class="img generatedImage" viewbox="289 91 139 49">
+
+  <path d="M 1 1  L 139 1  L 139 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 289 91 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 289 91 )" class="stroke" />
+  <path d="M 0 0.5  L 139 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 289 91 )" class="stroke" />
+  <path d="M 0 48.5  L 139 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 289 91 )" class="stroke" />
+                </svg>
+                <div id="u2688_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2689" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2689.svg" id="u2689_img" class="img generatedImage" viewbox="428 91 139 49">
+
+  <path d="M 1 1  L 139 1  L 139 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 428 91 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 428 91 )" class="stroke" />
+  <path d="M 0 0.5  L 139 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 428 91 )" class="stroke" />
+  <path d="M 0 48.5  L 139 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 428 91 )" class="stroke" />
+                </svg>
+                <div id="u2689_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2690" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2690.svg" id="u2690_img" class="img generatedImage" viewbox="567 91 105 49">
+
+  <path d="M 1 1  L 105 1  L 105 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 567 91 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 567 91 )" class="stroke" />
+  <path d="M 0 0.5  L 105 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 567 91 )" class="stroke" />
+  <path d="M 0 48.5  L 105 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 567 91 )" class="stroke" />
+                </svg>
+                <div id="u2690_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2691" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2691.svg" id="u2691_img" class="img generatedImage" viewbox="672 91 139 49">
+
+  <path d="M 1 1  L 139 1  L 139 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 672 91 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 672 91 )" class="stroke" />
+  <path d="M 0 0.5  L 139 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 672 91 )" class="stroke" />
+  <path d="M 0 48.5  L 139 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 672 91 )" class="stroke" />
+                </svg>
+                <div id="u2691_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2692" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2692.svg" id="u2692_img" class="img generatedImage" viewbox="811 91 87 49">
+
+  <path d="M 1 1  L 87 1  L 87 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 811 91 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 811 91 )" class="stroke" />
+  <path d="M 0 0.5  L 87 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 811 91 )" class="stroke" />
+  <path d="M 0 48.5  L 87 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 811 91 )" class="stroke" />
+                </svg>
+                <div id="u2692_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2693" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2693.svg" id="u2693_img" class="img generatedImage" viewbox="898 91 252 49">
+
+  <path d="M 1 1  L 252 1  L 252 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 898 91 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 898 91 )" class="stroke" />
+  <path d="M 0 0.5  L 252 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 898 91 )" class="stroke" />
+  <path d="M 0 48.5  L 252 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 898 91 )" class="stroke" />
+                </svg>
+                <div id="u2693_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2694" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2694.svg" id="u2694_img" class="img generatedImage" viewbox="1150 91 283 49">
+
+  <path d="M 1 1  L 283 1  L 283 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1150 91 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1150 91 )" class="stroke" />
+  <path d="M 0 0.5  L 283 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1150 91 )" class="stroke" />
+  <path d="M 0 48.5  L 283 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1150 91 )" class="stroke" />
+                </svg>
+                <div id="u2694_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2695" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2695.svg" id="u2695_img" class="img generatedImage" viewbox="1433 91 379 49">
+
+  <path d="M 1 1  L 379 1  L 379 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1433 91 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1433 91 )" class="stroke" />
+  <path d="M 0 0.5  L 379 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1433 91 )" class="stroke" />
+  <path d="M 0 48.5  L 379 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1433 91 )" class="stroke" />
+                </svg>
+                <div id="u2695_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2696" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2696.svg" id="u2696_img" class="img generatedImage" viewbox="1812 91 178 49">
+
+  <path d="M 1 1  L 178 1  L 178 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1812 91 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1812 91 )" class="stroke" />
+  <path d="M 0 0.5  L 178 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1812 91 )" class="stroke" />
+  <path d="M 0 48.5  L 178 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1812 91 )" class="stroke" />
+                </svg>
+                <div id="u2696_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2697" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2697.svg" id="u2697_img" class="img generatedImage" viewbox="1990 91 154 49">
+
+  <path d="M 1 1  L 154 1  L 154 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1990 91 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1990 91 )" class="stroke" />
+  <path d="M 0 0.5  L 154 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1990 91 )" class="stroke" />
+  <path d="M 0 48.5  L 154 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1990 91 )" class="stroke" />
+                </svg>
+                <div id="u2697_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2698" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2698.svg" id="u2698_img" class="img generatedImage" viewbox="2144 91 137 49">
+
+  <path d="M 1 1  L 137 1  L 137 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2144 91 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2144 91 )" class="stroke" />
+  <path d="M 0 0.5  L 137 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2144 91 )" class="stroke" />
+  <path d="M 0 48.5  L 137 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2144 91 )" class="stroke" />
+                </svg>
+                <div id="u2698_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2699" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2699.svg" id="u2699_img" class="img generatedImage" viewbox="2281 91 144 49">
+
+  <path d="M 1 1  L 144 1  L 144 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2281 91 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2281 91 )" class="stroke" />
+  <path d="M 0 0.5  L 144 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2281 91 )" class="stroke" />
+  <path d="M 0 48.5  L 144 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2281 91 )" class="stroke" />
+                </svg>
+                <div id="u2699_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2700" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2700.svg" id="u2700_img" class="img generatedImage" viewbox="2425 91 158 49">
+
+  <path d="M 1 1  L 158 1  L 158 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2425 91 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2425 91 )" class="stroke" />
+  <path d="M 0 0.5  L 158 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2425 91 )" class="stroke" />
+  <path d="M 0 48.5  L 158 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2425 91 )" class="stroke" />
+                </svg>
+                <div id="u2700_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2701" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2701.svg" id="u2701_img" class="img generatedImage" viewbox="2583 91 151 49">
+
+  <path d="M 1 1  L 151 1  L 151 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2583 91 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2583 91 )" class="stroke" />
+  <path d="M 0 0.5  L 151 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2583 91 )" class="stroke" />
+  <path d="M 0 48.5  L 151 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2583 91 )" class="stroke" />
+                </svg>
+                <div id="u2701_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2702" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2702.svg" id="u2702_img" class="img generatedImage" viewbox="2734 91 149 49">
+
+  <path d="M 1 1  L 149 1  L 149 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2734 91 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2734 91 )" class="stroke" />
+  <path d="M 0 0.5  L 149 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2734 91 )" class="stroke" />
+  <path d="M 0 48.5  L 149 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2734 91 )" class="stroke" />
+                </svg>
+                <div id="u2702_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2703" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2703.svg" id="u2703_img" class="img generatedImage" viewbox="2883 91 125 49">
+
+  <path d="M 1 1  L 125 1  L 125 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2883 91 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2883 91 )" class="stroke" />
+  <path d="M 0 0.5  L 125 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2883 91 )" class="stroke" />
+  <path d="M 0 48.5  L 125 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2883 91 )" class="stroke" />
+                </svg>
+                <div id="u2703_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2704" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2704.svg" id="u2704_img" class="img generatedImage" viewbox="3008 91 125 49">
+
+  <path d="M 1 1  L 125 1  L 125 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 3008 91 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3008 91 )" class="stroke" />
+  <path d="M 0 0.5  L 125 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3008 91 )" class="stroke" />
+  <path d="M 0 48.5  L 125 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3008 91 )" class="stroke" />
+                </svg>
+                <div id="u2704_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2705" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2705.svg" id="u2705_img" class="img generatedImage" viewbox="3133 91 162 49">
+
+  <path d="M 1 1  L 161 1  L 161 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 3133 91 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3133 91 )" class="stroke" />
+  <path d="M 0 0.5  L 162 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3133 91 )" class="stroke" />
+  <path d="M 161.5 1  L 161.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3133 91 )" class="stroke" />
+  <path d="M 0 48.5  L 162 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3133 91 )" class="stroke" />
+                </svg>
+                <div id="u2705_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2706" class="ax_default _文本段落 transition notrs">
+              <div id="u2706_div" class=""></div>
+              <div id="u2706_text" class="text ">
+                <p><span>当接口返回的借贷标记为</span><span style="color:#D9001B;">贷</span><span>，取交易金额</span></p><p><span>以上条件不满足则赋0</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2707" class="ax_default _文本段落 transition notrs">
+              <div id="u2707_div" class=""></div>
+              <div id="u2707_text" class="text ">
+                <p><span>当接口返回的借贷标记为</span><span style="color:#D9001B;">借</span><span>，取交易金额</span></p><p><span>以上条件不满足则赋0</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (动态面板) -->
+      <div id="u2708" class="ax_default">
+        <div id="u2708_state0" class="panel_state" data-label="State1" style="">
+          <div id="u2708_state0_content" class="panel_state_content">
+
+            <!-- Unnamed (表格) -->
+            <div id="u2709" class="ax_default">
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2710" class="ax_default table_cell transition notrs">
+                <svg data="images/当日交易明细/u2225.svg" id="u2710_img" class="img generatedImage" viewbox="0 0 124 30">
+
+  <path d="M 1 1  L 124 1  L 124 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+  <path d="M 0 0.5  L 124 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+                </svg>
+                <div id="u2710_text" class="text ">
+                  <p><span>所属银行</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2711" class="ax_default table_cell transition notrs">
+                <svg data="images/当日交易明细/u2226.svg" id="u2711_img" class="img generatedImage" viewbox="124 0 165 30">
+
+  <path d="M 1 1  L 165 1  L 165 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 124 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 124 0 )" class="stroke" />
+  <path d="M 0 0.5  L 165 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 124 0 )" class="stroke" />
+                </svg>
+                <div id="u2711_text" class="text ">
+                  <p><span>法人主体</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2712" class="ax_default table_cell transition notrs">
+                <svg data="images/当日交易明细/u2227.svg" id="u2712_img" class="img generatedImage" viewbox="289 0 139 30">
+
+  <path d="M 1 1  L 139 1  L 139 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 289 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 289 0 )" class="stroke" />
+  <path d="M 0 0.5  L 139 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 289 0 )" class="stroke" />
+                </svg>
+                <div id="u2712_text" class="text ">
+                  <p><span>交易日期</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2713" class="ax_default table_cell transition notrs">
+                <svg data="images/当日交易明细/u2228.svg" id="u2713_img" class="img generatedImage" viewbox="428 0 139 30">
+
+  <path d="M 1 1  L 139 1  L 139 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 428 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 428 0 )" class="stroke" />
+  <path d="M 0 0.5  L 139 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 428 0 )" class="stroke" />
+                </svg>
+                <div id="u2713_text" class="text ">
+                  <p><span>交易时间</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2714" class="ax_default table_cell transition notrs">
+                <svg data="images/当日交易明细/u2229.svg" id="u2714_img" class="img generatedImage" viewbox="567 0 105 30">
+
+  <path d="M 1 1  L 105 1  L 105 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 567 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 567 0 )" class="stroke" />
+  <path d="M 0 0.5  L 105 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 567 0 )" class="stroke" />
+                </svg>
+                <div id="u2714_text" class="text ">
+                  <p><span>账号</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2715" class="ax_default table_cell transition notrs">
+                <svg data="images/当日交易明细/u2230.svg" id="u2715_img" class="img generatedImage" viewbox="672 0 139 30">
+
+  <path d="M 1 1  L 139 1  L 139 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 672 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 672 0 )" class="stroke" />
+  <path d="M 0 0.5  L 139 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 672 0 )" class="stroke" />
+                </svg>
+                <div id="u2715_text" class="text ">
+                  <p><span>账户名称</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2716" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2716.svg" id="u2716_img" class="img generatedImage" viewbox="811 0 93 30">
+
+  <path d="M 1 1  L 93 1  L 93 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 811 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 811 0 )" class="stroke" />
+  <path d="M 0 0.5  L 93 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 811 0 )" class="stroke" />
+                </svg>
+                <div id="u2716_text" class="text ">
+                  <p><span>账户行名</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2717" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2717.svg" id="u2717_img" class="img generatedImage" viewbox="904 0 257 30">
+
+  <path d="M 1 1  L 257 1  L 257 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 904 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 904 0 )" class="stroke" />
+  <path d="M 0 0.5  L 257 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 904 0 )" class="stroke" />
+                </svg>
+                <div id="u2717_text" class="text ">
+                  <p><span>币种</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2718" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2718.svg" id="u2718_img" class="img generatedImage" viewbox="1161 0 272 30">
+
+  <path d="M 1 1  L 272 1  L 272 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 1161 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1161 0 )" class="stroke" />
+  <path d="M 0 0.5  L 272 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1161 0 )" class="stroke" />
+                </svg>
+                <div id="u2718_text" class="text ">
+                  <p><span>收款金额</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2719" class="ax_default table_cell transition notrs">
+                <svg data="images/当日交易明细/u2234.svg" id="u2719_img" class="img generatedImage" viewbox="1433 0 379 30">
+
+  <path d="M 1 1  L 379 1  L 379 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 1433 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1433 0 )" class="stroke" />
+  <path d="M 0 0.5  L 379 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1433 0 )" class="stroke" />
+                </svg>
+                <div id="u2719_text" class="text ">
+                  <p><span>付款金额</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2720" class="ax_default table_cell transition notrs">
+                <svg data="images/当日交易明细/u2235.svg" id="u2720_img" class="img generatedImage" viewbox="1812 0 178 30">
+
+  <path d="M 1 1  L 178 1  L 178 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 1812 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1812 0 )" class="stroke" />
+  <path d="M 0 0.5  L 178 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1812 0 )" class="stroke" />
+                </svg>
+                <div id="u2720_text" class="text ">
+                  <p><span>余额</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2721" class="ax_default table_cell transition notrs">
+                <svg data="images/当日交易明细/u2236.svg" id="u2721_img" class="img generatedImage" viewbox="1990 0 154 30">
+
+  <path d="M 1 1  L 154 1  L 154 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 1990 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1990 0 )" class="stroke" />
+  <path d="M 0 0.5  L 154 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1990 0 )" class="stroke" />
+                </svg>
+                <div id="u2721_text" class="text ">
+                  <p><span>对方账号</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2722" class="ax_default table_cell transition notrs">
+                <svg data="images/当日交易明细/u2237.svg" id="u2722_img" class="img generatedImage" viewbox="2144 0 137 30">
+
+  <path d="M 1 1  L 137 1  L 137 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 2144 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2144 0 )" class="stroke" />
+  <path d="M 0 0.5  L 137 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2144 0 )" class="stroke" />
+                </svg>
+                <div id="u2722_text" class="text ">
+                  <p><span>对方户名</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2723" class="ax_default table_cell transition notrs">
+                <svg data="images/当日交易明细/u2238.svg" id="u2723_img" class="img generatedImage" viewbox="2281 0 144 30">
+
+  <path d="M 1 1  L 144 1  L 144 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 2281 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2281 0 )" class="stroke" />
+  <path d="M 0 0.5  L 144 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2281 0 )" class="stroke" />
+                </svg>
+                <div id="u2723_text" class="text ">
+                  <p><span>对方行名</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2724" class="ax_default table_cell transition notrs">
+                <svg data="images/当日交易明细/u2239.svg" id="u2724_img" class="img generatedImage" viewbox="2425 0 158 30">
+
+  <path d="M 1 1  L 158 1  L 158 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 2425 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2425 0 )" class="stroke" />
+  <path d="M 0 0.5  L 158 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2425 0 )" class="stroke" />
+                </svg>
+                <div id="u2724_text" class="text ">
+                  <p><span>交易流水号</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2725" class="ax_default table_cell transition notrs">
+                <svg data="images/当日交易明细/u2240.svg" id="u2725_img" class="img generatedImage" viewbox="2583 0 151 30">
+
+  <path d="M 1 1  L 151 1  L 151 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 2583 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2583 0 )" class="stroke" />
+  <path d="M 0 0.5  L 151 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2583 0 )" class="stroke" />
+                </svg>
+                <div id="u2725_text" class="text ">
+                  <p><span>摘要</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2726" class="ax_default table_cell transition notrs">
+                <svg data="images/当日交易明细/u2241.svg" id="u2726_img" class="img generatedImage" viewbox="2734 0 149 30">
+
+  <path d="M 1 1  L 149 1  L 149 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 2734 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2734 0 )" class="stroke" />
+  <path d="M 0 0.5  L 149 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2734 0 )" class="stroke" />
+                </svg>
+                <div id="u2726_text" class="text ">
+                  <p><span>备注</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2727" class="ax_default table_cell transition notrs">
+                <svg data="images/当日交易明细/u2242.svg" id="u2727_img" class="img generatedImage" viewbox="2883 0 125 30">
+
+  <path d="M 1 1  L 125 1  L 125 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 2883 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2883 0 )" class="stroke" />
+  <path d="M 0 0.5  L 125 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2883 0 )" class="stroke" />
+                </svg>
+                <div id="u2727_text" class="text ">
+                  <p><span>附言</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2728" class="ax_default table_cell transition notrs">
+                <svg data="images/当日交易明细/u2243.svg" id="u2728_img" class="img generatedImage" viewbox="3008 0 125 30">
+
+  <path d="M 1 1  L 125 1  L 125 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 3008 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3008 0 )" class="stroke" />
+  <path d="M 0 0.5  L 125 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3008 0 )" class="stroke" />
+                </svg>
+                <div id="u2728_text" class="text ">
+                  <p><span>更新人</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2729" class="ax_default table_cell transition notrs">
+                <svg data="images/当日交易明细/u2244.svg" id="u2729_img" class="img generatedImage" viewbox="3133 0 162 30">
+
+  <path d="M 1 1  L 161 1  L 161 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(2, 125, 180, 0.6823529411764706)" stroke="none" transform="matrix(1 0 0 1 3133 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3133 0 )" class="stroke" />
+  <path d="M 0 0.5  L 162 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3133 0 )" class="stroke" />
+  <path d="M 161.5 1  L 161.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3133 0 )" class="stroke" />
+                </svg>
+                <div id="u2729_text" class="text ">
+                  <p><span>更新时间</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2730" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2730.svg" id="u2730_img" class="img generatedImage" viewbox="0 30 124 64">
+
+  <path d="M 1 1  L 124 1  L 124 64  L 1 64  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 64  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 30 )" class="stroke" />
+  <path d="M 0 0.5  L 124 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 30 )" class="stroke" />
+                </svg>
+                <div id="u2730_text" class="text ">
+                  <p><span>赋固定值‘浦发银行’</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2731" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2731.svg" id="u2731_img" class="img generatedImage" viewbox="124 30 165 64">
+
+  <path d="M 1 1  L 165 1  L 165 64  L 1 64  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 124 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 64  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 124 30 )" class="stroke" />
+  <path d="M 0 0.5  L 165 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 124 30 )" class="stroke" />
+                </svg>
+                <div id="u2731_text" class="text ">
+                  <p><span>账户设置数据</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2732" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2732.svg" id="u2732_img" class="img generatedImage" viewbox="289 30 139 64">
+
+  <path d="M 1 1  L 139 1  L 139 64  L 1 64  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 289 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 64  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 289 30 )" class="stroke" />
+  <path d="M 0 0.5  L 139 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 289 30 )" class="stroke" />
+                </svg>
+                <div id="u2732_text" class="text ">
+                  <p><span>yyyymmdd，展示前一天年月日</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2733" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2733.svg" id="u2733_img" class="img generatedImage" viewbox="428 30 139 64">
+
+  <path d="M 1 1  L 139 1  L 139 64  L 1 64  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 428 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 64  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 428 30 )" class="stroke" />
+  <path d="M 0 0.5  L 139 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 428 30 )" class="stroke" />
+                </svg>
+                <div id="u2733_text" class="text ">
+                  <p><span>接口返回</span></p><p><span>交易时间</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2734" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2734.svg" id="u2734_img" class="img generatedImage" viewbox="567 30 105 64">
+
+  <path d="M 1 1  L 105 1  L 105 64  L 1 64  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 567 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 64  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 567 30 )" class="stroke" />
+  <path d="M 0 0.5  L 105 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 567 30 )" class="stroke" />
+                </svg>
+                <div id="u2734_text" class="text ">
+                  <p><span>账户设置数据</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2735" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2735.svg" id="u2735_img" class="img generatedImage" viewbox="672 30 139 64">
+
+  <path d="M 1 1  L 139 1  L 139 64  L 1 64  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 672 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 64  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 672 30 )" class="stroke" />
+  <path d="M 0 0.5  L 139 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 672 30 )" class="stroke" />
+                </svg>
+                <div id="u2735_text" class="text ">
+                  <p><span>赋空值‘-’</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2736" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2736.svg" id="u2736_img" class="img generatedImage" viewbox="811 30 93 64">
+
+  <path d="M 1 1  L 93 1  L 93 64  L 1 64  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 811 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 64  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 811 30 )" class="stroke" />
+  <path d="M 0 0.5  L 93 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 811 30 )" class="stroke" />
+                </svg>
+                <div id="u2736_text" class="text ">
+                  <p><span>赋空值‘-’</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2737" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2737.svg" id="u2737_img" class="img generatedImage" viewbox="904 30 257 64">
+
+  <path d="M 1 1  L 257 1  L 257 64  L 1 64  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 904 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 64  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 904 30 )" class="stroke" />
+  <path d="M 0 0.5  L 257 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 904 30 )" class="stroke" />
+                </svg>
+                <div id="u2737_text" class="text ">
+                  <p><span>接口返回货币代号</span></p><p><span>中文在【财务对接平台/币别】取对应编码</span></p><p><span><br></span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2738" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2738.svg" id="u2738_img" class="img generatedImage" viewbox="1161 30 272 64">
+
+  <path d="M 1 1  L 272 1  L 272 64  L 1 64  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1161 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 64  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1161 30 )" class="stroke" />
+  <path d="M 0 0.5  L 272 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1161 30 )" class="stroke" />
+                </svg>
+                <div id="u2738_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2739" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2739.svg" id="u2739_img" class="img generatedImage" viewbox="1433 30 379 64">
+
+  <path d="M 1 1  L 379 1  L 379 64  L 1 64  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1433 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 64  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1433 30 )" class="stroke" />
+  <path d="M 0 0.5  L 379 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1433 30 )" class="stroke" />
+                </svg>
+                <div id="u2739_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2740" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2740.svg" id="u2740_img" class="img generatedImage" viewbox="1812 30 178 64">
+
+  <path d="M 1 1  L 178 1  L 178 64  L 1 64  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1812 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 64  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1812 30 )" class="stroke" />
+  <path d="M 0 0.5  L 178 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1812 30 )" class="stroke" />
+                </svg>
+                <div id="u2740_text" class="text ">
+                  <p><span>接口返回交易后账户余额</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2741" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2741.svg" id="u2741_img" class="img generatedImage" viewbox="1990 30 154 64">
+
+  <path d="M 1 1  L 154 1  L 154 64  L 1 64  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1990 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 64  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1990 30 )" class="stroke" />
+  <path d="M 0 0.5  L 154 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1990 30 )" class="stroke" />
+                </svg>
+                <div id="u2741_text" class="text ">
+                  <p><span>接口返回对方账号</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2742" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2742.svg" id="u2742_img" class="img generatedImage" viewbox="2144 30 137 64">
+
+  <path d="M 1 1  L 137 1  L 137 64  L 1 64  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2144 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 64  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2144 30 )" class="stroke" />
+  <path d="M 0 0.5  L 137 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2144 30 )" class="stroke" />
+                </svg>
+                <div id="u2742_text" class="text ">
+                  <p><span>接口返回对方户名</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2743" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2743.svg" id="u2743_img" class="img generatedImage" viewbox="2281 30 144 64">
+
+  <path d="M 1 1  L 144 1  L 144 64  L 1 64  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2281 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 64  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2281 30 )" class="stroke" />
+  <path d="M 0 0.5  L 144 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2281 30 )" class="stroke" />
+                </svg>
+                <div id="u2743_text" class="text ">
+                  <p><span>接口返回对方行名</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2744" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2744.svg" id="u2744_img" class="img generatedImage" viewbox="2425 30 158 64">
+
+  <path d="M 1 1  L 158 1  L 158 64  L 1 64  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2425 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 64  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2425 30 )" class="stroke" />
+  <path d="M 0 0.5  L 158 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2425 30 )" class="stroke" />
+                </svg>
+                <div id="u2744_text" class="text ">
+                  <p><span>接口返回唯一标识码</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2745" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2745.svg" id="u2745_img" class="img generatedImage" viewbox="2583 30 151 64">
+
+  <path d="M 1 1  L 151 1  L 151 64  L 1 64  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2583 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 64  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2583 30 )" class="stroke" />
+  <path d="M 0 0.5  L 151 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2583 30 )" class="stroke" />
+                </svg>
+                <div id="u2745_text" class="text ">
+                  <p><span>接口返回摘要代码</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2746" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2746.svg" id="u2746_img" class="img generatedImage" viewbox="2734 30 149 64">
+
+  <path d="M 1 1  L 149 1  L 149 64  L 1 64  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2734 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 64  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2734 30 )" class="stroke" />
+  <path d="M 0 0.5  L 149 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2734 30 )" class="stroke" />
+                </svg>
+                <div id="u2746_text" class="text ">
+                  <p><span>接口返回备注</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2747" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2747.svg" id="u2747_img" class="img generatedImage" viewbox="2883 30 125 64">
+
+  <path d="M 1 1  L 125 1  L 125 64  L 1 64  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2883 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 64  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2883 30 )" class="stroke" />
+  <path d="M 0 0.5  L 125 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2883 30 )" class="stroke" />
+                </svg>
+                <div id="u2747_text" class="text ">
+                  <p><span>接口返回客户附言</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2748" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2748.svg" id="u2748_img" class="img generatedImage" viewbox="3008 30 125 64">
+
+  <path d="M 1 1  L 125 1  L 125 64  L 1 64  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 3008 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 64  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3008 30 )" class="stroke" />
+  <path d="M 0 0.5  L 125 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3008 30 )" class="stroke" />
+                </svg>
+                <div id="u2748_text" class="text ">
+                  <p><span>赋固定值‘system’</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2749" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2749.svg" id="u2749_img" class="img generatedImage" viewbox="3133 30 162 64">
+
+  <path d="M 1 1  L 161 1  L 161 64  L 1 64  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 3133 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 64  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3133 30 )" class="stroke" />
+  <path d="M 0 0.5  L 162 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3133 30 )" class="stroke" />
+  <path d="M 161.5 1  L 161.5 64  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3133 30 )" class="stroke" />
+                </svg>
+                <div id="u2749_text" class="text ">
+                  <p><span>记录更新时间精确到秒</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2750" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2750.svg" id="u2750_img" class="img generatedImage" viewbox="0 94 124 49">
+
+  <path d="M 1 1  L 124 1  L 124 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 94 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 94 )" class="stroke" />
+  <path d="M 0 0.5  L 124 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 94 )" class="stroke" />
+  <path d="M 0 48.5  L 124 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 94 )" class="stroke" />
+                </svg>
+                <div id="u2750_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2751" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2751.svg" id="u2751_img" class="img generatedImage" viewbox="124 94 165 49">
+
+  <path d="M 1 1  L 165 1  L 165 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 124 94 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 124 94 )" class="stroke" />
+  <path d="M 0 0.5  L 165 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 124 94 )" class="stroke" />
+  <path d="M 0 48.5  L 165 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 124 94 )" class="stroke" />
+                </svg>
+                <div id="u2751_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2752" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2752.svg" id="u2752_img" class="img generatedImage" viewbox="289 94 139 49">
+
+  <path d="M 1 1  L 139 1  L 139 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 289 94 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 289 94 )" class="stroke" />
+  <path d="M 0 0.5  L 139 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 289 94 )" class="stroke" />
+  <path d="M 0 48.5  L 139 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 289 94 )" class="stroke" />
+                </svg>
+                <div id="u2752_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2753" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2753.svg" id="u2753_img" class="img generatedImage" viewbox="428 94 139 49">
+
+  <path d="M 1 1  L 139 1  L 139 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 428 94 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 428 94 )" class="stroke" />
+  <path d="M 0 0.5  L 139 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 428 94 )" class="stroke" />
+  <path d="M 0 48.5  L 139 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 428 94 )" class="stroke" />
+                </svg>
+                <div id="u2753_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2754" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2754.svg" id="u2754_img" class="img generatedImage" viewbox="567 94 105 49">
+
+  <path d="M 1 1  L 105 1  L 105 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 567 94 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 567 94 )" class="stroke" />
+  <path d="M 0 0.5  L 105 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 567 94 )" class="stroke" />
+  <path d="M 0 48.5  L 105 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 567 94 )" class="stroke" />
+                </svg>
+                <div id="u2754_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2755" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2755.svg" id="u2755_img" class="img generatedImage" viewbox="672 94 139 49">
+
+  <path d="M 1 1  L 139 1  L 139 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 672 94 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 672 94 )" class="stroke" />
+  <path d="M 0 0.5  L 139 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 672 94 )" class="stroke" />
+  <path d="M 0 48.5  L 139 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 672 94 )" class="stroke" />
+                </svg>
+                <div id="u2755_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2756" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2756.svg" id="u2756_img" class="img generatedImage" viewbox="811 94 93 49">
+
+  <path d="M 1 1  L 93 1  L 93 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 811 94 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 811 94 )" class="stroke" />
+  <path d="M 0 0.5  L 93 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 811 94 )" class="stroke" />
+  <path d="M 0 48.5  L 93 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 811 94 )" class="stroke" />
+                </svg>
+                <div id="u2756_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2757" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2757.svg" id="u2757_img" class="img generatedImage" viewbox="904 94 257 49">
+
+  <path d="M 1 1  L 257 1  L 257 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 904 94 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 904 94 )" class="stroke" />
+  <path d="M 0 0.5  L 257 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 904 94 )" class="stroke" />
+  <path d="M 0 48.5  L 257 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 904 94 )" class="stroke" />
+                </svg>
+                <div id="u2757_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2758" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2758.svg" id="u2758_img" class="img generatedImage" viewbox="1161 94 272 49">
+
+  <path d="M 1 1  L 272 1  L 272 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1161 94 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1161 94 )" class="stroke" />
+  <path d="M 0 0.5  L 272 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1161 94 )" class="stroke" />
+  <path d="M 0 48.5  L 272 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1161 94 )" class="stroke" />
+                </svg>
+                <div id="u2758_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2759" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2759.svg" id="u2759_img" class="img generatedImage" viewbox="1433 94 379 49">
+
+  <path d="M 1 1  L 379 1  L 379 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1433 94 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1433 94 )" class="stroke" />
+  <path d="M 0 0.5  L 379 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1433 94 )" class="stroke" />
+  <path d="M 0 48.5  L 379 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1433 94 )" class="stroke" />
+                </svg>
+                <div id="u2759_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2760" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2760.svg" id="u2760_img" class="img generatedImage" viewbox="1812 94 178 49">
+
+  <path d="M 1 1  L 178 1  L 178 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1812 94 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1812 94 )" class="stroke" />
+  <path d="M 0 0.5  L 178 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1812 94 )" class="stroke" />
+  <path d="M 0 48.5  L 178 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1812 94 )" class="stroke" />
+                </svg>
+                <div id="u2760_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2761" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2761.svg" id="u2761_img" class="img generatedImage" viewbox="1990 94 154 49">
+
+  <path d="M 1 1  L 154 1  L 154 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 1990 94 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1990 94 )" class="stroke" />
+  <path d="M 0 0.5  L 154 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1990 94 )" class="stroke" />
+  <path d="M 0 48.5  L 154 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1990 94 )" class="stroke" />
+                </svg>
+                <div id="u2761_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2762" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2762.svg" id="u2762_img" class="img generatedImage" viewbox="2144 94 137 49">
+
+  <path d="M 1 1  L 137 1  L 137 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2144 94 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2144 94 )" class="stroke" />
+  <path d="M 0 0.5  L 137 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2144 94 )" class="stroke" />
+  <path d="M 0 48.5  L 137 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2144 94 )" class="stroke" />
+                </svg>
+                <div id="u2762_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2763" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2763.svg" id="u2763_img" class="img generatedImage" viewbox="2281 94 144 49">
+
+  <path d="M 1 1  L 144 1  L 144 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2281 94 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2281 94 )" class="stroke" />
+  <path d="M 0 0.5  L 144 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2281 94 )" class="stroke" />
+  <path d="M 0 48.5  L 144 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2281 94 )" class="stroke" />
+                </svg>
+                <div id="u2763_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2764" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2764.svg" id="u2764_img" class="img generatedImage" viewbox="2425 94 158 49">
+
+  <path d="M 1 1  L 158 1  L 158 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2425 94 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2425 94 )" class="stroke" />
+  <path d="M 0 0.5  L 158 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2425 94 )" class="stroke" />
+  <path d="M 0 48.5  L 158 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2425 94 )" class="stroke" />
+                </svg>
+                <div id="u2764_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2765" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2765.svg" id="u2765_img" class="img generatedImage" viewbox="2583 94 151 49">
+
+  <path d="M 1 1  L 151 1  L 151 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2583 94 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2583 94 )" class="stroke" />
+  <path d="M 0 0.5  L 151 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2583 94 )" class="stroke" />
+  <path d="M 0 48.5  L 151 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2583 94 )" class="stroke" />
+                </svg>
+                <div id="u2765_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2766" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2766.svg" id="u2766_img" class="img generatedImage" viewbox="2734 94 149 49">
+
+  <path d="M 1 1  L 149 1  L 149 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2734 94 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2734 94 )" class="stroke" />
+  <path d="M 0 0.5  L 149 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2734 94 )" class="stroke" />
+  <path d="M 0 48.5  L 149 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2734 94 )" class="stroke" />
+                </svg>
+                <div id="u2766_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2767" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2767.svg" id="u2767_img" class="img generatedImage" viewbox="2883 94 125 49">
+
+  <path d="M 1 1  L 125 1  L 125 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 2883 94 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2883 94 )" class="stroke" />
+  <path d="M 0 0.5  L 125 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2883 94 )" class="stroke" />
+  <path d="M 0 48.5  L 125 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 2883 94 )" class="stroke" />
+                </svg>
+                <div id="u2767_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2768" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2768.svg" id="u2768_img" class="img generatedImage" viewbox="3008 94 125 49">
+
+  <path d="M 1 1  L 125 1  L 125 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 3008 94 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3008 94 )" class="stroke" />
+  <path d="M 0 0.5  L 125 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3008 94 )" class="stroke" />
+  <path d="M 0 48.5  L 125 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3008 94 )" class="stroke" />
+                </svg>
+                <div id="u2768_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (表格单元) -->
+              <div id="u2769" class="ax_default table_cell transition notrs">
+                <svg data="images/浦发--对接余额、交易明细/u2769.svg" id="u2769_img" class="img generatedImage" viewbox="3133 94 162 49">
+
+  <path d="M 1 1  L 161 1  L 161 48  L 1 48  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 3133 94 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3133 94 )" class="stroke" />
+  <path d="M 0 0.5  L 162 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3133 94 )" class="stroke" />
+  <path d="M 161.5 1  L 161.5 48  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3133 94 )" class="stroke" />
+  <path d="M 0 48.5  L 162 48.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 3133 94 )" class="stroke" />
+                </svg>
+                <div id="u2769_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2770" class="ax_default _文本段落 transition notrs">
+              <div id="u2770_div" class=""></div>
+              <div id="u2770_text" class="text ">
+                <p><span>当接口返回的借贷标记为</span><span style="color:#D9001B;">贷</span><span>，取交易金额</span></p><p><span>以上条件不满足则赋0</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u2771" class="ax_default _文本段落 transition notrs">
+              <div id="u2771_div" class=""></div>
+              <div id="u2771_text" class="text ">
+                <p><span>当接口返回的借贷标记为</span><span style="color:#D9001B;">借</span><span>，取交易金额</span></p><p><span>以上条件不满足则赋0</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u2772" class="ax_default _文本段落 transition notrs">
+        <div id="u2772_div" class=""></div>
+        <div id="u2772_text" class="text ">
+          <p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">4、历史交易明细页面：</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; 浦发银行：新增拉取浦发银行数据定时任务：</span><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;color:#D9001B;">每天上午9点</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">更新前一天数据（按照【账号+币种】维度新增/覆盖原数据；）其中，</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4.1列表【账号+币种】：获取【实体银行-银行账户管理-账户设置】中【所属银行】为‘浦发银行’且【账户状态】=‘正常’的【法人主体+银行账号</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;text-decoration:line-through ;">+币别</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">】；</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4.2根据4.1所取的【账号</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;text-decoration:line-through ;">+币种</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">+自然日交易起始日期~自然日交易终止日期（前一天）】通过接口</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;color:#D9001B;">（A561交易明细查询接口）</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">获取数据到当前页面，对应关系如下表：</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; （注意：请求接口返回的所有字段值均需保留至数据库中）</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span></p>
+        </div>
+      </div>
+    </div>
+    <script src="resources/scripts/axure/ios.js"></script>
+  </body>
+</html>
