@@ -1,0 +1,511 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>爬虫需求文档</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/爬虫需求文档/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-3.7.1.min.js"></script>
+    <script src="resources/scripts/axure/axQuery.js"></script>
+    <script src="resources/scripts/axure/globals.js"></script>
+    <script src="resources/scripts/axutils.js"></script>
+    <script src="resources/scripts/axure/annotation.js"></script>
+    <script src="resources/scripts/axure/axQuery.std.js"></script>
+    <script src="resources/scripts/axure/doc.js"></script>
+    <script src="resources/scripts/messagecenter.js"></script>
+    <script src="resources/scripts/axure/events.js"></script>
+    <script src="resources/scripts/axure/recording.js"></script>
+    <script src="resources/scripts/axure/action.js"></script>
+    <script src="resources/scripts/axure/expr.js"></script>
+    <script src="resources/scripts/axure/geometry.js"></script>
+    <script src="resources/scripts/axure/flyout.js"></script>
+    <script src="resources/scripts/axure/model.js"></script>
+    <script src="resources/scripts/axure/repeater.js"></script>
+    <script src="resources/scripts/axure/sto.js"></script>
+    <script src="resources/scripts/axure/utils.temp.js"></script>
+    <script src="resources/scripts/axure/variables.js"></script>
+    <script src="resources/scripts/axure/drag.js"></script>
+    <script src="resources/scripts/axure/move.js"></script>
+    <script src="resources/scripts/axure/visibility.js"></script>
+    <script src="resources/scripts/axure/style.js"></script>
+    <script src="resources/scripts/axure/adaptive.js"></script>
+    <script src="resources/scripts/axure/tree.js"></script>
+    <script src="resources/scripts/axure/init.temp.js"></script>
+    <script src="resources/scripts/axure/legacy.js"></script>
+    <script src="resources/scripts/axure/viewer.js"></script>
+    <script src="resources/scripts/axure/math.js"></script>
+    <script src="resources/scripts/axure/jquery.nicescroll.min.js"></script>
+    <script src="data/document.js"></script>
+    <script src="files/爬虫需求文档/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (矩形) -->
+      <div id="u127" class="ax_default box_2 transition notrs">
+        <div id="u127_div" class=""></div>
+        <div id="u127_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u128" class="ax_default _文本段落 transition notrs">
+        <div id="u128_div" class=""></div>
+        <div id="u128_text" class="text ">
+          <p style="font-size:20px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;color:#000000;">1.沃尔玛结算明细、结算汇总、结算汇总截图</span></p><p style="font-size:18px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;">1.1数据爬取页面:</span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">沃尔玛后台 &gt; Analytics &gt; Payments &gt; STATEMENTS </span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图像) -->
+      <div id="u129" class="ax_default _图片_ transition notrs">
+        <img id="u129_img" class="img " src="images/爬虫需求文档/u129.png"/>
+        <div id="u129_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u130" class="ax_default _文本段落 transition notrs">
+        <div id="u130_div" class=""></div>
+        <div id="u130_text" class="text ">
+          <p style="font-size:18px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;">1.2数据爬取页面详细说明:</span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">1.2.1筛选条件：</span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 1.2.1.1勾选Statement Period项；</span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 1.2.1.2时间范围：同时满足左上方下拉框选择时间范围包括</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;text-decoration:underline ;color:#6300BF;">上一自然月和上上一自然月</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">；和页面【Settlement Date】字段值需为</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;text-decoration:underline ;color:#6300BF;">上一自然月的</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">两个条件；</span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 1.2.1.3若均符合上述条件，点击【Download Report】按钮，选择下拉选项中的“Payments Report NEW”，下载并保存该账单；（结算明细）</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;color:#D9001B;">（文件名能否附上结算时间？）</span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 1.2.1.4截图并保存当前页面Statement Summary部分；（结算汇总截图）</span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 1.2.1.5爬取字段当前页面Statement Summary所有字段（结算汇总）</span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:18px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;">1.3频率说明:</span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">每月2号中午12:00，定时爬取，爬取完成后同步至佰易系统【财务管理-平台财务报表-其他平台-下载详情】</span></p><p style="font-size:18px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;"><br></span></p><p style="font-size:18px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;"><br></span></p><p style="font-size:20px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;color:#000000;">2.沃尔玛广告明细</span></p><p style="font-size:18px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;">2.1数据爬取页面：</span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">沃尔玛后台&gt;Ad Center&gt;选择账单类型（选择后依次下载）&gt;Advertiser</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图像) -->
+      <div id="u131" class="ax_default _图片_ transition notrs">
+        <img id="u131_img" class="img " src="images/爬虫需求文档/u131.png"/>
+        <div id="u131_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图像) -->
+      <div id="u132" class="ax_default _图片_ transition notrs">
+        <img id="u132_img" class="img " src="images/爬虫需求文档/u132.png"/>
+        <div id="u132_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图像) -->
+      <div id="u133" class="ax_default _图片_ transition notrs">
+        <img id="u133_img" class="img " src="images/爬虫需求文档/u133.png"/>
+        <div id="u133_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u134" class="ax_default _文本段落 transition notrs">
+        <div id="u134_div" class=""></div>
+        <div id="u134_text" class="text ">
+          <p style="font-size:18px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;">2.2数据爬取页面详细说明：</span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">2.1.1筛选条件：</span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 2.1.1.1时间范围：选择爬取时间对应的上一自然月；</span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 2.1.1.2点击【Export to CSV】按钮，下载并保存该账单；</span></p><p style="font-size:18px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;"><br></span></p><p style="font-size:18px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;">2.3频率说明:</span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">每月2号中午12:00，定时爬取，爬取完成后同步至佰易系统【财务管理-平台财务报表-其他平台-下载详情】</span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:20px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;color:#000000;">3.沃尔玛运费明细</span></p><p style="font-size:18px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;">3.1数据爬取页面：</span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">沃尔玛后台&gt;WFS&gt;Reports&gt;Payment Reports&gt;Settlement</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图像) -->
+      <div id="u135" class="ax_default _图片_ transition notrs">
+        <img id="u135_img" class="img " src="images/爬虫需求文档/u135.png"/>
+        <div id="u135_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u136" class="ax_default _文本段落 transition notrs">
+        <div id="u136_div" class=""></div>
+        <div id="u136_text" class="text ">
+          <p style="font-size:18px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;">3.2数据爬取页面详细说明：</span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">3.1.1筛选条件：</span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 3.1.1.1时间范围：选择爬取时间对应的上一自然月；</span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 3.1.1.2点击【Download】按钮，下载并保存该账单；</span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:18px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;">3.3频率说明:</span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">每月2号中午12:00，定时爬取，爬取完成后同步至佰易系统【财务管理-平台财务报表-其他平台-下载详情】</span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:20px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;text-decoration:line-through ;color:#000000;">4.沃尔玛物流明细</span></p><p style="font-size:18px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;text-decoration:line-through ;">4.1数据爬取页面：</span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;text-decoration:line-through ;">沃尔玛后台&gt;Order Management&gt;Orders</span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图像) -->
+      <div id="u137" class="ax_default _图片_ transition notrs">
+        <img id="u137_img" class="img " src="images/爬虫需求文档/u137.png"/>
+        <div id="u137_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u138" class="ax_default _文本段落 transition notrs">
+        <div id="u138_div" class=""></div>
+        <div id="u138_text" class="text ">
+          <p><span>账单类型：三类均需下载</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u139" class="ax_default _文本段落 transition notrs">
+        <div id="u139_div" class=""></div>
+        <div id="u139_text" class="text ">
+          <p><span>账单为空也需下载</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图像) -->
+      <div id="u140" class="ax_default _图片_ transition notrs">
+        <img id="u140_img" class="img " src="images/爬虫需求文档/u140.png"/>
+        <div id="u140_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u141" class="ax_default _文本段落 transition notrs">
+        <div id="u141_div" class=""></div>
+        <div id="u141_text" class="text ">
+          <p><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;text-decoration:line-through ;">4.2数据爬取页面详细说明：</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;text-decoration:line-through ;">4.2.1筛选条件：</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;text-decoration:line-through ;">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 4.2.1.1【Fulfilled by】：勾选选项“WFS”和“Partner”；</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;text-decoration:line-through ;">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 4.2.1.2【Status】：勾选选项“Shipperd”和“Delivered”；</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;text-decoration:line-through ;">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 4.2.1.3在上述筛选条件下，点击每条所筛数据的【Purchase order】，获取详情页面【Shipping detail】中的【Carrier/Tracking】和【Delivery】字段值；</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;text-decoration:line-through ;"><br></span></p><p><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;text-decoration:line-through ;">4.3频率说明:</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;text-decoration:line-through ;">每天中午12:00，定时爬取列表结构化数据（按照【店铺+站点+Purchase order#+Order #+order date】维度更新或新增）储存在后台数据库表中，具体如下：</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;text-decoration:line-through ;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;text-decoration:line-through ;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;text-decoration:line-through ;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;text-decoration:line-through ;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;text-decoration:line-through ;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;text-decoration:line-through ;"><br></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图像) -->
+      <div id="u142" class="ax_default _图片_ transition notrs">
+        <img id="u142_img" class="img " src="images/爬虫需求文档/u142.png"/>
+        <div id="u142_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (表格) -->
+      <div id="u143" class="ax_default">
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u144" class="ax_default table_cell transition notrs">
+          <svg data="images/爬虫需求文档/u144.svg" id="u144_img" class="img generatedImage" viewbox="0 0 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+          </svg>
+          <div id="u144_text" class="text ">
+            <p><span>店铺/账号</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u145" class="ax_default table_cell transition notrs">
+          <svg data="images/爬虫需求文档/u145.svg" id="u145_img" class="img generatedImage" viewbox="100 0 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 100 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 0 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 0 )" class="stroke" />
+          </svg>
+          <div id="u145_text" class="text ">
+            <p><span>站点</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u146" class="ax_default table_cell transition notrs">
+          <svg data="images/爬虫需求文档/u146.svg" id="u146_img" class="img generatedImage" viewbox="200 0 120 30">
+
+  <path d="M 1 1  L 120 1  L 120 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 0 )" class="stroke" />
+  <path d="M 0 0.5  L 120 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 0 )" class="stroke" />
+          </svg>
+          <div id="u146_text" class="text ">
+            <p><span>Purchase order#</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u147" class="ax_default table_cell transition notrs">
+          <svg data="images/爬虫需求文档/u147.svg" id="u147_img" class="img generatedImage" viewbox="320 0 111 30">
+
+  <path d="M 1 1  L 111 1  L 111 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 320 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 320 0 )" class="stroke" />
+  <path d="M 0 0.5  L 111 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 320 0 )" class="stroke" />
+          </svg>
+          <div id="u147_text" class="text ">
+            <p><span>Order #</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u148" class="ax_default table_cell transition notrs">
+          <svg data="images/爬虫需求文档/u148.svg" id="u148_img" class="img generatedImage" viewbox="431 0 111 30">
+
+  <path d="M 1 1  L 111 1  L 111 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 431 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 431 0 )" class="stroke" />
+  <path d="M 0 0.5  L 111 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 431 0 )" class="stroke" />
+          </svg>
+          <div id="u148_text" class="text ">
+            <p><span>order date</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u149" class="ax_default table_cell transition notrs">
+          <svg data="images/爬虫需求文档/u149.svg" id="u149_img" class="img generatedImage" viewbox="542 0 116 30">
+
+  <path d="M 1 1  L 116 1  L 116 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 542 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 542 0 )" class="stroke" />
+  <path d="M 0 0.5  L 116 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 542 0 )" class="stroke" />
+          </svg>
+          <div id="u149_text" class="text ">
+            <p><span>Status</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u150" class="ax_default table_cell transition notrs">
+          <svg data="images/爬虫需求文档/u150.svg" id="u150_img" class="img generatedImage" viewbox="658 0 116 30">
+
+  <path d="M 1 1  L 116 1  L 116 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 658 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 658 0 )" class="stroke" />
+  <path d="M 0 0.5  L 116 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 658 0 )" class="stroke" />
+          </svg>
+          <div id="u150_text" class="text ">
+            <p><span>Carrier/Tracking</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u151" class="ax_default table_cell transition notrs">
+          <svg data="images/爬虫需求文档/u151.svg" id="u151_img" class="img generatedImage" viewbox="773 0 116 30">
+
+  <path d="M 1 1  L 115 1  L 115 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 773 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 773 0 )" class="stroke" />
+  <path d="M 0 0.5  L 116 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 773 0 )" class="stroke" />
+  <path d="M 115.5 1  L 115.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 773 0 )" class="stroke" />
+          </svg>
+          <div id="u151_text" class="text ">
+            <p><span>Delivery</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u152" class="ax_default table_cell transition notrs">
+          <svg data="images/爬虫需求文档/u152.svg" id="u152_img" class="img generatedImage" viewbox="0 30 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 30 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 30 )" class="stroke" />
+          </svg>
+          <div id="u152_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u153" class="ax_default table_cell transition notrs">
+          <svg data="images/爬虫需求文档/u153.svg" id="u153_img" class="img generatedImage" viewbox="100 30 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 100 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 30 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 30 )" class="stroke" />
+          </svg>
+          <div id="u153_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u154" class="ax_default table_cell transition notrs">
+          <svg data="images/爬虫需求文档/u154.svg" id="u154_img" class="img generatedImage" viewbox="200 30 120 30">
+
+  <path d="M 1 1  L 120 1  L 120 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 30 )" class="stroke" />
+  <path d="M 0 0.5  L 120 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 30 )" class="stroke" />
+          </svg>
+          <div id="u154_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u155" class="ax_default table_cell transition notrs">
+          <svg data="images/爬虫需求文档/u155.svg" id="u155_img" class="img generatedImage" viewbox="320 30 111 30">
+
+  <path d="M 1 1  L 111 1  L 111 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 320 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 320 30 )" class="stroke" />
+  <path d="M 0 0.5  L 111 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 320 30 )" class="stroke" />
+          </svg>
+          <div id="u155_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u156" class="ax_default table_cell transition notrs">
+          <svg data="images/爬虫需求文档/u156.svg" id="u156_img" class="img generatedImage" viewbox="431 30 111 30">
+
+  <path d="M 1 1  L 111 1  L 111 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 431 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 431 30 )" class="stroke" />
+  <path d="M 0 0.5  L 111 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 431 30 )" class="stroke" />
+          </svg>
+          <div id="u156_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u157" class="ax_default table_cell transition notrs">
+          <svg data="images/爬虫需求文档/u157.svg" id="u157_img" class="img generatedImage" viewbox="542 30 116 30">
+
+  <path d="M 1 1  L 116 1  L 116 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 542 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 542 30 )" class="stroke" />
+  <path d="M 0 0.5  L 116 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 542 30 )" class="stroke" />
+          </svg>
+          <div id="u157_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u158" class="ax_default table_cell transition notrs">
+          <svg data="images/爬虫需求文档/u158.svg" id="u158_img" class="img generatedImage" viewbox="658 30 116 30">
+
+  <path d="M 1 1  L 116 1  L 116 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 658 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 658 30 )" class="stroke" />
+  <path d="M 0 0.5  L 116 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 658 30 )" class="stroke" />
+          </svg>
+          <div id="u158_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u159" class="ax_default table_cell transition notrs">
+          <svg data="images/爬虫需求文档/u159.svg" id="u159_img" class="img generatedImage" viewbox="773 30 116 30">
+
+  <path d="M 1 1  L 115 1  L 115 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 773 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 773 30 )" class="stroke" />
+  <path d="M 0 0.5  L 116 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 773 30 )" class="stroke" />
+  <path d="M 115.5 1  L 115.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 773 30 )" class="stroke" />
+          </svg>
+          <div id="u159_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u160" class="ax_default table_cell transition notrs">
+          <svg data="images/爬虫需求文档/u160.svg" id="u160_img" class="img generatedImage" viewbox="0 60 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 60 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 60 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 60 )" class="stroke" />
+  <path d="M 0 29.5  L 100 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 60 )" class="stroke" />
+          </svg>
+          <div id="u160_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u161" class="ax_default table_cell transition notrs">
+          <svg data="images/爬虫需求文档/u161.svg" id="u161_img" class="img generatedImage" viewbox="100 60 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 100 60 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 60 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 60 )" class="stroke" />
+  <path d="M 0 29.5  L 100 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 60 )" class="stroke" />
+          </svg>
+          <div id="u161_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u162" class="ax_default table_cell transition notrs">
+          <svg data="images/爬虫需求文档/u162.svg" id="u162_img" class="img generatedImage" viewbox="200 60 120 30">
+
+  <path d="M 1 1  L 120 1  L 120 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 60 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 60 )" class="stroke" />
+  <path d="M 0 0.5  L 120 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 60 )" class="stroke" />
+  <path d="M 0 29.5  L 120 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 60 )" class="stroke" />
+          </svg>
+          <div id="u162_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u163" class="ax_default table_cell transition notrs">
+          <svg data="images/爬虫需求文档/u163.svg" id="u163_img" class="img generatedImage" viewbox="320 60 111 30">
+
+  <path d="M 1 1  L 111 1  L 111 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 320 60 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 320 60 )" class="stroke" />
+  <path d="M 0 0.5  L 111 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 320 60 )" class="stroke" />
+  <path d="M 0 29.5  L 111 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 320 60 )" class="stroke" />
+          </svg>
+          <div id="u163_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u164" class="ax_default table_cell transition notrs">
+          <svg data="images/爬虫需求文档/u164.svg" id="u164_img" class="img generatedImage" viewbox="431 60 111 30">
+
+  <path d="M 1 1  L 111 1  L 111 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 431 60 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 431 60 )" class="stroke" />
+  <path d="M 0 0.5  L 111 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 431 60 )" class="stroke" />
+  <path d="M 0 29.5  L 111 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 431 60 )" class="stroke" />
+          </svg>
+          <div id="u164_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u165" class="ax_default table_cell transition notrs">
+          <svg data="images/爬虫需求文档/u165.svg" id="u165_img" class="img generatedImage" viewbox="542 60 116 30">
+
+  <path d="M 1 1  L 116 1  L 116 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 542 60 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 542 60 )" class="stroke" />
+  <path d="M 0 0.5  L 116 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 542 60 )" class="stroke" />
+  <path d="M 0 29.5  L 116 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 542 60 )" class="stroke" />
+          </svg>
+          <div id="u165_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u166" class="ax_default table_cell transition notrs">
+          <svg data="images/爬虫需求文档/u166.svg" id="u166_img" class="img generatedImage" viewbox="658 60 116 30">
+
+  <path d="M 1 1  L 116 1  L 116 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 658 60 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 658 60 )" class="stroke" />
+  <path d="M 0 0.5  L 116 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 658 60 )" class="stroke" />
+  <path d="M 0 29.5  L 116 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 658 60 )" class="stroke" />
+          </svg>
+          <div id="u166_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u167" class="ax_default table_cell transition notrs">
+          <svg data="images/爬虫需求文档/u167.svg" id="u167_img" class="img generatedImage" viewbox="773 60 116 30">
+
+  <path d="M 1 1  L 115 1  L 115 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 773 60 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 773 60 )" class="stroke" />
+  <path d="M 0 0.5  L 116 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 773 60 )" class="stroke" />
+  <path d="M 115.5 1  L 115.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 773 60 )" class="stroke" />
+  <path d="M 0 29.5  L 116 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 773 60 )" class="stroke" />
+          </svg>
+          <div id="u167_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="resources/scripts/axure/ios.js"></script>
+  </body>
+</html>
