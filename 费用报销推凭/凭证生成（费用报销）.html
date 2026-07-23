@@ -1,0 +1,354 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>凭证生成（费用报销）</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/凭证生成（费用报销）/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-3.7.1.min.js"></script>
+    <script src="resources/scripts/axure/axQuery.js"></script>
+    <script src="resources/scripts/axure/globals.js"></script>
+    <script src="resources/scripts/axutils.js"></script>
+    <script src="resources/scripts/axure/annotation.js"></script>
+    <script src="resources/scripts/axure/axQuery.std.js"></script>
+    <script src="resources/scripts/axure/doc.js"></script>
+    <script src="resources/scripts/messagecenter.js"></script>
+    <script src="resources/scripts/axure/events.js"></script>
+    <script src="resources/scripts/axure/recording.js"></script>
+    <script src="resources/scripts/axure/action.js"></script>
+    <script src="resources/scripts/axure/expr.js"></script>
+    <script src="resources/scripts/axure/geometry.js"></script>
+    <script src="resources/scripts/axure/flyout.js"></script>
+    <script src="resources/scripts/axure/model.js"></script>
+    <script src="resources/scripts/axure/repeater.js"></script>
+    <script src="resources/scripts/axure/sto.js"></script>
+    <script src="resources/scripts/axure/utils.temp.js"></script>
+    <script src="resources/scripts/axure/variables.js"></script>
+    <script src="resources/scripts/axure/drag.js"></script>
+    <script src="resources/scripts/axure/move.js"></script>
+    <script src="resources/scripts/axure/visibility.js"></script>
+    <script src="resources/scripts/axure/style.js"></script>
+    <script src="resources/scripts/axure/adaptive.js"></script>
+    <script src="resources/scripts/axure/tree.js"></script>
+    <script src="resources/scripts/axure/init.temp.js"></script>
+    <script src="resources/scripts/axure/legacy.js"></script>
+    <script src="resources/scripts/axure/viewer.js"></script>
+    <script src="resources/scripts/axure/math.js"></script>
+    <script src="resources/scripts/axure/jquery.nicescroll.min.js"></script>
+    <script src="data/document.js"></script>
+    <script src="files/凭证生成（费用报销）/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (矩形) -->
+      <div id="u21" class="ax_default box_1 transition notrs">
+        <div id="u21_div" class=""></div>
+        <div id="u21_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u22" class="ax_default _文本段落 transition notrs">
+        <div id="u22_div" class=""></div>
+        <div id="u22_text" class="text ">
+          <p><span style="font-family:&quot;Arial Negreta&quot;, &quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:700;">1.需求说明：</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">新增刷新EAS-供应商、收款名称与供应商对应关系按钮；--原因：费用报销单的收款名称与金蝶供应商名称可能不一致，按照当前逻辑系统无法匹配，财务需手动指定供应商；</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u23" class="ax_default _文本段落 transition notrs">
+        <div id="u23_div" class=""></div>
+        <div id="u23_text" class="text ">
+          <p><span style="font-family:&quot;Arial Negreta&quot;, &quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:700;">2.新增【刷新EAS-供应商】按钮</span><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">：2.1按照列表查询条件刷新【凭证生成状态】≠‘凭证生成成功’数据的【EAS-供应商】字段；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2.1首先根据【收款名称】匹配【财务对接平台/供应商】的供应商名称并刷新EAS-供应商字段，若匹到多个相同名称，则不取值；（匹配时需忽略英文大小写，中英文逗号/括号，及空格）；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2.2若2.2未匹配到EAS-供应商数据，则将【收款名称】按照下述【收款名称与供应商对应关系】所维护的对应关系匹配并赋值EAS-供应商名称+编码至列表对应字段；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Negreta&quot;, &quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:700;">3.新增【收款名称与供应商对应关系】按钮：</span><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">位于指定EAS-供应商按钮左侧；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">点击按钮打开弹窗如右图所示：</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">3.1搜索框部分：【收款名称、EAS-供应商名称】：下拉多选无默认值，选项为列表对应数据去重；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">3.2按钮部分：3.2.1【新增】：在弹窗列表新增一行可编辑数据，其中【收款名称】：必录，手工录入，限制100字符；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 【EAS-供应商名称】：弹窗单选必录参考指定EAS-供应商按钮，选择后同时赋值编码；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3.2.2【导入模板下载、导入】：导入模板字段同列表，校验参考上述逻辑（EAS供应商名称和编码均需录入且校验）；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3.2.3【删除】：二次确认，支持勾选或未勾选按筛选条件逻辑删除；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">3.3列表部分：修改按钮参考新增；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">3.4较重：3.4.1新增/修改/导入数据后，按【收款名称】维度校验列表是否存在重复数据；——新增/修改存在则失败，导入存在则覆盖更新；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 3.4.2导入数据还需校验文件内部是否存在重复数据，校验逻辑参考3.4.1（将列表改为文件内部）；——存在则重复部分导入失败，其他成功，并给出相应提示；</span></p><p><span style="font-family:&quot;Arial Normal&quot;, &quot;Arial&quot;, sans-serif;font-weight:400;"><br></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图像) -->
+      <div id="u24" class="ax_default _图片_ transition notrs">
+        <img id="u24_img" class="img " src="images/凭证生成（费用报销）/u24.png"/>
+        <div id="u24_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (组合) -->
+      <div id="u25" class="ax_default" data-left="1251" data-top="1080" data-width="511" data-height="246" layer-opacity="1">
+
+        <!-- Unnamed (组合) -->
+        <div id="u26" class="ax_default" data-left="1251" data-top="1080" data-width="511" data-height="246" layer-opacity="1">
+
+          <!-- Unnamed (矩形) -->
+          <div id="u27" class="ax_default box_1 transition notrs">
+            <div id="u27_div" class=""></div>
+            <div id="u27_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (表格) -->
+          <div id="u28" class="ax_default">
+
+            <!-- Unnamed (表格单元) -->
+            <div id="u29" class="ax_default table_cell1 transition notrs">
+              <svg data="images/凭证生成（费用报销）/u29.svg" id="u29_img" class="img generatedImage" viewbox="0 0 101 30">
+
+  <path d="M 1 1  L 101 1  L 101 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+  <path d="M 0 0.5  L 101 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+              </svg>
+              <div id="u29_text" class="text ">
+                <p><span>收款名称</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (表格单元) -->
+            <div id="u30" class="ax_default table_cell1 transition notrs">
+              <svg data="images/凭证生成（费用报销）/u30.svg" id="u30_img" class="img generatedImage" viewbox="101 0 126 30">
+
+  <path d="M 1 1  L 126 1  L 126 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 101 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 101 0 )" class="stroke" />
+  <path d="M 0 0.5  L 126 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 101 0 )" class="stroke" />
+              </svg>
+              <div id="u30_text" class="text ">
+                <p><span>EAS-供应商名称</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (表格单元) -->
+            <div id="u31" class="ax_default table_cell1 transition notrs">
+              <svg data="images/凭证生成（费用报销）/u31.svg" id="u31_img" class="img generatedImage" viewbox="227 0 124 30">
+
+  <path d="M 1 1  L 124 1  L 124 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 227 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 227 0 )" class="stroke" />
+  <path d="M 0 0.5  L 124 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 227 0 )" class="stroke" />
+              </svg>
+              <div id="u31_text" class="text ">
+                <p><span>EAS-供应商编码</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (表格单元) -->
+            <div id="u32" class="ax_default table_cell1 transition notrs">
+              <svg data="images/凭证生成（费用报销）/u32.svg" id="u32_img" class="img generatedImage" viewbox="351 0 112 30">
+
+  <path d="M 1 1  L 111 1  L 111 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 351 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 351 0 )" class="stroke" />
+  <path d="M 0 0.5  L 112 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 351 0 )" class="stroke" />
+  <path d="M 111.5 1  L 111.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 351 0 )" class="stroke" />
+              </svg>
+              <div id="u32_text" class="text ">
+                <p><span>操作日志</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (表格单元) -->
+            <div id="u33" class="ax_default table_cell1 transition notrs">
+              <svg data="images/凭证生成（费用报销）/u33.svg" id="u33_img" class="img generatedImage" viewbox="0 30 101 32">
+
+  <path d="M 1 1  L 101 1  L 101 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 30 )" class="stroke" />
+  <path d="M 0 0.5  L 101 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 30 )" class="stroke" />
+              </svg>
+              <div id="u33_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (表格单元) -->
+            <div id="u34" class="ax_default table_cell1 transition notrs">
+              <svg data="images/凭证生成（费用报销）/u34.svg" id="u34_img" class="img generatedImage" viewbox="101 30 126 32">
+
+  <path d="M 1 1  L 126 1  L 126 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 101 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 101 30 )" class="stroke" />
+  <path d="M 0 0.5  L 126 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 101 30 )" class="stroke" />
+              </svg>
+              <div id="u34_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (表格单元) -->
+            <div id="u35" class="ax_default table_cell1 transition notrs">
+              <svg data="images/凭证生成（费用报销）/u35.svg" id="u35_img" class="img generatedImage" viewbox="227 30 124 32">
+
+  <path d="M 1 1  L 124 1  L 124 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 227 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 227 30 )" class="stroke" />
+  <path d="M 0 0.5  L 124 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 227 30 )" class="stroke" />
+              </svg>
+              <div id="u35_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (表格单元) -->
+            <div id="u36" class="ax_default table_cell1 transition notrs">
+              <svg data="images/凭证生成（费用报销）/u36.svg" id="u36_img" class="img generatedImage" viewbox="351 30 112 32">
+
+  <path d="M 1 1  L 111 1  L 111 32  L 1 32  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 351 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 351 30 )" class="stroke" />
+  <path d="M 0 0.5  L 112 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 351 30 )" class="stroke" />
+  <path d="M 111.5 1  L 111.5 32  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 351 30 )" class="stroke" />
+              </svg>
+              <div id="u36_text" class="text ">
+                <p><span>修改&nbsp; 查看</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (表格单元) -->
+            <div id="u37" class="ax_default table_cell1 transition notrs">
+              <svg data="images/凭证生成（费用报销）/u37.svg" id="u37_img" class="img generatedImage" viewbox="0 62 101 30">
+
+  <path d="M 1 1  L 101 1  L 101 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 62 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 62 )" class="stroke" />
+  <path d="M 0 0.5  L 101 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 62 )" class="stroke" />
+  <path d="M 0 29.5  L 101 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 62 )" class="stroke" />
+              </svg>
+              <div id="u37_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (表格单元) -->
+            <div id="u38" class="ax_default table_cell1 transition notrs">
+              <svg data="images/凭证生成（费用报销）/u38.svg" id="u38_img" class="img generatedImage" viewbox="101 62 126 30">
+
+  <path d="M 1 1  L 126 1  L 126 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 101 62 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 101 62 )" class="stroke" />
+  <path d="M 0 0.5  L 126 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 101 62 )" class="stroke" />
+  <path d="M 0 29.5  L 126 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 101 62 )" class="stroke" />
+              </svg>
+              <div id="u38_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (表格单元) -->
+            <div id="u39" class="ax_default table_cell1 transition notrs">
+              <svg data="images/凭证生成（费用报销）/u39.svg" id="u39_img" class="img generatedImage" viewbox="227 62 124 30">
+
+  <path d="M 1 1  L 124 1  L 124 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 227 62 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 227 62 )" class="stroke" />
+  <path d="M 0 0.5  L 124 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 227 62 )" class="stroke" />
+  <path d="M 0 29.5  L 124 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 227 62 )" class="stroke" />
+              </svg>
+              <div id="u39_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (表格单元) -->
+            <div id="u40" class="ax_default table_cell1 transition notrs">
+              <svg data="images/凭证生成（费用报销）/u40.svg" id="u40_img" class="img generatedImage" viewbox="351 62 112 30">
+
+  <path d="M 1 1  L 111 1  L 111 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 351 62 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 351 62 )" class="stroke" />
+  <path d="M 0 0.5  L 112 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 351 62 )" class="stroke" />
+  <path d="M 111.5 1  L 111.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 351 62 )" class="stroke" />
+  <path d="M 0 29.5  L 112 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 351 62 )" class="stroke" />
+              </svg>
+              <div id="u40_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Unnamed (图像) -->
+          <div id="u41" class="ax_default _图片_ transition notrs">
+            <img id="u41_img" class="img " src="images/凭证生成（费用报销）/u41.png"/>
+            <div id="u41_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u42" class="ax_default _文本段落 transition notrs">
+            <div id="u42_div" class=""></div>
+            <div id="u42_text" class="text ">
+              <p><span>收款名称：</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (下拉列表框) -->
+          <div id="u43" class="ax_default droplist transition notrs">
+            <div id="u43_div" class=""></div>
+            <select id="u43_input" class="u43_input">
+            </select>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u44" class="ax_default _文本段落 transition notrs">
+            <div id="u44_div" class=""></div>
+            <div id="u44_text" class="text ">
+              <p><span>EAS-供应商名称：</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (下拉列表框) -->
+          <div id="u45" class="ax_default droplist transition notrs">
+            <div id="u45_div" class=""></div>
+            <select id="u45_input" class="u45_input">
+            </select>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u46" class="ax_default _文本段落 transition notrs">
+            <div id="u46_div" class=""></div>
+            <div id="u46_text" class="text ">
+              <p><span>收款名称与供应商对应关系</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (直线 / 行距) -->
+          <div id="u47" class="ax_default line transition notrs">
+            <svg data="images/凭证生成（费用报销）/u47.svg" id="u47_img" class="img generatedImage">
+
+  <g transform="matrix(1 0 0 1 -1265 -1110 )">
+    <path d="M 0 0.5  L 484 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 1265 1110 )" class="stroke" />
+  </g>
+            </svg>
+            <div id="u47_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unnamed (图像) -->
+        <div id="u48" class="ax_default _图片_ transition notrs">
+          <img id="u48_img" class="img " src="images/凭证生成（费用报销）/u48.png"/>
+          <div id="u48_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u49" class="ax_default _形状 transition notrs">
+        <div id="u49_div" class=""></div>
+        <div id="u49_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u50" class="ax_default _文本段落 transition notrs">
+        <div id="u50_div" class=""></div>
+        <div id="u50_text" class="text ">
+          <p><span>刷新EAS-供应商</span></p><p><span><br></span></p><p><span>指定EAS-供应商</span></p>
+        </div>
+      </div>
+    </div>
+    <script src="resources/scripts/axure/ios.js"></script>
+  </body>
+</html>
