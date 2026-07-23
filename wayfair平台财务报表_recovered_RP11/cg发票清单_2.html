@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>CG发票清单</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/cg发票清单_2/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-3.7.1.min.js"></script>
+    <script src="resources/scripts/axure/axQuery.js"></script>
+    <script src="resources/scripts/axure/globals.js"></script>
+    <script src="resources/scripts/axutils.js"></script>
+    <script src="resources/scripts/axure/annotation.js"></script>
+    <script src="resources/scripts/axure/axQuery.std.js"></script>
+    <script src="resources/scripts/axure/doc.js"></script>
+    <script src="resources/scripts/messagecenter.js"></script>
+    <script src="resources/scripts/axure/events.js"></script>
+    <script src="resources/scripts/axure/recording.js"></script>
+    <script src="resources/scripts/axure/action.js"></script>
+    <script src="resources/scripts/axure/expr.js"></script>
+    <script src="resources/scripts/axure/geometry.js"></script>
+    <script src="resources/scripts/axure/flyout.js"></script>
+    <script src="resources/scripts/axure/model.js"></script>
+    <script src="resources/scripts/axure/repeater.js"></script>
+    <script src="resources/scripts/axure/sto.js"></script>
+    <script src="resources/scripts/axure/utils.temp.js"></script>
+    <script src="resources/scripts/axure/variables.js"></script>
+    <script src="resources/scripts/axure/drag.js"></script>
+    <script src="resources/scripts/axure/move.js"></script>
+    <script src="resources/scripts/axure/visibility.js"></script>
+    <script src="resources/scripts/axure/style.js"></script>
+    <script src="resources/scripts/axure/adaptive.js"></script>
+    <script src="resources/scripts/axure/tree.js"></script>
+    <script src="resources/scripts/axure/init.temp.js"></script>
+    <script src="resources/scripts/axure/legacy.js"></script>
+    <script src="resources/scripts/axure/viewer.js"></script>
+    <script src="resources/scripts/axure/math.js"></script>
+    <script src="resources/scripts/axure/jquery.nicescroll.min.js"></script>
+    <script src="data/document.js"></script>
+    <script src="files/cg发票清单_2/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (矩形) -->
+      <div id="u4091" class="ax_default box_2 transition notrs">
+        <div id="u4091_div" class=""></div>
+        <div id="u4091_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u4092" class="ax_default _文本段落 transition notrs">
+        <div id="u4092_div" class=""></div>
+        <div id="u4092_text" class="text ">
+          <p><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;">1、新增【修改结算日期】按钮：</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; 多扣款的结算明细，已出发票；后续期间平台发现多扣款后，会新开负数发票冲回多扣费用，同时在当前期间将新产生的发票用于抵扣原来多扣款的结算明细；</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; 以上情况会导致【CG发票数据】页面【更新明细状态】按钮：当期用于抵扣的CG发票数据无法匹配到历史结算明细获取结算期间，因此需新增修改结算期间按钮赋值发票清单和数据的结算期间，</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;color:#D9001B;">用于计算汇总推凭；</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">1.1列表：最左侧新增【结算期间】列，默认为空值；</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">1.2新增【修改结算期间】按钮：1.2.1仅限勾选或未勾选按筛选条件修改【解析结果】=‘解析成功’ 且所有解析至CG发票数据的数据【是否汇总】均≠‘是’的数据的结算期间；</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 否则均修改失败并相应给出提示：未解析生成CG发票数据，无法修改！；解析生成的CG发票数据已计算汇总，无法修改！</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 后台需新增结算期间来源列判断结算期间是通过更新明细状态赋值还是修改赋值，若筛选范围存在【结算期间】有值且来源为更新明细状态的数据， 则均修改失败并给出相应提示：已存在匹配到结算期间的数据，无法修改！；</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.2.2点击打开弹窗，其中【结算期间】：单选非必录，精确到月；确认后更新当前页面+对应生成的CG发票数据 【结算期间】列（CG发票清单后台表，结算期间来源列需做标识；），更新CG发票数据 【明细状态】为‘历史已结算’，</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 同时【是否汇总】</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;color:#D9001B;">更新为‘否’</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">；——如确认结算期间为空值需清空当前页面+对应生成的CG发票数据【结算期间】列，后台【结算期间来源】列以及CG发票数据【明细状态】列</span></p><p><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;">2、将账单反审核，重新审核 后，手工上传的附件后不被清空：</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; 【批量上传】/附件列点更新：用户手工上传附件需按【店铺+站点+发票号】维度保存，后续重新审核CG发票清单时还原手工附件附上（若重新审核后既有爬虫又有手工上传附件，则以手工为准）</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;color:#D9001B;">3.搜索框：</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;color:#D9001B;">新增【结算期间】，位于期间右侧：日期框精确到月，包括开始~结束期间，无默认值；</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;color:#D9001B;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; </span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图像) -->
+      <div id="u4093" class="ax_default _图片_ transition notrs">
+        <img id="u4093_img" class="img " src="images/cg发票清单_2/u4093.png"/>
+        <div id="u4093_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u4094" class="ax_default primary_button1 transition notrs">
+        <div id="u4094_div" class=""></div>
+        <div id="u4094_text" class="text ">
+          <p><span>修改结算期间</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (直线 / 行距) -->
+      <div id="u4095" class="ax_default arrow transition notrs">
+        <svg data="images/cg发票清单_2/u4095.svg" id="u4095_img" class="img generatedImage">
+
+  <g transform="matrix(1 0 0 1 -591.5 -389 )">
+    <path d="M 0 2.5  L 73.99999999937977 2.5  " stroke-width="5" stroke-dasharray="0" stroke="rgba(217, 0, 27, 1)" fill="none" transform="matrix(1 0 0 1 594 402 )" class="stroke" />
+    <path d="M 71 14  L 83 2.5  L 71 -9  L 71 14  Z " fill-rule="nonzero" fill="rgba(217, 0, 27, 1)" stroke="none" transform="matrix(1 0 0 1 594 402 )" class="arrowhead" />
+  </g>
+        </svg>
+        <div id="u4095_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <script src="resources/scripts/axure/ios.js"></script>
+  </body>
+</html>

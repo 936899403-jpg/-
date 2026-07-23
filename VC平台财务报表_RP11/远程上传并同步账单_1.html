@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>远程上传并同步账单</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/远程上传并同步账单_1/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-3.7.1.min.js"></script>
+    <script src="resources/scripts/axure/axQuery.js"></script>
+    <script src="resources/scripts/axure/globals.js"></script>
+    <script src="resources/scripts/axutils.js"></script>
+    <script src="resources/scripts/axure/annotation.js"></script>
+    <script src="resources/scripts/axure/axQuery.std.js"></script>
+    <script src="resources/scripts/axure/doc.js"></script>
+    <script src="resources/scripts/messagecenter.js"></script>
+    <script src="resources/scripts/axure/events.js"></script>
+    <script src="resources/scripts/axure/recording.js"></script>
+    <script src="resources/scripts/axure/action.js"></script>
+    <script src="resources/scripts/axure/expr.js"></script>
+    <script src="resources/scripts/axure/geometry.js"></script>
+    <script src="resources/scripts/axure/flyout.js"></script>
+    <script src="resources/scripts/axure/model.js"></script>
+    <script src="resources/scripts/axure/repeater.js"></script>
+    <script src="resources/scripts/axure/sto.js"></script>
+    <script src="resources/scripts/axure/utils.temp.js"></script>
+    <script src="resources/scripts/axure/variables.js"></script>
+    <script src="resources/scripts/axure/drag.js"></script>
+    <script src="resources/scripts/axure/move.js"></script>
+    <script src="resources/scripts/axure/visibility.js"></script>
+    <script src="resources/scripts/axure/style.js"></script>
+    <script src="resources/scripts/axure/adaptive.js"></script>
+    <script src="resources/scripts/axure/tree.js"></script>
+    <script src="resources/scripts/axure/init.temp.js"></script>
+    <script src="resources/scripts/axure/legacy.js"></script>
+    <script src="resources/scripts/axure/viewer.js"></script>
+    <script src="resources/scripts/axure/math.js"></script>
+    <script src="resources/scripts/axure/jquery.nicescroll.min.js"></script>
+    <script src="data/document.js"></script>
+    <script src="files/远程上传并同步账单_1/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (矩形) -->
+      <div id="u371" class="ax_default box_2 transition notrs">
+        <div id="u371_div" class=""></div>
+        <div id="u371_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u372" class="ax_default _文本段落 transition notrs">
+        <div id="u372_div" class=""></div>
+        <div id="u372_text" class="text ">
+          <p style="font-size:20px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;color:#000000;">1.需求说明：</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;font-size:18px;color:#000000;">VC平台远程上传同步账单新增-自定义折扣明细至业财系统下载详情页面对应数据行；</span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;color:#000000;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 若同步到下载详情发现对应数据行已存在文件，则同步失败；若同步成功，列表【下载状态】更新为‘远程成功’；</span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;color:#000000;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 远程上传自定义折扣明细，按文件名“结束时间”的后一天确定“生成时间”；特殊：若“结束时间”是月度最后一天，则把该结束时间作为“生成时间”；</span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;color:#000000;"><br></span></p><p style="font-size:20px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;color:#000000;">2.文件名命名规则：</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;color:#000000;">（文件格式需支持xlsx、xls、csv、压缩包（rar、zip））——文件重复则重复文件均推送失败 </span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:20px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;font-size:18px;color:#D9001B;">新增自定义折扣明细（压缩包，压缩包内为xls、</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;color:#000000;">xlsx</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;font-size:18px;color:#D9001B;">）：压缩包命名规则：站点+日期范围+折扣&nbsp; 如：美国-20240701-0721-折扣</span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:18px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;">3.批量上传：</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">自定义折扣明细同样需支持同一店铺 通过压缩包批量上传文件；</span></p><p style="font-size:18px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:18px;"><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;">4.机器人通知提示语：</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">参考已有平台；</span></p><p style="font-size:20px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;color:#000000;"><br></span></p><p style="font-size:20px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;color:#000000;"><br></span></p><p style="font-size:20px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;color:#000000;"><br></span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p style="font-size:16px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p>
+        </div>
+      </div>
+    </div>
+    <script src="resources/scripts/axure/ios.js"></script>
+  </body>
+</html>

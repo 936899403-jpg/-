@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>销售数据新增刷新税率相关按钮及逻辑</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/销售数据新增刷新税率相关按钮及逻辑/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-3.7.1.min.js"></script>
+    <script src="resources/scripts/axure/axQuery.js"></script>
+    <script src="resources/scripts/axure/globals.js"></script>
+    <script src="resources/scripts/axutils.js"></script>
+    <script src="resources/scripts/axure/annotation.js"></script>
+    <script src="resources/scripts/axure/axQuery.std.js"></script>
+    <script src="resources/scripts/axure/doc.js"></script>
+    <script src="resources/scripts/messagecenter.js"></script>
+    <script src="resources/scripts/axure/events.js"></script>
+    <script src="resources/scripts/axure/recording.js"></script>
+    <script src="resources/scripts/axure/action.js"></script>
+    <script src="resources/scripts/axure/expr.js"></script>
+    <script src="resources/scripts/axure/geometry.js"></script>
+    <script src="resources/scripts/axure/flyout.js"></script>
+    <script src="resources/scripts/axure/model.js"></script>
+    <script src="resources/scripts/axure/repeater.js"></script>
+    <script src="resources/scripts/axure/sto.js"></script>
+    <script src="resources/scripts/axure/utils.temp.js"></script>
+    <script src="resources/scripts/axure/variables.js"></script>
+    <script src="resources/scripts/axure/drag.js"></script>
+    <script src="resources/scripts/axure/move.js"></script>
+    <script src="resources/scripts/axure/visibility.js"></script>
+    <script src="resources/scripts/axure/style.js"></script>
+    <script src="resources/scripts/axure/adaptive.js"></script>
+    <script src="resources/scripts/axure/tree.js"></script>
+    <script src="resources/scripts/axure/init.temp.js"></script>
+    <script src="resources/scripts/axure/legacy.js"></script>
+    <script src="resources/scripts/axure/viewer.js"></script>
+    <script src="resources/scripts/axure/math.js"></script>
+    <script src="resources/scripts/axure/jquery.nicescroll.min.js"></script>
+    <script src="data/document.js"></script>
+    <script src="files/销售数据新增刷新税率相关按钮及逻辑/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5050" class="ax_default box_2 transition notrs">
+        <div id="u5050_div" class=""></div>
+        <div id="u5050_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5051" class="ax_default _文本段落 transition notrs">
+        <div id="u5051_div" class=""></div>
+        <div id="u5051_text" class="text ">
+          <p><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;">需求说明：</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">新增【刷新税率、税率维护】按钮，用于计算不含税销售金额及税金；</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;">1.【VC/销售数据】：</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">1.1新增【税率维护】按钮，弹窗样式及按钮逻辑同【折扣明细】的税率维护按钮；--原需求：本需求文档v8.6.3新增计提折扣推凭逻辑；</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">1.2新增【刷新税率】按钮：支持勾选或未勾选按筛选条件刷新税率并计算，二次提示。仅限刷新计算所在期间未结账且【是否汇总】≠‘是’的数据，具体逻辑如下：</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.2.1将所筛数据按照【期间+店铺+站点+发票号】和【期间+店铺+站点&nbsp; (需匹弹窗发票号为空的数据)】维度（分先后，匹到停止）取税率维护弹窗对应税率；</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.2.2重新计算所筛数据原币及本位币金额；</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">1.3列表新增【税金-结算（原币）、税金-结算（本位币）】分别位于【销售金额-结算（原币）、销售金额-结算（本位币）】右侧；新增【税率】位于【财务类型】右侧；--导出同步调整；</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;">2【下载详情】：</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">审核‘月度结算明细’时，新增计算【税率】逻辑：按照【期间+店铺+站点+发票号】和【期间+店铺+站点&nbsp; (需匹弹窗发票号为空的数据)】维度（分先后，匹到停止）取税率维护弹窗对应税率；</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 新增按解析逻辑配置计算【税金-结算（原币、本位币）】的逻辑；</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;">3.【解析逻辑配置/销售数据/VC】：</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">【适用范围】=‘销售数据’数据行调整如下：</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 3.1【目标字段（原币）】列：新增【税金-结算】行位于【销售金额-结算】下方；</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 3.2【条件设置】列：影响因素选项新增【税率】位于最下方；</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 3.3【算法】列：可配置项Payment：新增【税率】位于最下方；</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 原币值：新增【税金-结算】位于【销售金额-结算】下方；</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">4.</span><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;">【解析逻辑配置/汇总数据/VC】：</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">【适用范围】=‘销售数据’数据行调整如下：【算法】列：原币值：新增【税金-结算】位于【销售金额-结算】下方；</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;"><br></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图像) -->
+      <div id="u5052" class="ax_default _图片 transition notrs">
+        <img id="u5052_img" class="img " src="images/销售数据新增刷新税率相关按钮及逻辑/u5052.png"/>
+        <div id="u5052_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图像) -->
+      <div id="u5053" class="ax_default _图片 transition notrs">
+        <img id="u5053_img" class="img " src="images/销售数据新增刷新税率相关按钮及逻辑/u5053.svg"/>
+        <div id="u5053_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5054" class="ax_default primary_button transition notrs">
+        <div id="u5054_div" class=""></div>
+        <div id="u5054_text" class="text ">
+          <p><span>刷新税率</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5055" class="ax_default primary_button transition notrs">
+        <div id="u5055_div" class=""></div>
+        <div id="u5055_text" class="text ">
+          <p><span>税率维护</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (直线 / 行距) -->
+      <div id="u5056" class="compound ax_default arrow transition notrs" data-height="3" data-width="60" CompoundMode="true">
+        <svg data="images/销售数据新增刷新税率相关按钮及逻辑/u5056.svg" id="u5056_img" class="singleImg img generatedImage">
+
+  <g transform="matrix(1 0 0 1 -648.5 -383 )">
+    <path d="M 0 1.5  L 52.99999981025114 1.5  " stroke-width="3" stroke-dasharray="0" stroke="rgba(217, 0, 27, 1)" fill="none" transform="matrix(1 0 0 1 650 394 )" class="stroke" />
+    <path d="M 51 10.4  L 60 1.5  L 51 -7.4  L 51 10.4  Z " fill-rule="nonzero" fill="rgba(217, 0, 27, 1)" stroke="none" transform="matrix(1 0 0 1 650 394 )" class="arrowhead" />
+  </g>
+        </svg>
+        <div id="u5056p000" class="ax_vector_shape" WidgetTopLeftX="-0.46373188659823406" WidgetTopLeftY="-0.33555839134749615" WidgetTopRightX="0.4737600026218338" WidgetTopRightY="-0.29396160981268427" WidgetBottomLeftX="-0.4639268715116793" WidgetBottomLeftY="0.1644372829032088" WidgetBottomRightX="0.4735650177083886" WidgetBottomRightY="0.2060340644380204">
+          <svg data="images/销售数据新增刷新税率相关按钮及逻辑/u5056p000.svg" id="u5056p000_img" class="img generatedImage" viewbox="648 393 64 4">
+
+  <g transform="matrix(-0.7771459614569706 -0.629320391049841 0.6293203910498387 -0.7771459614569742 959.8776993260537 1129.910520689397 )">
+    <path d="M 0 1.5  L 52.99999981025114 1.5  " stroke-width="3" stroke-dasharray="0" stroke="rgba(217, 0, 27, 1)" fill="none" transform="matrix(-0.7797570082619677 0.6260822694074203 -0.6260822694074203 -0.7797570082619677 704.3318336519702 377.88716743017034 )" class="stroke" />
+    <path d="M 51 10.4  L 60 1.5  L 51 -7.4  L 51 10.4  Z " fill-rule="nonzero" fill="rgba(217, 0, 27, 1)" stroke="none" transform="matrix(-0.7797570082619677 0.6260822694074203 -0.6260822694074203 -0.7797570082619677 704.3318336519702 377.88716743017034 )" class="arrowhead" />
+  </g>
+          </svg>
+        </div>
+        <div id="u5056p001" class="ax_vector_shape" WidgetTopLeftX="0.22197227532836905" WidgetTopLeftY="0.14786123836172274" WidgetTopRightX="-7.575597807291312" WidgetTopRightY="6.408683932435925" WidgetBottomLeftX="-0.09106885937533586" WidgetBottomLeftY="-0.24201726576926794" WidgetBottomRightX="-7.8886389419950165" WidgetBottomRightY="6.018805428304934">
+          <svg data="images/销售数据新增刷新税率相关按钮及逻辑/u5056p001.svg" id="u5056p001_img" class="img generatedImage" viewbox="700 375 6 4">
+
+  <path d="M 0 1.5  L 52.99999981025114 1.5  " stroke-width="3" stroke-dasharray="0" stroke="rgba(217, 0, 27, 1)" fill="none" transform="matrix(-0.7797570082619677 0.6260822694074203 -0.6260822694074203 -0.7797570082619677 704.3318336519702 377.88716743017034 )" class="stroke" />
+  <path d="M 51 10.4  L 60 1.5  L 51 -7.4  L 51 10.4  Z " fill-rule="nonzero" fill="rgba(217, 0, 27, 1)" stroke="none" transform="matrix(-0.7797570082619677 0.6260822694074203 -0.6260822694074203 -0.7797570082619677 704.3318336519702 377.88716743017034 )" class="arrowhead" />
+          </svg>
+        </div>
+        <div id="u5056p002" class="ax_vector_shape" WidgetTopLeftX="1.896688354080715" WidgetTopLeftY="0.06014028446883885" WidgetTopRightX="-0.2461502498508688" WidgetTopRightY="0.05122668842566488" WidgetBottomLeftX="1.8971340338828757" WidgetBottomLeftY="-0.04700164572774084" WidgetBottomRightX="-0.24570457004870835" WidgetBottomRightY="-0.05591524177091472">
+          <svg data="images/销售数据新增刷新税率相关按钮及逻辑/u5056p002.svg" id="u5056p002_img" class="img generatedImage" viewbox="648 397 28 26">
+
+  <g transform="matrix(0.7771459614569687 0.6293203910498373 -0.6293203910498393 0.7771459614569687 405.55073384592066 -325.23994307234955 )">
+    <path d="M 0 1.5  L 52.99999981025114 1.5  " stroke-width="3" stroke-dasharray="0" stroke="rgba(217, 0, 27, 1)" fill="none" transform="matrix(-0.7797570082619677 0.6260822694074203 -0.6260822694074203 -0.7797570082619677 704.3318336519702 377.88716743017034 )" class="stroke" />
+    <path d="M 51 10.4  L 60 1.5  L 51 -7.4  L 51 10.4  Z " fill-rule="nonzero" fill="rgba(217, 0, 27, 1)" stroke="none" transform="matrix(-0.7797570082619677 0.6260822694074203 -0.6260822694074203 -0.7797570082619677 704.3318336519702 377.88716743017034 )" class="arrowhead" />
+  </g>
+          </svg>
+        </div>
+        <div id="u5056_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <script src="resources/scripts/axure/ios.js"></script>
+  </body>
+</html>
