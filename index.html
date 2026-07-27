@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>业财原型导航</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #1f2328;
+      --muted: #57606a;
+      --line: #d0d7de;
+      --brand: #0969da;
+      --brand-bg: #ddf4ff;
+      --shadow: 0 8px 24px rgba(140,149,159,.15);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #eef5ff 0%, var(--bg) 220px);
+    }
+    .wrap {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 32px 20px 48px;
+    }
+    .hero {
+      background: rgba(255,255,255,.88);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(208,215,222,.8);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      padding: 28px;
+      margin-bottom: 24px;
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: 32px;
+      line-height: 1.2;
+    }
+    .desc {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 15px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+    .tag {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--brand-bg);
+      color: var(--brand);
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .toolbar {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    .search {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 14px 16px;
+      font-size: 15px;
+      background: #fff;
+      outline: none;
+      box-shadow: 0 1px 2px rgba(31,35,40,.04);
+    }
+    .search:focus {
+      border-color: var(--brand);
+      box-shadow: 0 0 0 3px rgba(9,105,218,.12);
+    }
+    .count {
+      color: var(--muted);
+      font-size: 14px;
+      white-space: nowrap;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px 18px 16px;
+      box-shadow: 0 1px 2px rgba(31,35,40,.04);
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      border-color: #9ecbff;
+      box-shadow: 0 10px 22px rgba(31,35,40,.08);
+    }
+    .title {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.4;
+      margin: 0 0 10px;
+      word-break: break-all;
+    }
+    .path {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+      word-break: break-all;
+      min-height: 42px;
+    }
+    .open {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 14px;
+      color: var(--brand);
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .empty {
+      display: none;
+      margin-top: 18px;
+      padding: 24px;
+      background: #fff;
+      border: 1px dashed var(--line);
+      border-radius: 16px;
+      color: var(--muted);
+      text-align: center;
+    }
+    .tips {
+      margin-top: 28px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px 20px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    .tips code {
+      padding: 2px 6px;
+      border-radius: 6px;
+      background: #f6f8fa;
+      color: #24292f;
+      border: 1px solid #d8dee4;
+      font-family: Consolas, Monaco, monospace;
+      font-size: 12px;
+    }
+    @media (max-width: 700px) {
+      .toolbar {
+        grid-template-columns: 1fr;
+      }
+      h1 { font-size: 26px; }
+      .hero { padding: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <h1>业财原型导航</h1>
+      <p class="desc">
+        这是给开发、测试、业务同事使用的原型入口页。点击下方卡片即可打开对应 Axure HTML 原型。
+        如果此文件放在仓库根目录并启用 GitHub Pages，可直接通过一个链接统一访问全部原型。
+      </p>
+      <div class="meta">
+        <span class="tag">适用于 GitHub Pages</span>
+        <span class="tag">支持关键词搜索</span>
+        <span class="tag">点击卡片直接预览</span>
+      </div>
+    </section>
+
+    <div class="toolbar">
+      <input id="search" class="search" type="search" placeholder="搜索原型名称，例如：资金流水 / 头程 / 银企直连" />
+      <div id="count" class="count"></div>
+    </div>
+
+    <div id="grid" class="grid"></div>
+    <div id="empty" class="empty">没有找到匹配的原型，请换个关键词试试。</div>
+
+    <section class="tips">
+      <div><strong>使用说明</strong></div>
+      <div>1. 建议将本文件保存为仓库根目录 <code>index.html</code>。</div>
+      <div>2. GitHub Pages 开启后，可通过类似 <code>https://936899403-jpg.github.io/-/</code> 的地址访问首页。</div>
+      <div>3. 若某个原型打不开，请确认对应目录下的 <code>index.html</code> 已一并上传。</div>
+    </section>
+  </div>
+
+  <script>
+    const items = [
+      { name: 'VC平台财务报表_RP11', path: 'VC平台财务报表_RP11/' },
+      { name: 'wayfair平台财务报表', path: 'wayfair平台财务报表/' },
+      { name: 'wayfair平台财务报表_recovered', path: 'wayfair平台财务报表_recovered/' },
+      { name: 'wayfair平台财务报表_recovered_RP11', path: 'wayfair平台财务报表_recovered_RP11/' },
+      { name: '上传同步远程账单', path: '上传同步远程账单/' },
+      { name: '业财消息通知', path: '业财消息通知/' },
+      { name: '业财迭代需求_抓取测试3', path: '业财迭代需求_抓取测试3/' },
+      { name: '业财迭代需求_测试', path: '业财迭代需求_测试/' },
+      { name: '亚马逊平台财务报表优化2022', path: '亚马逊平台财务报表优化2022/' },
+      { name: '亚马逊延迟交易数据', path: '亚马逊延迟交易数据/' },
+      { name: '亚马逊延迟交易数据_RP11', path: '亚马逊延迟交易数据_RP11/' },
+      { name: '亚马逊转款换币种推凭', path: '亚马逊转款换币种推凭/' },
+      { name: '佰易底稿仓库名称加账户后缀', path: '佰易底稿仓库名称加账户后缀/' },
+      { name: '其他平台财务报表_RP11', path: '其他平台财务报表_RP11/' },
+      { name: '凭证模板优化', path: '凭证模板优化/' },
+      { name: '凭证模板优化__2', path: '凭证模板优化__2/' },
+      { name: '出纳多次标账需求', path: '出纳多次标账需求/' },
+      { name: '历史资料 / 业财交接文件-刘健 / 业财交接文件 / 业财需求 / 平台财务报表 / vc平台财务报表 / VC平台财务报表', path: '历史资料/业财交接文件-刘健/业财交接文件/业财需求/平台财务报表/vc平台财务报表/VC平台财务报表/' },
+      { name: '国外成本核算-在途底稿优化', path: '国外成本核算-在途底稿优化/' },
+      { name: '国外成本核算—在途底稿', path: '国外成本核算—在途底稿/' },
+      { name: '国外成本核算在途底稿', path: '国外成本核算在途底稿/' },
+      { name: '头程成本核算', path: '头程成本核算/' },
+      { name: '头程成本核算_recovered', path: '头程成本核算_recovered/' },
+      { name: '实体银行', path: '实体银行/' },
+      { name: '实体银行_RP11', path: '实体银行_RP11/' },
+      { name: '实体银行对账', path: '实体银行对账/' },
+      { name: '对账', path: '对账/' },
+      { name: '平台发货订单中心', path: '平台发货订单中心/' },
+      { name: '平台发货订单中心_RP11', path: '平台发货订单中心_RP11/' },
+      { name: '平台财务报表优化2024', path: '平台财务报表优化2024/' },
+      { name: '平台财务报表优化_RP11', path: '平台财务报表优化_RP11/' },
+      { name: '成本核算新增字段', path: '成本核算新增字段/' },
+      { name: '成本核算日常优化2022', path: '成本核算日常优化2022/' },
+      { name: '成本核算日常优化2022__2', path: '成本核算日常优化2022__2/' },
+      { name: '成本核算日常优化202301-202406', path: '成本核算日常优化202301-202406/' },
+      { name: '成本核算日常优化202407-202412', path: '成本核算日常优化202407-202412/' },
+      { name: '成本核算日常优化2025_RP11', path: '成本核算日常优化2025_RP11/' },
+      { name: '成本核算日常优化2026_RP11', path: '成本核算日常优化2026_RP11/' },
+      { name: '成本核算日常优化2026_RP11_recovered', path: '成本核算日常优化2026_RP11_recovered/' },
+      { name: '新增境外非税法人关联业财系统改造', path: '新增境外非税法人关联业财系统改造/' },
+      { name: '新增境外非税法人关联业财系统改造__2', path: '新增境外非税法人关联业财系统改造__2/' },
+      { name: '权限改造', path: '权限改造/' },
+      { name: '权限改造_RP11', path: '权限改造_RP11/' },
+      { name: '沃尔玛财务报表', path: '沃尔玛财务报表/' },
+      { name: '沃尔玛财务报表_RP11', path: '沃尔玛财务报表_RP11/' },
+      { name: '沃尔玛需求原型', path: '沃尔玛需求原型/' },
+      { name: '流程审批', path: '流程审批/' },
+      { name: '海运账单', path: '海运账单/' },
+      { name: '第三方卡对账', path: '第三方卡对账/' },
+      { name: '第三方卡对账_RP11', path: '第三方卡对账_RP11/' },
+      { name: '第三方卡对账__2', path: '第三方卡对账__2/' },
+      { name: '第三方卡对账草稿', path: '第三方卡对账草稿/' },
+      { name: '第三方卡推凭', path: '第三方卡推凭/' },
+      { name: '第三方卡推凭_RP11', path: '第三方卡推凭_RP11/' },
+      { name: '第三方卡推凭__2', path: '第三方卡推凭__2/' },
+      { name: '第三方卡推凭旧', path: '第三方卡推凭旧/' },
+      { name: '美国公司成本核算', path: '美国公司成本核算/' },
+      { name: '蓝图', path: '蓝图/' },
+      { name: '蓝图_RP11', path: '蓝图_RP11/' },
+      { name: '贝宝财务报表新增推凭场景', path: '贝宝财务报表新增推凭场景/' },
+      { name: '财务对接平台_RP11', path: '财务对接平台_RP11/' },
+      { name: '财务平台收入', path: '财务平台收入/' },
+      { name: '财务平台收入_新', path: '财务平台收入_新/' },
+      { name: '财务平台收入_新_recovered', path: '财务平台收入_新_recovered/' },
+      { name: '财务平台收入_新_recovered_RP11', path: '财务平台收入_新_recovered_RP11/' },
+      { name: '财务物流费用', path: '财务物流费用/' },
+      { name: '财务物流费用_RP11 - 副本', path: '财务物流费用_RP11 - 副本/' },
+      { name: '财务物流费用_RP11', path: '财务物流费用_RP11/' },
+      { name: '财务部门需求汇总原型', path: '财务部门需求汇总原型/' },
+      { name: '费用报销推凭', path: '费用报销推凭/' },
+      { name: '资金流水', path: '资金流水/' },
+      { name: '资金流水_RP11', path: '资金流水_RP11/' },
+      { name: '资金流水__2', path: '资金流水__2/' },
+      { name: '金算盘', path: '金算盘/' },
+      { name: '银企直连', path: '银企直连/' },
+      { name: '银企直连_RP11', path: '银企直连_RP11/' },
+      { name: '高风险', path: '高风险/' }
+    ];
+
+    const grid = document.getElementById('grid');
+    const search = document.getElementById('search');
+    const count = document.getElementById('count');
+    const empty = document.getElementById('empty');
+
+    function render(keyword = '') {
+      const q = keyword.trim().toLowerCase();
+      const filtered = items.filter(item => !q || item.name.toLowerCase().includes(q) || item.path.toLowerCase().includes(q));
+      grid.innerHTML = filtered.map(item => `
+        <a class="card" href="./${item.path}" target="_blank" rel="noopener noreferrer">
+          <div class="title">${item.name}</div>
+          <div class="path">./${item.path}</div>
+          <div class="open">打开原型 →</div>
+        </a>
+      `).join('');
+      count.textContent = `共 ${items.length} 个原型，当前显示 ${filtered.length} 个`;
+      empty.style.display = filtered.length ? 'none' : 'block';
+    }
+
+    search.addEventListener('input', e => render(e.target.value));
+    render();
+  </script>
+</body>
+</html>
