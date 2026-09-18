@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>订单回款核对逻辑调整</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/订单回款核对逻辑调整/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-3.7.1.min.js"></script>
+    <script src="resources/scripts/axure/axQuery.js"></script>
+    <script src="resources/scripts/axure/globals.js"></script>
+    <script src="resources/scripts/axutils.js"></script>
+    <script src="resources/scripts/axure/annotation.js"></script>
+    <script src="resources/scripts/axure/axQuery.std.js"></script>
+    <script src="resources/scripts/axure/doc.js"></script>
+    <script src="resources/scripts/messagecenter.js"></script>
+    <script src="resources/scripts/axure/events.js"></script>
+    <script src="resources/scripts/axure/recording.js"></script>
+    <script src="resources/scripts/axure/action.js"></script>
+    <script src="resources/scripts/axure/expr.js"></script>
+    <script src="resources/scripts/axure/geometry.js"></script>
+    <script src="resources/scripts/axure/flyout.js"></script>
+    <script src="resources/scripts/axure/model.js"></script>
+    <script src="resources/scripts/axure/repeater.js"></script>
+    <script src="resources/scripts/axure/sto.js"></script>
+    <script src="resources/scripts/axure/utils.temp.js"></script>
+    <script src="resources/scripts/axure/variables.js"></script>
+    <script src="resources/scripts/axure/drag.js"></script>
+    <script src="resources/scripts/axure/move.js"></script>
+    <script src="resources/scripts/axure/visibility.js"></script>
+    <script src="resources/scripts/axure/style.js"></script>
+    <script src="resources/scripts/axure/adaptive.js"></script>
+    <script src="resources/scripts/axure/tree.js"></script>
+    <script src="resources/scripts/axure/init.temp.js"></script>
+    <script src="resources/scripts/axure/legacy.js"></script>
+    <script src="resources/scripts/axure/viewer.js"></script>
+    <script src="resources/scripts/axure/math.js"></script>
+    <script src="resources/scripts/axure/jquery.nicescroll.min.js"></script>
+    <script src="data/document.js"></script>
+    <script src="files/订单回款核对逻辑调整/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1758" class="ax_default _文本段落 transition notrs">
+        <div id="u1758_div" class=""></div>
+        <div id="u1758_text" class="text ">
+          <p><span>1.当①拉取到销售数据-月度结算明细且未拉取到发货数据；或②拉取到发货数据且发货数&nbsp; &nbsp;&nbsp; 据【公司SKU、平台SKU】均没值；按照【回款日期所在月+店铺+订单号+币种】维度分&nbsp; &nbsp;&nbsp; 别匹【供应链/新自发货】/【销售工具/其他平台订单】创建时间/当地下单时间为含回款日&nbsp; &nbsp;&nbsp; 期所在月内的</span><span style="color:#D9001B;">前</span><span style="text-decoration:line-through ;color:#D9001B;">6个月</span><span style="color:#D9001B;">12个月</span><span>的SKU/公司SKU、平台SKU；</span></p><p><span><br></span></p><p><span>2.再将所选范围内剩余未匹到平台SKU和公司SKU的数据，再按照【回款日期所在月+店&nbsp; &nbsp;&nbsp; 铺(店铺)+订单号】维度在【供应链/新自发货/订单管理/订单管理】和</span><span style="color:#D9001B;">【销售工具/平台发货订单中心/其他平台订单】</span><span>订单创建时间为含回款日期所在月内的</span><span style="color:#D9001B;">前</span><span style="text-decoration:line-through ;color:#D9001B;">6个月</span><span style="color:#D9001B;">12个月</span><span>的数据&nbsp; &nbsp;&nbsp; 中匹【账号+订单号】并获取对应平台SKU和公司SKU（若匹到同个公司SKU/平台SKU存&nbsp; &nbsp;&nbsp; 在逗号分隔的多个字段值，则取第一个逗号前的字段值）；</span></p><p><span><br></span></p><p><span>3.增加搜索框“是否调整”-选项（是/否），单选</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图像) -->
+      <div id="u1759" class="ax_default _图片 transition notrs">
+        <img id="u1759_img" class="img " src="images/订单回款核对逻辑调整/u1759.png"/>
+        <div id="u1759_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图像) -->
+      <div id="u1760" class="ax_default _图片 transition notrs">
+        <img id="u1760_img" class="img " src="images/订单回款核对逻辑调整/u1760.png"/>
+        <div id="u1760_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图像) -->
+      <div id="u1761" class="ax_default _图片 transition notrs">
+        <img id="u1761_img" class="img " src="images/订单回款核对逻辑调整/u1761.png"/>
+        <div id="u1761_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <script src="resources/scripts/axure/ios.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1225 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>亚马逊销售数据新增解析逻辑和字段</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/亚马逊销售数据新增解析逻辑和字段/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-3.7.1.min.js"></script>
+    <script src="resources/scripts/axure/axQuery.js"></script>
+    <script src="resources/scripts/axure/globals.js"></script>
+    <script src="resources/scripts/axutils.js"></script>
+    <script src="resources/scripts/axure/annotation.js"></script>
+    <script src="resources/scripts/axure/axQuery.std.js"></script>
+    <script src="resources/scripts/axure/doc.js"></script>
+    <script src="resources/scripts/messagecenter.js"></script>
+    <script src="resources/scripts/axure/events.js"></script>
+    <script src="resources/scripts/axure/recording.js"></script>
+    <script src="resources/scripts/axure/action.js"></script>
+    <script src="resources/scripts/axure/expr.js"></script>
+    <script src="resources/scripts/axure/geometry.js"></script>
+    <script src="resources/scripts/axure/flyout.js"></script>
+    <script src="resources/scripts/axure/model.js"></script>
+    <script src="resources/scripts/axure/repeater.js"></script>
+    <script src="resources/scripts/axure/sto.js"></script>
+    <script src="resources/scripts/axure/utils.temp.js"></script>
+    <script src="resources/scripts/axure/variables.js"></script>
+    <script src="resources/scripts/axure/drag.js"></script>
+    <script src="resources/scripts/axure/move.js"></script>
+    <script src="resources/scripts/axure/visibility.js"></script>
+    <script src="resources/scripts/axure/style.js"></script>
+    <script src="resources/scripts/axure/adaptive.js"></script>
+    <script src="resources/scripts/axure/tree.js"></script>
+    <script src="resources/scripts/axure/init.temp.js"></script>
+    <script src="resources/scripts/axure/legacy.js"></script>
+    <script src="resources/scripts/axure/viewer.js"></script>
+    <script src="resources/scripts/axure/math.js"></script>
+    <script src="resources/scripts/axure/jquery.nicescroll.min.js"></script>
+    <script src="data/document.js"></script>
+    <script src="files/亚马逊销售数据新增解析逻辑和字段/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (矩形) -->
+      <div id="u4409" class="ax_default _文本段落 transition notrs">
+        <div id="u4409_div" class=""></div>
+        <div id="u4409_text" class="text ">
+          <p><span>1.增加字段：【销售数据】增加字段”自动还款(原币)”和“自动还款（本位币）“；自动还款(原币)=其他费用；自动还款（本位币）=人民币汇率*原币</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图像) -->
+      <div id="u4410" class="ax_default _图片_ transition notrs">
+        <img id="u4410_img" class="img " src="images/亚马逊销售数据新增解析逻辑和字段/u4410.png"/>
+        <div id="u4410_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u4411" class="ax_default _文本段落 transition notrs">
+        <div id="u4411_div" class=""></div>
+        <div id="u4411_text" class="text ">
+          <p><span>2.解析后推凭证</span></p><p><span><br></span></p><p><span>3.【销售数据】新增字段“交易状态”“交易发布日期”“交易发布日期（原始时间）”“交易发布日期（当地时间）””交易发布日期（北京时间）“，字段放置于“描述类型“字段后面，按序即可。</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图像) -->
+      <div id="u4412" class="ax_default _图片_ transition notrs">
+        <img id="u4412_img" class="img " src="images/亚马逊销售数据新增解析逻辑和字段/u4412.png"/>
+        <div id="u4412_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u4413" class="ax_default _文本段落 transition notrs">
+        <div id="u4413_div" class=""></div>
+        <div id="u4413_text" class="text ">
+          <p><span>4.将【下载详情】中的字段”Transaction Status“解析到“交易状态”，其中枚举值展示中文，“已发布”、“延迟”，若为空则展示空；因不同站点可能出现不同语言，映射关系如下：</span></p><p><span><br></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (表格) -->
+      <div id="u4414" class="ax_default">
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4415" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4415.svg" id="u4415_img" class="img generatedImage" viewbox="0 0 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" class="stroke" />
+          </svg>
+          <div id="u4415_text" class="text ">
+            <p><span>站点英文</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4416" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4416.svg" id="u4416_img" class="img generatedImage" viewbox="100 0 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 100 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 0 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 0 )" class="stroke" />
+          </svg>
+          <div id="u4416_text" class="text ">
+            <p><span>站点中文</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4417" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4417.svg" id="u4417_img" class="img generatedImage" viewbox="200 0 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 0 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 0 )" class="stroke" />
+          </svg>
+          <div id="u4417_text" class="text ">
+            <p><span>已发布</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4418" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4418.svg" id="u4418_img" class="img generatedImage" viewbox="300 0 100 30">
+
+  <path d="M 1 1  L 99 1  L 99 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 0 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 0 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 0 )" class="stroke" />
+  <path d="M 99.5 1  L 99.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 0 )" class="stroke" />
+          </svg>
+          <div id="u4418_text" class="text ">
+            <p><span>延迟</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4419" class="ax_default transition notrs">
+          <svg data="images/成本调整与分摊/u1247.svg" id="u4419_img" class="img generatedImage" viewbox="0 30 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 30 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 30 )" class="stroke" />
+          </svg>
+          <div id="u4419_text" class="text ">
+            <p><span>US</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4420" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4420.svg" id="u4420_img" class="img generatedImage" viewbox="100 30 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 100 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 30 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 30 )" class="stroke" />
+          </svg>
+          <div id="u4420_text" class="text ">
+            <p><span>美国</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4421" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4421.svg" id="u4421_img" class="img generatedImage" viewbox="200 30 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 30 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 30 )" class="stroke" />
+          </svg>
+          <div id="u4421_text" class="text ">
+            <p><span>Released</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4422" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4422.svg" id="u4422_img" class="img generatedImage" viewbox="300 30 100 30">
+
+  <path d="M 1 1  L 99 1  L 99 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 30 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 30 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 30 )" class="stroke" />
+  <path d="M 99.5 1  L 99.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 30 )" class="stroke" />
+          </svg>
+          <div id="u4422_text" class="text ">
+            <p><span>Deferred</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4423" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4423.svg" id="u4423_img" class="img generatedImage" viewbox="0 60 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 60 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 60 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 60 )" class="stroke" />
+          </svg>
+          <div id="u4423_text" class="text ">
+            <p><span>USBETA</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4424" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4424.svg" id="u4424_img" class="img generatedImage" viewbox="100 60 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 100 60 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 60 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 60 )" class="stroke" />
+          </svg>
+          <div id="u4424_text" class="text ">
+            <p><span>美国beta</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4425" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4425.svg" id="u4425_img" class="img generatedImage" viewbox="200 60 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 60 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 60 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 60 )" class="stroke" />
+          </svg>
+          <div id="u4425_text" class="text ">
+            <p><span>Released</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4426" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4426.svg" id="u4426_img" class="img generatedImage" viewbox="300 60 100 30">
+
+  <path d="M 1 1  L 99 1  L 99 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 60 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 60 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 60 )" class="stroke" />
+  <path d="M 99.5 1  L 99.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 60 )" class="stroke" />
+          </svg>
+          <div id="u4426_text" class="text ">
+            <p><span>Deferred</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4427" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4427.svg" id="u4427_img" class="img generatedImage" viewbox="0 90 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 90 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 90 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 90 )" class="stroke" />
+          </svg>
+          <div id="u4427_text" class="text ">
+            <p><span>CA</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4428" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4428.svg" id="u4428_img" class="img generatedImage" viewbox="100 90 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 100 90 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 90 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 90 )" class="stroke" />
+          </svg>
+          <div id="u4428_text" class="text ">
+            <p><span>加拿大</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4429" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4429.svg" id="u4429_img" class="img generatedImage" viewbox="200 90 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 90 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 90 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 90 )" class="stroke" />
+          </svg>
+          <div id="u4429_text" class="text ">
+            <p><span>Released</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4430" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4430.svg" id="u4430_img" class="img generatedImage" viewbox="300 90 100 30">
+
+  <path d="M 1 1  L 99 1  L 99 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 90 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 90 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 90 )" class="stroke" />
+  <path d="M 99.5 1  L 99.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 90 )" class="stroke" />
+          </svg>
+          <div id="u4430_text" class="text ">
+            <p><span>Deferred</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4431" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4431.svg" id="u4431_img" class="img generatedImage" viewbox="0 120 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 120 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 120 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 120 )" class="stroke" />
+          </svg>
+          <div id="u4431_text" class="text ">
+            <p><span>MX</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4432" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4432.svg" id="u4432_img" class="img generatedImage" viewbox="100 120 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 100 120 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 120 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 120 )" class="stroke" />
+          </svg>
+          <div id="u4432_text" class="text ">
+            <p><span>墨西哥</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4433" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4433.svg" id="u4433_img" class="img generatedImage" viewbox="200 120 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 120 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 120 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 120 )" class="stroke" />
+          </svg>
+          <div id="u4433_text" class="text ">
+            <p><span>Lanzado</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4434" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4434.svg" id="u4434_img" class="img generatedImage" viewbox="300 120 100 30">
+
+  <path d="M 1 1  L 99 1  L 99 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 120 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 120 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 120 )" class="stroke" />
+  <path d="M 99.5 1  L 99.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 120 )" class="stroke" />
+          </svg>
+          <div id="u4434_text" class="text ">
+            <p><span>Diferido</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4435" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4435.svg" id="u4435_img" class="img generatedImage" viewbox="0 150 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 150 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 150 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 150 )" class="stroke" />
+          </svg>
+          <div id="u4435_text" class="text ">
+            <p><span>BR</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4436" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4436.svg" id="u4436_img" class="img generatedImage" viewbox="100 150 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 100 150 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 150 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 150 )" class="stroke" />
+          </svg>
+          <div id="u4436_text" class="text ">
+            <p><span>巴西</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4437" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4437.svg" id="u4437_img" class="img generatedImage" viewbox="200 150 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 150 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 150 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 150 )" class="stroke" />
+          </svg>
+          <div id="u4437_text" class="text ">
+            <p><span>Liberado</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4438" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4438.svg" id="u4438_img" class="img generatedImage" viewbox="300 150 100 30">
+
+  <path d="M 1 1  L 99 1  L 99 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 150 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 150 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 150 )" class="stroke" />
+  <path d="M 99.5 1  L 99.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 150 )" class="stroke" />
+          </svg>
+          <div id="u4438_text" class="text ">
+            <p><span>Diferido</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4439" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4439.svg" id="u4439_img" class="img generatedImage" viewbox="0 180 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 180 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 180 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 180 )" class="stroke" />
+          </svg>
+          <div id="u4439_text" class="text ">
+            <p><span>FR</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4440" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4440.svg" id="u4440_img" class="img generatedImage" viewbox="100 180 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 100 180 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 180 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 180 )" class="stroke" />
+          </svg>
+          <div id="u4440_text" class="text ">
+            <p><span>法国</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4441" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4441.svg" id="u4441_img" class="img generatedImage" viewbox="200 180 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 180 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 180 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 180 )" class="stroke" />
+          </svg>
+          <div id="u4441_text" class="text ">
+            <p><span>Sorti</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4442" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4442.svg" id="u4442_img" class="img generatedImage" viewbox="300 180 100 30">
+
+  <path d="M 1 1  L 99 1  L 99 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 180 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 180 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 180 )" class="stroke" />
+  <path d="M 99.5 1  L 99.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 180 )" class="stroke" />
+          </svg>
+          <div id="u4442_text" class="text ">
+            <p><span>Différé</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4443" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4443.svg" id="u4443_img" class="img generatedImage" viewbox="0 210 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 210 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 210 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 210 )" class="stroke" />
+          </svg>
+          <div id="u4443_text" class="text ">
+            <p><span>IT</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4444" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4444.svg" id="u4444_img" class="img generatedImage" viewbox="100 210 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 100 210 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 210 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 210 )" class="stroke" />
+          </svg>
+          <div id="u4444_text" class="text ">
+            <p><span>意大利</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4445" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4445.svg" id="u4445_img" class="img generatedImage" viewbox="200 210 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 210 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 210 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 210 )" class="stroke" />
+          </svg>
+          <div id="u4445_text" class="text ">
+            <p><span>Emesso</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4446" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4446.svg" id="u4446_img" class="img generatedImage" viewbox="300 210 100 30">
+
+  <path d="M 1 1  L 99 1  L 99 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 210 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 210 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 210 )" class="stroke" />
+  <path d="M 99.5 1  L 99.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 210 )" class="stroke" />
+          </svg>
+          <div id="u4446_text" class="text ">
+            <p><span>Differito</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4447" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4447.svg" id="u4447_img" class="img generatedImage" viewbox="0 240 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 240 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 240 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 240 )" class="stroke" />
+          </svg>
+          <div id="u4447_text" class="text ">
+            <p><span>UK</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4448" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4448.svg" id="u4448_img" class="img generatedImage" viewbox="100 240 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 100 240 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 240 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 240 )" class="stroke" />
+          </svg>
+          <div id="u4448_text" class="text ">
+            <p><span>英国</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4449" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4449.svg" id="u4449_img" class="img generatedImage" viewbox="200 240 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 240 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 240 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 240 )" class="stroke" />
+          </svg>
+          <div id="u4449_text" class="text ">
+            <p><span>Released</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4450" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4450.svg" id="u4450_img" class="img generatedImage" viewbox="300 240 100 30">
+
+  <path d="M 1 1  L 99 1  L 99 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 240 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 240 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 240 )" class="stroke" />
+  <path d="M 99.5 1  L 99.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 240 )" class="stroke" />
+          </svg>
+          <div id="u4450_text" class="text ">
+            <p><span>Deferred</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4451" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4451.svg" id="u4451_img" class="img generatedImage" viewbox="0 270 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 270 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 270 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 270 )" class="stroke" />
+          </svg>
+          <div id="u4451_text" class="text ">
+            <p><span>ES</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4452" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4452.svg" id="u4452_img" class="img generatedImage" viewbox="100 270 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 100 270 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 270 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 270 )" class="stroke" />
+          </svg>
+          <div id="u4452_text" class="text ">
+            <p><span>西班牙</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4453" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4453.svg" id="u4453_img" class="img generatedImage" viewbox="200 270 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 270 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 270 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 270 )" class="stroke" />
+          </svg>
+          <div id="u4453_text" class="text ">
+            <p><span>Liberada</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4454" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4454.svg" id="u4454_img" class="img generatedImage" viewbox="300 270 100 30">
+
+  <path d="M 1 1  L 99 1  L 99 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 270 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 270 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 270 )" class="stroke" />
+  <path d="M 99.5 1  L 99.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 270 )" class="stroke" />
+          </svg>
+          <div id="u4454_text" class="text ">
+            <p><span>Diferida</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4455" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4455.svg" id="u4455_img" class="img generatedImage" viewbox="0 300 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 300 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 300 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 300 )" class="stroke" />
+          </svg>
+          <div id="u4455_text" class="text ">
+            <p><span>DE</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4456" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4456.svg" id="u4456_img" class="img generatedImage" viewbox="100 300 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 100 300 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 300 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 300 )" class="stroke" />
+          </svg>
+          <div id="u4456_text" class="text ">
+            <p><span>德国</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4457" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4457.svg" id="u4457_img" class="img generatedImage" viewbox="200 300 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 300 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 300 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 300 )" class="stroke" />
+          </svg>
+          <div id="u4457_text" class="text ">
+            <p><span>Veröffentlicht</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4458" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4458.svg" id="u4458_img" class="img generatedImage" viewbox="300 300 100 30">
+
+  <path d="M 1 1  L 99 1  L 99 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 300 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 300 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 300 )" class="stroke" />
+  <path d="M 99.5 1  L 99.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 300 )" class="stroke" />
+          </svg>
+          <div id="u4458_text" class="text ">
+            <p><span>Verzögert</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4459" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4459.svg" id="u4459_img" class="img generatedImage" viewbox="0 330 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 330 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 330 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 330 )" class="stroke" />
+          </svg>
+          <div id="u4459_text" class="text ">
+            <p><span>NL</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4460" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4460.svg" id="u4460_img" class="img generatedImage" viewbox="100 330 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 100 330 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 330 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 330 )" class="stroke" />
+          </svg>
+          <div id="u4460_text" class="text ">
+            <p><span>荷兰</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4461" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4461.svg" id="u4461_img" class="img generatedImage" viewbox="200 330 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 330 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 330 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 330 )" class="stroke" />
+          </svg>
+          <div id="u4461_text" class="text ">
+            <p><span>Uitgebracht</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4462" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4462.svg" id="u4462_img" class="img generatedImage" viewbox="300 330 100 30">
+
+  <path d="M 1 1  L 99 1  L 99 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 330 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 330 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 330 )" class="stroke" />
+  <path d="M 99.5 1  L 99.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 330 )" class="stroke" />
+          </svg>
+          <div id="u4462_text" class="text ">
+            <p><span>Uitgesteld</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4463" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4463.svg" id="u4463_img" class="img generatedImage" viewbox="0 360 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 360 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 360 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 360 )" class="stroke" />
+          </svg>
+          <div id="u4463_text" class="text ">
+            <p><span>SE</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4464" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4464.svg" id="u4464_img" class="img generatedImage" viewbox="100 360 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 100 360 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 360 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 360 )" class="stroke" />
+          </svg>
+          <div id="u4464_text" class="text ">
+            <p><span>瑞典</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4465" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4465.svg" id="u4465_img" class="img generatedImage" viewbox="200 360 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 360 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 360 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 360 )" class="stroke" />
+          </svg>
+          <div id="u4465_text" class="text ">
+            <p><span>Släpps</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4466" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4466.svg" id="u4466_img" class="img generatedImage" viewbox="300 360 100 30">
+
+  <path d="M 1 1  L 99 1  L 99 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 360 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 360 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 360 )" class="stroke" />
+  <path d="M 99.5 1  L 99.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 360 )" class="stroke" />
+          </svg>
+          <div id="u4466_text" class="text ">
+            <p><span>Uppskjuten</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4467" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4467.svg" id="u4467_img" class="img generatedImage" viewbox="0 390 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 390 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 390 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 390 )" class="stroke" />
+          </svg>
+          <div id="u4467_text" class="text ">
+            <p><span>PL</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4468" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4468.svg" id="u4468_img" class="img generatedImage" viewbox="100 390 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 100 390 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 390 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 390 )" class="stroke" />
+          </svg>
+          <div id="u4468_text" class="text ">
+            <p><span>波兰</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4469" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4469.svg" id="u4469_img" class="img generatedImage" viewbox="200 390 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 390 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 390 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 390 )" class="stroke" />
+          </svg>
+          <div id="u4469_text" class="text ">
+            <p><span>Wydano</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4470" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4470.svg" id="u4470_img" class="img generatedImage" viewbox="300 390 100 30">
+
+  <path d="M 1 1  L 99 1  L 99 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 390 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 390 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 390 )" class="stroke" />
+  <path d="M 99.5 1  L 99.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 390 )" class="stroke" />
+          </svg>
+          <div id="u4470_text" class="text ">
+            <p><span>Odroczono</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4471" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4471.svg" id="u4471_img" class="img generatedImage" viewbox="0 420 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 420 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 420 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 420 )" class="stroke" />
+          </svg>
+          <div id="u4471_text" class="text ">
+            <p><span>TR</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4472" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4472.svg" id="u4472_img" class="img generatedImage" viewbox="100 420 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 100 420 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 420 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 420 )" class="stroke" />
+          </svg>
+          <div id="u4472_text" class="text ">
+            <p><span>土耳其</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4473" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4473.svg" id="u4473_img" class="img generatedImage" viewbox="200 420 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 420 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 420 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 420 )" class="stroke" />
+          </svg>
+          <div id="u4473_text" class="text ">
+            <p><span>Oluşturuldu</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4474" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4474.svg" id="u4474_img" class="img generatedImage" viewbox="300 420 100 30">
+
+  <path d="M 1 1  L 99 1  L 99 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 420 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 420 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 420 )" class="stroke" />
+  <path d="M 99.5 1  L 99.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 420 )" class="stroke" />
+          </svg>
+          <div id="u4474_text" class="text ">
+            <p><span>Ertelendi</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4475" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4475.svg" id="u4475_img" class="img generatedImage" viewbox="0 450 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 450 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 450 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 450 )" class="stroke" />
+          </svg>
+          <div id="u4475_text" class="text ">
+            <p><span>BE</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4476" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4476.svg" id="u4476_img" class="img generatedImage" viewbox="100 450 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 100 450 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 450 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 450 )" class="stroke" />
+          </svg>
+          <div id="u4476_text" class="text ">
+            <p><span>比利时</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4477" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4477.svg" id="u4477_img" class="img generatedImage" viewbox="200 450 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 450 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 450 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 450 )" class="stroke" />
+          </svg>
+          <div id="u4477_text" class="text ">
+            <p><span>Effectuée</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4478" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4478.svg" id="u4478_img" class="img generatedImage" viewbox="300 450 100 30">
+
+  <path d="M 1 1  L 99 1  L 99 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 450 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 450 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 450 )" class="stroke" />
+  <path d="M 99.5 1  L 99.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 450 )" class="stroke" />
+          </svg>
+          <div id="u4478_text" class="text ">
+            <p><span>Différée</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4479" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4479.svg" id="u4479_img" class="img generatedImage" viewbox="0 480 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 480 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 480 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 480 )" class="stroke" />
+          </svg>
+          <div id="u4479_text" class="text ">
+            <p><span>IE</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4480" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4480.svg" id="u4480_img" class="img generatedImage" viewbox="100 480 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 100 480 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 480 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 480 )" class="stroke" />
+          </svg>
+          <div id="u4480_text" class="text ">
+            <p><span>爱尔兰</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4481" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4481.svg" id="u4481_img" class="img generatedImage" viewbox="200 480 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 480 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 480 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 480 )" class="stroke" />
+          </svg>
+          <div id="u4481_text" class="text ">
+            <p><span>Released</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4482" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4482.svg" id="u4482_img" class="img generatedImage" viewbox="300 480 100 30">
+
+  <path d="M 1 1  L 99 1  L 99 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 480 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 480 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 480 )" class="stroke" />
+  <path d="M 99.5 1  L 99.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 480 )" class="stroke" />
+          </svg>
+          <div id="u4482_text" class="text ">
+            <p><span>Deferred</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4483" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4483.svg" id="u4483_img" class="img generatedImage" viewbox="0 510 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 510 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 510 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 510 )" class="stroke" />
+          </svg>
+          <div id="u4483_text" class="text ">
+            <p><span>JP</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4484" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4484.svg" id="u4484_img" class="img generatedImage" viewbox="100 510 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 100 510 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 510 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 510 )" class="stroke" />
+          </svg>
+          <div id="u4484_text" class="text ">
+            <p><span>日本</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4485" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4485.svg" id="u4485_img" class="img generatedImage" viewbox="200 510 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 510 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 510 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 510 )" class="stroke" />
+          </svg>
+          <div id="u4485_text" class="text ">
+            <p><span>支払い実行済み</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4486" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4486.svg" id="u4486_img" class="img generatedImage" viewbox="300 510 100 30">
+
+  <path d="M 1 1  L 99 1  L 99 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 510 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 510 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 510 )" class="stroke" />
+  <path d="M 99.5 1  L 99.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 510 )" class="stroke" />
+          </svg>
+          <div id="u4486_text" class="text ">
+            <p><span>留保中</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4487" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4487.svg" id="u4487_img" class="img generatedImage" viewbox="0 540 100 34">
+
+  <path d="M 1 1  L 100 1  L 100 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 540 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 540 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 540 )" class="stroke" />
+          </svg>
+          <div id="u4487_text" class="text ">
+            <p><span>AE</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4488" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4488.svg" id="u4488_img" class="img generatedImage" viewbox="100 540 100 34">
+
+  <path d="M 1 1  L 100 1  L 100 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 100 540 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 540 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 540 )" class="stroke" />
+          </svg>
+          <div id="u4488_text" class="text ">
+            <p><span>阿拉伯联合酋长国</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4489" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4489.svg" id="u4489_img" class="img generatedImage" viewbox="200 540 100 34">
+
+  <path d="M 1 1  L 100 1  L 100 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 540 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 540 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 540 )" class="stroke" />
+          </svg>
+          <div id="u4489_text" class="text ">
+            <p><span>Released</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4490" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4490.svg" id="u4490_img" class="img generatedImage" viewbox="300 540 100 34">
+
+  <path d="M 1 1  L 99 1  L 99 34  L 1 34  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 540 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 540 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 540 )" class="stroke" />
+  <path d="M 99.5 1  L 99.5 34  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 540 )" class="stroke" />
+          </svg>
+          <div id="u4490_text" class="text ">
+            <p><span>Deferred</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4491" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4491.svg" id="u4491_img" class="img generatedImage" viewbox="0 574 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 574 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 574 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 574 )" class="stroke" />
+          </svg>
+          <div id="u4491_text" class="text ">
+            <p><span>AU</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4492" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4492.svg" id="u4492_img" class="img generatedImage" viewbox="100 574 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 100 574 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 574 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 574 )" class="stroke" />
+          </svg>
+          <div id="u4492_text" class="text ">
+            <p><span>澳洲</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4493" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4493.svg" id="u4493_img" class="img generatedImage" viewbox="200 574 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 574 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 574 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 574 )" class="stroke" />
+          </svg>
+          <div id="u4493_text" class="text ">
+            <p><span>Released</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4494" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4494.svg" id="u4494_img" class="img generatedImage" viewbox="300 574 100 30">
+
+  <path d="M 1 1  L 99 1  L 99 30  L 1 30  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 574 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 574 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 574 )" class="stroke" />
+  <path d="M 99.5 1  L 99.5 30  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 574 )" class="stroke" />
+          </svg>
+          <div id="u4494_text" class="text ">
+            <p><span>Deferred</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4495" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4495.svg" id="u4495_img" class="img generatedImage" viewbox="0 604 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 0 604 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 604 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 604 )" class="stroke" />
+  <path d="M 0 29.5  L 100 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 0 604 )" class="stroke" />
+          </svg>
+          <div id="u4495_text" class="text ">
+            <p><span>SA</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4496" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4496.svg" id="u4496_img" class="img generatedImage" viewbox="100 604 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 100 604 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 604 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 604 )" class="stroke" />
+  <path d="M 0 29.5  L 100 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 100 604 )" class="stroke" />
+          </svg>
+          <div id="u4496_text" class="text ">
+            <p><span>沙特阿拉伯</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4497" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4497.svg" id="u4497_img" class="img generatedImage" viewbox="200 604 100 30">
+
+  <path d="M 1 1  L 100 1  L 100 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 200 604 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 604 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 604 )" class="stroke" />
+  <path d="M 0 29.5  L 100 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 200 604 )" class="stroke" />
+          </svg>
+          <div id="u4497_text" class="text ">
+            <p><span>Released</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (表格单元) -->
+        <div id="u4498" class="ax_default transition notrs">
+          <svg data="images/亚马逊销售数据新增解析逻辑和字段/u4498.svg" id="u4498_img" class="img generatedImage" viewbox="300 604 100 30">
+
+  <path d="M 1 1  L 99 1  L 99 29  L 1 29  L 1 1  Z " fill-rule="nonzero" fill="rgba(255, 255, 255, 1)" stroke="none" transform="matrix(1 0 0 1 300 604 )" class="fill" />
+  <path d="M 0.5 1  L 0.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 604 )" class="stroke" />
+  <path d="M 0 0.5  L 100 0.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 604 )" class="stroke" />
+  <path d="M 99.5 1  L 99.5 29  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 604 )" class="stroke" />
+  <path d="M 0 29.5  L 100 29.5  " stroke-width="1" stroke-dasharray="0" stroke="rgba(121, 121, 121, 1)" fill="none" transform="matrix(1 0 0 1 300 604 )" class="stroke" />
+          </svg>
+          <div id="u4498_text" class="text ">
+            <p><span>Deferred</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u4499" class="ax_default _文本段落 transition notrs">
+        <div id="u4499_div" class=""></div>
+        <div id="u4499_text" class="text ">
+          <p><span>6.将【下载详情】中的字段“Transaction Release Date”解析到“交易发布日期“；其中：&nbsp; &nbsp;&nbsp; “交易发布日期（原始时间）”=“交易发布日期（当地时间）”=“交易发布日期”&nbsp; &nbsp;&nbsp; ”交易发布日期（北京时间）“取“交易发布日期（当地时间）”对应的北京时间</span></p>
+        </div>
+      </div>
+    </div>
+    <script src="resources/scripts/axure/ios.js"></script>
+  </body>
+</html>
