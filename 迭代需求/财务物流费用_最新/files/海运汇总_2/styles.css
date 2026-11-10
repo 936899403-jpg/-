@@ -1,0 +1,80 @@
+﻿body {
+  margin:0px;
+  background-image:none;
+  position:relative;
+  left:-0px;
+  width:1777px;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:left;
+}
+.form_sketch {
+  border-color:transparent;
+  background-color:transparent;
+}
+#base {
+  position:absolute;
+  z-index:0;
+}
+#u8007 {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:1592px;
+  height:1093px;
+  display:flex;
+  transition:none;
+}
+#u8007 .text {
+  position:absolute;
+  align-self:center;
+  padding:2px 2px 2px 2px;
+  box-sizing:border-box;
+  width:100%;
+}
+#u8007_img {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:1592px;
+  height:1093px;
+}
+#u8007_text {
+  border-width:0px;
+  word-wrap:break-word;
+  text-transform:none;
+  visibility:hidden;
+}
+#u8008 {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:1093px;
+  width:1777px;
+  height:217px;
+  display:flex;
+  transition:none;
+}
+#u8008 .text {
+  position:absolute;
+  align-self:center;
+  padding:2px 2px 2px 2px;
+  box-sizing:border-box;
+  width:100%;
+}
+#u8008_img {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:1777px;
+  height:217px;
+}
+#u8008_text {
+  border-width:0px;
+  word-wrap:break-word;
+  text-transform:none;
+  visibility:hidden;
+}
